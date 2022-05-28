@@ -24,14 +24,12 @@ def getAttractions(filters):
         cur.execute(sql)
         # display the PostgreSQL database server version
         results = cur.fetchall()
-        print(results)
         # close the communication with the PostgreSQL
         cur.close()
         return results
     finally:
         if conn is not None:
             conn.close()
-            print('Database connection closed.')
     return None
 
 def generateSQL(filters):

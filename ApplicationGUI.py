@@ -3,6 +3,9 @@ import ApplicationFilterRequest
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
+    global filteredAttractionsList
+    filteredAttractionsList = []
+
     def createLabel(self,type,Xcoor,Ycoor,width,length):
         if type == "groupBox":
             self.label = QtWidgets.QLabel(self.groupBox)
@@ -22,20 +25,49 @@ class Ui_MainWindow(object):
             self.checkBox = QtWidgets.QCheckBox(self.groupBox)
         self.checkBox.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
         self.checkBox.setObjectName("checkBox")
-        return self.comboBox
+        return self.checkBox
 
-    def getCurrentFieldTexts(self, _):
+    def createScrollAreaObject(self):
+        self.label = QtWidgets.QLabel(self.scrollAreaWidgetContainer)
+        self.label.setMinimumSize(QtCore.QSize(0, 100))
+        self.label.setObjectName("label")
+        self.verticalLayout_3.addWidget(self.label)
+        return self.label
+
+    def controlScrollArea(self):
+        global filteredAttractionsList
+        _translate = QtCore.QCoreApplication.translate
+
+        for attraction in range(len(filteredAttractionsList)):
+            self.createScrollAreaObject().setText(_translate("MainWindow", str(filteredAttractionsList[attraction-1])))
+        self.scrollArea.setWidget(self.scrollAreaWidgetContainer)
+
+    def getCurrentFieldValues(self, _):
+        global filteredAttractionsList
+
         currentSelectedState = self.stateFilterComboBox.currentText()
         currentSelectedCity = self.cityFilterComboBox.currentText()
         currentSelectedType = self.typeFilterComboBox.currentText()
-        print("Selected State:", currentSelectedState)
-        print("Selected City:", currentSelectedCity)
-        print("Selected Type:", currentSelectedType)
-        attributeList = [currentSelectedState,currentSelectedCity,currentSelectedType]
+        currentCheckedWheelchairAccessibility = self.wheelchairAccessFilterCheckBox.isChecked()
+        currentCheckedFamilyFriendliness = self.familyFriendlyFilterCheckBox.isChecked()
+        currentCheckedPetFriendliness = self.petFriendlyFilterCheckBox.isChecked()
+        print("Selected State?:", currentSelectedState, "| Selected City?:", currentSelectedCity,
+              "| Selected Type?:", currentSelectedType, "| Wheelchair Accessibility is Checked?:",
+              currentCheckedWheelchairAccessibility, "| Family Friendliness is Checked?:",
+              currentCheckedFamilyFriendliness, "| Pet Friendliness is Checked?:",
+              currentCheckedPetFriendliness)
+
+        attributeList = [str(currentSelectedState),str(currentSelectedCity),str(currentSelectedType),
+                         str(currentCheckedWheelchairAccessibility), str(currentCheckedFamilyFriendliness),
+                         str(currentCheckedPetFriendliness)]
         for index in range(len(attributeList)):
-            if (attributeList[index] == "None"):
+            if (attributeList[index] == "None" or attributeList[index] == "False"):
                 attributeList[index] = None
-        ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(attributeList[0], attributeList[1], attributeList[2], None, None, None))
+        filteredAttractions = ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(attributeList[0], attributeList[1], attributeList[2], attributeList[3], attributeList[4], attributeList[5]))
+        filteredAttractionsList = filteredAttractions
+        print(filteredAttractionsList)
+        self.controlScrollArea()
+
         attributeList = [None, None, None, None, None, None]
 
     def setupUi(self, MainWindow):
@@ -86,7 +118,7 @@ class Ui_MainWindow(object):
         self.groupBox.setFlat(True)
         self.groupBox.setObjectName("groupBox")
 
-        # Filtering by State - Format: (Label: ComboBox)
+        # Filtering by State - Format: (Label : ComboBox)
         self.stateFilterLabel = self.createLabel("groupBox",5, 25, 50, 50)
         self.stateFilterComboBox = self.createComboBox("groupBox",40, 40, 157, 26)
         self.stateFilterComboBox.addItems(["None","Alabama","Alaska","Arizona","Arkansas","California",
@@ -98,24 +130,34 @@ class Ui_MainWindow(object):
                                            "North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island",
                                            "South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont",
                                            "Virginia","Washington","West Virginia","Wisconsin","Wyoming"])
-        self.stateFilterComboBox.activated.connect(self.getCurrentFieldTexts)
+        self.stateFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
-        # Filtering by City - Format: (Label: ComboBox)
+        # Filtering by City - Format: (Label : ComboBox)
         self.cityFilterLabel = self.createLabel("groupBox", 5, 65, 50, 50)
         self.cityFilterComboBox = self.createComboBox("groupBox", 40, 80, 157, 26)
         self.cityFilterComboBox.addItems(["None", "City1", "City2", "Huntsville", "Birmingham"])
-        self.cityFilterComboBox.activated.connect(self.getCurrentFieldTexts)
+        self.cityFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
-        # Filtering by Type - Format: (Label: ComboBox)
+        # Filtering by Type - Format: (Label : ComboBox)
         self.typeFilterLabel = self.createLabel("groupBox", 5, 105, 50, 50)
         self.typeFilterComboBox = self.createComboBox("groupBox", 40, 120, 157, 26)
         self.typeFilterComboBox.addItems(["None", "Sports", "Cultural/Historical"])
-        self.typeFilterComboBox.activated.connect(self.getCurrentFieldTexts)
+        self.typeFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
-        # Filtering by WheelChairAccessibility - Format: (Label: CheckBox)
+        # Filtering by WheelChair Accessibility - Format: (CheckBox : Label)
         self.wheelchairAccessFilterLabel = self.createLabel("groupBox", 30, 145, 150, 50)
         self.wheelchairAccessFilterCheckBox = self.createCheckBox("groupBox", 5, 161, 20, 20)
-        self.wheelchairAccessFilterCheckBox.activated.connect(self.getCurrentFieldTexts)
+        self.wheelchairAccessFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
+
+        # Filtering by Family Friendliness - Format: (CheckBox : Label)
+        self.familyFriendlyFilterLabel = self.createLabel("groupBox", 30, 170, 150, 50)
+        self.familyFriendlyFilterCheckBox = self.createCheckBox("groupBox", 5, 186, 20, 20)
+        self.familyFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
+
+        # Filtering by Pet Friendliness - Format: (CheckBox : Label)
+        self.petFriendlyFilterLabel = self.createLabel("groupBox", 30, 195, 150, 50)
+        self.petFriendlyFilterCheckBox = self.createCheckBox("groupBox", 5, 211, 20, 20)
+        self.petFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
         # Setting ScrollArea
         self.verticalLayout.addWidget(self.groupBox)
@@ -128,10 +170,10 @@ class Ui_MainWindow(object):
         self.scrollArea.setSizePolicy(sizePolicy)
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
-        self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 609, 988))
-        self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
+        self.scrollAreaWidgetContainer = QtWidgets.QWidget()
+        self.scrollAreaWidgetContainer.setGeometry(QtCore.QRect(0, 0, 609, 988))
+        self.scrollAreaWidgetContainer.setObjectName("scrollAreaWidgetContainer")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContainer)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
 
         # Adds multiple tabs
@@ -154,10 +196,15 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+
         self.stateFilterLabel.setText(_translate("MainWindow", "State:"))
         self.cityFilterLabel.setText(_translate("MainWindow", "City:"))
         self.typeFilterLabel.setText(_translate("MainWindow", "Type:"))
+
         self.wheelchairAccessFilterLabel.setText(_translate("MainWindow", "Wheelchair Accessible"))
+        self.familyFriendlyFilterLabel.setText(_translate("MainWindow", "Family Friendly"))
+        self.petFriendlyFilterLabel.setText(_translate("MainWindow", "Pet Friendly"))
+
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "Attractions"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "About Us"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Sources"))
