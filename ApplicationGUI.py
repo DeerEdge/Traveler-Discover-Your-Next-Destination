@@ -1,19 +1,26 @@
 import ApplicationDatabase
 import ApplicationFilterRequest
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import QPen, QPainter, QColor, QPixmap
+from PyQt5.QtCore import Qt
 
 class Ui_MainWindow(object):
     global filteredAttractionsList
     filteredAttractionsList = []
 
     def createLabel(self,type,Xcoor,Ycoor,width,length):
+        global scrollAreaGroupBox
         if type == "groupBox":
             self.label = QtWidgets.QLabel(self.groupBox)
+        elif type == "scrollAreaGroupBox":
+            self.label = QtWidgets.QLabel(self.scrollAreaGroupBox)
         self.label.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
         self.label.setObjectName("label")
         return self.label
 
     def createComboBox(self,type,Xcoor,Ycoor,width,length):
+        global scrollAreaGroupBox
         if type == "groupBox":
             self.comboBox = QtWidgets.QComboBox(self.groupBox)
         self.comboBox.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
@@ -21,30 +28,108 @@ class Ui_MainWindow(object):
         return self.comboBox
 
     def createCheckBox(self,type,Xcoor,Ycoor,width,length):
+        global scrollAreaGroupBox
         if type == "groupBox":
             self.checkBox = QtWidgets.QCheckBox(self.groupBox)
         self.checkBox.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
         self.checkBox.setObjectName("checkBox")
         return self.checkBox
 
-    def createScrollAreaObject(self):
-        self.label = QtWidgets.QLabel(self.scrollAreaWidgetContainer)
-        self.label.setMinimumSize(QtCore.QSize(0, 100))
-        self.label.setObjectName("label")
-        self.verticalLayout_3.addWidget(self.label)
-        return self.label
+    def createScrollAreaObject(self,Ycoor,attraction):
+        global scrollAreaGroupBox
+        _translate = QtCore.QCoreApplication.translate
+
+        self.scrollAreaGroupBox = QtWidgets.QGroupBox(self.widget)
+        self.scrollAreaGroupBox.setFixedSize(884, 220)
+        self.scrollAreaGroupBox.setLayout(QtWidgets.QVBoxLayout())
+
+        labelXPos = 230
+        labelYPos = 25
+        self.attractionTitle = self.createLabel("scrollAreaGroupBox", labelXPos, 0, 400, 50)
+        self.ratingLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 420, 0, 50, 50)
+        self.locationLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos - 8, 200, 50)
+        # self.dateLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 20, 200, 50)
+        self.typeLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 20, 200, 50)
+        self.priceLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 40, 200, 50)
+        self.busynessLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 60, 200, 50)
+
+        self.wheelChairAccessibilityLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 150, labelYPos + 20, 200, 50)
+        self.familyFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 150, labelYPos + 40, 200, 50)
+        self.petFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 150, labelYPos + 60, 200, 50)
+
+        self.descriptionLabel = self.createLabel("scrollAreaGroupBox",labelXPos, labelYPos + 80, 460, 130)
+        self.descriptionLabel.setWordWrap(True)
+
+        self.attractionMapLabel = QtWidgets.QLabel(self.scrollAreaGroupBox)
+        self.attractionMapLabel.setPixmap(QtGui.QPixmap("attractionImage.jpg"))
+        self.attractionMapLabel.setScaledContents(True)
+        self.attractionMapLabel.setFixedSize(220, 220)
+        self.attractionMapLabel.show()
+
+        self.googleMapLabel = QtWidgets.QLabel(self.scrollAreaGroupBox)
+        self.googleMapLabel.setPixmap(QtGui.QPixmap("googleMap.jpg"))
+        self.googleMapLabel.setScaledContents(True)
+        self.googleMapLabel.setFixedSize(190, 190)
+        self.googleMapLabel.move(700, 0)
+        self.googleMapLabel.show()
+
+        self.line = QtWidgets.QFrame(self.scrollAreaGroupBox)
+        self.line.setGeometry(QtCore.QRect(280, 125, 350, 10))
+        self.line.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+
+        self.attractionTitle.setText(_translate("MainWindow", (str(attraction[1]) + "  - (Est. " + (str(attraction[2])) + ")")))
+        self.ratingLabel.setText(_translate("MainWindow", (str(attraction[9]))))
+        self.locationLabel.setText(_translate("MainWindow", (str(attraction[5]) + ",  " + str(attraction[4]))))
+        # self.dateLabel.setText(_translate("MainWindow", (str(attraction[2]))))
+        self.typeLabel.setText(_translate("MainWindow", (str(attraction[6]))))
+        if (str(attraction[7])) == '1':
+            self.priceLabel.setText(_translate("MainWindow", "Price Level - $"))
+        elif (str(attraction[7])) == '2':
+            self.priceLabel.setText(_translate("MainWindow", "Price Level - $$"))
+        elif (str(attraction[7])) == '3':
+            self.priceLabel.setText(_translate("MainWindow", "Price Level - $$$"))
+        if (str(attraction[8])) == '1':
+            self.busynessLabel.setText(_translate("MainWindow", "Very Busy"))
+        elif (str(attraction[8])) == '2':
+            self.busynessLabel.setText(_translate("MainWindow", "Moderately Busy"))
+        elif (str(attraction[8])) == '3':
+            self.busynessLabel.setText(_translate("MainWindow", "Low Busyness"))
+        if (str(attraction[9])):
+            self.wheelChairAccessibilityLabel.setText(_translate("MainWindow", "WheelChair Accessible? - Yes"))
+        else:
+            self.wheelChairAccessibilityLabel.setText(_translate("MainWindow", "WheelChair Accessible? - No"))
+        if (str(attraction[10])):
+            self.familyFriendlyLabel.setText(_translate("MainWindow", "Family Friendly? - Yes"))
+        else:
+            self.familyFriendlyLabel.setText(_translate("MainWindow", "Family Friendly? - No"))
+        if (str(attraction[11])):
+            self.petFriendlyLabel.setText(_translate("MainWindow", "Pet Friendly? - Yes"))
+        else:
+            self.petFriendlyLabel.setText(_translate("MainWindow", "Pet Friendly? - No"))
+        self.descriptionLabel.setText(_translate("MainWindow", ("     " + str(attraction[3]))))
+
+        self.verticalLayout_3.addWidget(self.scrollAreaGroupBox)
+        return self.scrollAreaGroupBox
 
     def controlScrollArea(self):
         global filteredAttractionsList
-        _translate = QtCore.QCoreApplication.translate
-
-        for attraction in range(len(filteredAttractionsList)):
-            self.createScrollAreaObject().setText(_translate("MainWindow", str(filteredAttractionsList[attraction-1])))
+        # Removes any previously displayed result objects
+        if (len(self.scrollAreaWidgetContainer.children()) > 0):
+            scrollAreaWidgetList = self.scrollAreaWidgetContainer.children()
+            for i in reversed(range(len(self.scrollAreaWidgetContainer.children()))):
+                if i > 0:
+                    scrollAreaWidgetList[i].deleteLater()
+        # Adds all filtered result objects to the scrollArea
+        Ycoor = 0
+        for index in range(len(filteredAttractionsList)):
+            self.createScrollAreaObject(Ycoor,filteredAttractionsList[index])
+            Ycoor = Ycoor + 200
         self.scrollArea.setWidget(self.scrollAreaWidgetContainer)
 
     def getCurrentFieldValues(self, _):
         global filteredAttractionsList
-
         currentSelectedState = self.stateFilterComboBox.currentText()
         currentSelectedCity = self.cityFilterComboBox.currentText()
         currentSelectedType = self.typeFilterComboBox.currentText()
@@ -67,17 +152,16 @@ class Ui_MainWindow(object):
         filteredAttractionsList = filteredAttractions
         print(filteredAttractionsList)
         self.controlScrollArea()
-
         attributeList = [None, None, None, None, None, None]
 
     def setupUi(self, MainWindow):
         # Sets up the window container
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(850, 650)
+        MainWindow.resize(1150, 650)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 851, 631))
+        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1151, 631))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
         self.tabWidget.setSizePolicy(sizePolicy)
@@ -85,7 +169,7 @@ class Ui_MainWindow(object):
         self.tabWidgetPage1 = QtWidgets.QWidget()
         self.tabWidgetPage1.setObjectName("tabWidgetPage1")
         self.gridWidget = QtWidgets.QWidget(self.tabWidgetPage1)
-        self.gridWidget.setGeometry(QtCore.QRect(580, 0, 251, 49))
+        self.gridWidget.setGeometry(QtCore.QRect(880, 0, 251, 49))
         self.gridWidget.setObjectName("gridWidget")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.gridWidget)
         self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -109,11 +193,6 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.groupBox = QtWidgets.QGroupBox(self.widget)
         self.groupBox.setEnabled(True)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox.sizePolicy().hasHeightForWidth())
-        self.groupBox.setSizePolicy(sizePolicy)
         self.groupBox.setTitle("")
         self.groupBox.setFlat(True)
         self.groupBox.setObjectName("groupBox")
@@ -121,21 +200,64 @@ class Ui_MainWindow(object):
         # Filtering by State - Format: (Label : ComboBox)
         self.stateFilterLabel = self.createLabel("groupBox",5, 25, 50, 50)
         self.stateFilterComboBox = self.createComboBox("groupBox",40, 40, 157, 26)
-        self.stateFilterComboBox.addItems(["None","Alabama","Alaska","Arizona","Arkansas","California",
-                                           "Colorado","Connecticut","Delaware","Florida","Georgia",
-                                           "Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas",
-                                           "Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan",
-                                           "Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada",
-                                           "New Hampshire","New Jersey","New Mexico","New York","North Carolina",
-                                           "North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island",
-                                           "South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont",
-                                           "Virginia","Washington","West Virginia","Wisconsin","Wyoming"])
+        self.stateFilterComboBox.addItem("None", ["None"])
+        self.stateFilterComboBox.addItem("Alabama", ["None", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
+        self.stateFilterComboBox.addItem("Alaska", ["None", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
+        self.stateFilterComboBox.addItem("Arizona")
+        self.stateFilterComboBox.addItem("Arkansas")
+        self.stateFilterComboBox.addItem("California")
+        self.stateFilterComboBox.addItem("Colorado")
+        self.stateFilterComboBox.addItem("Connecticut")
+        self.stateFilterComboBox.addItem("Delaware")
+        self.stateFilterComboBox.addItem("Florida")
+        self.stateFilterComboBox.addItem("Georgia")
+        self.stateFilterComboBox.addItem("Hawaii")
+        self.stateFilterComboBox.addItem("Idaho")
+        self.stateFilterComboBox.addItem("Illinois")
+        self.stateFilterComboBox.addItem("Indiana")
+        self.stateFilterComboBox.addItem("Iowa")
+        self.stateFilterComboBox.addItem("Kansas")
+        self.stateFilterComboBox.addItem("Kentucky")
+        self.stateFilterComboBox.addItem("Louisiana")
+        self.stateFilterComboBox.addItem("Maine")
+        self.stateFilterComboBox.addItem("Maryland")
+        self.stateFilterComboBox.addItem("Massachusetts")
+        self.stateFilterComboBox.addItem("Michigan")
+        self.stateFilterComboBox.addItem("Minnesota")
+        self.stateFilterComboBox.addItem("Mississippi")
+        self.stateFilterComboBox.addItem("Missouri")
+        self.stateFilterComboBox.addItem("Montana")
+        self.stateFilterComboBox.addItem("Nebraska")
+        self.stateFilterComboBox.addItem("Nevada")
+        self.stateFilterComboBox.addItem("New Hampshire")
+        self.stateFilterComboBox.addItem("New Jersey")
+        self.stateFilterComboBox.addItem("New Mexico")
+        self.stateFilterComboBox.addItem("New York")
+        self.stateFilterComboBox.addItem("North Carolina")
+        self.stateFilterComboBox.addItem("North Dakota")
+        self.stateFilterComboBox.addItem("Ohio")
+        self.stateFilterComboBox.addItem("Oklahoma")
+        self.stateFilterComboBox.addItem("Oregon")
+        self.stateFilterComboBox.addItem("Pennsylvania")
+        self.stateFilterComboBox.addItem("Rhode Island")
+        self.stateFilterComboBox.addItem("South Carolina")
+        self.stateFilterComboBox.addItem("South Dakota")
+        self.stateFilterComboBox.addItem("Tennessee")
+        self.stateFilterComboBox.addItem("Texas")
+        self.stateFilterComboBox.addItem("Utah")
+        self.stateFilterComboBox.addItem("Vermont")
+        self.stateFilterComboBox.addItem("Virginia")
+        self.stateFilterComboBox.addItem("Washington")
+        self.stateFilterComboBox.addItem("West Virginia")
+        self.stateFilterComboBox.addItem("Wisconsin")
+        self.stateFilterComboBox.addItem("Wyoming")
+        self.stateFilterComboBox.activated.connect(self.selectCityFromState)
         self.stateFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by City - Format: (Label : ComboBox)
         self.cityFilterLabel = self.createLabel("groupBox", 5, 65, 50, 50)
         self.cityFilterComboBox = self.createComboBox("groupBox", 40, 80, 157, 26)
-        self.cityFilterComboBox.addItems(["None", "City1", "City2", "Huntsville", "Birmingham"])
+        self.cityFilterComboBox.addItems(["None"])
         self.cityFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by Type - Format: (Label : ComboBox)
@@ -160,21 +282,21 @@ class Ui_MainWindow(object):
         self.petFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
         # Setting ScrollArea
+        self.scrollAreaWidgetContainer = QtWidgets.QWidget()
+        self.scrollAreaWidgetContainer.setObjectName("scrollAreaWidgetContainer")
+
         self.verticalLayout.addWidget(self.groupBox)
         self.scrollArea = QtWidgets.QScrollArea(self.tabWidgetPage1)
-        self.scrollArea.setGeometry(QtCore.QRect(230, 50, 611, 511))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.scrollArea.sizePolicy().hasHeightForWidth())
-        self.scrollArea.setSizePolicy(sizePolicy)
+        self.scrollArea.setFixedWidth(907)
+        self.scrollArea.setMinimumHeight(531)
+        self.scrollArea.move(230,50)
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
-        self.scrollAreaWidgetContainer = QtWidgets.QWidget()
-        self.scrollAreaWidgetContainer.setGeometry(QtCore.QRect(0, 0, 609, 988))
-        self.scrollAreaWidgetContainer.setObjectName("scrollAreaWidgetContainer")
+
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContainer)
+        self.scrollAreaWidgetContainer.setLayout(self.verticalLayout_3)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
+
 
         # Adds multiple tabs
         self.tabWidget.addTab(self.tabWidgetPage1, "")
@@ -192,6 +314,10 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def selectCityFromState(self, index):
+        self.cityFilterComboBox.clear()
+        self.cityFilterComboBox.addItems(self.stateFilterComboBox.itemData(index))
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
