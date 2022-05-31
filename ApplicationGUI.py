@@ -138,7 +138,7 @@ class Ui_MainWindow(object):
         currentCheckedWheelchairAccessibility = self.wheelchairAccessFilterCheckBox.isChecked()
         currentCheckedFamilyFriendliness = self.familyFriendlyFilterCheckBox.isChecked()
         currentCheckedPetFriendliness = self.petFriendlyFilterCheckBox.isChecked()
-        currentSorter = self.comboBox_4.currentText()
+        currentSorter = self.sortingComboBox.currentText()
         print("Selected State?:", currentSelectedState, "| Selected City?:", currentSelectedCity,
               "| Selected Type?:", currentSelectedType, "| Wheelchair Accessibility is Checked?:",
               currentCheckedWheelchairAccessibility, "| Family Friendliness is Checked?:",
@@ -159,17 +159,17 @@ class Ui_MainWindow(object):
         attributeList = [None, None, None, None, None, None]
 
     def sortingAttractions(self):
-        if self.comboBox_4.currentText() == "Rating: lowest to highest":
+        if self.sortingComboBox.currentText() == "Rating: lowest to highest":
             filteredAttractionsList.sort(key = itemgetter(9), reverse=False)
-        if self.comboBox_4.currentText() == "Rating: highest to lowest":
+        if self.sortingComboBox.currentText() == "Rating: highest to lowest":
             filteredAttractionsList.sort(key = itemgetter(9), reverse=True)
-        if self.comboBox_4.currentText() == "Price: lowest to highest":
+        if self.sortingComboBox.currentText() == "Price: lowest to highest":
             filteredAttractionsList.sort(key = itemgetter(7), reverse=False)
-        if self.comboBox_4.currentText() == "Price: highest to lowest":
+        if self.sortingComboBox.currentText() == "Price: highest to lowest":
             filteredAttractionsList.sort(key = itemgetter(7), reverse=True)
-        if self.comboBox_4.currentText() == "Traffic: lowest to highest":
+        if self.sortingComboBox.currentText() == "Traffic: lowest to highest":
             filteredAttractionsList.sort(key = itemgetter(8), reverse=False)
-        if self.comboBox_4.currentText() == "Traffic: highest to lowest":
+        if self.sortingComboBox.currentText() == "Traffic: highest to lowest":
             filteredAttractionsList.sort(key = itemgetter(8), reverse=True)
 
 
@@ -197,17 +197,17 @@ class Ui_MainWindow(object):
         self.label_2 = QtWidgets.QLabel(self.gridWidget)
         self.label_2.setObjectName("label_2")
         self.gridLayout_3.addWidget(self.label_2, 0, 0, 1, 1, QtCore.Qt.AlignRight)
-        self.comboBox_4 = QtWidgets.QComboBox(self.gridWidget)
-        self.comboBox_4.setObjectName("comboBox_4")
-        self.gridLayout_3.addWidget(self.comboBox_4, 0, 1, 1, 1)
-        self.comboBox_4.addItems(["Recommended (placeholder)",
+        self.sortingComboBox = QtWidgets.QComboBox(self.gridWidget)
+        self.sortingComboBox.setObjectName("sortingComboBox")
+        self.gridLayout_3.addWidget(self.sortingComboBox, 0, 1, 1, 1)
+        self.sortingComboBox.addItems(["Recommended (placeholder)",
                                   "Rating: lowest to highest",
                                   "Rating: highest to lowest",
                                   "Price: lowest to highest",
                                   "Price: highest to lowest",
                                   "Traffic: lowest to highest",
                                   "Traffic: highest to lowest"])
-        self.comboBox_4.activated.connect(self.getCurrentFieldValues)
+        self.sortingComboBox.activated.connect(self.getCurrentFieldValues)
 
         self.line = QtWidgets.QFrame(self.tabWidgetPage1)
         self.line.setGeometry(QtCore.QRect(210, -10, 21, 611))
