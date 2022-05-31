@@ -1,6 +1,8 @@
 import ApplicationDatabase
 import ApplicationFilterRequest
 
+from operator import itemgetter
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPen, QPainter, QColor, QPixmap
 from PyQt5.QtCore import Qt
@@ -91,20 +93,20 @@ class Ui_MainWindow(object):
         elif (str(attraction[7])) == '3':
             self.priceLabel.setText(_translate("MainWindow", "Price Level - $$$"))
         if (str(attraction[8])) == '1':
-            self.busynessLabel.setText(_translate("MainWindow", "Very Busy"))
+            self.busynessLabel.setText(_translate("MainWindow", "Low Busyness"))
         elif (str(attraction[8])) == '2':
             self.busynessLabel.setText(_translate("MainWindow", "Moderately Busy"))
         elif (str(attraction[8])) == '3':
-            self.busynessLabel.setText(_translate("MainWindow", "Low Busyness"))
-        if (str(attraction[9])):
+            self.busynessLabel.setText(_translate("MainWindow", "Very Busy"))
+        if (str(attraction[10]) == "True"):
             self.wheelChairAccessibilityLabel.setText(_translate("MainWindow", "WheelChair Accessible? - Yes"))
         else:
             self.wheelChairAccessibilityLabel.setText(_translate("MainWindow", "WheelChair Accessible? - No"))
-        if (str(attraction[10])):
+        if (str(attraction[11]) == "True"):
             self.familyFriendlyLabel.setText(_translate("MainWindow", "Family Friendly? - Yes"))
         else:
             self.familyFriendlyLabel.setText(_translate("MainWindow", "Family Friendly? - No"))
-        if (str(attraction[11])):
+        if (str(attraction[12]) == "True"):
             self.petFriendlyLabel.setText(_translate("MainWindow", "Pet Friendly? - Yes"))
         else:
             self.petFriendlyLabel.setText(_translate("MainWindow", "Pet Friendly? - No"))
@@ -136,11 +138,12 @@ class Ui_MainWindow(object):
         currentCheckedWheelchairAccessibility = self.wheelchairAccessFilterCheckBox.isChecked()
         currentCheckedFamilyFriendliness = self.familyFriendlyFilterCheckBox.isChecked()
         currentCheckedPetFriendliness = self.petFriendlyFilterCheckBox.isChecked()
+        currentSorter = self.comboBox_4.currentText()
         print("Selected State?:", currentSelectedState, "| Selected City?:", currentSelectedCity,
               "| Selected Type?:", currentSelectedType, "| Wheelchair Accessibility is Checked?:",
               currentCheckedWheelchairAccessibility, "| Family Friendliness is Checked?:",
               currentCheckedFamilyFriendliness, "| Pet Friendliness is Checked?:",
-              currentCheckedPetFriendliness)
+              currentCheckedPetFriendliness, "| Currently sorting by:", currentSorter)
 
         attributeList = [str(currentSelectedState),str(currentSelectedCity),str(currentSelectedType),
                          str(currentCheckedWheelchairAccessibility), str(currentCheckedFamilyFriendliness),
@@ -150,9 +153,26 @@ class Ui_MainWindow(object):
                 attributeList[index] = None
         filteredAttractions = ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(attributeList[0], attributeList[1], attributeList[2], attributeList[3], attributeList[4], attributeList[5]))
         filteredAttractionsList = filteredAttractions
-        print(filteredAttractionsList)
+        self.sortingAttractions()
+        print(*filteredAttractionsList, sep = "\n")
         self.controlScrollArea()
         attributeList = [None, None, None, None, None, None]
+
+    def sortingAttractions(self):
+        if self.comboBox_4.currentText() == "Rating: lowest to highest":
+            filteredAttractionsList.sort(key = itemgetter(9), reverse=False)
+        if self.comboBox_4.currentText() == "Rating: highest to lowest":
+            filteredAttractionsList.sort(key = itemgetter(9), reverse=True)
+        if self.comboBox_4.currentText() == "Price: lowest to highest":
+            filteredAttractionsList.sort(key = itemgetter(7), reverse=False)
+        if self.comboBox_4.currentText() == "Price: highest to lowest":
+            filteredAttractionsList.sort(key = itemgetter(7), reverse=True)
+        if self.comboBox_4.currentText() == "Traffic: lowest to highest":
+            filteredAttractionsList.sort(key = itemgetter(8), reverse=False)
+        if self.comboBox_4.currentText() == "Traffic: highest to lowest":
+            filteredAttractionsList.sort(key = itemgetter(8), reverse=True)
+
+
 
     def setupUi(self, MainWindow):
         # Sets up the window container
@@ -180,6 +200,15 @@ class Ui_MainWindow(object):
         self.comboBox_4 = QtWidgets.QComboBox(self.gridWidget)
         self.comboBox_4.setObjectName("comboBox_4")
         self.gridLayout_3.addWidget(self.comboBox_4, 0, 1, 1, 1)
+        self.comboBox_4.addItems(["Recommended (placeholder)",
+                                  "Rating: lowest to highest",
+                                  "Rating: highest to lowest",
+                                  "Price: lowest to highest",
+                                  "Price: highest to lowest",
+                                  "Traffic: lowest to highest",
+                                  "Traffic: highest to lowest"])
+        self.comboBox_4.activated.connect(self.getCurrentFieldValues)
+
         self.line = QtWidgets.QFrame(self.tabWidgetPage1)
         self.line.setGeometry(QtCore.QRect(210, -10, 21, 611))
         self.line.setFrameShape(QtWidgets.QFrame.VLine)
@@ -196,6 +225,7 @@ class Ui_MainWindow(object):
         self.groupBox.setTitle("")
         self.groupBox.setFlat(True)
         self.groupBox.setObjectName("groupBox")
+
 
         # Filtering by State - Format: (Label : ComboBox)
         self.stateFilterLabel = self.createLabel("groupBox",5, 25, 50, 50)
@@ -281,6 +311,7 @@ class Ui_MainWindow(object):
         self.petFriendlyFilterCheckBox = self.createCheckBox("groupBox", 5, 211, 20, 20)
         self.petFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
+
         # Setting ScrollArea
         self.scrollAreaWidgetContainer = QtWidgets.QWidget()
         self.scrollAreaWidgetContainer.setObjectName("scrollAreaWidgetContainer")
@@ -296,6 +327,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContainer)
         self.scrollAreaWidgetContainer.setLayout(self.verticalLayout_3)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
+
 
 
         # Adds multiple tabs
