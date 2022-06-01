@@ -158,6 +158,25 @@ class Ui_MainWindow(object):
         self.controlScrollArea()
         attributeList = [None, None, None, None, None, None]
 
+        with open('output_report.txt', 'w') as f:
+            f.write("Selected State?:")
+            f.write(currentSelectedState)
+            f.write("| Selected City?:")
+            f.write(currentSelectedCity)
+            f.write("| Selected Type?:")
+            f.write(currentSelectedType)
+            f.write("| Wheelchair Accessibility is Checked?:")
+            f.write(str(currentCheckedWheelchairAccessibility))
+            f.write("| Family Friendliness is Checked?:")
+            f.write(str(currentCheckedFamilyFriendliness))
+            f.write("| Pet Friendliness is Checked?:")
+            f.write(str(currentCheckedPetFriendliness))
+            f.write("| Currently sorting by:")
+            f.write(currentSorter)
+            for element in filteredAttractionsList:
+                f.write(str(element))
+                f.write("\n")
+
     def sortingAttractions(self):
         if self.sortingComboBox.currentText() == "Rating: lowest to highest":
             filteredAttractionsList.sort(key = itemgetter(9), reverse=False)
