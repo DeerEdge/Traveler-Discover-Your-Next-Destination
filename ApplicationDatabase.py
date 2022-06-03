@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import psycopg2
+# import time
 
 from ApplicationFilterRequest import FilterRequest
 from SQLParser import parse
@@ -11,6 +12,7 @@ def getAttractions(filters):
     global sql
     conn = None
     try:
+        # start = time.time()
         whereClauseAdded = False
         # read connection parameters
         params = parse()
@@ -26,6 +28,8 @@ def getAttractions(filters):
         results = cur.fetchall()
         # close the communication with the PostgreSQL
         cur.close()
+        # print('Time taken for DB query: '+ str(end - start))
+        # start = time.time()
         return results
     finally:
         if conn is not None:
@@ -55,6 +59,8 @@ def generateSQL(filters):
     if filters.petFriendly is not None:
         checkClause()
         sql += 'PET_FRIENDLY = ' + str(filters.petFriendly)
+    # print('Time taken for generateSQL: ' + str(end - start))
+    # start = time.time()
 
 def checkClause():
     global sql

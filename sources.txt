@@ -1,81 +1,386 @@
- U.S. Space and Rocket Center,Huntsville,Alabama,1970
+ U.S. Space and Rocket Center, Huntsville, Alabama, 1970
  https://www.rocketcenter.com
 
- Birmingham Civil Rights Institute,Birmingham,Alabama,1992
+ Huntsville Museum of Art, Huntsville, Alabama, 1973
+ https://hsvmuseum.org/
+
+ Huntsville Depot Museum, Huntsville, Alabama, 1860
+ https://earlyworks.com/huntsville-historic-depot-museum
+
+ Lowe Mill Arts & Entertainment, Huntsville, Alabama, 2001
+ https://lowemill.art/
+
+ Broadway Theater League, Huntsville, Alabama, 1959
+ https://broadwaytheatreleague.org/
+
+ John Hunt Park Championship Soccer Stadium, Huntsville, Alabama, 2000
+ https://northalabamasc.org/
+
+ Huntsville Botanical Garden, Huntsville, Alabama, 1988
+ https://hsvbg.org/
+
+ Monte Sano State Park, Huntsville, Alabama, 1900
+ https://www.alapark.com/parks/monte-sano-state-park
+
+ Land Trust of North Alabama: Monte Sano Nature Preserve, Huntsville, Alabama, 1900
+ https://www.landtrustnal.org/properties/monte-sano-preserve/
+
+ Po Boy Factory, Huntsville, Alabama, 2000
+ https://www.poboyfactory.com/
+
+ Hildegard's German Cuisine, Huntsville, Alabama, 2007
+ https://hildegardsgermancuisine.com/
+
+ 1892 East Restaurant & Tavern
+, Huntsville, Alabama, 1892
+ http://www.1892east.com/
+
+ Birmingham Civil Rights Institute, Birmingham, Alabama, 1992
  https://www.bcri.org
 
- The National Memorial for Peace and Justice,Montgomery,Alabama,2018
+ Birmingham Museum of Art, Birmingham, Alabama, 1951
+ https://www.artsbma.org/
+
+ Sloss Furnaces National Historic Landmark, Birmingham, Alabama, 1881
+ https://www.slossfurnaces.com/
+
+ Birmingham Zoo, Birmingham, Alabama, 1955
+ https://www.birminghamzoo.com/
+
+ Alabama Theatre, Birmingham, Alabama, 1927
+ https://alabamatheatre.com/
+
+ Barber Motorsports Park, Birmingham, Alabama, 2003
+ https://barberracingevents.com/
+
+ Oak Mountain State Park, Birmingham, Alabama, 1927
+ https://www.alapark.com/parks/oak-mountain-state-park
+
+ Birmingham Botanical Gardens, Birmingham, Alabama, 1964
+ https://www.bbgardens.org/
+
+ Moss Rock Preserve, Birmingham, Alabama, 2003
+ http://www.hooveral.org/214/Moss-Rock-Preserve
+
+ Corry's Restaurant, Birmingham, Alabama, 2002
+ https://corrysrestaurant.com/
+
+ Dreamland BBQ, Birmingham, Alabama, 1962
+ https://dreamlandbbq.com/
+
+ Urban Cookhouse, Birmingham, Alabama, 2010
+ https://www.uc-birmingham.com/
+
+ The National Memorial for Peace and Justice, Montgomery, Alabama, 2018
  https://museumandmemorial.eji.org/memorial
 
- USS Alabama Battleship Memorial Park,Mobile,Alabama,1963
+ Alabama State Capitol, Montgomery, Alabama, 1872
+ https://ahc.alabama.gov/alabama-state-capitol.aspx
+
+ The National Memorial for Peace and Justice, Montgomery, Alabama, 2018
+ http://museumandmemorial.eji.org/
+
+ Montgomery Zoo & Mann Wildlife Learning Museum, Montgomery, Alabama, 1920
+ http://www.montgomeryzoo.com/
+
+ Capri Theatre, Montgomery, Alabama, 1941
+ http://www.capritheatre.org/
+
+ Montgomery Performing Arts Centre, Montgomery, Alabama, 2014
+ http://www.mpaconline.org/
+
+ Riverfront Park, Montgomery, Alabama, 1900
+ http://www.funinmontgomery.com/
+
+ Alabama Safari Park, Montgomery, Alabama, 2020
+ https://www.alabamasafaripark.com/
+
+ Cooters Pond Park, Montgomery, Alabama, 2000
+ http://www.prattvilleal.gov/departments/parks-a-facilities.html
+
+ Central Restaurant, Montgomery, Alabama, 2000
+ https://www.central129coosa.com/home
+
+ Mrs B's Home Cooking, Montgomery, Alabama, 2000
+ http://mrs-bs-home-cooking.cafes-city.com/
+
+ Wintzell's Oyster House, Montgomery, Alabama, 1938
+ http://www.wintzellsoysterhouse.com/location/montgomery/
+
+ USS Alabama Battleship Memorial Park, Mobile, Alabama, 1963
  https://www.ussalabama.com
 
- Tuscaloosa River Walk,Tuscaloosa,Alabama,2002
+ History Museum of Mobile, Mobile, Alabama, 1858
+ http://www.historymuseumofmobile.com/
+
+ USS Alabama, Mobile, Alabama, 1930
+ https://www.ussalabama.com/
+
+ Exploreum Science Center & Poarch Band of Creek Indians Digital Dome Theater, Mobile, Alabama, 1998
+ http://www.exploreum.com/
+
+ Saenger Theatre Mobile, Mobile, Alabama, 1964
+ http://www.mobilesaenger.com/
+
+ Mobile Carnival Museum, Mobile, Alabama, 2005
+ http://www.mobilecarnivalmuseum.com/
+
+ Bellingrath Gardens and Home, Mobile, Alabama, 1958
+ http://www.bellingrath.org/
+
+ Meaher State Park, Mobile, Alabama, 1900
+ https://www.alapark.com/parks/meaher-state-park
+
+ Mobile Botanical Gardens, Mobile, Alabama, 1974
+ https://mobilebotanicalgardens.org/
+
+ Maple Street Biscuit Company Mobile, Mobile, Alabama, 2012
+ https://maplestreetbiscuits.com/our-menu-2/
+
+ Chicken Salad Chick, Mobile, Alabama, 2000
+ https://www.chickensaladchick.com/mobile-university/
+
+ Soul Bowlz, Mobile, Alabama, 2000
+ http://www.soulbowlz.com/
+
+ Alabama Museum of Natural History, Tuscaloosa, Alabama, 1909
+ https://almnh.museums.ua.edu/
+
+ Paul W. Bryant Museum, Tuscaloosa, Alabama, 1988
+ http://bryantmuseum.com/
+
+ Jemison-Van De Graaff Mansion, Tuscaloosa, Alabama, 1966
+ https://historictuscaloosa.org/
+
+ Bama Theatre, Tuscaloosa, Alabama, 1970
+ http://tuscarts.org/
+
+ Kentuck Art Center & Festival, Tuscaloosa, Alabama, 1971
+ http://www.kentuck.org/
+
+ Tuscaloosa Amphitheater, Tuscaloosa, Alabama, 2011
+ http://www.tuscaloosaamphitheater.com/
+
+ Tuscaloosa River Walk, Tuscaloosa, Alabama, 2002
  https://visittuscaloosa.com/listing/the-riverwalk/
 
- Alaska Native Heritage Center,Anchorage,Alaska,1989
+ Moundville Archaeological Park, Tuscaloosa, Alabama, 1422
+ http://moundville.museums.ua.edu/
+
+ Lake Lurleen State Park, Tuscaloosa, Alabama, 2000
+ http://www.alapark.com/lake-lurleen-state-park
+
+ Chuck's Fish, Tuscaloosa, Alabama, 2009
+ https://www.chucksfish.com/location/chucks-fish-tuscaloosa/
+
+ Avenue Pub, Tuscaloosa, Alabama, 2014
+ https://www.avepub.com/
+
+
+ Flavaz Seafood & Soulfood Restaurant, Tuscaloosa, Alabama, 2000
+ http://flavazseafoodandsoulfood.com/
+
+ Alaska Native Heritage Center, Anchorage, Alaska, 1989
  https://www.alaskanative.net/
 
- Anchorage Museum at Rasmuson Center,Anchorage,Alaska,1968
+ Anchorage Museum at Rasmuson Center, Anchorage, Alaska, 1968
  https://www.anchoragemuseum.org/
 
- Chugach State Park,Anchorage,Alaska,1970
+ Chugach State Park, Anchorage, Alaska, 1970
  http://dnr.alaska.gov/parks/aspunits/chugach/chugachindex.htm
 
- Kincaid Grill and Wine Bar,Anchorage,Alaska,2003
+ Kincaid Grill and Wine Bar, Anchorage, Alaska, 2003
  http://kincaidgrill.com/
 
- Alyeska Resort,Anchorage,Alaska,1994
+ Alyeska Resort, Anchorage, Alaska, 1994
  https://www.alyeskaresort.com/
 
- Bear Tooth Theatrepub,Anchorage,Alaska,2000
+ Bear Tooth Theatrepub, Anchorage, Alaska, 2000
  http://beartooththeatre.net/
 
- Mendenhall Glacier,Juneau,Alaska,1942
+ Mendenhall Glacier, Juneau, Alaska, 1942
  https://www.fs.usda.gov/detail/tongass/about-forest/offices/?cid=stelprdb5400800
 
- Phoenix Art Museum,Phoenix,Arizona,1959
+ Tracy Arm, Juneau, Alaska, 1960
+ https://www.tripadvisor.com/Attraction_Review-g31020-d630993-Reviews-Tracy_Arm_Fjord-Juneau_Alaska.html
+
+ Mount Roberts Tramway, Juneau, Alaska, 1996
+ https://goldbelttram.com
+
+ Historic Gold Mining and Panning Tour, Juneau, Alaska, 1978
+ https://www.alaska.org/detail/ata-gold-panning-adventure#getting-there
+
+ Deckhand Dave's Fish Tacos, Juneau, Alaska, 2016
+ http://www.deckhanddaves.com/new-page/
+
+ Arctic Circle & Northern Lights Tour, Fairbanks, Alaska, 1987
+ https://www.alaska-wildlife-guide.com/winter-tours/northern-lights-tours-fairbanks/arctic-circle-aurora/
+
+ Museum of the North, Fairbanks, Alaska, 1929
+ https://www.uaf.edu/museum/
+
+ Running Reindeer Ranch, Fairbanks, Alaska, 2007
+ https://runningreindeer.com
+
+ Pioneer Park, Fairbanks, Alaska, 1967
+ https://www.fnsb.gov/462/Pioneer-Park
+
+ The Cookie Jar Restaurant, Fairbanks, Alaska, 1986
+ https://cookiejarfairbanks.com/
+
+ Museum of Alaska Transportation, Wasilla, Alaska, 1967
+ http://www.museumofalaska.org/
+
+ Wasilla Museum & Visitor Center, Wasilla, Alaska, 1967
+ http://www.cityofwasilla.com/museum
+
+ Palmer Hay Flats State Game Refuge, Wasilla, Alaska, 1975
+ https://www.adfg.alaska.gov/index.cfm?adfg=palmerhayflats.main
+
+ Extreme Fun Center, Wasilla, Alaska, 2000
+ http://wasilla.extremefuncenters.com/
+
+ Basil Ginger, Wasilla, Alaska, 2000
+ http://basilginger.com/
+
+ Knik Museum and Mushers Hall of Fame, Knik-Fairview, Alaska, 1967
+ http://www.wkhsociety.org/
+
+ Reflections Lake, Knik-Fairview, Alaska, 2000
+ https://www.nps.gov/state/ak/index.htm
+
+ Lucille Lake, Knik-Fairview, Alaska, 2000
+ https://www.nps.gov/state/ak/index.htm
+
+ Matanuska Lake, Knik-Fairview, Alaska, 2000
+ https://www.nps.gov/state/ak/index.htm
+
+ Knik Pizza, Knik-Fairview, Alaska, 2000
+ https://slicelife.com/restaurants/ak/wasilla/99654/knik-pizza-llc/menu
+
+ Phoenix Art Museum, Phoenix, Arizona, 1959
  https://phxart.org/
 
- The Japanese Friendship Garden of Phoenix,Phoenix,Arizona,1996
+ The Japanese Friendship Garden of Phoenix, Phoenix, Arizona, 1996
  https://www.japanesefriendshipgarden.org/
 
- Castles N' Coasters,Phoenix,Arizona,1976
+ Castles N' Coasters, Phoenix, Arizona, 1976
  https://www.castlesncoasters.com/
 
- Pueblo Grande Museum Archaeological Park,Phoenix,Arizona,1924
+ Pueblo Grande Museum Archaeological Park, Phoenix, Arizona, 1924
  https://www.phoenix.gov/parks/arts-culture-history/pueblo-grande/
 
- Desert Botanical Garden,Phoenix,Arizona,1937
+ Desert Botanical Garden, Phoenix, Arizona, 1937
  https://dbg.org/
 
- Saguaro National Park,Tucson,Arizona,1994
+ Saguaro National Park, Tucson, Arizona, 1994
  https://www.nps.gov/sagu/index.htm
 
- Pima Air & Space Museum,Tucson,Arizona,1976
+ Pima Air & Space Museum, Tucson, Arizona, 1976
  https://pimaair.org/
 
- Mission San Xavier del bac,Tucson,Arizona,1783
+ Mission San Xavier del bac, Tucson, Arizona, 1783
  https://sanxaviermission.org/
 
- Funtasticks Family Fun Park,Tucson,Arizona,2000
+ Funtasticks Family Fun Park, Tucson, Arizona, 2000
  https://www.funtasticks.com/index.php
 
- Gene C. Reid Park,Tucson,Arizona,1925
+ Gene C. Reid Park, Tucson, Arizona, 1925
  https://www.tucsonaz.gov/parks/genecreidpark
 
- Chapel of the Holy Cross,Sedona,Arizona,1956
+ Chapel of the Holy Cross, Sedona, Arizona, 1956
  https://chapeloftheholycross.com/
 
- Cathedral Rock Trail,Sedona,Arizona,1908
+ Cathedral Rock Trail, Sedona, Arizona, 1908
  https://www.alltrails.com/trail/us/arizona/cathedral-rock-trail
 
- Sedona Heritage Museum,Sedona,Arizona,2007
+ Sedona Heritage Museum, Sedona, Arizona, 2007
  https://sedonamuseum.org/
 
- Sedona Arts Center,Sedona,Arizona,1958
+ Sedona Arts Center, Sedona, Arizona, 1958
  https://sedonaartscenter.org/
 
- Tlaquepaque Arts & Shopping Village,Sedona,Arizona,1970
+ Tlaquepaque Arts & Shopping Village, Sedona, Arizona, 1970
  https://www.tlaq.com/
+
+ Wild West Experience Hike, Mesa, Arizona, 1994
+ https://www.visitmesa.com/things-to-do/arts-culture/wild-west/
+
+ Papago Park, Mesa, Arizona, 1914
+ https://www.visitphoenix.com/sonoran-desert/parks/papago-park/
+
+ Mesa Arts Center, Mesa, Arizona, 2005
+ https://www.mesaartscenter.com
+
+ Usery Mountain Regional Park, Mesa, Arizona, 1967
+ https://www.maricopacountyparks.net/usery-mountain-regional-park-um/
+
+ Green Corner Restaurant, Mesa, Arizona, 2009
+ https://greencorneraz.com
+
+ Taliesin West, Scottsdale, Arizona, 1959
+ https://franklloydwright.org/
+
+ Western Spirit: Scottsdale’s Museum of the West, Scottsdale, Arizona, 2000
+ https://scottsdalemuseumwest.org/
+
+ Hole in the Rock, Scottsdale, Arizona, 1879
+ https://www.phoenix.gov/parks/trails/locations/papago-park
+
+ Scottsdale Center For The Performing Arts, Scottsdale, Arizona, 1975
+ http://www.scottsdaleperformingarts.org/
+
+ The Mission Old Town, Scottsdale, Arizona, 2008
+ https://www.themissionaz.com/
+
+ Arkansas State Capital, Little Rock, Arkansas, 1915
+ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjR4eu2voj4AhV9m44IHRk6CPUQFnoECAoQAQ&url=https%3A%2F%2Fwww.sos.arkansas.gov%2Fstate-capitol&usg=AOvVaw3RwhjPd9iSjjqNCt8KIHDm
+
+ Big Dam Bridge, Little Rock, Arkansas, 2006
+ https://vacationidea.com/destinations/best-things-to-do-in-little-rock.html
+
+ Metro Streetcar, Little Rock, Arkansas, 1876
+ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj2__vCv4j4AhXpkI4IHSLlCPsQFnoECCsQAQ&url=https%3A%2F%2Frrmetro.org%2Fservices%2Fstreetcar%2Fmaps-schedules%2F&usg=AOvVaw0AEk4qE1nG0EuZTD8zBGbs
+
+ The Arkansas River Trial System, Little Rock, Arkansas, 1998
+ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi61eyywIj4AhXtnI4IHU7BDzsQFnoECAcQAQ&url=https%3A%2F%2Fwww.littlerock.com%2Fdocs%2Fdefault-source%2Fbrochure-downloads%2Farkansasrivertrailfall2017.pdf%3Fsfvrsn%3D46578ab6_2&usg=AOvVaw01jT3YavA6Jth1oaUpnA_j
+
+ Museum Of Discovery, Little Rock, Arkansas, 1927
+ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiruaKSwYj4AhXLoY4IHQUMAf4QFnoECAQQAQ&url=https%3A%2F%2Fmuseumofdiscovery.org%2F&usg=AOvVaw38HvxcrqAGCG19O12c0g6o
+
+ Rivervalley Artisan Market, Fort Smith, Arkansas, 1942
+ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwidgZnhwoj4AhUcoY4IHfqTArAQFnoECAYQAQ&url=http%3A%2F%2Ffortsmith365.com%2Ffort-smith-arts-culture%2Ffort-smith-outdoor-markets%2Friver-valley-artisan-market-2%2F&usg=AOvVaw0y8axAUhZTpXPZ5rh88gIG
+
+ The Clayton House, Fort Smith, Arkansas, 1975
+ http://claytonhouse.org
+
+ The Park at West End, Fort Smith, Arkansas, 1897
+ https://www.arkansas.com/fort-smith/attractions-culture/park-west-end
+
+ Ben Geren Regional Park, Fort Smith, Arkansas, 1872
+ https://sebastiancountyar.gov/
+
+ Eunice's Country Cookin', Fort Smith, Arkansas, 1976
+ http://www.eunicescountrycookin.com/
+
+ Arkansas Air and Military Museum, Fayetteville, Arkansas, 1986
+ http://www.arkansasairandmilitary.com/
+
+ Prairie Grove Battlefield State Park, Fayetteville, Arkansas, 1862
+ https://www.arkansasstateparks.com/parks/prairie-grove-battlefield-state-park
+
+ Lokomotion Family Fun Park, Fayetteville, Arkansas, 2000
+ https://www.lokomotion.com/
+
+ Botanical Garden of the Ozarks, Fayetteville, Arkansas, 1993
+ https://www.bgozarks.org/
+
+ Mellow Mushroom Fayetteville, Fayetteville, Arkansas, 1974
+ https://mellowmushroom.com/location/ar-fayetteville-1460-e-augustine-ln-72703/
+
+ Shiloh Museum of Ozark History, Springsdale, Arkansas, 1965
+ https://shilohmuseum.org/
+
+ Arkansas & Missouri Railroad, Springsdale, Arkansas, 1982
+ https://www.amrailroad.com/
 
