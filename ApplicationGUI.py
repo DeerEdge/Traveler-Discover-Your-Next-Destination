@@ -342,7 +342,7 @@ class Ui_MainWindow(object):
                 f.write(self.outputLogs.toPlainText())
                 f.close()
         else:
-            fileName = ('User Report ' + str(len(directory)))
+            fileName = ('User Report ' + (str(len(directory) + 1)))
             fileLocation = os.path.join(path, fileName)
             with open(fileLocation, 'w') as f:
                 f.write("User Information: " + "Full Name - " + self.nameField.text() + "Email - " + self.emailField.text())
