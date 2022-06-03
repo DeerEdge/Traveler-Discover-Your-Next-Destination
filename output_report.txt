@@ -1,7 +1,128 @@
-Selected State?:Alaska| Selected City?:None| Selected Type?:None| Wheelchair Accessibility is Checked?:False| Family Friendliness is Checked?:False| Pet Friendliness is Checked?:False| Currently sorting by:Recommended(6, 'Alaska Native Heritage Center', 1989, 'The Alaska Native Heritage Center, northeast of the city center, explores the cultures of 11 Alaskan indigenous groups. At the Heritage Center, six traditional dwellings surround the small Lake Tiulana, with each demonstration village displaying artifacts and offering various experiences.', 'Alaska', 'Anchorage', 'Cultural/Historical', 2, 2, Decimal('4.6'), True, True, False, 'https://www.alaskanative.net/', None)
-(7, 'Anchorage Museum at Rasmuson Center', 1968, 'The facility contains a broad range of art and historic items related to Alaska and the arctic. The museum features numerous traveling exhibits from around the world each year.', 'Alaska', 'Anchorage', 'Cultural/Historical', 2, 2, Decimal('4.5'), True, True, False, 'https://www.anchoragemuseum.org/', None)
-(8, 'Chugach State Park', 1970, 'One of the four largest state parks in the United States, Chugach State Park covers a staggering 700 square miles. This rugged terrain of mountains, rivers, lakes, and glaciers is home to wolves, moose, bears, beavers, lynx, and other wildlife. It’s also offers hiking, skiing, and camping.', 'Alaska', 'Anchorage', 'Nature/Outdoor', 3, 3, Decimal('4.8'), True, True, True, 'http://dnr.alaska.gov/parks/aspunits/chugach/chugachindex.htm', None)
-(9, 'Kincaid Grill and Wine Bar', 2003, 'This bar serves an impressive menu of Alaskan cuisine, from seafood to meat to decadent desserts.', 'Alaska', 'Anchorage', 'Food', 2, 2, Decimal('3.9'), True, True, False, 'http://kincaidgrill.com/', None)
-(10, 'Alyeska Resort', 1994, 'Alyeska Resort is truly a playground for all levels of skiers and riders. Offering 1,610 skiable acres, 76 named trails and over 669″ of snow annually, Alyeska lives up to its reputation of ‘steep and deep’. ', 'Alaska', 'Anchorage', 'Sports', 2, 3, Decimal('4.5'), False, True, False, 'https://www.alyeskaresort.com/', None)
-(11, 'Bear Tooth Theatrepub', 2000, 'The Theatrepub has become a second-run movie hub for Anchorage, as well as the only place in town to catch relevant documentaries and Art House films. And as an added bonus, the monthly concerts that had once been hosted exclusively at Moose’s Tooth now had an indoor spot for the long winters.', 'Alaska', 'Anchorage', 'Entertainment', 2, 1, Decimal('4.6'), True, False, False, 'http://beartooththeatre.net/', None)
-(12, 'Mendenhall Glacier', 1942, 'Experience the splendor of Mendenhall Glacier at the Mendenhall Glacier Visitor Center. Here, you can enjoy views of the thirteen-mile-long river of ice, which terminates on the far side of Mendenhall Lake, and watch blue icebergs floating in the water amidst reflections of southeast Alaska’s coast mountains. The Mendenhall Glacier is one of many major glaciers that connect to the vast Juneau Ice Field, a 1,500 square mile remnant of the last ice age, cradled high in the coast mountain’s lofty peaks.', 'Alaska', 'Juneau', 'Nature/Outdoor', 1, 1, Decimal('4.9'), True, True, False, 'https://www.fs.usda.gov/detail/tongass/about-forest/offices/?cid=stelprdb5400800', None)
+Selected State?:Alabama
+| Selected City?:None
+| Selected Type?:None
+| Wheelchair Accessibility is Checked?:False
+| Family Friendliness is Checked?:False
+| Pet Friendliness is Checked?:False
+| Currently sorting by:Recommended
+
+(1, 'U.S. Space and Rocket Center', 1970, 'The U.S. Space & Rocket Center in Huntsville, Alabama is a museum operated by the government of Alabama, showcasing rockets, achievements, and artifacts of the U.S. space program. ', 'Alabama', 'Huntsville', 'Cultural/Historical', 1, 2, Decimal('4.7'), True, True, 'f', 'https://www.rocketcenter.com', Decimal('34.7113703100'), Decimal('-86.6539148400'))
+
+(2, 'Huntsville Museum of Art', 1973, 'The Museum’s 75,034 square foot facility is located in Downtown Huntsville and includes fourteen galleries covering 20,000 square feet.', 'Alabama', 'Huntsville', 'Cultural/Historical', 1, 1, Decimal('4.6'), True, True, 'f', 'https://hsvmuseum.org/', Decimal('34.7273189400'), Decimal('-86.5872215700'))
+
+(3, 'Huntsville Depot Museum', 1860, 'The Huntsville Depot located on the Norfolk Southern Railway line in downtown Huntsville is the oldest surviving railroad depot in Alabama and one of the oldest in the United States.', 'Alabama', 'Huntsville', 'Cultural/Historical', 1, 2, Decimal('4.4'), True, True, 'f', 'https://earlyworks.com/huntsville-historic-depot-museum', Decimal('34.7346536700'), Decimal('-86.5908251500'))
+
+(4, 'Lowe Mill Arts & Entertainment', 2001, 'Lowe Mill ARTS & Entertainment is the largest privately owned arts facility in the southern United States. With a focus on visual arts, this huge historic factory building has been redeveloped into 152 working studios for over 200 artists and makers, 7 galleries, a theatre, community garden, and performance venues.', 'Alabama', 'Huntsville', 'Entertainment', 2, 3, Decimal('4.7'), False, True, 'f', 'https://lowemill.art/', Decimal('34.7156170200'), Decimal('-86.5974593500'))
+
+(5, 'Broadway Theater League', 1959, 'League presents touring musicals & other major productions at Mark C. Smith Concert Hall.', 'Alabama', 'Huntsville', 'Entertainment', 3, 3, Decimal('4.8'), True, True, 'f', 'https://broadwaytheatreleague.org/', Decimal('34.7282269900'), Decimal('-86.5902437000'))
+
+(6, 'John Hunt Park Championship Soccer Stadium\r', 2000, 'Public recreational area featuring 428 acres of sports fields & courts, plus a community building.', 'Alabama', 'Huntsville', 'Entertainment', 1, 2, Decimal('4.4'), True, True, 't', 'https://northalabamasc.org/', Decimal('34.6900385100'), Decimal('-86.5875695700'))
+
+(7, 'Huntsville Botanical Garden', 1988, 'The Huntsville Botanical Garden is a 118 acres botanical garden located at 4747 Bob Wallace Avenue, Huntsville, Alabama, near the U.S. Space & Rocket Center.', 'Alabama', 'Huntsville', 'Nature/Outdoor', 1, 1, Decimal('4.7'), True, True, 't', 'https://hsvbg.org/', Decimal('34.7077160800'), Decimal('-86.6340911500'))
+
+(8, 'Monte Sano State Park\r', 1900, 'Monte Sano State Park is a publicly owned recreation area and mountaintop retreat encompassing 2,140 acres on the eastern portion of the top and slopes of Monte Sano Mountain on the east side of Huntsville, Alabama.', 'Alabama', 'Huntsville', 'Nature/Outdoor', 1, 1, Decimal('4.8'), False, True, 't', 'https://www.alapark.com/parks/monte-sano-state-park', Decimal('34.7448661400'), Decimal('-86.5185387600'))
+
+(9, 'Land Trust of North Alabama: Monte Sano Nature Preserve', 1900, 'Monte Sano Nature Preserve is, at 1,107 acres, one of the largest urban nature preserves in the US and is located on Monte Sano Mountain in Huntsville, Alabama.', 'Alabama', 'Huntsville', 'Nature/Outdoor', 1, 1, Decimal('4.8'), False, True, 't', 'https://www.landtrustnal.org/properties/monte-sano-preserve/', Decimal('34.7437559200'), Decimal('-86.5443755400'))
+
+(10, 'Po Boy Factory', 2000, 'New Orleans-style seafood & Cajun-Creole favorites star at this funky spot filled with artwork.', 'Alabama', 'Huntsville', 'Food', 2, 1, Decimal('4.5'), True, True, 'f', 'https://www.poboyfactory.com/', Decimal('34.7449470400'), Decimal('-86.5768091400'))
+
+(11, "Hildegard's German Cuisine\r", 2007, 'Low-key restaurant for schnitzels, sausages & other German classics, along with imported beer.', 'Alabama', 'Huntsville', 'Food', 2, 1, Decimal('4.6'), True, True, 'f', 'https://hildegardsgermancuisine.com/', Decimal('34.7132255000'), Decimal('-86.5742294700'))
+
+(12, '1892 East Restaurant & Tavern\n', 1892, 'Comfortable bar & grill focusing on locally sourced global recipes with lots of vegetarian options.', 'Alabama', 'Huntsville', 'Food', 3, 1, Decimal('4.5'), True, True, 'f', 'http://www.1892east.com/', Decimal('34.7388408400'), Decimal('-86.5756727700'))
+
+(13, 'Birmingham Civil Rights Institute', 1992, 'Museum that shows history of different races', 'Alabama', 'Birmingham', 'Cultural/Historical', 1, 2, Decimal('4.4'), True, True, 'f', 'https://www.bcri.org', Decimal('33.5161634400'), Decimal('-86.8144996400'))
+
+(14, 'Birmingham Museum of Art', 1951, 'The Birmingham Museum of Art is a museum in Birmingham, Alabama. It has one of the most extensive collections of artwork in the Southeastern United States, with more than 24,000 paintings, sculptures, prints, drawings, and decorative arts representing numerous Cycultures, including Asian, European, American, African, Pre-Columbian, and Native American.', 'Alabama', 'Birmingham', 'Cultural/Historical', 1, 1, Decimal('4.7'), True, True, 'f', 'https://www.artsbma.org/', Decimal('33.5223211200'), Decimal('-86.8100956600'))
+
+(15, 'Sloss Furnaces National Historic Landmark\r', 1881, 'Blast furnace plant where iron was made from 1882–1971, now an arts & education center with tours.', 'Alabama', 'Birmingham', 'Cultural/Historical', 1, 1, Decimal('4.6'), False, True, 'f', 'https://www.slossfurnaces.com/', Decimal('33.5209791900'), Decimal('-86.7905385300'))
+
+(16, 'Birmingham Zoo\r', 1955, "The zoo features elephants, lions & hundreds of other animals plus exhibits & kids' activities.", 'Alabama', 'Birmingham', 'Entertainment', 2, 2, Decimal('4.3'), False, True, 't', 'https://www.birminghamzoo.com/', Decimal('33.4862234300'), Decimal('-86.7795735900'))
+
+(17, 'Alabama Theatre\r', 1927, 'Classic films & theatrical works presented in an ornate, former movie theater from the 1920s.', 'Alabama', 'Birmingham', 'Entertainment', 1, 2, Decimal('4.8'), True, True, 'f', 'https://alabamatheatre.com/', Decimal('33.5165462000'), Decimal('-86.8089180900'))
+
+(18, 'Barber Motorsports Park\r', 2003, 'Barber Motorsports Park is an 880 acres multi-purpose racing facility located in Birmingham, Alabama.', 'Alabama', 'Birmingham', 'Entertainment', 2, 2, Decimal('4.9'), False, True, 'f', 'https://barberracingevents.com/', Decimal('33.5328836200'), Decimal('-86.6201938500'))
+
+(19, 'Oak Mountain State Park\r', 1927, '9,940-acre area provides camping, cabins, 2 recreational lakes, a petting zoo, hiking trails & more.', 'Alabama', 'Birmingham', 'Nature/Outdoor', 1, 1, Decimal('4.7'), False, True, 't', 'https://www.alapark.com/parks/oak-mountain-state-park', Decimal('33.3261626200'), Decimal('-86.7588937300'))
+
+(20, 'Birmingham Botanical Gardens', 1964, 'The Birmingham Botanical Gardens is 67.5-acre of botanical gardens located adjacent to Lane Park at the southern foot of Red Mountain in Birmingham, Alabama.', 'Alabama', 'Birmingham', 'Nature/Outdoor', 1, 1, Decimal('4.8'), True, True, 't', 'https://www.bbgardens.org/', Decimal('33.4918333300'), Decimal('-86.7744958600'))
+
+(21, 'Moss Rock Preserve', 2003, 'Hiking trails run through this wooded, 349-acre nature preserve with streams & climbable boulders.', 'Alabama', 'Birmingham', 'Nature/Outdoor', 1, 1, Decimal('4.7'), False, True, 't', 'http://www.hooveral.org/214/Moss-Rock-Preserve', Decimal('33.3820036600'), Decimal('-86.8400382600'))
+
+(22, "Corry's Restaurant\r", 2002, 'A local soul food restaurant: Home of Delicious and Unique Flavors!', 'Alabama', 'Birmingham', 'Food', 1, 1, Decimal('4.4'), False, True, 'f', 'https://corrysrestaurant.com/', Decimal('33.4666897800'), Decimal('-86.8743338400'))
+
+(23, 'Dreamland BBQ\r', 1962, 'Local BBQ chain serving hickory-fired ribs, plates & sandwiches, plus wings & comfort sides.', 'Alabama', 'Birmingham', 'Food', 2, 1, Decimal('4.4'), True, True, 'f', 'https://dreamlandbbq.com/', Decimal('33.5381430000'), Decimal('-86.7987221800'))
+
+(24, 'Urban Cookhouse\r', 2010, 'Quick, counter-service spot offering sandwiches, salads & entrees with a focus on local produce.', 'Alabama', 'Birmingham', 'Food', 2, 1, Decimal('4.5'), True, True, 'f', 'https://www.uc-birmingham.com/', Decimal('33.4831366300'), Decimal('-86.7895571900'))
+
+(25, 'The National Memorial for Peace and Justice', 2018, 'Museum dedicated to the legacy of enslaved and Jim-Crow era Black people', 'Alabama', 'Montgomery', 'Cultural/Historical', 1, 1, Decimal('4.9'), True, True, 'f', 'https://museumandmemorial.eji.org/memorial', Decimal('32.3724282500'), Decimal('-86.3127693300'))
+
+(26, 'Alabama State Capitol', 1872, 'The Alabama State Capitol, listed on the National Register of Historic Places as the First Confederate Capitol, is the state capitol building for Alabama.', 'Alabama', 'Montgomery', 'Cultural/Historical', 1, 1, Decimal('4.5'), True, True, 'f', 'https://ahc.alabama.gov/alabama-state-capitol.aspx', Decimal('32.3775683600'), Decimal('-86.2998313000'))
+
+(27, 'The National Memorial for Peace and Justice', 2018, 'The National Memorial for Peace and Justice, informally known as the National Lynching Memorial, is a national memorial to commemorate the black victims of lynching in the United States.', 'Alabama', 'Montgomery', 'Cultural/Historical', 1, 1, Decimal('4.9'), True, False, 'f', 'http://museumandmemorial.eji.org/', Decimal('32.3724463700'), Decimal('-86.3128015200'))
+
+(28, 'Montgomery Zoo & Mann Wildlife Learning Museum', 1920, 'This enduring, 40-acre zoo features over 700 animals, plus a museum with taxidermy displays.', 'Alabama', 'Montgomery', 'Entertainment', 1, 2, Decimal('4.5'), True, True, 't', 'http://www.montgomeryzoo.com/', Decimal('32.4199140000'), Decimal('-86.2751980900'))
+
+(29, 'Capri Theatre', 1941, 'Historic nonprofit theater showing independent, foreign & classic films with beer & wine available.', 'Alabama', 'Montgomery', 'Entertainment', 1, 2, Decimal('4.7'), True, True, 'f', 'http://www.capritheatre.org/', Decimal('32.3525075800'), Decimal('-86.2909193900'))
+
+(30, 'Montgomery Performing Arts Centre', 2014, 'Local & traveling artists grace the stage at this sleek auditorium located at the Renaissance Hotel.', 'Alabama', 'Montgomery', 'Entertainment', 2, 3, Decimal('4.7'), True, True, 'f', 'http://www.mpaconline.org/', Decimal('32.3794194400'), Decimal('-86.3129130500'))
+
+(31, 'Riverfront Park', 1900, 'Riverboat rides, concerts, baseball & boating are among the attractions at this riverside compound.', 'Alabama', 'Montgomery', 'Nature/Outdoor', 1, 1, Decimal('4.6'), True, True, 't', 'http://www.funinmontgomery.com/', Decimal('32.3832527900'), Decimal('-86.3125418400'))
+
+(32, 'Alabama Safari Park', 2020, 'Alabama Safari Park not only participate in breeding programs and educate our visitors about the importance of protecting animals and their native habitats, but we also support organizations that work to ensure the animals thrive in the wild.', 'Alabama', 'Montgomery', 'Nature/Outdoor', 2, 1, Decimal('4.7'), False, True, 't', 'https://www.alabamasafaripark.com/', Decimal('32.2165423100'), Decimal('-86.3986781300'))
+
+(33, 'Cooters Pond Park', 2000, 'Serene green space with shade trees, 2 boat ramps, picnic pavilions, a dog park & a nut grove.', 'Alabama', 'Montgomery', 'Nature/Outdoor', 1, 1, Decimal('4.5'), True, True, 't', 'http://www.prattvilleal.gov/departments/parks-a-facilities.html', Decimal('32.4295838500'), Decimal('-86.4007746200'))
+
+(34, 'Central Restaurant', 2000, 'Sophisticated American restaurant serving creative fare in a dramatic warehouse dining space.', 'Alabama', 'Montgomery', 'Food', 3, 1, Decimal('4.6'), True, True, 'f', 'https://www.central129coosa.com/home', Decimal('32.3803894800'), Decimal('-86.3105193900'))
+
+(35, "Mrs B's Home Cooking", 2000, 'Down-home Southern plates whipped up in a small, humble house with old-timey photos & porch rockers.', 'Alabama', 'Montgomery', 'Food', 1, 1, Decimal('4.5'), True, True, 'f', 'http://mrs-bs-home-cooking.cafes-city.com/', Decimal('32.3664249700'), Decimal('-86.3485658400'))
+
+(36, "Wintzell's Oyster House", 1938, 'Informal chain eatery serving oysters, fried shrimp & other Gulf Coast seafood, plus happy hour.', 'Alabama', 'Montgomery', 'Food', 2, 2, Decimal('4.1'), True, True, 'f', 'http://www.wintzellsoysterhouse.com/location/montgomery/', Decimal('32.4793156800'), Decimal('-86.3296547900'))
+
+(37, 'USS Alabama Battleship Memorial Park', 1963, 'Museum showing the battleship USS Alabama', 'Alabama', 'Mobile', 'Cultural/Historical', 1, 1, Decimal('4.5'), True, True, 'f', 'https://www.ussalabama.com', Decimal('30.6836413600'), Decimal('-88.0165857400'))
+
+(38, 'History Museum of Mobile', 1858, 'Museum featuring local-history exhibits in a 19th-century Italianate city hall & marketplace.', 'Alabama', 'Mobile', 'Cultural/Historical', 1, 1, Decimal('4.6'), True, True, 'f', 'http://www.historymuseumofmobile.com/', Decimal('30.6897771900'), Decimal('-88.0398725900'))
+
+(39, 'USS Alabama', 1930, 'USS Alabama (BB-60) is a retired battleship. She was the fourth and final member of the South Dakota class of fast battleships built for the United States Navy in the 1930s.', 'Alabama', 'Mobile', 'Cultural/Historical', 1, 1, Decimal('4.8'), True, True, 'f', 'https://www.ussalabama.com/', Decimal('30.6819989800'), Decimal('-88.0143648700'))
+
+(40, 'Exploreum Science Center & Poarch Band of Creek Indians Digital Dome Theater', 1998, 'The Gulf Coast Exploreum Science Center is a non-profit science center that promotes science learning through a variety of activities, including exhibits, IMAX films, demonstrations, workshops and teacher professional development.', 'Alabama', 'Mobile', 'Entertainment', 1, 2, Decimal('4.4'), True, True, 'f', 'http://www.exploreum.com/', Decimal('30.6907064700'), Decimal('-88.0391504000'))
+
+(41, 'Saenger Theatre Mobile\r', 1964, 'Historical theater featuring live music, special events & lectures in a glamorous, polished setting.', 'Alabama', 'Mobile', 'Entertainment', 2, 2, Decimal('4.7'), True, True, 'f', 'http://www.mobilesaenger.com/', Decimal('30.6908813600'), Decimal('-88.0438110400'))
+
+(42, 'Mobile Carnival Museum\r', 2005, "Colorful parades & pageantry of Mardi Gras' past, featured in gallery rooms of a historic home.", 'Alabama', 'Mobile', 'Entertainment', 1, 1, Decimal('4.7'), True, True, 'f', 'http://www.mobilecarnivalmuseum.com/', Decimal('30.6887204100'), Decimal('-88.0452566300'))
+
+(43, 'Bellingrath Gardens and Home\r', 1958, 'Bellingrath Gardens and Home is the 65-acre public garden and historic home of Walter and Bessie Bellingrath, located on the Fowl River near Mobile, Alabama.', 'Alabama', 'Mobile', 'Nature/Outdoor', 1, 1, Decimal('4.8'), True, True, 't', 'http://www.bellingrath.org/', Decimal('30.4316812500'), Decimal('-88.1408374600'))
+
+(44, 'Meaher State Park\r', 1900, 'Meaher State Park is a publicly owned recreation area located on Big Island, an island at the north end of Mobile Bay that lies within the city limits of Spanish Fort, Alabama.', 'Alabama', 'Mobile', 'Nature/Outdoor', 1, 1, Decimal('4.6'), True, True, 't', 'https://www.alapark.com/parks/meaher-state-park', Decimal('30.6684832200'), Decimal('-87.9343821100'))
+
+(45, 'Mobile Botanical Gardens\r', 1974, 'Grounds adorned with native plants, Japanese Maples & Longleaf Pines, with a rental hall & trails.', 'Alabama', 'Mobile', 'Nature/Outdoor', 1, 1, Decimal('4.5'), True, True, 't', 'https://mobilebotanicalgardens.org/', Decimal('30.7002204900'), Decimal('-88.1619134600'))
+
+(46, 'Maple Street Biscuit Company Mobile\r', 2012, 'Casual cafe serving biscuit sandwiches & Southern sides for breakfast & lunch.', 'Alabama', 'Mobile', 'Food', 2, 1, Decimal('4.2'), True, True, 'f', 'https://maplestreetbiscuits.com/our-menu-2/', Decimal('30.6921557600'), Decimal('-88.1587039800'))
+
+(47, 'Chicken Salad Chick\r', 2000, 'Chain outlet specializing in many different types of chicken salads, plus sandwiches, soups & sides.', 'Alabama', 'Mobile', 'Food', 2, 2, Decimal('4.6'), True, True, 'f', 'https://www.chickensaladchick.com/mobile-university/', Decimal('30.6908653300'), Decimal('-88.1732239400'))
+
+(48, 'Soul Bowlz\r', 2000, 'Soul Bowlz Is a health food restaurant prioritizing Healthy, Nutrient Packed Bowl Of Wholesome Goodness.', 'Alabama', 'Mobile', 'Food', 1, 1, Decimal('4.6'), True, True, 'f', 'http://www.soulbowlz.com/', Decimal('30.6992973300'), Decimal('-88.1437436400'))
+
+(49, 'Alabama Museum of Natural History\r', 1909, 'Local paleontology, archaeology, geology & natural science exhibits at the University of Alabama.', 'Alabama', 'Tuscaloosa', 'Cultural/Historical', 1, 2, Decimal('4.5'), True, True, 'f', 'https://almnh.museums.ua.edu/', Decimal('33.2121140600'), Decimal('-87.5440129800'))
+
+(50, 'Paul W. Bryant Museum\r', 1988, "University of Alabama's museum for sports memorabilia, archives & exhibits featuring team stars.", 'Alabama', 'Tuscaloosa', 'Cultural/Historical', 1, 1, Decimal('4.8'), True, True, 'f', 'http://bryantmuseum.com/', Decimal('33.2067744000'), Decimal('-87.5397436600'))
+
+(51, 'Jemison-Van De Graaff Mansion\r', 1966, 'The Jemison–Van de Graaff Mansion, also known as the Jemison–Van de Graaf–Burchfield House, is a historic house in Tuscaloosa, Alabama, United States.', 'Alabama', 'Tuscaloosa', 'Cultural/Historical', 1, 1, Decimal('4.7'), True, True, 'f', 'https://historictuscaloosa.org/', Decimal('33.2022095500'), Decimal('-87.5646764300'))
+
+(52, 'Bama Theatre\r', 1970, 'This 1930s performing arts facility hosts local plays, film festivals, dance productions & more.', 'Alabama', 'Tuscaloosa', 'Entertainment', 2, 2, Decimal('4.7'), True, True, 'f', 'http://tuscarts.org/', Decimal('33.2087525800'), Decimal('-87.5681249400'))
+
+(53, 'Kentuck Art Center & Festival\r', 1971, 'Kentuck Art Center and Festival is an experiential arts and culture economic engine located in Historic Downtown Northport, Alabama.', 'Alabama', 'Tuscaloosa', 'Entertainment', 2, 2, Decimal('4.7'), False, True, 't', 'http://www.kentuck.org/', Decimal('33.2194927300'), Decimal('-87.5778074700'))
+
+(54, 'Tuscaloosa Amphitheater\r', 2011, 'Amphitheater by the Black Warrior River showcases outdoor concerts & events featuring national acts.', 'Alabama', 'Tuscaloosa', 'Entertainment', 3, 3, Decimal('4.6'), True, True, 'f', 'http://www.tuscaloosaamphitheater.com/', Decimal('33.2120603200'), Decimal('-87.5743860700'))
+
+(55, 'Tuscaloosa River Walk', 2002, 'A trail along the Southern Bank of the Black Warrior River', 'Alabama', 'Tuscaloosa', 'Nature/Outdoor', 1, 1, Decimal('4.7'), False, True, 't', 'https://visittuscaloosa.com/listing/the-riverwalk/', Decimal('33.2123367800'), Decimal('-87.5755529200'))
+
+(56, 'Moundville Archaeological Park\r', 1422, 'Ancient Native American site with self-guided & paid tours, plus a museum with artifacts & history.', 'Alabama', 'Tuscaloosa', 'Nature/Outdoor', 1, 1, Decimal('4.6'), True, True, 't', 'http://moundville.museums.ua.edu/', Decimal('33.0030730300'), Decimal('-87.6280146200'))
+
+(57, 'Lake Lurleen State Park\r', 2000, 'Recreation area for hiking & camping around a lake with a beach, boat rentals, fishing & more.', 'Alabama', 'Tuscaloosa', 'Nature/Outdoor', 1, 1, Decimal('4.6'), False, True, 't', 'http://www.alapark.com/lake-lurleen-state-park', Decimal('33.3018027000'), Decimal('-87.6747501000'))
+
+(58, "Chuck's Fish\r", 2009, 'Diverse menu of seafood, sushi, pizza & more in trendy surrounds with a loft & full bar.', 'Alabama', 'Tuscaloosa', 'Food', 3, 3, Decimal('4.4'), True, True, 'f', 'https://www.chucksfish.com/location/chucks-fish-tuscaloosa/', Decimal('33.2096027200'), Decimal('-87.5684151900'))
+
+(59, 'Avenue Pub', 2014, 'Relaxed, contemporary pub serving brunch & casual American fare, plus cocktails & local beers.', 'Alabama', 'Tuscaloosa', 'Food', 2, 2, Decimal('4.7'), True, True, 'f', 'https://www.avepub.com/\r\n', Decimal('33.2111099800'), Decimal('-87.5670668000'))
+
+(60, 'Flavaz Seafood & Soulfood Restaurant', 2000, 'Local eatery specializing in comfort American cuisine', 'Alabama', 'Tuscaloosa', 'Food', 1, 1, Decimal('4.6'), False, True, 'f', 'http://flavazseafoodandsoulfood.com/', Decimal('33.1952358300'), Decimal('-87.5233665900'))
+
