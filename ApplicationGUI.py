@@ -1,15 +1,20 @@
+import os
 import webbrowser
 import ApplicationDatabase
 import ApplicationFilterRequest
 import io
-import folium # pip install folium
+import folium
 
+from time import gmtime, strftime
 from operator import itemgetter
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout
-from PyQt5.QtWebEngineWidgets import QWebEngineView # pip install PyQtWebEngine
+from PyQt5.QtWebEngineWidgets import QWebEngineView
 
-from geopy import distance
+def clearLog():
+    with open("outputreport.txt", "r+") as f:
+        f.seek(0)
+        f.truncate()
 
 class Ui_MainWindow(object):
     global currentAttraction
@@ -30,8 +35,9 @@ class Ui_MainWindow(object):
             self.label = QtWidgets.QLabel(self.topGroupBoxBar)
         elif type == "sourcesTabWidget":
             self.label = QtWidgets.QLabel(self.sourcesTabWidget)
+        elif type == "reportWindowGroupBox":
+            self.label = QtWidgets.QLabel(self.reportWindow)
         self.label.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
-        self.label.setObjectName("label")
         return self.label
 
     def createComboBox(self,type,Xcoor,Ycoor,width,length):
@@ -43,7 +49,6 @@ class Ui_MainWindow(object):
         elif type == "topGroupBoxBar":
             self.comboBox = QtWidgets.QComboBox(self.topGroupBoxBar)
         self.comboBox.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
-        self.comboBox.setObjectName("comboBox")
         return self.comboBox
 
     def createCheckBox(self,type,Xcoor,Ycoor,width,length):
@@ -52,7 +57,6 @@ class Ui_MainWindow(object):
         if type == "groupBox":
             self.checkBox = QtWidgets.QCheckBox(self.groupBox)
         self.checkBox.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
-        self.checkBox.setObjectName("checkBox")
         return self.checkBox
 
     def createScrollAreaObject(self,Ycoor,attraction):
@@ -65,24 +69,59 @@ class Ui_MainWindow(object):
 
         labelXPos = 230
         labelYPos = 25
-        self.attractionTitle = self.createLabel("scrollAreaGroupBox", labelXPos, 0, 400, 50)
+        self.attractionTitle = self.createLabel("scrollAreaGroupBox", labelXPos, 0, 450, 50)
         self.attractionTitle.setObjectName("attractionName")
+        self.attractionTitle.setText((str(attraction[1]) + "  - (Est. " + (str(attraction[2])) + ")"))
         self.ratingLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 420, 0, 50, 50)
+        self.ratingLabel.setText((str(attraction[9])))
         self.locationLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos - 8, 200, 50)
-        # self.dateLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 20, 200, 50)
+        self.locationLabel.setText((str(attraction[5]) + ",  " + str(attraction[4])))
         self.typeLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 20, 200, 50)
+        self.typeLabel.setText((str(attraction[6])))
         self.priceLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 40, 200, 50)
+        if (str(attraction[7])) == '1':
+            self.priceLabel.setText("Price Level - $")
+        elif (str(attraction[7])) == '2':
+            self.priceLabel.setText("Price Level - $$")
+        else:
+            self.priceLabel.setText("Price Level - $$$")
         self.busynessLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 60, 200, 50)
-
-        self.wheelChairAccessibilityLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 150, labelYPos + 20, 200, 50)
-        self.familyFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 150, labelYPos + 40, 200, 50)
-        self.petFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 150, labelYPos + 60, 200, 50)
-
+        if (str(attraction[8])) == '1':
+            self.busynessLabel.setText("Low Busyness")
+        elif (str(attraction[8])) == '2':
+            self.busynessLabel.setText("Moderately Busy")
+        else:
+            self.busynessLabel.setText("Very Busy")
+        self.wheelChairAccessibilityLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 130, labelYPos + 20, 200, 50)
+        if ((attraction[10])):
+            self.wheelChairAccessibilityLabel.setText("Wheelchair Accessible? - Yes")
+        else:
+            self.wheelChairAccessibilityLabel.setText("Wheelchair Accessible? - No")
+        self.familyFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 130, labelYPos + 40, 200, 50)
+        if ((attraction[11])):
+            self.familyFriendlyLabel.setText("Family Friendly? - Yes")
+        else:
+            self.familyFriendlyLabel.setText("Family Friendly? - No")
+        self.petFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 130, labelYPos + 60, 200, 50)
+        if ((attraction[12])):
+            self.petFriendlyLabel.setText("Pet Friendly? - Yes")
+        else:
+            self.petFriendlyLabel.setText("Pet Friendly? - No")
+        self.distanceLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 330, labelYPos + 20, 200, 50)
+        self.distanceLabel.setText("100km from you")
+        self.coordinateLocationLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 270, labelYPos + 60, 200, 50)
+        self.coordinateLocationLabel.setText("Location: (" + str('%.3f'%(attraction[15])) + "," + str('%.3f'%(attraction[14])) + ")")
+        self.coordinateInfoLabel = self.createLabel("scrollAreaGroupBox", 0, 0, 200, 50)
+        self.coordinateInfoLabel.setText(str('%.6f'%(attraction[15])) + "," + str('%.6f'%(attraction[14])))
+        self.coordinateInfoLabel.setObjectName("Location")
+        self.coordinateInfoLabel.hide()
         self.descriptionLabel = self.createLabel("scrollAreaGroupBox",labelXPos, labelYPos + 80, 460, 130)
         self.descriptionLabel.setWordWrap(True)
+        self.descriptionLabel.setText(("     " + str(attraction[3])))
 
         self.attractionImage = QtWidgets.QLabel(self.scrollAreaGroupBox)
-        self.attractionImage.setPixmap(QtGui.QPixmap("attractionImage.jpg"))
+        imageAddress = "./Attraction Pictures/" + str(attraction[0]) + " - " + str(attraction[5]) + ".jpeg"
+        self.attractionImage.setPixmap(QtGui.QPixmap(imageAddress))
         self.attractionImage.setScaledContents(True)
         self.attractionImage.setFixedSize(220, 220)
         self.attractionImage.show()
@@ -92,7 +131,7 @@ class Ui_MainWindow(object):
         self.mapBox.setEnabled(True)
         self.mapBox.setFlat(True)
         self.mapHolder = QtWidgets.QVBoxLayout(self.mapBox)
-        coordinate = (34.71137031,-86.65391484)
+        coordinate = (attraction[14],attraction[15])
         map = folium.Map(
             zoom_start=15,
             location=coordinate
@@ -108,33 +147,9 @@ class Ui_MainWindow(object):
         self.mapHolder.addWidget(webView)
         self.expandMapButton = QtWidgets.QToolButton(self.scrollAreaGroupBox)
         self.expandMapButton.setGeometry(690, 198, 94, 17)
-        self.expandMapButton.setText(_translate("MainWindow", "Expand Map ↗︎"))
-        self.window = QtWidgets.QLabel()
-        self.window.setFixedSize(800, 600)
-        self.centralwidget = QtWidgets.QWidget(self.window)
-        self.centralwidget.setFixedSize(800, 600)
-        self.centralwidget.setObjectName("centralwidget")
-        self.expandedMapBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.expandedMapBox.setFixedSize(820, 610)
-        self.expandedMapBox.move(-10, 0)
-        self.expandedMapBox.setEnabled(True)
-        self.expandedMapBox.setFlat(True)
-        self.mapHolder = QtWidgets.QVBoxLayout(self.expandedMapBox)
-        coordinate = (34.71137031, -86.65391484)
-        expandedMap = folium.Map(
-            zoom_start=14,
-            location=coordinate,
-            popup="test"
-        )
-        folium.Marker(
-            location=coordinate
-        ).add_to(expandedMap)
-        # save map data to data object
-        data = io.BytesIO()
-        expandedMap.save(data, close_file=False)
-        webView = QWebEngineView()
-        webView.setHtml(data.getvalue().decode())
-        self.mapHolder.addWidget(webView)
+        self.expandMapButton.setText("Expand Map ↗︎")
+        self.expandMapButton.clicked.connect(self.showWindow)
+
         self.expandMapButton.clicked.connect(self.showWindow)
         self.googleMapsButton = QtWidgets.QToolButton(self.scrollAreaGroupBox)
         self.googleMapsButton.setGeometry(786, 198, 94, 17)
@@ -142,42 +157,9 @@ class Ui_MainWindow(object):
         self.googleMapsButton.clicked.connect(lambda: webbrowser.open(str(attraction[13])))
 
         self.line = QtWidgets.QFrame(self.scrollAreaGroupBox)
-        self.line.setGeometry(QtCore.QRect(280, 125, 350, 10))
+        self.line.setGeometry(QtCore.QRect(235, 125, 440, 10))
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line.setObjectName("line")
-
-        self.attractionTitle.setText(_translate("MainWindow", (str(attraction[1]) + "  - (Est. " + (str(attraction[2])) + ")")))
-        self.ratingLabel.setText(_translate("MainWindow", (str(attraction[9]))))
-        self.locationLabel.setText(_translate("MainWindow", (str(attraction[5]) + ",  " + str(attraction[4]))))
-
-        # self.dateLabel.setText(_translate("MainWindow", (str(attraction[2]))))
-        self.typeLabel.setText(_translate("MainWindow", (str(attraction[6]))))
-        if (str(attraction[7])) == '1':
-            self.priceLabel.setText(_translate("MainWindow", "Price Level - $"))
-        elif (str(attraction[7])) == '2':
-            self.priceLabel.setText(_translate("MainWindow", "Price Level - $$"))
-        elif (str(attraction[7])) == '3':
-            self.priceLabel.setText(_translate("MainWindow", "Price Level - $$$"))
-        if (str(attraction[8])) == '1':
-            self.busynessLabel.setText(_translate("MainWindow", "Low Busyness"))
-        elif (str(attraction[8])) == '2':
-            self.busynessLabel.setText(_translate("MainWindow", "Moderately Busy"))
-        elif (str(attraction[8])) == '3':
-            self.busynessLabel.setText(_translate("MainWindow", "Very Busy"))
-        if ((attraction[10])):
-            self.wheelChairAccessibilityLabel.setText(_translate("MainWindow", "WheelChair Accessible? - Yes"))
-        else:
-            self.wheelChairAccessibilityLabel.setText(_translate("MainWindow", "WheelChair Accessible? - No"))
-        if ((attraction[11])):
-            self.familyFriendlyLabel.setText(_translate("MainWindow", "Family Friendly? - Yes"))
-        else:
-            self.familyFriendlyLabel.setText(_translate("MainWindow", "Family Friendly? - No"))
-        if ((attraction[12])):
-            self.petFriendlyLabel.setText(_translate("MainWindow", "Pet Friendly? - Yes"))
-        else:
-            self.petFriendlyLabel.setText(_translate("MainWindow", "Pet Friendly? - No"))
-        self.descriptionLabel.setText(_translate("MainWindow", ("     " + str(attraction[3]))))
         self.verticalLayout_3.addWidget(self.scrollAreaGroupBox)
         return self.scrollAreaGroupBox
 
@@ -224,44 +206,51 @@ class Ui_MainWindow(object):
         self.controlScrollArea()
         attributeList = [None, None, None, None, None, None]
 
-        with open('output_report.txt', 'w') as f:
-            f.write("Selected State?:")
+        with open('outputreport.txt', 'a') as f:
+            stringAccessedTime = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+            locationOfSpace = stringAccessedTime.index(" ")
+            f.write("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯")
+            f.write("Activity Logged Date: " +  stringAccessedTime[:locationOfSpace] + " Time Of Action: " + stringAccessedTime[(locationOfSpace+1):])
+            f.write("\n")
+            f.write("Selected State: ")
             f.write(currentSelectedState)
-            f.write("| Selected City?:")
+            f.write("\n")
+            f.write("Selected City: ")
             f.write(currentSelectedCity)
-            f.write("| Selected Type?:")
+            f.write("\n")
+            f.write("Selected Type: ")
             f.write(currentSelectedType)
-            f.write("| Wheelchair Accessibility is Checked?:")
+            f.write("\n")
+            f.write("Wheelchair Accessibility is Checked: ")
             f.write(str(currentCheckedWheelchairAccessibility))
-            f.write("| Family Friendliness is Checked?:")
+            f.write("\n")
+            f.write("Family Friendliness is Checked: ")
             f.write(str(currentCheckedFamilyFriendliness))
-            f.write("| Pet Friendliness is Checked?:")
+            f.write("\n")
+            f.write("Pet Friendliness is Checked: ")
             f.write(str(currentCheckedPetFriendliness))
-            f.write("| Currently sorting by:")
+            f.write("\n")
+            f.write("Currently sorting by: ")
             f.write(currentSorter)
+            f.write("\n")
             for element in filteredAttractionsList:
-                f.write(str(element))
+                f.write("Filtered Attraction: " + "(id: " + str(element[0]) + ")" + ", " +
+                        str(element[1]) + ", " + str(element[5]) + ", " + str(element[4]) + ", " + str(element[2]))
                 f.write("\n")
+            f.close()
 
         # Used to create a file with all sources. Run only once and then comment out
-        with open('sources.txt', 'w') as f:
-            for attraction in allAttractions:
-                f.write(" ")
-                f.write(str(attraction[1]) + ", " + str(attraction[5]) + ", " + str(attraction[4]) + ", " + str(attraction[2]))
-                f.write("\n")
-                f.write(" ")
-                f.write(str(attraction[13]))
-                f.write("\n")
-                f.write("\n")
-
-
+        # with open('sources.txt', 'w') as f:
+        #     for attraction in allAttractions:
+        #         f.write(" ")
+        #         f.write(str(attraction[1]) + ", " + str(attraction[5]) + ", " + str(attraction[4]) + ", " + str(attraction[2]))
+        #         f.write("\n")
+        #         f.write(" ")
+        #         f.write(str(attraction[13]))
+        #         f.write("\n")
+        #         f.write("\n")
 
     def sortingAttractions(self):
-        def findDistanceToInput(data):
-            return distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())), (data[14], data[15])).miles
-
-        if self.sortingComboBox.currentText() == "Nearest attractions":
-            filteredAttractionsList.sort(key=findDistanceToInput)
         if self.sortingComboBox.currentText() == "Rating: Lowest to Highest":
             filteredAttractionsList.sort(key=itemgetter(9), reverse=False)
         if self.sortingComboBox.currentText() == "Rating: Highest to Lowest":
@@ -275,8 +264,6 @@ class Ui_MainWindow(object):
         if self.sortingComboBox.currentText() == "Traffic: Highest to Lowest":
             filteredAttractionsList.sort(key=itemgetter(8), reverse=True)
 
-
-
     def helpMenuListener(self, _):
         global helpMenuGroupBox
         global clickCount
@@ -289,6 +276,37 @@ class Ui_MainWindow(object):
             clickCount = 0
 
     def showWindow(self, _):
+        self.window = QtWidgets.QLabel()
+        self.window.setFixedSize(800, 600)
+        self.centralwidget = QtWidgets.QWidget(self.window)
+        self.centralwidget.setFixedSize(800, 600)
+        self.centralwidget.setObjectName("centralwidget")
+        self.expandedMapBox = QtWidgets.QGroupBox(self.centralwidget)
+        self.expandedMapBox.setFixedSize(820, 610)
+        self.expandedMapBox.move(-10, 0)
+        self.expandedMapBox.setEnabled(True)
+        self.expandedMapBox.setFlat(True)
+        self.mapHolder = QtWidgets.QVBoxLayout(self.expandedMapBox)
+        objectCoordinate = self.scrollAreaGroupBox.sender().parent().findChild(QtWidgets.QLabel,'Location').text()
+        print(objectCoordinate)
+        indexOfComma = objectCoordinate.index(",")
+        long = float(objectCoordinate[:indexOfComma])
+        lat = float(objectCoordinate[(indexOfComma + 1):])
+        coordinate = (lat,long)
+        expandedMap = folium.Map(
+            zoom_start=15,
+            location=coordinate,
+            popup="test"
+        )
+        folium.Marker(
+            location=coordinate
+        ).add_to(expandedMap)
+        # save map data to data object
+        data = io.BytesIO()
+        expandedMap.save(data, close_file=False)
+        webView = QWebEngineView()
+        webView.setHtml(data.getvalue().decode())
+        self.mapHolder.addWidget(webView)
         self.window.show()
 
     def searchResults(self, _):
@@ -308,7 +326,86 @@ class Ui_MainWindow(object):
             self.numOfAttractionsLabel.setText(
                 _translate("MainWindow", (str(countOfObjectsShown)) + " Attractions Found"))
 
+    def createUserReportFile(self, _):
+        path = "./User Reports"
+        directory = os.listdir(path)
+        if len(directory) == 0:
+            fileName = 'User Report 1'
+            fileLocation = os.path.join(path,fileName)
+            with open(fileLocation, 'w') as f:
+                f.write("User Information: " + "Full Name - " + self.nameField.text() + "Email - " + self.emailField.text())
+                f.write("\n")
+                f.write(self.reportTopicField.text())
+                f.write("\n")
+                f.write(self.userReportField.toPlainText())
+                f.write("\n")
+                f.write(self.outputLogs.toPlainText())
+                f.close()
+        else:
+            fileName = ('User Report ' + (str(len(directory) + 1)))
+            fileLocation = os.path.join(path, fileName)
+            with open(fileLocation, 'w') as f:
+                f.write("User Information: " + "Full Name - " + self.nameField.text() + "Email - " + self.emailField.text())
+                f.write("\n")
+                f.write(self.reportTopicField.text())
+                f.write("\n")
+                f.write(self.userReportField.toPlainText())
+                f.write("\n")
+                f.write(self.outputLogs.toPlainText())
+                f.close()
+        self.reportWindow.close()
+
     def createReport(self, _):
+        self.reportWindow = QtWidgets.QLabel()
+        self.reportWindow.setFixedSize(800, 600)
+        self.reportWindow.setWindowTitle("Create a Report")
+        self.reportWindowCentralwidget = QtWidgets.QWidget(self.reportWindow)
+        self.reportWindowCentralwidget.setFixedSize(800, 600)
+        self.reportWindowGroupBox = QtWidgets.QGroupBox(self.reportWindowCentralwidget)
+        self.reportWindowGroupBox.setFixedSize(800, 600)
+        self.reportWindowGroupBox.setEnabled(True)
+        self.reportWindowGroupBox.setFlat(True)
+        self.outputLogLabel = self.createLabel("reportWindowGroupBox", 8, 0, 200, 50)
+        self.outputLogLabel.setText("Output Report:")
+        self.outputLogs = QtWidgets.QPlainTextEdit(self.reportWindowGroupBox)
+        self.outputLogs.setFixedSize(784, 250)
+        self.outputLogs.move(8, 35)
+        text = open('outputreport.txt').read()
+        self.outputLogs.setPlainText(text)
+        self.outputLogs.setReadOnly(True)
+        self.nameLabel = self.createLabel("reportWindowGroupBox", 8, 275, 200, 50)
+        self.nameLabel.setText("Full Name:")
+        self.nameField = QtWidgets.QLineEdit(self.reportWindowGroupBox)
+        self.nameField.setFixedSize(387, 25)
+        self.nameField.move(8, 310)
+        self.nameField.setPlaceholderText(" Enter your full name here")
+        # self.nameField.selectionChanged.connect(lambda: self.nameField.setSelection(0, 0))
+        self.emailLabel = self.createLabel("reportWindowGroupBox", 404, 275, 200, 50)
+        self.emailLabel.setText("Email Address:")
+        self.emailField = QtWidgets.QLineEdit(self.reportWindowGroupBox)
+        self.emailField.setFixedSize(387, 25)
+        self.emailField.move(404, 310)
+        self.emailField.setPlaceholderText(" Enter your email address here")
+        # self.emailField.selectionChanged.connect(lambda: self.emailField.setSelection(0, 0))
+        self.reportTopicLabel = self.createLabel("reportWindowGroupBox", 8, 325, 200, 50)
+        self.reportTopicLabel.setText("Title:")
+        self.reportTopicField = QtWidgets.QLineEdit(self.reportWindowGroupBox)
+        self.reportTopicField.setFixedSize(784, 25)
+        self.reportTopicField.move(8, 360)
+        self.reportTopicField.setPlaceholderText(" Provide a short title for the issue/report")
+        # self.reportTopicField.selectionChanged.connect(lambda: self.reportTopicField.setSelection(0, 0))
+        self.userReportLabel = self.createLabel("reportWindowGroupBox", 8, 375, 200, 50)
+        self.userReportLabel.setText("Description:")
+        self.userReportField = QtWidgets.QPlainTextEdit(self.reportWindowGroupBox)
+        self.userReportField.setFixedSize(784, 160)
+        self.userReportField.move(8, 410)
+        self.userReportField.setPlaceholderText("Provide a detailed description of the problem you are facing. "
+                                           " Include any actions made prior to the issue arising and the  resulting erroneous output. "
+                                           " If the report is created to inform of incorrect data, provide the attraction name and details about the data.")
+        self.submitButton = QtWidgets.QToolButton(self.reportWindowGroupBox)
+        self.submitButton.setGeometry(640, 575, 150, 20)
+        self.submitButton.setText("Submit")
+        self.submitButton.clicked.connect(self.createUserReportFile)
         self.reportWindow.show()
 
     def setupUi(self, MainWindow):
@@ -316,37 +413,30 @@ class Ui_MainWindow(object):
         global groupBox
         global topGroupBoxBar
         _translate = QtCore.QCoreApplication.translate
+
         # Sets up the window container
         MainWindow.setObjectName("MainWindow")
         MainWindow.setFixedSize(1150, 645)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
         self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1151, 626))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
         self.tabWidget.setSizePolicy(sizePolicy)
-        self.tabWidget.setObjectName("tabWidget")
         self.tabWidgetPage1 = QtWidgets.QWidget()
-        self.tabWidgetPage1.setObjectName("tabWidgetPage1")
         self.gridWidget = QtWidgets.QWidget(self.tabWidgetPage1)
         self.gridWidget.setGeometry(QtCore.QRect(880, 0, 251, 49))
-        self.gridWidget.setObjectName("gridWidget")
         self.line = QtWidgets.QFrame(self.tabWidgetPage1)
         self.line.setGeometry(QtCore.QRect(210, -10, 21, 611))
         self.line.setFrameShape(QtWidgets.QFrame.VLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line.setObjectName("line")
         self.widget = QtWidgets.QWidget(self.tabWidgetPage1)
         self.widget.setGeometry(QtCore.QRect(0, 0, 1151, 601))
-        self.widget.setObjectName("widget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout.setObjectName("verticalLayout")
         self.groupBox = QtWidgets.QGroupBox(self.widget)
         self.groupBox.setEnabled(True)
         self.groupBox.setFlat(True)
-        self.groupBox.setObjectName("groupBox")
 
         # Setting topGroupBoxBar
         self.topGroupBoxBar = QtWidgets.QGroupBox(self.widget)
@@ -358,7 +448,6 @@ class Ui_MainWindow(object):
         self.sortingComboBoxLabel = self.createLabel("topGroupBoxBar", 653, 13, 50, 20)
         self.sortingComboBox = self.createComboBox("topGroupBoxBar", 700, 10, 200, 30)
         self.sortingComboBox.addItems(["Recommended",
-                                  "Nearest attractions",
                                   "Rating: Highest to Lowest",
                                   "Rating: Lowest to Highest",
                                   "Price: Highest to Lowest",
@@ -366,8 +455,6 @@ class Ui_MainWindow(object):
                                   "Traffic: Highest to Lowest",
                                   "Traffic: Lowest to Highest"])
         self.sortingComboBox.activated.connect(self.getCurrentFieldValues)
-
-
 
         # Search Field and Search Button
         self.searchBar = QtWidgets.QLineEdit(self.topGroupBoxBar)
@@ -482,37 +569,6 @@ class Ui_MainWindow(object):
         self.petFriendlyFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+256, 20, 20)
         self.petFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
-        # Enter Coordinates QLineEdit
-
-        self.latitudeInput = QtWidgets.QLineEdit(self.groupBox)
-        self.latitudeInput.setGeometry(QtCore.QRect(Xcoor + 5, Ycoor + 295, 192, 25))
-        self.latitudeInput.setPlaceholderText("Enter your latitude:")
-
-        self.longitudeInput = QtWidgets.QLineEdit(self.groupBox)
-        self.longitudeInput.setGeometry(QtCore.QRect(Xcoor + 5, Ycoor + 325, 192, 25))
-        self.longitudeInput.setPlaceholderText("Enter your longitude:")
-
-        self.sortByDistanceButton = QtWidgets.QToolButton(self.groupBox)
-        self.sortByDistanceButton.setGeometry(QtCore.QRect(Xcoor + 5, Ycoor + 355, 192, 25))
-        self.sortByDistanceButton.setText(_translate("MainWindow", "Sort by nearest attractions"))
-        self.sortByDistanceButton.clicked.connect(self.changeSortingToDistance)
-        self.sortByDistanceButton.clicked.connect(self.getCurrentFieldValues)
-
-        # self.searchBar = QtWidgets.QLineEdit(self.topGroupBoxBar)
-        # self.searchBar.setGeometry(QtCore.QRect(220, 10, 301, 25))
-        # self.searchBar.setPlaceholderText("Search by Keyword")
-        # self.searchButton = QtWidgets.QToolButton(self.topGroupBoxBar)
-        # self.searchButton.setGeometry(QtCore.QRect(520, 10, 60, 25))
-        # self.searchButton.setText(_translate("MainWindow", "Search"))
-        # self.searchIcon = QtWidgets.QLabel(self.topGroupBoxBar)
-        # self.searchIcon.setStyleSheet("border: 1px solid lightgrey;")
-        # self.searchIcon.setPixmap(QtGui.QPixmap("searchIcon.png"))
-        # self.searchIcon.setScaledContents(True)
-        # self.searchIcon.setFixedSize(25, 25)
-        # self.searchIcon.move(196, 10)
-        # self.searchIcon.show()
-        # self.searchButton.clicked.connect(self.searchResults)
-
         # Adding a Dynamic Help Menu
         self.helpButton = QtWidgets.QToolButton(self.groupBox)
         self.helpButton.setGeometry(13,535,190,20)
@@ -522,17 +578,7 @@ class Ui_MainWindow(object):
         self.helpMenuGroupBox.hide()
         self.reportButton = QtWidgets.QToolButton(self.groupBox)
         self.reportButton.setGeometry(13, 560, 190, 20)
-        self.reportButton.setText(_translate("MainWindow", "Report"))
-        self.reportWindow = QtWidgets.QLabel()
-        self.reportWindow.setFixedSize(800, 600)
-        self.reportWindowCentralwidget = QtWidgets.QWidget(self.reportWindow)
-        self.reportWindowCentralwidget.setFixedSize(800, 600)
-        self.reportWindowCentralwidget.setObjectName("centralwidget")
-        self.reportWindowGroupBox = QtWidgets.QGroupBox(self.reportWindowCentralwidget)
-        self.reportWindowGroupBox.setFixedSize(820, 610)
-        self.reportWindowGroupBox.move(-10, 0)
-        self.reportWindowGroupBox.setEnabled(True)
-        self.reportWindowGroupBox.setFlat(True)
+        self.reportButton.setText("Create a Report")
         self.reportButton.clicked.connect(self.createReport)
         self.documentationButton = QtWidgets.QToolButton(self.helpMenuGroupBox)
         self.documentationButton.setGeometry(5, 5, 180, 20)
@@ -548,22 +594,18 @@ class Ui_MainWindow(object):
 
         # Setting ScrollArea
         self.scrollAreaWidgetContainer = QtWidgets.QWidget()
-        self.scrollAreaWidgetContainer.setObjectName("scrollAreaWidgetContainer")
         self.verticalLayout.addWidget(self.groupBox)
         self.scrollArea = QtWidgets.QScrollArea(self.tabWidgetPage1)
         self.scrollArea.setFixedWidth(907)
         self.scrollArea.setMinimumHeight(531)
         self.scrollArea.move(230,50)
         self.scrollArea.setWidgetResizable(True)
-        self.scrollArea.setObjectName("scrollArea")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContainer)
         self.scrollAreaWidgetContainer.setLayout(self.verticalLayout_3)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
 
         # Adds multiple tabs
         self.tabWidget.addTab(self.tabWidgetPage1, " ")
         self.tab = QtWidgets.QWidget()
-        self.tab.setObjectName("tab")
         self.tabWidget.addTab(self.tab, " ")
 
         self.sourcesTab = QtWidgets.QWidget()
@@ -586,15 +628,10 @@ class Ui_MainWindow(object):
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-    def changeSortingToDistance(self):
-        self.sortingComboBox.setCurrentIndex(1)
-
 
     def selectCityFromState(self, index):
         self.cityFilterComboBox.clear()
@@ -617,6 +654,8 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.sourcesTab), _translate("MainWindow", "Sources"))
 
 if __name__ == "__main__":
+    # Clears action log
+    clearLog()
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()

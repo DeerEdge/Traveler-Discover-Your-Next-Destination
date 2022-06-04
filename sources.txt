@@ -74,9 +74,6 @@
  The National Memorial for Peace and Justice, Montgomery, Alabama, 2018
  https://museumandmemorial.eji.org/memorial
 
- Bama Theatre, Tuscaloosa, Alabama, 1970
- http://tuscarts.org/
-
  Alabama State Capitol, Montgomery, Alabama, 1872
  https://ahc.alabama.gov/alabama-state-capitol.aspx
 
@@ -155,6 +152,9 @@
  Jemison-Van De Graaff Mansion, Tuscaloosa, Alabama, 1966
  https://historictuscaloosa.org/
 
+ Bama Theatre, Tuscaloosa, Alabama, 1970
+ http://tuscarts.org/
+
  Kentuck Art Center & Festival, Tuscaloosa, Alabama, 1971
  http://www.kentuck.org/
 
@@ -174,7 +174,7 @@
  https://www.chucksfish.com/location/chucks-fish-tuscaloosa/
 
  Avenue Pub, Tuscaloosa, Alabama, 2014
- https://www.avepub.com/
+ https://www.avepub.com/
 
 
  Flavaz Seafood & Soulfood Restaurant, Tuscaloosa, Alabama, 2000
@@ -303,7 +303,7 @@
  Tlaquepaque Arts & Shopping Village, Sedona, Arizona, 1970
  https://www.tlaq.com/
 
- Wild West Experience Hike, Mesa, Arizona, 1970
+ Wild West Experience Hike, Mesa, Arizona, 1994
  https://www.visitmesa.com/things-to-do/arts-culture/wild-west/
 
  Papago Park, Mesa, Arizona, 1914
@@ -321,7 +321,7 @@
  Taliesin West, Scottsdale, Arizona, 1959
  https://franklloydwright.org/
 
- Western Spirit: Scottsdale¡¯s Museum of the West, Scottsdale, Arizona, 2000
+ Western Spirit: Scottsdaleâ€™s Museum of the West, Scottsdale, Arizona, 2000
  https://scottsdalemuseumwest.org/
 
  Hole in the Rock, Scottsdale, Arizona, 1879
@@ -342,19 +342,19 @@
  Metro Streetcar, Little Rock, Arkansas, 1876
  https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj2__vCv4j4AhXpkI4IHSLlCPsQFnoECCsQAQ&url=https%3A%2F%2Frrmetro.org%2Fservices%2Fstreetcar%2Fmaps-schedules%2F&usg=AOvVaw0AEk4qE1nG0EuZTD8zBGbs
 
- The Arkansas River Trial System, Little Rock, Arkansas, 1876
+ The Arkansas River Trial System, Little Rock, Arkansas, 1998
  https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi61eyywIj4AhXtnI4IHU7BDzsQFnoECAcQAQ&url=https%3A%2F%2Fwww.littlerock.com%2Fdocs%2Fdefault-source%2Fbrochure-downloads%2Farkansasrivertrailfall2017.pdf%3Fsfvrsn%3D46578ab6_2&usg=AOvVaw01jT3YavA6Jth1oaUpnA_j
 
  Museum Of Discovery, Little Rock, Arkansas, 1927
  https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiruaKSwYj4AhXLoY4IHQUMAf4QFnoECAQQAQ&url=https%3A%2F%2Fmuseumofdiscovery.org%2F&usg=AOvVaw38HvxcrqAGCG19O12c0g6o
 
- Rivervalley Artisan Market, Fort Smith, Arkansas, 1927
+ Rivervalley Artisan Market, Fort Smith, Arkansas, 1942
  https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwidgZnhwoj4AhUcoY4IHfqTArAQFnoECAYQAQ&url=http%3A%2F%2Ffortsmith365.com%2Ffort-smith-arts-culture%2Ffort-smith-outdoor-markets%2Friver-valley-artisan-market-2%2F&usg=AOvVaw0y8axAUhZTpXPZ5rh88gIG
 
- The Clayton House, Fort Smith, Arkansas, 1927
+ The Clayton House, Fort Smith, Arkansas, 1975
  http://claytonhouse.org
 
- The Park at West End, Fort Smith, Arkansas, 1927
+ The Park at West End, Fort Smith, Arkansas, 1897
  https://www.arkansas.com/fort-smith/attractions-culture/park-west-end
 
  Ben Geren Regional Park, Fort Smith, Arkansas, 1872

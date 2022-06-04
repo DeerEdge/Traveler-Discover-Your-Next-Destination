@@ -1,7 +1,0 @@
-
-*.ini
-output_report.txt
-outputreport.txt
-__pycache__/SQLParser.cpython-38.pyc
-__pycache__/ApplicationFilterRequest.cpython-38.pyc
-__pycache__/ApplicationDatabase.cpython-38.pyc
