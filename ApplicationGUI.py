@@ -5,11 +5,16 @@ import ApplicationFilterRequest
 import io
 import folium
 
+from ipregistry import IpregistryClient
 from time import gmtime, strftime
 from operator import itemgetter
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout
 from PyQt5.QtWebEngineWidgets import QWebEngineView
+from geopy import distance
+
+
+client = IpregistryClient("72bw4jakulj27ism")
+ipInfo = client.lookup()
 
 def clearLog():
     with open("outputreport.txt", "r+") as f:
@@ -19,6 +24,10 @@ def clearLog():
 class Ui_MainWindow(object):
     global currentAttraction
     global filteredAttractionsList
+    global radiusChecked
+    global cache
+    cache = dict()
+    radiusChecked = False
     filteredAttractionsList = []
 
     def createLabel(self,type,Xcoor,Ycoor,width,length):
@@ -107,8 +116,11 @@ class Ui_MainWindow(object):
             self.petFriendlyLabel.setText("Pet Friendly? - Yes")
         else:
             self.petFriendlyLabel.setText("Pet Friendly? - No")
-        self.distanceLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 330, labelYPos + 20, 200, 50)
-        self.distanceLabel.setText("100km from you")
+        if (self.latitudeInput.text() != "" and self.longitudeInput.text() != "" and self.isfloat(str(self.latitudeInput.text())) and self.isfloat(str(self.longitudeInput.text()))):
+            distanceFromUserLocation = distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),(attraction[14], attraction[15])).miles
+            self.distanceLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 310, labelYPos + 40, 200, 50)
+            self.distanceLabel.setText(str('%.1f'%(distanceFromUserLocation)) + " miles from you")
+            self.distanceLabel.setObjectName("Distance")
         self.coordinateLocationLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 270, labelYPos + 60, 200, 50)
         self.coordinateLocationLabel.setText("Location: (" + str('%.3f'%(attraction[15])) + "," + str('%.3f'%(attraction[14])) + ")")
         self.coordinateInfoLabel = self.createLabel("scrollAreaGroupBox", 0, 0, 200, 50)
@@ -178,6 +190,11 @@ class Ui_MainWindow(object):
             Ycoor = Ycoor + 200
         self.scrollArea.setWidget(self.scrollAreaWidgetContainer)
 
+    # atrself.scrollAreaWidgetContainer.children()[index].findChild(QtWidgets.QLabel, 'attractionName').text()
+    # grpBox = self.createScrollAreaObject(Ycoor, filteredAttractionsList[index])
+    # cache[
+    #     self.scrollAreaWidgetContainer.children()[index].findChild(QtWidgets.QLabel, 'attractionName').text()] = grpBox
+
     def getCurrentFieldValues(self, _):
         global filteredAttractionsList
         global groupBox
@@ -204,6 +221,25 @@ class Ui_MainWindow(object):
             self.numOfAttractionsLabel.setText(_translate("MainWindow",(str(len(filteredAttractionsList))) + " Attractions Found"))
         self.sortingAttractions()
         self.controlScrollArea()
+        if (self.radiusComboBox.isEnabled()):
+            global radiusChecked
+            radiusChecked = True
+            if (self.radiusComboBox.currentText() != "Any distance"):
+                countOfObjectsShown = len(self.scrollAreaWidgetContainer.children()) - 1
+                for index in range(len(self.scrollAreaWidgetContainer.children())):
+                    if index != 0:
+                        objectDistanceLabel = self.scrollAreaWidgetContainer.children()[index].findChild(QtWidgets.QLabel,
+                                                                                                         'Distance').text()
+                        indexOfLetterM = objectDistanceLabel.index("m")
+                        if (float(objectDistanceLabel[:(indexOfLetterM - 1)]) < float(self.radiusComboBox.currentText()[10:12])):
+                            self.scrollAreaWidgetContainer.children()[index].show()
+                        else:
+                            self.scrollAreaWidgetContainer.children()[index].hide()
+                            countOfObjectsShown = countOfObjectsShown - 1
+                if (countOfObjectsShown) == 1:
+                    self.numOfAttractionsLabel.setText((str(countOfObjectsShown)) + " Attraction Found")
+                else:
+                    self.numOfAttractionsLabel.setText((str(countOfObjectsShown)) + " Attractions Found")
         attributeList = [None, None, None, None, None, None]
 
         with open('outputreport.txt', 'a') as f:
@@ -251,6 +287,11 @@ class Ui_MainWindow(object):
         #         f.write("\n")
 
     def sortingAttractions(self):
+        def findDistanceToInput(data):
+            return distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),(data[14], data[15])).miles
+
+        if self.sortingComboBox.currentText() == "Nearest attractions":
+            filteredAttractionsList.sort(key=findDistanceToInput)
         if self.sortingComboBox.currentText() == "Rating: Lowest to Highest":
             filteredAttractionsList.sort(key=itemgetter(9), reverse=False)
         if self.sortingComboBox.currentText() == "Rating: Highest to Lowest":
@@ -263,6 +304,40 @@ class Ui_MainWindow(object):
             filteredAttractionsList.sort(key=itemgetter(8), reverse=False)
         if self.sortingComboBox.currentText() == "Traffic: Highest to Lowest":
             filteredAttractionsList.sort(key=itemgetter(8), reverse=True)
+
+    def detectChangeInRadius(self, _):
+        global radiusChecked
+        if (radiusChecked):
+            countOfObjectsShown = len(self.scrollAreaWidgetContainer.children()) - 1
+            if (self.radiusComboBox.isEnabled()):
+                for index in range(len(self.scrollAreaWidgetContainer.children())):
+                    if index != 0:
+                        objectDistanceLabel = self.scrollAreaWidgetContainer.children()[index].findChild(QtWidgets.QLabel,
+                                                                                                        'Distance').text()
+
+                        indexOfLetterM = objectDistanceLabel.index("m")
+                        if (float(objectDistanceLabel[:(indexOfLetterM - 1)]) < float(self.radiusComboBox.currentText()[10:12])):
+                            self.scrollAreaWidgetContainer.children()[index].show()
+                        else:
+                            self.scrollAreaWidgetContainer.children()[index].hide()
+                            countOfObjectsShown = countOfObjectsShown - 1
+                if (countOfObjectsShown) == 1:
+                    self.numOfAttractionsLabel.setText((str(countOfObjectsShown)) + " Attraction Found")
+                else:
+                    self.numOfAttractionsLabel.setText((str(countOfObjectsShown)) + " Attractions Found")
+
+    def checkIfLocationIsFilled(self, _):
+        if (self.latitudeInput.text() != "" and self.longitudeInput.text() != "" and self.isfloat(str(self.latitudeInput.text())) and self.isfloat(str(self.longitudeInput.text()))):
+            self.radiusComboBox.setEnabled(True)
+        else:
+            self.radiusComboBox.setEnabled(False)
+
+    def getCurrentLocation(self, _):
+        print(ipInfo)
+        self.latitudeInput.setText(str(ipInfo.__getattr__("location")["latitude"]))
+        self.longitudeInput.setText(str(ipInfo.__getattr__("location")["longitude"]))
+        self.checkIfLocationIsFilled
+        self.currentLocationLabel.setText(str(ipInfo.__getattr__("location")["city"]) + ", " + str(ipInfo.__getattr__("location")["region"]["name"]) +  ", " + str(ipInfo.__getattr__("location")["postal"]))
 
     def helpMenuListener(self, _):
         global helpMenuGroupBox
@@ -288,7 +363,6 @@ class Ui_MainWindow(object):
         self.expandedMapBox.setFlat(True)
         self.mapHolder = QtWidgets.QVBoxLayout(self.expandedMapBox)
         objectCoordinate = self.scrollAreaGroupBox.sender().parent().findChild(QtWidgets.QLabel,'Location').text()
-        print(objectCoordinate)
         indexOfComma = objectCoordinate.index(",")
         long = float(objectCoordinate[:indexOfComma])
         lat = float(objectCoordinate[(indexOfComma + 1):])
@@ -408,6 +482,13 @@ class Ui_MainWindow(object):
         self.submitButton.clicked.connect(self.createUserReportFile)
         self.reportWindow.show()
 
+    def isfloat(self, num):
+        try:
+            float(num)
+            return True
+        except ValueError:
+            return False
+
     def setupUi(self, MainWindow):
         global clickCount
         global groupBox
@@ -448,6 +529,7 @@ class Ui_MainWindow(object):
         self.sortingComboBoxLabel = self.createLabel("topGroupBoxBar", 653, 13, 50, 20)
         self.sortingComboBox = self.createComboBox("topGroupBoxBar", 700, 10, 200, 30)
         self.sortingComboBox.addItems(["Recommended",
+                                "Nearest attractions",
                                   "Rating: Highest to Lowest",
                                   "Rating: Lowest to Highest",
                                   "Price: Highest to Lowest",
@@ -482,12 +564,12 @@ class Ui_MainWindow(object):
 
         # Filter Title
         Xcoor = 0
-        Ycoor = 10
+        Ycoor = 230
         self.filterTitle = self.createLabel("groupBox",Xcoor+5, Ycoor+40, 60, 50)
 
         # Filtering by State - Format: (Label : ComboBox)
         self.stateFilterLabel = self.createLabel("groupBox",Xcoor+5, Ycoor+80, 50, 50)
-        self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+40, Ycoor+95, 157, 26)
+        self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+40, Ycoor+95, 175, 26)
         self.stateFilterComboBox.addItem("None", ["None"])
         self.stateFilterComboBox.addItem("Alabama", ["None", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
         self.stateFilterComboBox.addItem("Alaska", ["None", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
@@ -544,13 +626,13 @@ class Ui_MainWindow(object):
 
         # Filtering by City - Format: (Label : ComboBox)
         self.cityFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+115, 50, 50)
-        self.cityFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+130, 157, 26)
+        self.cityFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+130, 175, 26)
         self.cityFilterComboBox.addItems(["None"])
         self.cityFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by Type - Format: (Label : ComboBox)
         self.typeFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+150, 50, 50)
-        self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+165, 157, 26)
+        self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+165, 175, 26)
         self.typeFilterComboBox.addItems(["None", "Sports", "Cultural/Historical"])
         self.typeFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
@@ -569,15 +651,48 @@ class Ui_MainWindow(object):
         self.petFriendlyFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+256, 20, 20)
         self.petFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
+        # Enter Coordinates QLineEdit
+        self.userLocationTitle = self.createLabel("groupBox", Xcoor + 5, Ycoor - 175, 200, 25)
+        self.userLocationTitle.setText("Your location")
+        self.currentLocationLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 145, 200, 25)
+        self.latitudeInputLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 115, 200, 25)
+        self.latitudeInputLabel.setText("Latitude:")
+        self.latitudeInput = QtWidgets.QLineEdit(self.groupBox)
+        self.latitudeInput.setGeometry(QtCore.QRect(Xcoor + 65, Ycoor - 115, 120, 25))
+        self.latitudeInput.setPlaceholderText(" Enter latitude")
+        self.latitudeInput.textChanged.connect(self.checkIfLocationIsFilled)
+        self.longitudeInputLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 80, 200, 25)
+        self.longitudeInputLabel.setText("Longitude:")
+        self.longitudeInput = QtWidgets.QLineEdit(self.groupBox)
+        self.longitudeInput.setGeometry(QtCore.QRect(Xcoor + 75, Ycoor - 80, 120, 25))
+        self.longitudeInput.setPlaceholderText(" Enter longitude")
+        self.longitudeInput.textChanged.connect(self.checkIfLocationIsFilled)
+        self.radiusLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 45, 200, 25)
+        self.radiusLabel.setText("Desired Distance From You:")
+        self.radiusComboBox = self.createComboBox("groupBox", Xcoor + 0, Ycoor - 20, 215, 25)
+        self.radiusComboBox.addItems(["Any distance", "Less than 5 miles", "Less than 10 miles", "Less than 20 miles", "Less than 50 miles"])
+        self.radiusComboBox.setEnabled(False)
+        self.radiusComboBox.activated.connect(self.detectChangeInRadius)
+        self.getLocationButton = QtWidgets.QToolButton(self.groupBox)
+        self.getLocationButton.setGeometry(Xcoor + 5, Ycoor + 10, 205, 20)
+        self.getLocationButton.setText("Find my location")
+        self.getLocationButton.clicked.connect(self.getCurrentLocation)
+
+        # self.sortByDistanceButton = QtWidgets.QToolButton(self.groupBox)
+        # self.sortByDistanceButton.setGeometry(QtCore.QRect(Xcoor + 5, Ycoor - 55, 192, 25))
+        # self.sortByDistanceButton.setText(_translate("MainWindow", "Sort by nearest attractions"))
+        # self.sortByDistanceButton.clicked.connect(self.changeSortingToDistance)
+        # self.sortByDistanceButton.clicked.connect(self.getCurrentFieldValues)
+
         # Adding a Dynamic Help Menu
         self.helpButton = QtWidgets.QToolButton(self.groupBox)
-        self.helpButton.setGeometry(13,535,190,20)
+        self.helpButton.setGeometry(5,535,205,20)
         clickCount = 0
         self.helpMenuGroupBox = QtWidgets.QGroupBox(self.groupBox)
         self.helpMenuGroupBox.setGeometry(QtCore.QRect(13, 455, 190, 80))
         self.helpMenuGroupBox.hide()
         self.reportButton = QtWidgets.QToolButton(self.groupBox)
-        self.reportButton.setGeometry(13, 560, 190, 20)
+        self.reportButton.setGeometry(5, 560, 205, 20)
         self.reportButton.setText("Create a Report")
         self.reportButton.clicked.connect(self.createReport)
         self.documentationButton = QtWidgets.QToolButton(self.helpMenuGroupBox)
@@ -632,6 +747,9 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def changeSortingToDistance(self):
+        self.sortingComboBox.setCurrentIndex(1)
 
     def selectCityFromState(self, index):
         self.cityFilterComboBox.clear()
