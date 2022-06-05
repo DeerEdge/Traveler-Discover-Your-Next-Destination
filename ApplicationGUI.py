@@ -16,6 +16,7 @@ from geopy import distance
 client = IpregistryClient("72bw4jakulj27ism")
 ipInfo = client.lookup()
 
+# clear logs
 def clearLog():
     with open("outputreport.txt", "r+") as f:
         f.seek(0)
