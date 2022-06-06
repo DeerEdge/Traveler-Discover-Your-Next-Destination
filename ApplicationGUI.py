@@ -47,6 +47,8 @@ class Ui_MainWindow(object):
             self.label = QtWidgets.QLabel(self.sourcesTabWidget)
         elif type == "reportWindowGroupBox":
             self.label = QtWidgets.QLabel(self.reportWindow)
+        elif type == "documentationWindowGroupBox":
+            self.label = QtWidgets.QLabel(self.documentationWindow)
         self.label.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
         return self.label
 
@@ -317,11 +319,14 @@ class Ui_MainWindow(object):
                                                                                                         'Distance').text()
 
                         indexOfLetterM = objectDistanceLabel.index("m")
-                        if (float(objectDistanceLabel[:(indexOfLetterM - 1)]) < float(self.radiusComboBox.currentText()[10:12])):
-                            self.scrollAreaWidgetContainer.children()[index].show()
+                        if (self.radiusComboBox.currentText() != "Any distance"):
+                            if (float(objectDistanceLabel[:(indexOfLetterM - 1)]) < float(self.radiusComboBox.currentText()[10:12])):
+                                self.scrollAreaWidgetContainer.children()[index].show()
+                            else:
+                                self.scrollAreaWidgetContainer.children()[index].hide()
+                                countOfObjectsShown = countOfObjectsShown - 1
                         else:
-                            self.scrollAreaWidgetContainer.children()[index].hide()
-                            countOfObjectsShown = countOfObjectsShown - 1
+                            self.scrollAreaWidgetContainer.children()[index].show()
                 if (countOfObjectsShown) == 1:
                     self.numOfAttractionsLabel.setText((str(countOfObjectsShown)) + " Attraction Found")
                 else:
@@ -334,7 +339,6 @@ class Ui_MainWindow(object):
             self.radiusComboBox.setEnabled(False)
 
     def getCurrentLocation(self, _):
-        print(ipInfo)
         self.latitudeInput.setText(str(ipInfo.__getattr__("location")["latitude"]))
         self.longitudeInput.setText(str(ipInfo.__getattr__("location")["longitude"]))
         self.checkIfLocationIsFilled
@@ -350,6 +354,48 @@ class Ui_MainWindow(object):
         else:
             self.helpMenuGroupBox.hide()
             clickCount = 0
+
+    def showDocumentation(self, _):
+        self.documentationWindow = QtWidgets.QLabel()
+        self.documentationWindow.setFixedSize(800, 600)
+        self.documentationWindow.setWindowTitle("Read Documentation")
+        self.documentationWindowCentralwidget = QtWidgets.QWidget(self.documentationWindow)
+        self.documentationWindowCentralwidget.setFixedSize(800, 600)
+        self.documentationWindowGroupBox = QtWidgets.QGroupBox(self.documentationWindowCentralwidget)
+        self.documentationWindowGroupBox.setFixedSize(800, 600)
+        self.documentationWindowGroupBox.setEnabled(True)
+        self.documentationWindowGroupBox.setFlat(True)
+        self.documentationLabel = self.createLabel("documentationWindowGroupBox", 8, 0, 200, 50)
+        self.documentationLabel.setText("Documentation:")
+        self.documentation = QtWidgets.QPlainTextEdit(self.documentationWindowGroupBox)
+        self.documentation.setFixedSize(784, 550)
+        self.documentation.move(8, 35)
+        text = open('documentation.txt').read()
+        self.documentation.setPlainText(text)
+        self.documentation.setReadOnly(True)
+        self.documentationWindow.show()
+
+    def showDescriptions(self, _):
+        self.latitudeInput.setToolTip("Enter a latitudinal location here \n"
+                                      "or select the find my location \n"
+                                      "button to autofill these fields \n"
+                                      "with your current latitudinal \n"
+                                      "location. If both the latitude \n"
+                                      "and longitude fields are entered \n"
+                                      "correctly (in the form of integers), \n"
+                                      "you will be able to enter the desired \n"
+                                      "radius of distance away that an \n"
+                                      "attraction should be.")
+        self.longitudeInput.setToolTip("Enter a longitudinal location here \n"
+                                      "or select the find my location \n"
+                                      "button to autofill these fields \n"
+                                      "with your current longitudinal \n"
+                                      "location." "If both the latitude \n"
+                                      "and longitude fields are entered \n"
+                                      "correctly (in the form of integers), \n"
+                                      "you will be able to enter the desired \n"
+                                      "radius of distance away that an \n"
+                                      "attraction should be.")
 
     def showWindow(self, _):
         self.window = QtWidgets.QLabel()
@@ -690,20 +736,22 @@ class Ui_MainWindow(object):
         self.helpButton.setGeometry(5,535,205,20)
         clickCount = 0
         self.helpMenuGroupBox = QtWidgets.QGroupBox(self.groupBox)
-        self.helpMenuGroupBox.setGeometry(QtCore.QRect(13, 455, 190, 80))
+        self.helpMenuGroupBox.setGeometry(QtCore.QRect(5, 455, 205, 80))
         self.helpMenuGroupBox.hide()
         self.reportButton = QtWidgets.QToolButton(self.groupBox)
         self.reportButton.setGeometry(5, 560, 205, 20)
         self.reportButton.setText("Create a Report")
         self.reportButton.clicked.connect(self.createReport)
         self.documentationButton = QtWidgets.QToolButton(self.helpMenuGroupBox)
-        self.documentationButton.setGeometry(5, 5, 180, 20)
+        self.documentationButton.setGeometry(5, 30, 195, 20)
+        self.documentationButton.clicked.connect(self.showDocumentation)
         self.supportButton = QtWidgets.QToolButton(self.helpMenuGroupBox)
-        self.supportButton.setGeometry(5, 30, 180, 20)
+        self.supportButton.setGeometry(5, 5, 195, 20)
         self.showToolDescriptionButton = QtWidgets.QToolButton(self.helpMenuGroupBox)
-        self.showToolDescriptionButton.setGeometry(5, 55, 180, 20)
-        self.documentationButton.setText(_translate("MainWindow", "Documentation"))
-        self.supportButton.setText(_translate("MainWindow", "Support"))
+        self.showToolDescriptionButton.setGeometry(5, 55, 195, 20)
+        self.showToolDescriptionButton.clicked.connect(self.showDescriptions)
+        self.documentationButton.setText(_translate("MainWindow", " Read Documentation"))
+        self.supportButton.setText(_translate("MainWindow", "Q ＆ A"))
         self.showToolDescriptionButton.setText(_translate("MainWindow", "Show Tool Descriptions"))
         self.helpButton.setText(_translate("MainWindow", "Help"))
         self.helpButton.clicked.connect(self.helpMenuListener)
