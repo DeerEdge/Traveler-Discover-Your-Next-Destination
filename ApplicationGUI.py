@@ -335,8 +335,10 @@ class Ui_MainWindow(object):
     def checkIfLocationIsFilled(self, _):
         if (self.latitudeInput.text() != "" and self.longitudeInput.text() != "" and self.isfloat(str(self.latitudeInput.text())) and self.isfloat(str(self.longitudeInput.text()))):
             self.radiusComboBox.setEnabled(True)
+            self.showLocationMapButton.setEnabled((True))
         else:
             self.radiusComboBox.setEnabled(False)
+            self.showLocationMapButton.setEnabled((False))
 
     def getCurrentLocation(self, _):
         self.latitudeInput.setText(str(ipInfo.__getattr__("location")["latitude"]))
@@ -397,9 +399,41 @@ class Ui_MainWindow(object):
                                       "radius of distance away that an \n"
                                       "attraction should be.")
 
+    def showLocationMap(self, _):
+        if (self.latitudeInput.text() != "" and self.longitudeInput.text() != "" and self.isfloat(str(self.latitudeInput.text())) and self.isfloat(str(self.longitudeInput.text()))):
+            self.window = QtWidgets.QLabel()
+            self.window.setFixedSize(800, 600)
+            self.window.setWindowTitle("Entered Location Map")
+            self.centralwidget = QtWidgets.QWidget(self.window)
+            self.centralwidget.setFixedSize(800, 600)
+            self.centralwidget.setObjectName("centralwidget")
+            self.expandedMapBox = QtWidgets.QGroupBox(self.centralwidget)
+            self.expandedMapBox.setFixedSize(820, 610)
+            self.expandedMapBox.move(-10, 0)
+            self.expandedMapBox.setEnabled(True)
+            self.expandedMapBox.setFlat(True)
+            self.mapHolder = QtWidgets.QVBoxLayout(self.expandedMapBox)
+            coordinate = (float(self.latitudeInput.text()), float(self.longitudeInput.text()))
+            expandedMap = folium.Map(
+                zoom_start=15,
+                location=coordinate,
+                popup="test"
+            )
+            folium.Marker(
+                location=coordinate
+            ).add_to(expandedMap)
+            # save map data to data object
+            data = io.BytesIO()
+            expandedMap.save(data, close_file=False)
+            webView = QWebEngineView()
+            webView.setHtml(data.getvalue().decode())
+            self.mapHolder.addWidget(webView)
+            self.window.show()
+
     def showWindow(self, _):
         self.window = QtWidgets.QLabel()
         self.window.setFixedSize(800, 600)
+        self.window.setWindowTitle("Expanded Map View")
         self.centralwidget = QtWidgets.QWidget(self.window)
         self.centralwidget.setFixedSize(800, 600)
         self.centralwidget.setObjectName("centralwidget")
@@ -612,11 +646,11 @@ class Ui_MainWindow(object):
         # Filter Title
         Xcoor = 0
         Ycoor = 230
-        self.filterTitle = self.createLabel("groupBox",Xcoor+5, Ycoor+40, 60, 50)
+        self.filterTitle = self.createLabel("groupBox",Xcoor+5, Ycoor+50, 60, 50)
 
         # Filtering by State - Format: (Label : ComboBox)
-        self.stateFilterLabel = self.createLabel("groupBox",Xcoor+5, Ycoor+80, 50, 50)
-        self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+40, Ycoor+95, 175, 26)
+        self.stateFilterLabel = self.createLabel("groupBox",Xcoor+5, Ycoor+90, 50, 50)
+        self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+40, Ycoor+105, 175, 26)
         self.stateFilterComboBox.addItem("None", ["None"])
         self.stateFilterComboBox.addItem("Alabama", ["None", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
         self.stateFilterComboBox.addItem("Alaska", ["None", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
@@ -672,30 +706,30 @@ class Ui_MainWindow(object):
         self.stateFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by City - Format: (Label : ComboBox)
-        self.cityFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+115, 50, 50)
-        self.cityFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+130, 175, 26)
+        self.cityFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+125, 50, 50)
+        self.cityFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+140, 175, 26)
         self.cityFilterComboBox.addItems(["None"])
         self.cityFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by Type - Format: (Label : ComboBox)
-        self.typeFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+150, 50, 50)
-        self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+165, 175, 26)
+        self.typeFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+160, 50, 50)
+        self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+175, 175, 26)
         self.typeFilterComboBox.addItems(["None", "Sports", "Cultural/Historical"])
         self.typeFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by WheelChair Accessibility - Format: (CheckBox : Label)
-        self.wheelchairAccessFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+190, 150, 50)
-        self.wheelchairAccessFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+206, 20, 20)
+        self.wheelchairAccessFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+200, 150, 50)
+        self.wheelchairAccessFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+216, 20, 20)
         self.wheelchairAccessFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
         # Filtering by Family Friendliness - Format: (CheckBox : Label)
-        self.familyFriendlyFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+215, 150, 50)
-        self.familyFriendlyFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+231, 20, 20)
+        self.familyFriendlyFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+225, 150, 50)
+        self.familyFriendlyFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+241, 20, 20)
         self.familyFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
         # Filtering by Pet Friendliness - Format: (CheckBox : Label)
-        self.petFriendlyFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+240, 150, 50)
-        self.petFriendlyFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+256, 20, 20)
+        self.petFriendlyFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+250, 150, 50)
+        self.petFriendlyFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+266, 20, 20)
         self.petFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
         # Enter Coordinates QLineEdit
@@ -720,8 +754,13 @@ class Ui_MainWindow(object):
         self.radiusComboBox.addItems(["Any distance", "Less than 5 miles", "Less than 10 miles", "Less than 20 miles", "Less than 50 miles"])
         self.radiusComboBox.setEnabled(False)
         self.radiusComboBox.activated.connect(self.detectChangeInRadius)
+        self.showLocationMapButton = QtWidgets.QToolButton(self.groupBox)
+        self.showLocationMapButton.setGeometry(Xcoor + 5, Ycoor + 10, 205, 20)
+        self.showLocationMapButton.setText("Show location in maps")
+        self.showLocationMapButton.setEnabled(False)
+        self.showLocationMapButton.clicked.connect(self.showLocationMap)
         self.getLocationButton = QtWidgets.QToolButton(self.groupBox)
-        self.getLocationButton.setGeometry(Xcoor + 5, Ycoor + 10, 205, 20)
+        self.getLocationButton.setGeometry(Xcoor + 5, Ycoor + 35, 205, 20)
         self.getLocationButton.setText("Find my location")
         self.getLocationButton.clicked.connect(self.getCurrentLocation)
 
