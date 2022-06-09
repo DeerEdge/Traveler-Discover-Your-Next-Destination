@@ -1,0 +1,69 @@
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-09 Time Of Action: 01:55:45
+Selected State: Alabama
+Selected City: None
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 1), U.S. Space and Rocket Center, Huntsville, Alabama, 1970
+Filtered Attraction: (id: 2), Huntsville Museum of Art, Huntsville, Alabama, 1973
+Filtered Attraction: (id: 3), Huntsville Depot Museum, Huntsville, Alabama, 1860
+Filtered Attraction: (id: 4), Lowe Mill Arts & Entertainment, Huntsville, Alabama, 2001
+Filtered Attraction: (id: 5), Broadway Theater League, Huntsville, Alabama, 1959
+Filtered Attraction: (id: 6), John Hunt Park Championship Soccer Stadium, Huntsville, Alabama, 2000
+Filtered Attraction: (id: 7), Huntsville Botanical Garden, Huntsville, Alabama, 1988
+Filtered Attraction: (id: 8), Monte Sano State Park, Huntsville, Alabama, 1900
+Filtered Attraction: (id: 9), Land Trust of North Alabama: Monte Sano Nature Preserve, Huntsville, Alabama, 1900
+Filtered Attraction: (id: 10), Po Boy Factory, Huntsville, Alabama, 2000
+Filtered Attraction: (id: 11), Hildegard's German Cuisine, Huntsville, Alabama, 2007
+Filtered Attraction: (id: 12), 1892 East Restaurant & Tavern
+, Huntsville, Alabama, 1892
+Filtered Attraction: (id: 13), Birmingham Civil Rights Institute, Birmingham, Alabama, 1992
+Filtered Attraction: (id: 14), Birmingham Museum of Art, Birmingham, Alabama, 1951
+Filtered Attraction: (id: 15), Sloss Furnaces National Historic Landmark, Birmingham, Alabama, 1881
+Filtered Attraction: (id: 16), Birmingham Zoo, Birmingham, Alabama, 1955
+Filtered Attraction: (id: 17), Alabama Theatre, Birmingham, Alabama, 1927
+Filtered Attraction: (id: 18), Barber Motorsports Park, Birmingham, Alabama, 2003
+Filtered Attraction: (id: 19), Oak Mountain State Park, Birmingham, Alabama, 1927
+Filtered Attraction: (id: 20), Birmingham Botanical Gardens, Birmingham, Alabama, 1964
+Filtered Attraction: (id: 21), Moss Rock Preserve, Birmingham, Alabama, 2003
+Filtered Attraction: (id: 22), Corry's Restaurant, Birmingham, Alabama, 2002
+Filtered Attraction: (id: 23), Dreamland BBQ, Birmingham, Alabama, 1962
+Filtered Attraction: (id: 24), Urban Cookhouse, Birmingham, Alabama, 2010
+Filtered Attraction: (id: 25), The National Memorial for Peace and Justice, Montgomery, Alabama, 2018
+Filtered Attraction: (id: 26), Alabama State Capitol, Montgomery, Alabama, 1872
+Filtered Attraction: (id: 27), The National Memorial for Peace and Justice, Montgomery, Alabama, 2018
+Filtered Attraction: (id: 28), Montgomery Zoo & Mann Wildlife Learning Museum, Montgomery, Alabama, 1920
+Filtered Attraction: (id: 29), Capri Theatre, Montgomery, Alabama, 1941
+Filtered Attraction: (id: 30), Montgomery Performing Arts Centre, Montgomery, Alabama, 2014
+Filtered Attraction: (id: 31), Riverfront Park, Montgomery, Alabama, 1900
+Filtered Attraction: (id: 32), Alabama Safari Park, Montgomery, Alabama, 2020
+Filtered Attraction: (id: 33), Cooters Pond Park, Montgomery, Alabama, 2000
+Filtered Attraction: (id: 34), Central Restaurant, Montgomery, Alabama, 2000
+Filtered Attraction: (id: 35), Mrs B's Home Cooking, Montgomery, Alabama, 2000
+Filtered Attraction: (id: 36), Wintzell's Oyster House, Montgomery, Alabama, 1938
+Filtered Attraction: (id: 37), USS Alabama Battleship Memorial Park, Mobile, Alabama, 1963
+Filtered Attraction: (id: 38), History Museum of Mobile, Mobile, Alabama, 1858
+Filtered Attraction: (id: 39), USS Alabama, Mobile, Alabama, 1930
+Filtered Attraction: (id: 40), Exploreum Science Center & Poarch Band of Creek Indians Digital Dome Theater, Mobile, Alabama, 1998
+Filtered Attraction: (id: 41), Saenger Theatre Mobile, Mobile, Alabama, 1964
+Filtered Attraction: (id: 42), Mobile Carnival Museum, Mobile, Alabama, 2005
+Filtered Attraction: (id: 43), Bellingrath Gardens and Home, Mobile, Alabama, 1958
+Filtered Attraction: (id: 44), Meaher State Park, Mobile, Alabama, 1900
+Filtered Attraction: (id: 45), Mobile Botanical Gardens, Mobile, Alabama, 1974
+Filtered Attraction: (id: 46), Maple Street Biscuit Company Mobile, Mobile, Alabama, 2012
+Filtered Attraction: (id: 47), Chicken Salad Chick, Mobile, Alabama, 2000
+Filtered Attraction: (id: 48), Soul Bowlz, Mobile, Alabama, 2000
+Filtered Attraction: (id: 49), Alabama Museum of Natural History, Tuscaloosa, Alabama, 1909
+Filtered Attraction: (id: 50), Paul W. Bryant Museum, Tuscaloosa, Alabama, 1988
+Filtered Attraction: (id: 51), Jemison-Van De Graaff Mansion, Tuscaloosa, Alabama, 1966
+Filtered Attraction: (id: 52), Bama Theatre, Tuscaloosa, Alabama, 1970
+Filtered Attraction: (id: 53), Kentuck Art Center & Festival, Tuscaloosa, Alabama, 1971
+Filtered Attraction: (id: 54), Tuscaloosa Amphitheater, Tuscaloosa, Alabama, 2011
+Filtered Attraction: (id: 55), Tuscaloosa River Walk, Tuscaloosa, Alabama, 2002
+Filtered Attraction: (id: 56), Moundville Archaeological Park, Tuscaloosa, Alabama, 1422
+Filtered Attraction: (id: 57), Lake Lurleen State Park, Tuscaloosa, Alabama, 2000
+Filtered Attraction: (id: 58), Chuck's Fish, Tuscaloosa, Alabama, 2009
+Filtered Attraction: (id: 59), Avenue Pub, Tuscaloosa, Alabama, 2014
+Filtered Attraction: (id: 60), Flavaz Seafood & Soulfood Restaurant, Tuscaloosa, Alabama, 2000
