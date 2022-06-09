@@ -49,6 +49,8 @@ class Ui_MainWindow(object):
             self.label = QtWidgets.QLabel(self.reportWindow)
         elif type == "documentationWindowGroupBox":
             self.label = QtWidgets.QLabel(self.documentationWindow)
+        elif type == "titleCentralWidget":
+            self.label = QtWidgets.QLabel(self.titleCentralwidget)
         self.label.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
         return self.label
 
@@ -60,6 +62,8 @@ class Ui_MainWindow(object):
             self.comboBox = QtWidgets.QComboBox(self.groupBox)
         elif type == "topGroupBoxBar":
             self.comboBox = QtWidgets.QComboBox(self.topGroupBoxBar)
+        elif type == "titleCentralWidget":
+            self.comboBox = QtWidgets.QComboBox(self.titleCentralwidget)
         self.comboBox.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
         return self.comboBox
 
@@ -163,9 +167,9 @@ class Ui_MainWindow(object):
         self.expandMapButton = QtWidgets.QToolButton(self.scrollAreaGroupBox)
         self.expandMapButton.setGeometry(690, 198, 94, 17)
         self.expandMapButton.setText("Expand Map ↗︎")
-        self.expandMapButton.clicked.connect(self.showWindow)
+        self.expandMapButton.clicked.connect(self.showExpandedMapViewWindow)
 
-        self.expandMapButton.clicked.connect(self.showWindow)
+        self.expandMapButton.clicked.connect(self.showExpandedMapViewWindow)
         self.googleMapsButton = QtWidgets.QToolButton(self.scrollAreaGroupBox)
         self.googleMapsButton.setGeometry(786, 198, 94, 17)
         self.googleMapsButton.setText(_translate("MainWindow", "Website ↗︎"))
@@ -430,7 +434,7 @@ class Ui_MainWindow(object):
             self.mapHolder.addWidget(webView)
             self.window.show()
 
-    def showWindow(self, _):
+    def showExpandedMapViewWindow(self, _):
         self.window = QtWidgets.QLabel()
         self.window.setFixedSize(800, 600)
         self.window.setWindowTitle("Expanded Map View")
@@ -570,15 +574,234 @@ class Ui_MainWindow(object):
         except ValueError:
             return False
 
+    def changeWindow(self, _):
+        self.titleCentralwidget.deleteLater()
+        ui.setupUi(MainWindow)
+
+    def setupTitle(self, MainWindow):
+        MainWindow.setWindowTitle("Traveler")
+        MainWindow.setFixedSize(1150, 645)
+        self.titleCentralwidget = QtWidgets.QWidget(MainWindow)
+        self.titleCentralwidget.setFixedSize(1150, 645)
+        self.titleWindowPicture = QtWidgets.QLabel(self.titleCentralwidget)
+        self.titleWindowPicture.setFixedSize(1150,645)
+        self.titleWindowPicture.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowPicture.jpeg"))
+        self.titleWindowPicture.setScaledContents(True)
+        self.titleWindowPicture.show()
+        self.titleWindowLogo = QtWidgets.QLabel(self.titleCentralwidget)
+        self.titleWindowLogo.setFixedSize(500, 500)
+        self.titleWindowLogo.move(310,0)
+        self.titleWindowLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
+        self.titleWindowLogo.setScaledContents(True)
+        self.titleWindowLogo.show()
+        self.titleStateInput = self.createComboBox("titleCentralWidget", 150, 200, 150, 50)
+        self.titleStateInput.setStyleSheet("QComboBox"
+                                           "{"
+                                           "color: white;"
+                                            "border: 3px solid;" 
+                                           "border-color: rgb(245, 245, 245);"
+                                           "background-color: rgba(20, 52, 124, 170);"
+                                           "}"
+                                           "QComboBox QAbstractItemView {" 
+                                           "background-color: rgb(140, 140, 140);"
+                                           "color: white;"
+                                           "width: 200px;"
+                                            "selection-background-color: lightgrey;"
+                                            "}"
+                                           )
+        self.titleStateInput.setFont(QtGui.QFont("Lato", 14))
+        self.titleStateInput.addItem("Select a State", ["None"])
+        self.titleStateInput.addItem("Alabama",
+                                         ["None", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
+        self.titleStateInput.addItem("Alaska",
+                                         ["None", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
+        self.titleStateInput.addItem("Arizona")
+        self.titleStateInput.addItem("Arkansas")
+        self.titleStateInput.addItem("California")
+        self.titleStateInput.addItem("Colorado")
+        self.titleStateInput.addItem("Connecticut")
+        self.titleStateInput.addItem("Delaware")
+        self.titleStateInput.addItem("Florida")
+        self.titleStateInput.addItem("Georgia")
+        self.titleStateInput.addItem("Hawaii")
+        self.titleStateInput.addItem("Idaho")
+        self.titleStateInput.addItem("Illinois")
+        self.titleStateInput.addItem("Indiana")
+        self.titleStateInput.addItem("Iowa")
+        self.titleStateInput.addItem("Kansas")
+        self.titleStateInput.addItem("Kentucky")
+        self.titleStateInput.addItem("Louisiana")
+        self.titleStateInput.addItem("Maine")
+        self.titleStateInput.addItem("Maryland")
+        self.titleStateInput.addItem("Massachusetts")
+        self.titleStateInput.addItem("Michigan")
+        self.titleStateInput.addItem("Minnesota")
+        self.titleStateInput.addItem("Mississippi")
+        self.titleStateInput.addItem("Missouri")
+        self.titleStateInput.addItem("Montana")
+        self.titleStateInput.addItem("Nebraska")
+        self.titleStateInput.addItem("Nevada")
+        self.titleStateInput.addItem("New Hampshire")
+        self.titleStateInput.addItem("New Jersey")
+        self.titleStateInput.addItem("New Mexico")
+        self.titleStateInput.addItem("New York")
+        self.titleStateInput.addItem("North Carolina")
+        self.titleStateInput.addItem("North Dakota")
+        self.titleStateInput.addItem("Ohio")
+        self.titleStateInput.addItem("Oklahoma")
+        self.titleStateInput.addItem("Oregon")
+        self.titleStateInput.addItem("Pennsylvania")
+        self.titleStateInput.addItem("Rhode Island")
+        self.titleStateInput.addItem("South Carolina")
+        self.titleStateInput.addItem("South Dakota")
+        self.titleStateInput.addItem("Tennessee")
+        self.titleStateInput.addItem("Texas")
+        self.titleStateInput.addItem("Utah")
+        self.titleStateInput.addItem("Vermont")
+        self.titleStateInput.addItem("Virginia")
+        self.titleStateInput.addItem("Washington")
+        self.titleStateInput.addItem("West Virginia")
+        self.titleStateInput.addItem("Wisconsin")
+        self.titleStateInput.addItem("Wyoming")
+
+        #Title City Input
+        self.titleCityInput = self.createComboBox("titleCentralWidget", 297, 200, 150, 50)
+        self.titleCityInput.setStyleSheet("QComboBox"
+                                           "{"
+                                           "color: white;"
+                                           "border: 3px solid;"
+                                           "border-color: rgb(245, 245, 245);"
+                                           "background-color: rgba(20, 52, 124, 170);"
+                                           "}"
+                                           "QComboBox QAbstractItemView {"
+                                           "background-color: rgb(140, 140, 140);"
+                                           "color: white;"
+                                           "width: 200px;"
+                                           "selection-background-color: lightgrey;"
+                                           "}"
+                                           )
+        self.titleCityInput.setFont(QtGui.QFont("Lato", 14))
+        self.titleCityInput.addItem("Select a City", ["None"])
+
+        # Title Type Input
+        self.titleTypeInput = self.createComboBox("titleCentralWidget", 444, 200, 160, 50)
+        self.titleTypeInput.setStyleSheet("QComboBox"
+                                          "{"
+                                          "color: white;"
+                                          "border: 3px solid;"
+                                          "border-color: rgb(245, 245, 245);"
+                                          "background-color: rgba(20, 52, 124, 170);"
+                                          "}"
+                                          "QComboBox QAbstractItemView {"
+                                          "background-color: rgb(140, 140, 140);"
+                                          "color: white;"
+                                          "width: 200px;"
+                                          "selection-background-color: lightgrey;"
+                                          "}"
+                                          )
+        self.titleTypeInput.setFont(QtGui.QFont("Lato", 14))
+        self.titleTypeInput.addItem("Select a Type")
+        self.titleTypeInput.addItem("Sports")
+
+        # Title Search Input
+        self.titleSearchBar = QtWidgets.QLineEdit(self.titleCentralwidget)
+        self.titleSearchBar.setGeometry(QtCore.QRect(601, 200, 302, 50))
+        self.titleSearchBar.setPlaceholderText("Search by Attraction Name")
+        self.titleSearchBar.setStyleSheet("QLineEdit"
+                                          "{"
+                                          "color: white;"
+                                          "border: 3px solid;"
+                                          "border-color: rgb(245, 245, 245);"
+                                          "background-color: rgba(20, 52, 124, 170);"
+                                          "}"
+                                          )
+        self.titleSearchBar.setFont(QtGui.QFont("Lato", 14))
+
+        self.windowChangeButton = QtWidgets.QToolButton(self.titleCentralwidget)
+        self.windowChangeButton.setGeometry(900, 200, 100, 50)
+        self.windowChangeButton.setText("Search")
+        self.windowChangeButton.setStyleSheet("QToolButton"
+                                          "{"
+                                          "color: white;"
+                                          "border: 3px solid;"
+                                          "border-color: rgb(245, 245, 245);"
+                                          "background-color: rgba(20, 52, 124, 170);"
+                                          "}"
+                                          )
+        self.windowChangeButton.setFont(QtGui.QFont("Lato", 14))
+        self.windowChangeButton.clicked.connect(self.changeWindow)
+
+        self.titleWindowExplorePicture = QtWidgets.QLabel(self.titleCentralwidget)
+        self.titleWindowExplorePicture.setStyleSheet("QLabel"
+                                          "{"
+                                          "border: 2px solid;"
+                                          "border-color: rgb(245, 245, 245);"
+                                          "}"
+                                          )
+        self.titleWindowExplorePicture.setFixedSize(469, 330)
+        self.titleWindowExplorePicture.move(150, 290)
+        self.titleWindowExplorePicture.setPixmap(QtGui.QPixmap("./Application Pictures/exploreCities.png"))
+        self.titleWindowExplorePicture.setScaledContents(True)
+        self.titleWindowExplorePicture.show()
+
+        self.exploreCitiesButton = QtWidgets.QToolButton(self.titleCentralwidget)
+        self.exploreCitiesButton.setGeometry(630, 290, 370, 30)
+        self.exploreCitiesButton.setText("Explore Top Cities and Attractions")
+        self.exploreCitiesButton.setStyleSheet("QToolButton"
+                                              "{"
+                                              "color: white;"
+                                              "border: 2px solid;"
+                                              "border-color: rgb(245, 245, 245);"
+                                              "background-color: rgba(20, 52, 124, 170);"
+                                              "}"
+                                              )
+        self.exploreCitiesButton.setFont(QtGui.QFont("Lato", 12))
+
+        self.exploreCitiesFeatureDescription = self.createLabel("titleCentralWidget", 630, 325, 370, 200)
+        self.exploreCitiesFeatureDescription.setText(" Text about this feature...")
+        self.exploreCitiesFeatureDescription.setStyleSheet("QLabel"
+                                               "{"
+                                               "color: white;"
+                                               "background-color: rgba(20, 52, 124, 170);"
+                                               "}"
+                                               )
+        self.exploreCitiesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
+
+        self.sourcesButton = QtWidgets.QToolButton(self.titleCentralwidget)
+        self.sourcesButton.setGeometry(630, 530, 370, 30)
+        self.sourcesButton.setText("View Sources, Licenses, and References")
+        self.sourcesButton.setStyleSheet("QToolButton"
+                                               "{"
+                                               "color: white;"
+                                               "border: 2px solid;"
+                                               "border-color: rgb(245, 245, 245);"
+                                               "background-color: rgba(20, 52, 124, 170);"
+                                               "}"
+                                               )
+        self.sourcesButton.setFont(QtGui.QFont("Lato", 12))
+
+        self.sourcesFeatureDescription = self.createLabel("titleCentralWidget", 630, 565, 370, 53)
+        self.sourcesFeatureDescription.setText(" Text about this feature...")
+        self.sourcesFeatureDescription.setStyleSheet("QLabel"
+                                         "{"
+                                         "color: white;"
+                                         "background-color: rgba(20, 52, 124, 170);"
+                                         "}"
+                                         )
+        self.sourcesFeatureDescription.setFont(QtGui.QFont("Lato", 12))
+
+        MainWindow.setCentralWidget(self.titleCentralwidget)
+
+
     def setupUi(self, MainWindow):
         global clickCount
         global groupBox
         global topGroupBoxBar
         _translate = QtCore.QCoreApplication.translate
 
-        # Sets up the window container
-        MainWindow.setObjectName("MainWindow")
+        MainWindow.setWindowTitle("Traveler")
         MainWindow.setFixedSize(1150, 645)
+        # Sets up the window container
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
         self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1151, 626))
@@ -866,7 +1089,7 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
+    ui.setupTitle(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
 
