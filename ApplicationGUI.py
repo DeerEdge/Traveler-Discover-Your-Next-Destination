@@ -574,9 +574,47 @@ class Ui_MainWindow(object):
         except ValueError:
             return False
 
+    def titleInputDependencies(self, _):
+        if (self.titleStateInput.currentText() != "Select a State"):
+            self.titleCityInput.setEnabled(True)
+            if (self.titleCityInput.currentText() != "Select a City"):
+                self.titleTypeInput.setEnabled(True)
+                self.windowChangeButton.setEnabled(True)
+            else:
+                self.titleTypeInput.setEnabled(False)
+                self.titleTypeInput.setCurrentText("Select a Type")
+                self.windowChangeButton.setEnabled(False)
+        else:
+            self.titleCityInput.setEnabled(False)
+            self.titleTypeInput.setCurrentText("Select a Type")
+            self.titleCityInput.setCurrentText("Select a City")
+
     def changeWindow(self, _):
+        titleSelectedState = self.titleStateInput.currentText()
+        titleSelectedCity = self.titleCityInput.currentText()
+        titleSelectedType = self.titleTypeInput.currentText()
+        titleSearchInput = self.titleSearchBar.text()
         self.titleCentralwidget.deleteLater()
         ui.setupUi(MainWindow)
+        self.getCurrentLocation(_)
+        self.stateFilterComboBox.setCurrentText(titleSelectedState)
+        self.cityFilterComboBox.addItems(
+        self.stateFilterComboBox.itemData(self.stateFilterComboBox.findText(titleSelectedState)))
+        self.cityFilterComboBox.setCurrentText(titleSelectedCity)
+        self.typeFilterComboBox.setCurrentText(titleSelectedType)
+        self.searchBar.setText(titleSearchInput)
+        self.getCurrentFieldValues(_)
+        self.searchResults(_)
+
+    def changeToExploreTab(self, _):
+        self.titleCentralwidget.deleteLater()
+        ui.setupUi(MainWindow)
+        self.tabWidget.setCurrentIndex(1)
+
+    def changeToSourcesTab(self, _):
+        self.titleCentralwidget.deleteLater()
+        ui.setupUi(MainWindow)
+        self.tabWidget.setCurrentIndex(2)
 
     def setupTitle(self, MainWindow):
         MainWindow.setWindowTitle("Traveler")
@@ -612,9 +650,9 @@ class Ui_MainWindow(object):
         self.titleStateInput.setFont(QtGui.QFont("Lato", 14))
         self.titleStateInput.addItem("Select a State", ["None"])
         self.titleStateInput.addItem("Alabama",
-                                         ["None", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
+                                         ["Select a City", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
         self.titleStateInput.addItem("Alaska",
-                                         ["None", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
+                                         ["Select a City", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
         self.titleStateInput.addItem("Arizona")
         self.titleStateInput.addItem("Arkansas")
         self.titleStateInput.addItem("California")
@@ -663,9 +701,12 @@ class Ui_MainWindow(object):
         self.titleStateInput.addItem("West Virginia")
         self.titleStateInput.addItem("Wisconsin")
         self.titleStateInput.addItem("Wyoming")
+        self.titleStateInput.activated.connect(self.selectTitleCityFromTitleState)
+        self.titleStateInput.activated.connect(self.titleInputDependencies)
 
         #Title City Input
         self.titleCityInput = self.createComboBox("titleCentralWidget", 297, 200, 150, 50)
+        self.titleCityInput.setEnabled(False)
         self.titleCityInput.setStyleSheet("QComboBox"
                                            "{"
                                            "color: white;"
@@ -682,9 +723,11 @@ class Ui_MainWindow(object):
                                            )
         self.titleCityInput.setFont(QtGui.QFont("Lato", 14))
         self.titleCityInput.addItem("Select a City", ["None"])
+        self.titleCityInput.activated.connect(self.titleInputDependencies)
 
         # Title Type Input
         self.titleTypeInput = self.createComboBox("titleCentralWidget", 444, 200, 160, 50)
+        self.titleTypeInput.setEnabled(False)
         self.titleTypeInput.setStyleSheet("QComboBox"
                                           "{"
                                           "color: white;"
@@ -702,6 +745,7 @@ class Ui_MainWindow(object):
         self.titleTypeInput.setFont(QtGui.QFont("Lato", 14))
         self.titleTypeInput.addItem("Select a Type")
         self.titleTypeInput.addItem("Sports")
+        self.titleTypeInput.addItem("Cultural/Historical")
 
         # Title Search Input
         self.titleSearchBar = QtWidgets.QLineEdit(self.titleCentralwidget)
@@ -717,7 +761,9 @@ class Ui_MainWindow(object):
                                           )
         self.titleSearchBar.setFont(QtGui.QFont("Lato", 14))
 
+        # Search button that changes windows
         self.windowChangeButton = QtWidgets.QToolButton(self.titleCentralwidget)
+        self.windowChangeButton.setEnabled(False)
         self.windowChangeButton.setGeometry(900, 200, 100, 50)
         self.windowChangeButton.setText("Search")
         self.windowChangeButton.setStyleSheet("QToolButton"
@@ -731,6 +777,7 @@ class Ui_MainWindow(object):
         self.windowChangeButton.setFont(QtGui.QFont("Lato", 14))
         self.windowChangeButton.clicked.connect(self.changeWindow)
 
+        # Explore Cities Feature Preview Picture
         self.titleWindowExplorePicture = QtWidgets.QLabel(self.titleCentralwidget)
         self.titleWindowExplorePicture.setStyleSheet("QLabel"
                                           "{"
@@ -744,6 +791,7 @@ class Ui_MainWindow(object):
         self.titleWindowExplorePicture.setScaledContents(True)
         self.titleWindowExplorePicture.show()
 
+        # Explore Cities Button
         self.exploreCitiesButton = QtWidgets.QToolButton(self.titleCentralwidget)
         self.exploreCitiesButton.setGeometry(630, 290, 370, 30)
         self.exploreCitiesButton.setText("Explore Top Cities and Attractions")
@@ -756,9 +804,17 @@ class Ui_MainWindow(object):
                                               "}"
                                               )
         self.exploreCitiesButton.setFont(QtGui.QFont("Lato", 12))
+        self.exploreCitiesButton.clicked.connect(self.changeToExploreTab)
 
+        # Description of Explore Feature
         self.exploreCitiesFeatureDescription = self.createLabel("titleCentralWidget", 630, 325, 370, 200)
-        self.exploreCitiesFeatureDescription.setText(" Text about this feature...")
+        self.exploreCitiesFeatureDescription.setText("     Not sure where to go or what types of attractions are best? Using our"
+                                                     "\n unique explore feature, you can instantly find the top attractions across the"
+                                                     "\n country! These attractions come from the biggest cities in the nation and"
+                                                     "\n boast high ratings and extravagant qualities. From the iconic Golden Gate"
+                                                     "\n Bridge to the skyscrapers of New York City, an extensive collection of"
+                                                     "\n attractions await you! To explore these attractions click the button above.")
+        self.exploreCitiesFeatureDescription.setWordWrap(True)
         self.exploreCitiesFeatureDescription.setStyleSheet("QLabel"
                                                "{"
                                                "color: white;"
@@ -767,6 +823,7 @@ class Ui_MainWindow(object):
                                                )
         self.exploreCitiesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
 
+        # Sources button
         self.sourcesButton = QtWidgets.QToolButton(self.titleCentralwidget)
         self.sourcesButton.setGeometry(630, 530, 370, 30)
         self.sourcesButton.setText("View Sources, Licenses, and References")
@@ -779,16 +836,21 @@ class Ui_MainWindow(object):
                                                "}"
                                                )
         self.sourcesButton.setFont(QtGui.QFont("Lato", 12))
+        self.sourcesButton.clicked.connect(self.changeToSourcesTab)
 
+        # Sources Button Description
         self.sourcesFeatureDescription = self.createLabel("titleCentralWidget", 630, 565, 370, 53)
-        self.sourcesFeatureDescription.setText(" Text about this feature...")
+        self.sourcesFeatureDescription.setText("     Find all sources, licenses, and references used within this application by"
+                                               "\n clicking the button above. If you spot any missing citations, please create"
+                                               "\n a report on the search attractions page.")
+        self.sourcesFeatureDescription.setWordWrap(True)
         self.sourcesFeatureDescription.setStyleSheet("QLabel"
                                          "{"
                                          "color: white;"
                                          "background-color: rgba(20, 52, 124, 170);"
                                          "}"
                                          )
-        self.sourcesFeatureDescription.setFont(QtGui.QFont("Lato", 12))
+        self.sourcesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
 
         MainWindow.setCentralWidget(self.titleCentralwidget)
 
@@ -1065,6 +1127,10 @@ class Ui_MainWindow(object):
     def selectCityFromState(self, index):
         self.cityFilterComboBox.clear()
         self.cityFilterComboBox.addItems(self.stateFilterComboBox.itemData(index))
+
+    def selectTitleCityFromTitleState(self, index):
+        self.titleCityInput.clear()
+        self.titleCityInput.addItems(self.titleStateInput.itemData(index))
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
