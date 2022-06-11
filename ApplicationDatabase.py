@@ -22,7 +22,6 @@ def getAttractions(filters):
         # create a cursor
         cur = conn.cursor()
         generateSQL(filters)
-        print('SQL: '+sql)
         cur.execute(sql)
         # display the PostgreSQL database server version
         results = cur.fetchall()
