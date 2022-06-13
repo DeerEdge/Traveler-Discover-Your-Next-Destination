@@ -26,8 +26,6 @@ class Ui_MainWindow(object):
     global currentAttraction
     global filteredAttractionsList
     global radiusChecked
-    global cache
-    cache = dict()
     radiusChecked = False
     filteredAttractionsList = []
 
@@ -196,11 +194,6 @@ class Ui_MainWindow(object):
             self.createScrollAreaObject(Ycoor,filteredAttractionsList[index])
             Ycoor = Ycoor + 200
         self.scrollArea.setWidget(self.scrollAreaWidgetContainer)
-
-    # atrself.scrollAreaWidgetContainer.children()[index].findChild(QtWidgets.QLabel, 'attractionName').text()
-    # grpBox = self.createScrollAreaObject(Ycoor, filteredAttractionsList[index])
-    # cache[
-    #     self.scrollAreaWidgetContainer.children()[index].findChild(QtWidgets.QLabel, 'attractionName').text()] = grpBox
 
     def getCurrentFieldValues(self, _):
         global filteredAttractionsList
@@ -743,9 +736,7 @@ class Ui_MainWindow(object):
                                           "}"
                                           )
         self.titleTypeInput.setFont(QtGui.QFont("Lato", 14))
-        self.titleTypeInput.addItem("Select a Type")
-        self.titleTypeInput.addItem("Sports")
-        self.titleTypeInput.addItem("Cultural/Historical")
+        self.titleTypeInput.addItems(["Select a Type", "Food", "Nature/Outdoor", "Entertainment", "Cultural/Historical"])
 
         # Title Search Input
         self.titleSearchBar = QtWidgets.QLineEdit(self.titleCentralwidget)
@@ -906,19 +897,23 @@ class Ui_MainWindow(object):
 
         # Search Field and Search Button
         self.searchBar = QtWidgets.QLineEdit(self.topGroupBoxBar)
-        self.searchBar.setGeometry(QtCore.QRect(220,10,301,25))
+        self.searchBar.setGeometry(QtCore.QRect(200,10,301,25))
         self.searchBar.setPlaceholderText("Search by Keyword")
         self.searchButton = QtWidgets.QToolButton(self.topGroupBoxBar)
-        self.searchButton.setGeometry(QtCore.QRect(520, 10, 60, 25))
+        self.searchButton.setGeometry(QtCore.QRect(500, 10, 50, 25))
         self.searchButton.setText(_translate("MainWindow", "Search"))
         self.searchIcon = QtWidgets.QLabel(self.topGroupBoxBar)
         self.searchIcon.setStyleSheet("border: 1px solid lightgrey;")
         self.searchIcon.setPixmap(QtGui.QPixmap("searchIcon.png"))
         self.searchIcon.setScaledContents(True)
         self.searchIcon.setFixedSize(25, 25)
-        self.searchIcon.move(196,10)
+        self.searchIcon.move(176,10)
         self.searchIcon.show()
         self.searchButton.clicked.connect(self.searchResults)
+        self.clearButton = QtWidgets.QToolButton(self.topGroupBoxBar)
+        self.clearButton.setGeometry(QtCore.QRect(549, 10, 50, 25))
+        self.clearButton.setText("Clear")
+        self.clearButton.clicked.connect(self.clearSearch)
 
         # App Logo
         self.appLogo = QtWidgets.QLabel(self.groupBox)
@@ -999,7 +994,7 @@ class Ui_MainWindow(object):
         # Filtering by Type - Format: (Label : ComboBox)
         self.typeFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+160, 50, 50)
         self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+175, 175, 26)
-        self.typeFilterComboBox.addItems(["None", "Sports", "Cultural/Historical"])
+        self.typeFilterComboBox.addItems(["None", "Food", "Nature/Outdoor", "Entertainment", "Cultural/Historical"])
         self.typeFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by WheelChair Accessibility - Format: (CheckBox : Label)
@@ -1048,12 +1043,6 @@ class Ui_MainWindow(object):
         self.getLocationButton.setGeometry(Xcoor + 5, Ycoor + 35, 205, 20)
         self.getLocationButton.setText("Find my location")
         self.getLocationButton.clicked.connect(self.getCurrentLocation)
-
-        # self.sortByDistanceButton = QtWidgets.QToolButton(self.groupBox)
-        # self.sortByDistanceButton.setGeometry(QtCore.QRect(Xcoor + 5, Ycoor - 55, 192, 25))
-        # self.sortByDistanceButton.setText(_translate("MainWindow", "Sort by nearest attractions"))
-        # self.sortByDistanceButton.clicked.connect(self.changeSortingToDistance)
-        # self.sortByDistanceButton.clicked.connect(self.getCurrentFieldValues)
 
         # Adding a Dynamic Help Menu
         self.helpButton = QtWidgets.QToolButton(self.groupBox)
@@ -1134,7 +1123,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.filterTitle.setText(_translate("MainWindow", "Filter By:"))
         self.stateFilterLabel.setText(_translate("MainWindow", "State:"))
         self.cityFilterLabel.setText(_translate("MainWindow", "City:"))
