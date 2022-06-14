@@ -478,6 +478,16 @@ class Ui_MainWindow(object):
             self.numOfAttractionsLabel.setText(
                 _translate("MainWindow", (str(countOfObjectsShown)) + " Attractions Found"))
 
+    def clearSearch(self, _):
+        self.searchBar.setText("")
+        for index in range(len(self.scrollAreaWidgetContainer.children())):
+            if index != 0:
+                self.scrollAreaWidgetContainer.children()[index].show()
+                if len(self.scrollAreaWidgetContainer.children()) == 2:
+                    self.numOfAttractionsLabel.setText((str(len(self.scrollAreaWidgetContainer.children()) - 1) + " Attraction Found"))
+                else:
+                    self.numOfAttractionsLabel.setText((str(len(self.scrollAreaWidgetContainer.children()) - 1) + " Attractions Found"))
+
     def createUserReportFile(self, _):
         path = "./User Reports"
         directory = os.listdir(path)
@@ -913,7 +923,7 @@ class Ui_MainWindow(object):
         self.clearButton = QtWidgets.QToolButton(self.topGroupBoxBar)
         self.clearButton.setGeometry(QtCore.QRect(549, 10, 50, 25))
         self.clearButton.setText("Clear")
-        # self.clearButton.clicked.connect(self.clearSearch)
+        self.clearButton.clicked.connect(self.clearSearch)
 
         # App Logo
         self.appLogo = QtWidgets.QLabel(self.groupBox)
