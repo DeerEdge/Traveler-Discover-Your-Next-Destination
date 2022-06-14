@@ -913,7 +913,7 @@ class Ui_MainWindow(object):
         self.clearButton = QtWidgets.QToolButton(self.topGroupBoxBar)
         self.clearButton.setGeometry(QtCore.QRect(549, 10, 50, 25))
         self.clearButton.setText("Clear")
-        self.clearButton.clicked.connect(self.clearSearch)
+        # self.clearButton.clicked.connect(self.clearSearch)
 
         # App Logo
         self.appLogo = QtWidgets.QLabel(self.groupBox)
