@@ -631,11 +631,11 @@ class Ui_MainWindow(object):
         self.titleWindowPicture.show()
         self.titleWindowLogo = QtWidgets.QLabel(self.titleCentralwidget)
         self.titleWindowLogo.setFixedSize(500, 500)
-        self.titleWindowLogo.move(310,0)
+        self.titleWindowLogo.move(310,50)
         self.titleWindowLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
         self.titleWindowLogo.setScaledContents(True)
         self.titleWindowLogo.show()
-        self.titleStateInput = self.createComboBox("titleCentralWidget", 150, 200, 150, 50)
+        self.titleStateInput = self.createComboBox("titleCentralWidget", 150, 250, 150, 50)
         self.titleStateInput.setStyleSheet("QComboBox"
                                            "{"
                                            "color: white;"
@@ -708,7 +708,7 @@ class Ui_MainWindow(object):
         self.titleStateInput.activated.connect(self.titleInputDependencies)
 
         #Title City Input
-        self.titleCityInput = self.createComboBox("titleCentralWidget", 297, 200, 150, 50)
+        self.titleCityInput = self.createComboBox("titleCentralWidget", 297, 250, 150, 50)
         self.titleCityInput.setEnabled(False)
         self.titleCityInput.setStyleSheet("QComboBox"
                                            "{"
@@ -729,7 +729,7 @@ class Ui_MainWindow(object):
         self.titleCityInput.activated.connect(self.titleInputDependencies)
 
         # Title Type Input
-        self.titleTypeInput = self.createComboBox("titleCentralWidget", 444, 200, 160, 50)
+        self.titleTypeInput = self.createComboBox("titleCentralWidget", 444, 250, 160, 50)
         self.titleTypeInput.setEnabled(False)
         self.titleTypeInput.setStyleSheet("QComboBox"
                                           "{"
@@ -750,7 +750,7 @@ class Ui_MainWindow(object):
 
         # Title Search Input
         self.titleSearchBar = QtWidgets.QLineEdit(self.titleCentralwidget)
-        self.titleSearchBar.setGeometry(QtCore.QRect(601, 200, 302, 50))
+        self.titleSearchBar.setGeometry(QtCore.QRect(601, 250, 302, 50))
         self.titleSearchBar.setPlaceholderText("Search by Attraction Name")
         self.titleSearchBar.setStyleSheet("QLineEdit"
                                           "{"
@@ -765,7 +765,7 @@ class Ui_MainWindow(object):
         # Search button that changes windows
         self.windowChangeButton = QtWidgets.QToolButton(self.titleCentralwidget)
         self.windowChangeButton.setEnabled(False)
-        self.windowChangeButton.setGeometry(900, 200, 100, 50)
+        self.windowChangeButton.setGeometry(900, 250, 100, 50)
         self.windowChangeButton.setText("Search")
         self.windowChangeButton.setStyleSheet("QToolButton"
                                           "{"
@@ -779,79 +779,79 @@ class Ui_MainWindow(object):
         self.windowChangeButton.clicked.connect(self.changeWindow)
 
         # Explore Cities Feature Preview Picture
-        self.titleWindowExplorePicture = QtWidgets.QLabel(self.titleCentralwidget)
-        self.titleWindowExplorePicture.setStyleSheet("QLabel"
-                                          "{"
-                                          "border: 2px solid;"
-                                          "border-color: rgb(245, 245, 245);"
-                                          "}"
-                                          )
-        self.titleWindowExplorePicture.setFixedSize(469, 330)
-        self.titleWindowExplorePicture.move(150, 290)
-        self.titleWindowExplorePicture.setPixmap(QtGui.QPixmap("./Application Pictures/exploreCities.png"))
-        self.titleWindowExplorePicture.setScaledContents(True)
-        self.titleWindowExplorePicture.show()
+        # self.titleWindowExplorePicture = QtWidgets.QLabel(self.titleCentralwidget)
+        # self.titleWindowExplorePicture.setStyleSheet("QLabel"
+        #                                   "{"
+        #                                   "border: 2px solid;"
+        #                                   "border-color: rgb(245, 245, 245);"
+        #                                   "}"
+        #                                   )
+        # # self.titleWindowExplorePicture.setFixedSize(469, 330)
+        # self.titleWindowExplorePicture.move(150, 290)
+        # self.titleWindowExplorePicture.setPixmap(QtGui.QPixmap("./Application Pictures/exploreCities.png"))
+        # self.titleWindowExplorePicture.setScaledContents(True)
+        # self.titleWindowExplorePicture.show()
 
         # Explore Cities Button
-        self.exploreCitiesButton = QtWidgets.QToolButton(self.titleCentralwidget)
-        self.exploreCitiesButton.setGeometry(630, 290, 370, 30)
-        self.exploreCitiesButton.setText("Explore Top Cities and Attractions")
-        self.exploreCitiesButton.setStyleSheet("QToolButton"
-                                              "{"
-                                              "color: white;"
-                                              "border: 2px solid;"
-                                              "border-color: rgb(245, 245, 245);"
-                                              "background-color: rgba(20, 52, 124, 170);"
-                                              "}"
-                                              )
-        self.exploreCitiesButton.setFont(QtGui.QFont("Lato", 12))
-        self.exploreCitiesButton.clicked.connect(self.changeToExploreTab)
-
-        # Description of Explore Feature
-        self.exploreCitiesFeatureDescription = self.createLabel("titleCentralWidget", 630, 325, 370, 200)
-        self.exploreCitiesFeatureDescription.setText("     Not sure where to go or what types of attractions are best? Using our"
-                                                     "\n unique explore feature, you can instantly find the top attractions across the"
-                                                     "\n country! These attractions come from the biggest cities in the nation and"
-                                                     "\n boast high ratings and extravagant qualities. From the iconic Golden Gate"
-                                                     "\n Bridge to the skyscrapers of New York City, an extensive collection of"
-                                                     "\n attractions await you! To explore these attractions click the button above.")
-        self.exploreCitiesFeatureDescription.setWordWrap(True)
-        self.exploreCitiesFeatureDescription.setStyleSheet("QLabel"
-                                               "{"
-                                               "color: white;"
-                                               "background-color: rgba(20, 52, 124, 170);"
-                                               "}"
-                                               )
-        self.exploreCitiesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
-
-        # Sources button
-        self.sourcesButton = QtWidgets.QToolButton(self.titleCentralwidget)
-        self.sourcesButton.setGeometry(630, 530, 370, 30)
-        self.sourcesButton.setText("View Sources, Licenses, and References")
-        self.sourcesButton.setStyleSheet("QToolButton"
-                                               "{"
-                                               "color: white;"
-                                               "border: 2px solid;"
-                                               "border-color: rgb(245, 245, 245);"
-                                               "background-color: rgba(20, 52, 124, 170);"
-                                               "}"
-                                               )
-        self.sourcesButton.setFont(QtGui.QFont("Lato", 12))
-        self.sourcesButton.clicked.connect(self.changeToSourcesTab)
-
-        # Sources Button Description
-        self.sourcesFeatureDescription = self.createLabel("titleCentralWidget", 630, 565, 370, 53)
-        self.sourcesFeatureDescription.setText("     Find all sources, licenses, and references used within this application by"
-                                               "\n clicking the button above. If you spot any missing citations, please create"
-                                               "\n a report on the search attractions page.")
-        self.sourcesFeatureDescription.setWordWrap(True)
-        self.sourcesFeatureDescription.setStyleSheet("QLabel"
-                                         "{"
-                                         "color: white;"
-                                         "background-color: rgba(20, 52, 124, 170);"
-                                         "}"
-                                         )
-        self.sourcesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
+        # self.exploreCitiesButton = QtWidgets.QToolButton(self.titleCentralwidget)
+        # self.exploreCitiesButton.setGeometry(160, 320, 370, 30)
+        # self.exploreCitiesButton.setText("Explore Top Cities and Attractions")
+        # self.exploreCitiesButton.setStyleSheet("QToolButton"
+        #                                       "{"
+        #                                       "color: white;"
+        #                                       "border: 2px solid;"
+        #                                       "border-color: rgb(245, 245, 245);"
+        #                                       "background-color: rgba(20, 52, 124, 170);"
+        #                                       "}"
+        #                                       )
+        # self.exploreCitiesButton.setFont(QtGui.QFont("Lato", 12))
+        # self.exploreCitiesButton.clicked.connect(self.changeToExploreTab)
+        #
+        # # Description of Explore Feature
+        # self.exploreCitiesFeatureDescription = self.createLabel("titleCentralWidget", 160, 355, 370, 200)
+        # self.exploreCitiesFeatureDescription.setText("     Not sure where to go or what types of attractions are best? Using our"
+        #                                              "\n unique explore feature, you can instantly find the top attractions across the"
+        #                                              "\n country! These attractions come from the biggest cities in the nation and"
+        #                                              "\n boast high ratings and extravagant qualities. From the iconic Golden Gate"
+        #                                              "\n Bridge to the skyscrapers of New York City, an extensive collection of"
+        #                                              "\n attractions await you! To explore these attractions click the button above.")
+        # self.exploreCitiesFeatureDescription.setWordWrap(True)
+        # self.exploreCitiesFeatureDescription.setStyleSheet("QLabel"
+        #                                        "{"
+        #                                        "color: white;"
+        #                                        "background-color: rgba(20, 52, 124, 170);"
+        #                                        "}"
+        #                                        )
+        # self.exploreCitiesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
+        #
+        # # Sources button
+        # self.sourcesButton = QtWidgets.QToolButton(self.titleCentralwidget)
+        # self.sourcesButton.setGeometry(550, 320, 370, 30)
+        # self.sourcesButton.setText("View Sources, Licenses, and References")
+        # self.sourcesButton.setStyleSheet("QToolButton"
+        #                                        "{"
+        #                                        "color: white;"
+        #                                        "border: 2px solid;"
+        #                                        "border-color: rgb(245, 245, 245);"
+        #                                        "background-color: rgba(20, 52, 124, 170);"
+        #                                        "}"
+        #                                        )
+        # self.sourcesButton.setFont(QtGui.QFont("Lato", 12))
+        # self.sourcesButton.clicked.connect(self.changeToSourcesTab)
+        #
+        # # Sources Button Description
+        # self.sourcesFeatureDescription = self.createLabel("titleCentralWidget", 550, 355, 370, 53)
+        # self.sourcesFeatureDescription.setText("     Find all sources, licenses, and references used within this application by"
+        #                                        "\n clicking the button above. If you spot any missing citations, please create"
+        #                                        "\n a report on the search attractions page.")
+        # self.sourcesFeatureDescription.setWordWrap(True)
+        # self.sourcesFeatureDescription.setStyleSheet("QLabel"
+        #                                  "{"
+        #                                  "color: white;"
+        #                                  "background-color: rgba(20, 52, 124, 170);"
+        #                                  "}"
+        #                                  )
+        # self.sourcesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
 
         MainWindow.setCentralWidget(self.titleCentralwidget)
 
