@@ -341,7 +341,7 @@ class Ui_MainWindow(object):
         self.latitudeInput.setText(str(ipInfo.__getattr__("location")["latitude"]))
         self.longitudeInput.setText(str(ipInfo.__getattr__("location")["longitude"]))
         self.checkIfLocationIsFilled
-        self.currentLocationLabel.setText(str(ipInfo.__getattr__("location")["city"]) + ", " + str(ipInfo.__getattr__("location")["region"]["name"]) +  ", " + str(ipInfo.__getattr__("location")["postal"]))
+        self.currentLocationLabel.setText(str(ipInfo.__getattr__("location")["city"]) + ", " + str(ipInfo.__getattr__("location")["region"]["name"]))
 
     def helpMenuListener(self, _):
         global helpMenuGroupBox
@@ -631,11 +631,11 @@ class Ui_MainWindow(object):
         self.titleWindowPicture.show()
         self.titleWindowLogo = QtWidgets.QLabel(self.titleCentralwidget)
         self.titleWindowLogo.setFixedSize(500, 500)
-        self.titleWindowLogo.move(310,0)
+        self.titleWindowLogo.move(310,50)
         self.titleWindowLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
         self.titleWindowLogo.setScaledContents(True)
         self.titleWindowLogo.show()
-        self.titleStateInput = self.createComboBox("titleCentralWidget", 150, 200, 150, 50)
+        self.titleStateInput = self.createComboBox("titleCentralWidget", 150, 250, 150, 50)
         self.titleStateInput.setStyleSheet("QComboBox"
                                            "{"
                                            "color: white;"
@@ -708,7 +708,7 @@ class Ui_MainWindow(object):
         self.titleStateInput.activated.connect(self.titleInputDependencies)
 
         #Title City Input
-        self.titleCityInput = self.createComboBox("titleCentralWidget", 297, 200, 150, 50)
+        self.titleCityInput = self.createComboBox("titleCentralWidget", 297, 250, 150, 50)
         self.titleCityInput.setEnabled(False)
         self.titleCityInput.setStyleSheet("QComboBox"
                                            "{"
@@ -729,7 +729,7 @@ class Ui_MainWindow(object):
         self.titleCityInput.activated.connect(self.titleInputDependencies)
 
         # Title Type Input
-        self.titleTypeInput = self.createComboBox("titleCentralWidget", 444, 200, 160, 50)
+        self.titleTypeInput = self.createComboBox("titleCentralWidget", 444, 250, 160, 50)
         self.titleTypeInput.setEnabled(False)
         self.titleTypeInput.setStyleSheet("QComboBox"
                                           "{"
@@ -750,7 +750,7 @@ class Ui_MainWindow(object):
 
         # Title Search Input
         self.titleSearchBar = QtWidgets.QLineEdit(self.titleCentralwidget)
-        self.titleSearchBar.setGeometry(QtCore.QRect(601, 200, 302, 50))
+        self.titleSearchBar.setGeometry(QtCore.QRect(601, 250, 302, 50))
         self.titleSearchBar.setPlaceholderText("Search by Attraction Name")
         self.titleSearchBar.setStyleSheet("QLineEdit"
                                           "{"
@@ -765,7 +765,7 @@ class Ui_MainWindow(object):
         # Search button that changes windows
         self.windowChangeButton = QtWidgets.QToolButton(self.titleCentralwidget)
         self.windowChangeButton.setEnabled(False)
-        self.windowChangeButton.setGeometry(900, 200, 100, 50)
+        self.windowChangeButton.setGeometry(900, 250, 100, 50)
         self.windowChangeButton.setText("Search")
         self.windowChangeButton.setStyleSheet("QToolButton"
                                           "{"
@@ -779,79 +779,79 @@ class Ui_MainWindow(object):
         self.windowChangeButton.clicked.connect(self.changeWindow)
 
         # Explore Cities Feature Preview Picture
-        self.titleWindowExplorePicture = QtWidgets.QLabel(self.titleCentralwidget)
-        self.titleWindowExplorePicture.setStyleSheet("QLabel"
-                                          "{"
-                                          "border: 2px solid;"
-                                          "border-color: rgb(245, 245, 245);"
-                                          "}"
-                                          )
-        self.titleWindowExplorePicture.setFixedSize(469, 330)
-        self.titleWindowExplorePicture.move(150, 290)
-        self.titleWindowExplorePicture.setPixmap(QtGui.QPixmap("./Application Pictures/exploreCities.png"))
-        self.titleWindowExplorePicture.setScaledContents(True)
-        self.titleWindowExplorePicture.show()
+        # self.titleWindowExplorePicture = QtWidgets.QLabel(self.titleCentralwidget)
+        # self.titleWindowExplorePicture.setStyleSheet("QLabel"
+        #                                   "{"
+        #                                   "border: 2px solid;"
+        #                                   "border-color: rgb(245, 245, 245);"
+        #                                   "}"
+        #                                   )
+        # # self.titleWindowExplorePicture.setFixedSize(469, 330)
+        # self.titleWindowExplorePicture.move(150, 290)
+        # self.titleWindowExplorePicture.setPixmap(QtGui.QPixmap("./Application Pictures/exploreCities.png"))
+        # self.titleWindowExplorePicture.setScaledContents(True)
+        # self.titleWindowExplorePicture.show()
 
         # Explore Cities Button
-        self.exploreCitiesButton = QtWidgets.QToolButton(self.titleCentralwidget)
-        self.exploreCitiesButton.setGeometry(630, 290, 370, 30)
-        self.exploreCitiesButton.setText("Explore Top Cities and Attractions")
-        self.exploreCitiesButton.setStyleSheet("QToolButton"
-                                              "{"
-                                              "color: white;"
-                                              "border: 2px solid;"
-                                              "border-color: rgb(245, 245, 245);"
-                                              "background-color: rgba(20, 52, 124, 170);"
-                                              "}"
-                                              )
-        self.exploreCitiesButton.setFont(QtGui.QFont("Lato", 12))
-        self.exploreCitiesButton.clicked.connect(self.changeToExploreTab)
-
-        # Description of Explore Feature
-        self.exploreCitiesFeatureDescription = self.createLabel("titleCentralWidget", 630, 325, 370, 200)
-        self.exploreCitiesFeatureDescription.setText("     Not sure where to go or what types of attractions are best? Using our"
-                                                     "\n unique explore feature, you can instantly find the top attractions across the"
-                                                     "\n country! These attractions come from the biggest cities in the nation and"
-                                                     "\n boast high ratings and extravagant qualities. From the iconic Golden Gate"
-                                                     "\n Bridge to the skyscrapers of New York City, an extensive collection of"
-                                                     "\n attractions await you! To explore these attractions click the button above.")
-        self.exploreCitiesFeatureDescription.setWordWrap(True)
-        self.exploreCitiesFeatureDescription.setStyleSheet("QLabel"
-                                               "{"
-                                               "color: white;"
-                                               "background-color: rgba(20, 52, 124, 170);"
-                                               "}"
-                                               )
-        self.exploreCitiesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
-
-        # Sources button
-        self.sourcesButton = QtWidgets.QToolButton(self.titleCentralwidget)
-        self.sourcesButton.setGeometry(630, 530, 370, 30)
-        self.sourcesButton.setText("View Sources, Licenses, and References")
-        self.sourcesButton.setStyleSheet("QToolButton"
-                                               "{"
-                                               "color: white;"
-                                               "border: 2px solid;"
-                                               "border-color: rgb(245, 245, 245);"
-                                               "background-color: rgba(20, 52, 124, 170);"
-                                               "}"
-                                               )
-        self.sourcesButton.setFont(QtGui.QFont("Lato", 12))
-        self.sourcesButton.clicked.connect(self.changeToSourcesTab)
-
-        # Sources Button Description
-        self.sourcesFeatureDescription = self.createLabel("titleCentralWidget", 630, 565, 370, 53)
-        self.sourcesFeatureDescription.setText("     Find all sources, licenses, and references used within this application by"
-                                               "\n clicking the button above. If you spot any missing citations, please create"
-                                               "\n a report on the search attractions page.")
-        self.sourcesFeatureDescription.setWordWrap(True)
-        self.sourcesFeatureDescription.setStyleSheet("QLabel"
-                                         "{"
-                                         "color: white;"
-                                         "background-color: rgba(20, 52, 124, 170);"
-                                         "}"
-                                         )
-        self.sourcesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
+        # self.exploreCitiesButton = QtWidgets.QToolButton(self.titleCentralwidget)
+        # self.exploreCitiesButton.setGeometry(160, 320, 370, 30)
+        # self.exploreCitiesButton.setText("Explore Top Cities and Attractions")
+        # self.exploreCitiesButton.setStyleSheet("QToolButton"
+        #                                       "{"
+        #                                       "color: white;"
+        #                                       "border: 2px solid;"
+        #                                       "border-color: rgb(245, 245, 245);"
+        #                                       "background-color: rgba(20, 52, 124, 170);"
+        #                                       "}"
+        #                                       )
+        # self.exploreCitiesButton.setFont(QtGui.QFont("Lato", 12))
+        # self.exploreCitiesButton.clicked.connect(self.changeToExploreTab)
+        #
+        # # Description of Explore Feature
+        # self.exploreCitiesFeatureDescription = self.createLabel("titleCentralWidget", 160, 355, 370, 200)
+        # self.exploreCitiesFeatureDescription.setText("     Not sure where to go or what types of attractions are best? Using our"
+        #                                              "\n unique explore feature, you can instantly find the top attractions across the"
+        #                                              "\n country! These attractions come from the biggest cities in the nation and"
+        #                                              "\n boast high ratings and extravagant qualities. From the iconic Golden Gate"
+        #                                              "\n Bridge to the skyscrapers of New York City, an extensive collection of"
+        #                                              "\n attractions await you! To explore these attractions click the button above.")
+        # self.exploreCitiesFeatureDescription.setWordWrap(True)
+        # self.exploreCitiesFeatureDescription.setStyleSheet("QLabel"
+        #                                        "{"
+        #                                        "color: white;"
+        #                                        "background-color: rgba(20, 52, 124, 170);"
+        #                                        "}"
+        #                                        )
+        # self.exploreCitiesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
+        #
+        # # Sources button
+        # self.sourcesButton = QtWidgets.QToolButton(self.titleCentralwidget)
+        # self.sourcesButton.setGeometry(550, 320, 370, 30)
+        # self.sourcesButton.setText("View Sources, Licenses, and References")
+        # self.sourcesButton.setStyleSheet("QToolButton"
+        #                                        "{"
+        #                                        "color: white;"
+        #                                        "border: 2px solid;"
+        #                                        "border-color: rgb(245, 245, 245);"
+        #                                        "background-color: rgba(20, 52, 124, 170);"
+        #                                        "}"
+        #                                        )
+        # self.sourcesButton.setFont(QtGui.QFont("Lato", 12))
+        # self.sourcesButton.clicked.connect(self.changeToSourcesTab)
+        #
+        # # Sources Button Description
+        # self.sourcesFeatureDescription = self.createLabel("titleCentralWidget", 550, 355, 370, 53)
+        # self.sourcesFeatureDescription.setText("     Find all sources, licenses, and references used within this application by"
+        #                                        "\n clicking the button above. If you spot any missing citations, please create"
+        #                                        "\n a report on the search attractions page.")
+        # self.sourcesFeatureDescription.setWordWrap(True)
+        # self.sourcesFeatureDescription.setStyleSheet("QLabel"
+        #                                  "{"
+        #                                  "color: white;"
+        #                                  "background-color: rgba(20, 52, 124, 170);"
+        #                                  "}"
+        #                                  )
+        # self.sourcesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
 
         MainWindow.setCentralWidget(self.titleCentralwidget)
 
@@ -866,22 +866,30 @@ class Ui_MainWindow(object):
         MainWindow.setFixedSize(1150, 645)
         # Sets up the window container
         self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("display")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
         self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1151, 626))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
         self.tabWidget.setSizePolicy(sizePolicy)
         self.tabWidgetPage1 = QtWidgets.QWidget()
+        self.tabWidgetPage1.setObjectName("tab1")
         self.gridWidget = QtWidgets.QWidget(self.tabWidgetPage1)
         self.gridWidget.setGeometry(QtCore.QRect(880, 0, 251, 49))
-        self.line = QtWidgets.QFrame(self.tabWidgetPage1)
-        self.line.setGeometry(QtCore.QRect(210, -10, 21, 611))
-        self.line.setFrameShape(QtWidgets.QFrame.VLine)
-        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        # self.line = QtWidgets.QFrame(self.tabWidgetPage1)
+        # self.line.setGeometry(QtCore.QRect(210, -10, 21, 611))
+        # self.line.setFrameShape(QtWidgets.QFrame.VLine)
+        # self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.widget = QtWidgets.QWidget(self.tabWidgetPage1)
         self.widget.setGeometry(QtCore.QRect(0, 0, 1151, 601))
         self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.designGroupBox = QtWidgets.QGroupBox(self.widget)
+        self.designGroupBox.setObjectName("backdrop")
+        self.designGroupBox.setEnabled(True)
+        self.designGroupBox.setFlat(True)
+        self.designGroupBox.setFixedSize(218,240)
+        self.designGroupBox.move(5,50)
         self.groupBox = QtWidgets.QGroupBox(self.widget)
         self.groupBox.setEnabled(True)
         self.groupBox.setFlat(True)
@@ -893,8 +901,11 @@ class Ui_MainWindow(object):
         self.topGroupBoxBar.setEnabled(True)
         self.topGroupBoxBar.setFlat(True)
         self.numOfAttractionsLabel = self.createLabel("topGroupBoxBar", 10, 15, 200, 20)
-        self.sortingComboBoxLabel = self.createLabel("topGroupBoxBar", 653, 13, 50, 20)
+        self.numOfAttractionsLabel.setObjectName("numAttractions")
+        self.sortingComboBoxLabel = self.createLabel("topGroupBoxBar", 643, 13, 100, 20)
+        self.sortingComboBoxLabel.setObjectName("sortByLabel")
         self.sortingComboBox = self.createComboBox("topGroupBoxBar", 700, 10, 200, 30)
+        self.sortingComboBox.setObjectName("sortingComboBox")
         self.sortingComboBox.addItems(["Recommended",
                                 "Nearest attractions",
                                   "Rating: Highest to Lowest",
@@ -927,20 +938,23 @@ class Ui_MainWindow(object):
 
         # App Logo
         self.appLogo = QtWidgets.QLabel(self.groupBox)
-        self.appLogo.setPixmap(QtGui.QPixmap("Logo.png"))
+        self.appLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
         self.appLogo.setScaledContents(True)
         self.appLogo.setFixedSize(190, 190)
         self.appLogo.move(5, -22)
         self.appLogo.show()
 
         # Filter Title
-        Xcoor = 0
+        Xcoor = 6
         Ycoor = 230
-        self.filterTitle = self.createLabel("groupBox",Xcoor+5, Ycoor+50, 60, 50)
+        self.filterTitle = self.createLabel("groupBox",Xcoor+5, Ycoor+60, 120, 50)
+        self.filterTitle.setObjectName("filterByTitle")
 
         # Filtering by State - Format: (Label : ComboBox)
         self.stateFilterLabel = self.createLabel("groupBox",Xcoor+5, Ycoor+90, 50, 50)
-        self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+40, Ycoor+105, 175, 26)
+        self.stateFilterLabel.setObjectName("filters")
+        self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+47, Ycoor+103, 171, 26)
+        self.stateFilterComboBox.setObjectName("filterComboboxes")
         self.stateFilterComboBox.addItem("None", ["None"])
         self.stateFilterComboBox.addItem("Alabama", ["None", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
         self.stateFilterComboBox.addItem("Alaska", ["None", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
@@ -997,35 +1011,44 @@ class Ui_MainWindow(object):
 
         # Filtering by City - Format: (Label : ComboBox)
         self.cityFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+125, 50, 50)
-        self.cityFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+140, 175, 26)
+        self.cityFilterLabel.setObjectName("filters")
+        self.cityFilterComboBox = self.createComboBox("groupBox", Xcoor+47, Ycoor+138, 171, 26)
+        self.cityFilterComboBox.setObjectName("filterComboboxes")
         self.cityFilterComboBox.addItems(["None"])
         self.cityFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by Type - Format: (Label : ComboBox)
         self.typeFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+160, 50, 50)
-        self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+175, 175, 26)
+        self.typeFilterLabel.setObjectName("filters")
+        self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+47, Ycoor+173, 171, 26)
+        self.typeFilterComboBox.setObjectName("filterComboboxes")
         self.typeFilterComboBox.addItems(["None", "Food", "Nature/Outdoor", "Entertainment", "Cultural/Historical"])
         self.typeFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by WheelChair Accessibility - Format: (CheckBox : Label)
         self.wheelchairAccessFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+200, 150, 50)
+        self.wheelchairAccessFilterLabel.setObjectName("filters")
         self.wheelchairAccessFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+216, 20, 20)
         self.wheelchairAccessFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
         # Filtering by Family Friendliness - Format: (CheckBox : Label)
         self.familyFriendlyFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+225, 150, 50)
+        self.familyFriendlyFilterLabel.setObjectName("filters")
         self.familyFriendlyFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+241, 20, 20)
         self.familyFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
         # Filtering by Pet Friendliness - Format: (CheckBox : Label)
         self.petFriendlyFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+250, 150, 50)
+        self.petFriendlyFilterLabel.setObjectName("filters")
         self.petFriendlyFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+266, 20, 20)
         self.petFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
         # Enter Coordinates QLineEdit
         self.userLocationTitle = self.createLabel("groupBox", Xcoor + 5, Ycoor - 175, 200, 25)
-        self.userLocationTitle.setText("Your location")
+        self.userLocationTitle.setObjectName("locationDetailsTitle")
+        self.userLocationTitle.setText("Location Details")
         self.currentLocationLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 145, 200, 25)
+        self.currentLocationLabel.setObjectName("enteredLocation")
         self.latitudeInputLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 115, 200, 25)
         self.latitudeInputLabel.setText("Latitude:")
         self.latitudeInput = QtWidgets.QLineEdit(self.groupBox)
@@ -1040,7 +1063,8 @@ class Ui_MainWindow(object):
         self.longitudeInput.textChanged.connect(self.checkIfLocationIsFilled)
         self.radiusLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 45, 200, 25)
         self.radiusLabel.setText("Desired Distance From You:")
-        self.radiusComboBox = self.createComboBox("groupBox", Xcoor + 0, Ycoor - 20, 215, 25)
+        self.radiusComboBox = self.createComboBox("groupBox", Xcoor + 5, Ycoor - 20, 205, 25)
+        self.radiusComboBox.setObjectName("radiusComboBox")
         self.radiusComboBox.addItems(["Any distance", "Less than 5 miles", "Less than 10 miles", "Less than 20 miles", "Less than 50 miles"])
         self.radiusComboBox.setEnabled(False)
         self.radiusComboBox.activated.connect(self.detectChangeInRadius)
@@ -1056,13 +1080,14 @@ class Ui_MainWindow(object):
 
         # Adding a Dynamic Help Menu
         self.helpButton = QtWidgets.QToolButton(self.groupBox)
-        self.helpButton.setGeometry(5,535,205,20)
+        self.helpButton.setObjectName("helpButton")
+        self.helpButton.setGeometry(5,535,219,20)
         clickCount = 0
         self.helpMenuGroupBox = QtWidgets.QGroupBox(self.groupBox)
         self.helpMenuGroupBox.setGeometry(QtCore.QRect(5, 455, 205, 80))
         self.helpMenuGroupBox.hide()
         self.reportButton = QtWidgets.QToolButton(self.groupBox)
-        self.reportButton.setGeometry(5, 560, 205, 20)
+        self.reportButton.setGeometry(5, 560, 219, 20)
         self.reportButton.setText("Create a Report")
         self.reportButton.clicked.connect(self.createReport)
         self.documentationButton = QtWidgets.QToolButton(self.helpMenuGroupBox)
@@ -1100,7 +1125,7 @@ class Ui_MainWindow(object):
         self.sourcesTabWidget = QtWidgets.QWidget(self.sourcesTab)
         self.sourcesTabWidget.setGeometry(QtCore.QRect(0, 0, 1150, 601))
         self.sourcesTabAppLogo = QtWidgets.QLabel(self.sourcesTabWidget)
-        self.sourcesTabAppLogo.setPixmap(QtGui.QPixmap("Logo.png"))
+        self.sourcesTabAppLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
         self.sourcesTabAppLogo.setScaledContents(True)
         self.sourcesTabAppLogo.setFixedSize(190, 190)
         self.sourcesTabAppLogo.move(5, -22)
@@ -1142,15 +1167,18 @@ class Ui_MainWindow(object):
         self.petFriendlyFilterLabel.setText(_translate("MainWindow", "Pet Friendly"))
         self.sortingComboBoxLabel.setText(_translate("MainWindow", "Sort By:"))
         self.sourcesLabel.setText(_translate("MainWindow", "Sources, Liscenses, and References"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "Attractions"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "About Us"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.sourcesTab), _translate("MainWindow", "Sources"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "Find Attractions"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Explore Destinations"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.sourcesTab), _translate("MainWindow", "Sources, Licenses, and References"))
 
 if __name__ == "__main__":
     # Clears action log
     clearLog()
     import sys
     app = QtWidgets.QApplication(sys.argv)
+    with open("design.css", "r") as f:
+        _style = f.read()
+        app.setStyleSheet(_style)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupTitle(MainWindow)

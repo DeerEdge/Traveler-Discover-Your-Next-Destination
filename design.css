@@ -1,0 +1,56 @@
+QWidget#display {
+    background-color: #5883AD;
+}
+
+QGroupBox#backdrop{
+    background-color: #FFD942;
+}
+
+QLabel {
+    color: #293155;
+    font-family: Arial, sans-serif;
+}
+
+QLabel#numAttractions {
+    color: #FFFFFF;
+    font: 15px
+}
+
+QLabel#sortByLabel {
+    color: #FFFFFF;
+    font: 15px
+}
+
+QComboBox#sortingComboBox {
+    border: 1px black;
+    border-radius: 2px;
+}
+
+QLabel#locationDetailsTitle {
+    font: 18px
+}
+
+QLabel#enteredLocation {
+    font: 16px
+}
+
+QComboBox#radiusComboBox {
+    border: 1px black;
+    border-radius: 2px;
+}
+
+QLabel#filterByTitle {
+    color: #FFFFFF;
+    font: 18px
+}
+
+QLabel#filters {
+    color: #FFFFFF;
+    font: 15px;
+}
+
+QComboBox#filterComboboxes {
+    border: 1px black;
+    border-radius: 2px;
+}
+

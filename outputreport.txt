@@ -1,6 +1,6 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-14 Time Of Action: 07:43:31
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-15 Time Of Action: 10:50:52
 Selected State: Alaska
-Selected City: None
+Selected City: Anchorage
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
@@ -12,23 +12,3 @@ Filtered Attraction: (id: 63), Chugach State Park, Anchorage, Alaska, 1970
 Filtered Attraction: (id: 64), Kincaid Grill and Wine Bar, Anchorage, Alaska, 2003
 Filtered Attraction: (id: 65), Alyeska Resort, Anchorage, Alaska, 1994
 Filtered Attraction: (id: 66), Bear Tooth Theatrepub, Anchorage, Alaska, 2000
-Filtered Attraction: (id: 67), Mendenhall Glacier, Juneau, Alaska, 1942
-Filtered Attraction: (id: 68), Tracy Arm, Juneau, Alaska, 1960
-Filtered Attraction: (id: 69), Mount Roberts Tramway, Juneau, Alaska, 1996
-Filtered Attraction: (id: 70), Historic Gold Mining and Panning Tour, Juneau, Alaska, 1978
-Filtered Attraction: (id: 71), Deckhand Dave's Fish Tacos, Juneau, Alaska, 2016
-Filtered Attraction: (id: 72), Arctic Circle & Northern Lights Tour, Fairbanks, Alaska, 1987
-Filtered Attraction: (id: 73), Museum of the North, Fairbanks, Alaska, 1929
-Filtered Attraction: (id: 74), Running Reindeer Ranch, Fairbanks, Alaska, 2007
-Filtered Attraction: (id: 75), Pioneer Park, Fairbanks, Alaska, 1967
-Filtered Attraction: (id: 76), The Cookie Jar Restaurant, Fairbanks, Alaska, 1986
-Filtered Attraction: (id: 77), Museum of Alaska Transportation, Wasilla, Alaska, 1967
-Filtered Attraction: (id: 78), Wasilla Museum & Visitor Center, Wasilla, Alaska, 1967
-Filtered Attraction: (id: 79), Palmer Hay Flats State Game Refuge, Wasilla, Alaska, 1975
-Filtered Attraction: (id: 80), Extreme Fun Center, Wasilla, Alaska, 2000
-Filtered Attraction: (id: 81), Basil Ginger, Wasilla, Alaska, 2000
-Filtered Attraction: (id: 82), Knik Museum and Mushers Hall of Fame, Knik-Fairview, Alaska, 1967
-Filtered Attraction: (id: 83), Reflections Lake, Knik-Fairview, Alaska, 2000
-Filtered Attraction: (id: 84), Lucille Lake, Knik-Fairview, Alaska, 2000
-Filtered Attraction: (id: 85), Matanuska Lake, Knik-Fairview, Alaska, 2000
-Filtered Attraction: (id: 86), Knik Pizza, Knik-Fairview, Alaska, 2000
