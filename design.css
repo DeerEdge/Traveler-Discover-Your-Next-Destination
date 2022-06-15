@@ -1,0 +1,25 @@
+QWidget#display {
+    background-color: #3B6196;
+}
+
+QGroupBox#backdrop{
+    background-color: #FFD942;
+}
+
+QLabel {
+    color: #293155;
+    font-family: Arial, sans-serif;
+}
+
+QLabel#locationDetailsTitle {
+    font: 18px
+}
+
+QLabel#enteredLocation {
+    font: 16px
+}
+
+QLabel#filters {
+    color: #FFFFFF;
+    font: 14px;
+}

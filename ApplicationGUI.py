@@ -341,7 +341,7 @@ class Ui_MainWindow(object):
         self.latitudeInput.setText(str(ipInfo.__getattr__("location")["latitude"]))
         self.longitudeInput.setText(str(ipInfo.__getattr__("location")["longitude"]))
         self.checkIfLocationIsFilled
-        self.currentLocationLabel.setText(str(ipInfo.__getattr__("location")["city"]) + ", " + str(ipInfo.__getattr__("location")["region"]["name"]) +  ", " + str(ipInfo.__getattr__("location")["postal"]))
+        self.currentLocationLabel.setText(str(ipInfo.__getattr__("location")["city"]) + ", " + str(ipInfo.__getattr__("location")["region"]["name"]))
 
     def helpMenuListener(self, _):
         global helpMenuGroupBox
@@ -866,22 +866,30 @@ class Ui_MainWindow(object):
         MainWindow.setFixedSize(1150, 645)
         # Sets up the window container
         self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("display")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
         self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1151, 626))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
         self.tabWidget.setSizePolicy(sizePolicy)
         self.tabWidgetPage1 = QtWidgets.QWidget()
+        self.tabWidgetPage1.setObjectName("tab1")
         self.gridWidget = QtWidgets.QWidget(self.tabWidgetPage1)
         self.gridWidget.setGeometry(QtCore.QRect(880, 0, 251, 49))
-        self.line = QtWidgets.QFrame(self.tabWidgetPage1)
-        self.line.setGeometry(QtCore.QRect(210, -10, 21, 611))
-        self.line.setFrameShape(QtWidgets.QFrame.VLine)
-        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        # self.line = QtWidgets.QFrame(self.tabWidgetPage1)
+        # self.line.setGeometry(QtCore.QRect(210, -10, 21, 611))
+        # self.line.setFrameShape(QtWidgets.QFrame.VLine)
+        # self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.widget = QtWidgets.QWidget(self.tabWidgetPage1)
         self.widget.setGeometry(QtCore.QRect(0, 0, 1151, 601))
         self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.designGroupBox = QtWidgets.QGroupBox(self.widget)
+        self.designGroupBox.setObjectName("backdrop")
+        self.designGroupBox.setEnabled(True)
+        self.designGroupBox.setFlat(True)
+        self.designGroupBox.setFixedSize(218,240)
+        self.designGroupBox.move(5,50)
         self.groupBox = QtWidgets.QGroupBox(self.widget)
         self.groupBox.setEnabled(True)
         self.groupBox.setFlat(True)
@@ -934,12 +942,13 @@ class Ui_MainWindow(object):
         self.appLogo.show()
 
         # Filter Title
-        Xcoor = 0
+        Xcoor = 6
         Ycoor = 230
         self.filterTitle = self.createLabel("groupBox",Xcoor+5, Ycoor+50, 60, 50)
 
         # Filtering by State - Format: (Label : ComboBox)
         self.stateFilterLabel = self.createLabel("groupBox",Xcoor+5, Ycoor+90, 50, 50)
+        self.stateFilterLabel.setObjectName("filters")
         self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+40, Ycoor+105, 175, 26)
         self.stateFilterComboBox.addItem("None", ["None"])
         self.stateFilterComboBox.addItem("Alabama", ["None", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
@@ -1024,8 +1033,10 @@ class Ui_MainWindow(object):
 
         # Enter Coordinates QLineEdit
         self.userLocationTitle = self.createLabel("groupBox", Xcoor + 5, Ycoor - 175, 200, 25)
-        self.userLocationTitle.setText("Your location")
+        self.userLocationTitle.setObjectName("locationDetailsTitle")
+        self.userLocationTitle.setText("Location Details")
         self.currentLocationLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 145, 200, 25)
+        self.currentLocationLabel.setObjectName("enteredLocation")
         self.latitudeInputLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 115, 200, 25)
         self.latitudeInputLabel.setText("Latitude:")
         self.latitudeInput = QtWidgets.QLineEdit(self.groupBox)
@@ -1151,6 +1162,9 @@ if __name__ == "__main__":
     clearLog()
     import sys
     app = QtWidgets.QApplication(sys.argv)
+    with open("design.css", "r") as f:
+        _style = f.read()
+        app.setStyleSheet(_style)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupTitle(MainWindow)
