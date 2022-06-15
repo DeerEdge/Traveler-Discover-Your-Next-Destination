@@ -901,8 +901,11 @@ class Ui_MainWindow(object):
         self.topGroupBoxBar.setEnabled(True)
         self.topGroupBoxBar.setFlat(True)
         self.numOfAttractionsLabel = self.createLabel("topGroupBoxBar", 10, 15, 200, 20)
-        self.sortingComboBoxLabel = self.createLabel("topGroupBoxBar", 653, 13, 50, 20)
+        self.numOfAttractionsLabel.setObjectName("numAttractions")
+        self.sortingComboBoxLabel = self.createLabel("topGroupBoxBar", 643, 13, 100, 20)
+        self.sortingComboBoxLabel.setObjectName("sortByLabel")
         self.sortingComboBox = self.createComboBox("topGroupBoxBar", 700, 10, 200, 30)
+        self.sortingComboBox.setObjectName("sortingComboBox")
         self.sortingComboBox.addItems(["Recommended",
                                 "Nearest attractions",
                                   "Rating: Highest to Lowest",
@@ -935,7 +938,7 @@ class Ui_MainWindow(object):
 
         # App Logo
         self.appLogo = QtWidgets.QLabel(self.groupBox)
-        self.appLogo.setPixmap(QtGui.QPixmap("Logo.png"))
+        self.appLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
         self.appLogo.setScaledContents(True)
         self.appLogo.setFixedSize(190, 190)
         self.appLogo.move(5, -22)
@@ -944,12 +947,14 @@ class Ui_MainWindow(object):
         # Filter Title
         Xcoor = 6
         Ycoor = 230
-        self.filterTitle = self.createLabel("groupBox",Xcoor+5, Ycoor+50, 60, 50)
+        self.filterTitle = self.createLabel("groupBox",Xcoor+5, Ycoor+60, 120, 50)
+        self.filterTitle.setObjectName("filterByTitle")
 
         # Filtering by State - Format: (Label : ComboBox)
         self.stateFilterLabel = self.createLabel("groupBox",Xcoor+5, Ycoor+90, 50, 50)
         self.stateFilterLabel.setObjectName("filters")
-        self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+40, Ycoor+105, 175, 26)
+        self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+47, Ycoor+103, 171, 26)
+        self.stateFilterComboBox.setObjectName("filterComboboxes")
         self.stateFilterComboBox.addItem("None", ["None"])
         self.stateFilterComboBox.addItem("Alabama", ["None", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
         self.stateFilterComboBox.addItem("Alaska", ["None", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
@@ -1006,28 +1011,35 @@ class Ui_MainWindow(object):
 
         # Filtering by City - Format: (Label : ComboBox)
         self.cityFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+125, 50, 50)
-        self.cityFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+140, 175, 26)
+        self.cityFilterLabel.setObjectName("filters")
+        self.cityFilterComboBox = self.createComboBox("groupBox", Xcoor+47, Ycoor+138, 171, 26)
+        self.cityFilterComboBox.setObjectName("filterComboboxes")
         self.cityFilterComboBox.addItems(["None"])
         self.cityFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by Type - Format: (Label : ComboBox)
         self.typeFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+160, 50, 50)
-        self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+40, Ycoor+175, 175, 26)
+        self.typeFilterLabel.setObjectName("filters")
+        self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+47, Ycoor+173, 171, 26)
+        self.typeFilterComboBox.setObjectName("filterComboboxes")
         self.typeFilterComboBox.addItems(["None", "Food", "Nature/Outdoor", "Entertainment", "Cultural/Historical"])
         self.typeFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by WheelChair Accessibility - Format: (CheckBox : Label)
         self.wheelchairAccessFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+200, 150, 50)
+        self.wheelchairAccessFilterLabel.setObjectName("filters")
         self.wheelchairAccessFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+216, 20, 20)
         self.wheelchairAccessFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
         # Filtering by Family Friendliness - Format: (CheckBox : Label)
         self.familyFriendlyFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+225, 150, 50)
+        self.familyFriendlyFilterLabel.setObjectName("filters")
         self.familyFriendlyFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+241, 20, 20)
         self.familyFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
         # Filtering by Pet Friendliness - Format: (CheckBox : Label)
         self.petFriendlyFilterLabel = self.createLabel("groupBox", Xcoor+30, Ycoor+250, 150, 50)
+        self.petFriendlyFilterLabel.setObjectName("filters")
         self.petFriendlyFilterCheckBox = self.createCheckBox("groupBox", Xcoor+5, Ycoor+266, 20, 20)
         self.petFriendlyFilterCheckBox.stateChanged.connect(self.getCurrentFieldValues)
 
@@ -1051,7 +1063,8 @@ class Ui_MainWindow(object):
         self.longitudeInput.textChanged.connect(self.checkIfLocationIsFilled)
         self.radiusLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 45, 200, 25)
         self.radiusLabel.setText("Desired Distance From You:")
-        self.radiusComboBox = self.createComboBox("groupBox", Xcoor + 0, Ycoor - 20, 215, 25)
+        self.radiusComboBox = self.createComboBox("groupBox", Xcoor + 5, Ycoor - 20, 205, 25)
+        self.radiusComboBox.setObjectName("radiusComboBox")
         self.radiusComboBox.addItems(["Any distance", "Less than 5 miles", "Less than 10 miles", "Less than 20 miles", "Less than 50 miles"])
         self.radiusComboBox.setEnabled(False)
         self.radiusComboBox.activated.connect(self.detectChangeInRadius)
@@ -1067,13 +1080,14 @@ class Ui_MainWindow(object):
 
         # Adding a Dynamic Help Menu
         self.helpButton = QtWidgets.QToolButton(self.groupBox)
-        self.helpButton.setGeometry(5,535,205,20)
+        self.helpButton.setObjectName("helpButton")
+        self.helpButton.setGeometry(5,535,219,20)
         clickCount = 0
         self.helpMenuGroupBox = QtWidgets.QGroupBox(self.groupBox)
         self.helpMenuGroupBox.setGeometry(QtCore.QRect(5, 455, 205, 80))
         self.helpMenuGroupBox.hide()
         self.reportButton = QtWidgets.QToolButton(self.groupBox)
-        self.reportButton.setGeometry(5, 560, 205, 20)
+        self.reportButton.setGeometry(5, 560, 219, 20)
         self.reportButton.setText("Create a Report")
         self.reportButton.clicked.connect(self.createReport)
         self.documentationButton = QtWidgets.QToolButton(self.helpMenuGroupBox)
@@ -1111,7 +1125,7 @@ class Ui_MainWindow(object):
         self.sourcesTabWidget = QtWidgets.QWidget(self.sourcesTab)
         self.sourcesTabWidget.setGeometry(QtCore.QRect(0, 0, 1150, 601))
         self.sourcesTabAppLogo = QtWidgets.QLabel(self.sourcesTabWidget)
-        self.sourcesTabAppLogo.setPixmap(QtGui.QPixmap("Logo.png"))
+        self.sourcesTabAppLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
         self.sourcesTabAppLogo.setScaledContents(True)
         self.sourcesTabAppLogo.setFixedSize(190, 190)
         self.sourcesTabAppLogo.move(5, -22)
@@ -1153,9 +1167,9 @@ class Ui_MainWindow(object):
         self.petFriendlyFilterLabel.setText(_translate("MainWindow", "Pet Friendly"))
         self.sortingComboBoxLabel.setText(_translate("MainWindow", "Sort By:"))
         self.sourcesLabel.setText(_translate("MainWindow", "Sources, Liscenses, and References"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "Attractions"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "About Us"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.sourcesTab), _translate("MainWindow", "Sources"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "Find Attractions"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Explore Destinations"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.sourcesTab), _translate("MainWindow", "Sources, Licenses, and References"))
 
 if __name__ == "__main__":
     # Clears action log
