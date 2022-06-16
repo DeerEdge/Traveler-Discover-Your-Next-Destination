@@ -157,7 +157,7 @@ class Ui_MainWindow(object):
         self.descriptionLabel.setText(("     " + str(attraction[3])))
 
         self.attractionImage = QtWidgets.QLabel(self.scrollAreaGroupBox)
-        imageAddress = "./Attraction Pictures/" + str(attraction[0]) + " - " + str(attraction[5]) + ".jpeg"
+        imageAddress = "./Attraction Pictures/" + str(attraction[0]) + " - " + str(attraction[5]) + ".jpg"
         self.attractionImage.setPixmap(QtGui.QPixmap(imageAddress))
         self.attractionImage.setScaledContents(True)
         self.attractionImage.setFixedSize(220, 220)
