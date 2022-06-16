@@ -212,7 +212,7 @@ class Ui_MainWindow(object):
         for index in range(len(attributeList)):
             if (attributeList[index] == "None" or attributeList[index] == "False"):
                 attributeList[index] = None
-        allAttractions = ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(None,None,None,None,None,None))
+        allAttractions = ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(None, None, None, None, None, None))
         filteredAttractions = ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(attributeList[0], attributeList[1], attributeList[2], attributeList[3], attributeList[4], attributeList[5]))
         filteredAttractionsList = filteredAttractions
         if (len(filteredAttractionsList)) == 1:
@@ -626,13 +626,13 @@ class Ui_MainWindow(object):
         self.titleCentralwidget.setFixedSize(1150, 645)
         self.titleWindowPicture = QtWidgets.QLabel(self.titleCentralwidget)
         self.titleWindowPicture.setFixedSize(1150,645)
-        self.titleWindowPicture.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowPicture.jpeg"))
+        self.titleWindowPicture.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowPicture.jpeg"))
         self.titleWindowPicture.setScaledContents(True)
         self.titleWindowPicture.show()
         self.titleWindowLogo = QtWidgets.QLabel(self.titleCentralwidget)
         self.titleWindowLogo.setFixedSize(500, 500)
         self.titleWindowLogo.move(310,50)
-        self.titleWindowLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
+        self.titleWindowLogo.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowLogo.png"))
         self.titleWindowLogo.setScaledContents(True)
         self.titleWindowLogo.show()
         self.titleStateInput = self.createComboBox("titleCentralWidget", 150, 250, 150, 50)
@@ -938,7 +938,7 @@ class Ui_MainWindow(object):
 
         # App Logo
         self.appLogo = QtWidgets.QLabel(self.groupBox)
-        self.appLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
+        self.appLogo.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowLogo.png"))
         self.appLogo.setScaledContents(True)
         self.appLogo.setFixedSize(190, 190)
         self.appLogo.move(5, -22)
@@ -1125,7 +1125,7 @@ class Ui_MainWindow(object):
         self.sourcesTabWidget = QtWidgets.QWidget(self.sourcesTab)
         self.sourcesTabWidget.setGeometry(QtCore.QRect(0, 0, 1150, 601))
         self.sourcesTabAppLogo = QtWidgets.QLabel(self.sourcesTabWidget)
-        self.sourcesTabAppLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
+        self.sourcesTabAppLogo.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowLogo.png"))
         self.sourcesTabAppLogo.setScaledContents(True)
         self.sourcesTabAppLogo.setFixedSize(190, 190)
         self.sourcesTabAppLogo.move(5, -22)

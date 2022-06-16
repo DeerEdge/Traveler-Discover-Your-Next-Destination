@@ -23,7 +23,7 @@ import glob
 import requests
 
 all_data = pd.DataFrame()
-for file in glob.glob("rawcsv/*"):
+for file in glob.glob("KearneyandWA/*"):
     city_data = pd.read_csv(file)
     all_data = all_data.append(city_data)
     print("Checkpoint 1: City Added")
@@ -97,5 +97,5 @@ combined_all_data = combined_all_data.reset_index(drop = True)
 
 print("Checkpoint 8 (Final Dataframe created)")
 
-combined_all_data.to_csv('complete_data.csv')
+combined_all_data.to_csv('kearney_wa_data.csv')
 print("Checkpoint 9 (Process Complete)")

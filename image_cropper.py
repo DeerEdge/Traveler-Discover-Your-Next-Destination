@@ -7,7 +7,7 @@ print(glob.glob("Attraction Pictures/*"))
 
 w = 400
 h = 400
-for file in glob.glob("Attraction Pictures/*"):
+for file in glob.glob("NE_WA/*"):
     if file.endswith('.jpg'):
         try:
             pic = cv2.imread(file)

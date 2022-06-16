@@ -2,7 +2,7 @@ import pandas as pd
 import regex as re
 
 # Merge this with "Scraping.py"
-complete_data = pd.read_csv("final_data.csv")
+complete_data = pd.read_csv("ke_wa_state_city.csv")
 
 
 def getState(address):
@@ -37,4 +37,4 @@ cities = complete_data.apply(getCity)
 state_city_dataframe = pd.DataFrame(list(zip(states, cities)), columns=['State', 'City'])
 state_city_dataframe['State'] = state_city_dataframe['State'].map(states_dict)
 
-state_city_dataframe.to_csv('state_city_data.csv')
+state_city_dataframe.to_csv('ke_wa_state_city.csv')
