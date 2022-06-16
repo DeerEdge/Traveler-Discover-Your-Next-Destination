@@ -83,13 +83,33 @@ class Ui_MainWindow(object):
 
         labelXPos = 230
         labelYPos = 25
-        self.attractionTitle = self.createLabel("scrollAreaGroupBox", labelXPos, 0, 450, 50)
+        self.attractionTitle = self.createLabel("scrollAreaGroupBox", labelXPos, -5, 450, 50)
         self.attractionTitle.setObjectName("attractionName")
-        self.attractionTitle.setText((str(attraction[1]) + "  - (Est. " + (str(attraction[2])) + ")"))
-        self.ratingLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 420, 0, 50, 50)
+        self.attractionTitle.setText((str(attraction[1])))
+        self.ratingLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 350, -5, 50, 50)
+        self.ratingLabel.setObjectName("rating")
         self.ratingLabel.setText((str(attraction[9])))
-        self.locationLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos - 8, 200, 50)
-        self.locationLabel.setText((str(attraction[5]) + ",  " + str(attraction[4])))
+        minStarRating = 5.0
+        for i in range(10):
+            if (float(attraction[9]) < minStarRating):
+                minStarRating = minStarRating - 0.5
+            else:
+                self.ratingIcon = QtWidgets.QLabel(self.scrollAreaGroupBox)
+                self.ratingIcon.setPixmap(QtGui.QPixmap("./Application Pictures/Star Ratings/" + str(minStarRating) + " star.png"))
+                self.ratingIcon.setScaledContents(True)
+                self.ratingIcon.setFixedSize(85, 16)
+                self.ratingIcon.move(600, 12)
+                self.ratingIcon.show()
+                break
+        if (self.latitudeInput.text() != "" and self.longitudeInput.text() != "" and self.isfloat(str(self.latitudeInput.text())) and self.isfloat(str(self.longitudeInput.text()))):
+            self.locationLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos - 8, 250, 50)
+            self.locationLabel.setObjectName("locationAndDistance")
+            distanceFromUserLocation = distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),(attraction[14], attraction[15])).miles
+            self.locationLabel.setText((str(attraction[5]) + ", " + str(attraction[4])) + " - " + str('%.1f'%(distanceFromUserLocation)) + " miles away")
+        else:
+            self.locationLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos - 3, 200, 50)
+            self.locationLabel.setObjectName("locationAndDistance")
+            self.locationLabel.setText((str(attraction[5]) + ", " + str(attraction[4])))
         self.typeLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 20, 200, 50)
         self.typeLabel.setText((str(attraction[6])))
         self.priceLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 40, 200, 50)
@@ -106,33 +126,33 @@ class Ui_MainWindow(object):
             self.busynessLabel.setText("Moderately Busy")
         else:
             self.busynessLabel.setText("Very Busy")
-        self.wheelChairAccessibilityLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 130, labelYPos + 20, 200, 50)
+        self.wheelChairAccessibilityLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 170, labelYPos + 20, 200, 50)
         if ((attraction[10])):
             self.wheelChairAccessibilityLabel.setText("Wheelchair Accessible? - Yes")
         else:
             self.wheelChairAccessibilityLabel.setText("Wheelchair Accessible? - No")
-        self.familyFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 130, labelYPos + 40, 200, 50)
+        self.familyFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 170, labelYPos + 40, 200, 50)
         if ((attraction[11])):
             self.familyFriendlyLabel.setText("Family Friendly? - Yes")
         else:
             self.familyFriendlyLabel.setText("Family Friendly? - No")
-        self.petFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 130, labelYPos + 60, 200, 50)
+        self.petFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 170, labelYPos + 60, 200, 50)
         if ((attraction[12])):
             self.petFriendlyLabel.setText("Pet Friendly? - Yes")
         else:
             self.petFriendlyLabel.setText("Pet Friendly? - No")
-        if (self.latitudeInput.text() != "" and self.longitudeInput.text() != "" and self.isfloat(str(self.latitudeInput.text())) and self.isfloat(str(self.longitudeInput.text()))):
-            distanceFromUserLocation = distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),(attraction[14], attraction[15])).miles
-            self.distanceLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 310, labelYPos + 40, 200, 50)
-            self.distanceLabel.setText(str('%.1f'%(distanceFromUserLocation)) + " miles from you")
-            self.distanceLabel.setObjectName("Distance")
-        self.coordinateLocationLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 270, labelYPos + 60, 200, 50)
-        self.coordinateLocationLabel.setText("Location: (" + str('%.3f'%(attraction[15])) + "," + str('%.3f'%(attraction[14])) + ")")
+        # if (self.latitudeInput.text() != "" and self.longitudeInput.text() != "" and self.isfloat(str(self.latitudeInput.text())) and self.isfloat(str(self.longitudeInput.text()))):
+        #     distanceFromUserLocation = distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),(attraction[14], attraction[15])).miles
+        #     self.distanceLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 310, labelYPos + 40, 200, 50)
+        #     self.distanceLabel.setText(str('%.1f'%(distanceFromUserLocation)) + " miles from you")
+        #     self.distanceLabel.setObjectName("Distance")
+        self.coordinateLocationLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 80, 200, 50)
+        self.coordinateLocationLabel.setText("Location: (" + str('%.3f'%(attraction[14])) + "," + str('%.3f'%(attraction[15])) + ")")
         self.coordinateInfoLabel = self.createLabel("scrollAreaGroupBox", 0, 0, 200, 50)
         self.coordinateInfoLabel.setText(str('%.6f'%(attraction[15])) + "," + str('%.6f'%(attraction[14])))
         self.coordinateInfoLabel.setObjectName("Location")
         self.coordinateInfoLabel.hide()
-        self.descriptionLabel = self.createLabel("scrollAreaGroupBox",labelXPos, labelYPos + 80, 460, 130)
+        self.descriptionLabel = self.createLabel("scrollAreaGroupBox",labelXPos, labelYPos + 93, 454, 125)
         self.descriptionLabel.setWordWrap(True)
         self.descriptionLabel.setText(("     " + str(attraction[3])))
 
@@ -174,7 +194,7 @@ class Ui_MainWindow(object):
         self.googleMapsButton.clicked.connect(lambda: webbrowser.open(str(attraction[13])))
 
         self.line = QtWidgets.QFrame(self.scrollAreaGroupBox)
-        self.line.setGeometry(QtCore.QRect(235, 125, 440, 10))
+        self.line.setGeometry(QtCore.QRect(235, 138, 440, 10))
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.verticalLayout_3.addWidget(self.scrollAreaGroupBox)
@@ -229,9 +249,10 @@ class Ui_MainWindow(object):
                 for index in range(len(self.scrollAreaWidgetContainer.children())):
                     if index != 0:
                         objectDistanceLabel = self.scrollAreaWidgetContainer.children()[index].findChild(QtWidgets.QLabel,
-                                                                                                         'Distance').text()
-                        indexOfLetterM = objectDistanceLabel.index("m")
-                        if (float(objectDistanceLabel[:(indexOfLetterM - 1)]) < float(self.radiusComboBox.currentText()[10:12])):
+                                                                                                         'locationAndDistance').text()
+                        indexOfLetterM = objectDistanceLabel.index("miles")
+                        indexOfHyphen = objectDistanceLabel.index("-")
+                        if (float(objectDistanceLabel[(indexOfHyphen + 1):(indexOfLetterM - 1)]) < float(self.radiusComboBox.currentText()[10:12])):
                             self.scrollAreaWidgetContainer.children()[index].show()
                         else:
                             self.scrollAreaWidgetContainer.children()[index].hide()
@@ -312,12 +333,12 @@ class Ui_MainWindow(object):
             if (self.radiusComboBox.isEnabled()):
                 for index in range(len(self.scrollAreaWidgetContainer.children())):
                     if index != 0:
-                        objectDistanceLabel = self.scrollAreaWidgetContainer.children()[index].findChild(QtWidgets.QLabel,
-                                                                                                        'Distance').text()
+                        objectDistanceLabel = self.scrollAreaWidgetContainer.children()[index].findChild(QtWidgets.QLabel, 'locationAndDistance').text()
 
                         indexOfLetterM = objectDistanceLabel.index("m")
+                        indexOfHyphen = objectDistanceLabel.index("-")
                         if (self.radiusComboBox.currentText() != "Any distance"):
-                            if (float(objectDistanceLabel[:(indexOfLetterM - 1)]) < float(self.radiusComboBox.currentText()[10:12])):
+                            if (float(objectDistanceLabel[(indexOfHyphen + 1):(indexOfLetterM - 1)]) < float(self.radiusComboBox.currentText()[10:12])):
                                 self.scrollAreaWidgetContainer.children()[index].show()
                             else:
                                 self.scrollAreaWidgetContainer.children()[index].hide()
@@ -900,11 +921,11 @@ class Ui_MainWindow(object):
         self.topGroupBoxBar.move(230,10)
         self.topGroupBoxBar.setEnabled(True)
         self.topGroupBoxBar.setFlat(True)
-        self.numOfAttractionsLabel = self.createLabel("topGroupBoxBar", 10, 15, 200, 20)
+        self.numOfAttractionsLabel = self.createLabel("topGroupBoxBar", 10, 20, 200, 20)
         self.numOfAttractionsLabel.setObjectName("numAttractions")
         self.sortingComboBoxLabel = self.createLabel("topGroupBoxBar", 643, 13, 100, 20)
         self.sortingComboBoxLabel.setObjectName("sortByLabel")
-        self.sortingComboBox = self.createComboBox("topGroupBoxBar", 700, 10, 200, 30)
+        self.sortingComboBox = self.createComboBox("topGroupBoxBar", 700, 7, 208, 30)
         self.sortingComboBox.setObjectName("sortingComboBox")
         self.sortingComboBox.addItems(["Recommended",
                                 "Nearest attractions",
@@ -918,21 +939,22 @@ class Ui_MainWindow(object):
 
         # Search Field and Search Button
         self.searchBar = QtWidgets.QLineEdit(self.topGroupBoxBar)
-        self.searchBar.setGeometry(QtCore.QRect(200,10,301,25))
+        self.searchBar.setObjectName("searchBar")
+        self.searchBar.setStyleSheet("font: 14px")
+        self.searchBar.setGeometry(QtCore.QRect(200,8,301,30))
         self.searchBar.setPlaceholderText("Search by Keyword")
         self.searchButton = QtWidgets.QToolButton(self.topGroupBoxBar)
-        self.searchButton.setGeometry(QtCore.QRect(500, 10, 50, 25))
+        self.searchButton.setGeometry(QtCore.QRect(500, 9, 55, 28))
         self.searchButton.setText(_translate("MainWindow", "Search"))
         self.searchIcon = QtWidgets.QLabel(self.topGroupBoxBar)
-        self.searchIcon.setStyleSheet("border: 1px solid lightgrey;")
-        self.searchIcon.setPixmap(QtGui.QPixmap("searchIcon.png"))
+        self.searchIcon.setPixmap(QtGui.QPixmap("./Application Pictures/magnifyingIcon.png"))
         self.searchIcon.setScaledContents(True)
         self.searchIcon.setFixedSize(25, 25)
-        self.searchIcon.move(176,10)
+        self.searchIcon.move(171,10)
         self.searchIcon.show()
         self.searchButton.clicked.connect(self.searchResults)
         self.clearButton = QtWidgets.QToolButton(self.topGroupBoxBar)
-        self.clearButton.setGeometry(QtCore.QRect(549, 10, 50, 25))
+        self.clearButton.setGeometry(QtCore.QRect(554, 9, 55, 28))
         self.clearButton.setText("Clear")
         self.clearButton.clicked.connect(self.clearSearch)
 
@@ -1168,7 +1190,7 @@ class Ui_MainWindow(object):
         self.sortingComboBoxLabel.setText(_translate("MainWindow", "Sort By:"))
         self.sourcesLabel.setText(_translate("MainWindow", "Sources, Liscenses, and References"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "Find Attractions"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Explore Destinations"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Bookmarked Attractions"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.sourcesTab), _translate("MainWindow", "Sources, Licenses, and References"))
 
 if __name__ == "__main__":

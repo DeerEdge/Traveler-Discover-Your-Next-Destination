@@ -4,6 +4,7 @@ QWidget#display {
 
 QGroupBox#backdrop{
     background-color: #FFD942;
+    border-radius: 2px;
 }
 
 QLabel {
@@ -11,10 +12,13 @@ QLabel {
     font-family: Arial, sans-serif;
 }
 
+/* topGroupBoxBar */
 QLabel#numAttractions {
     color: #FFFFFF;
-    font: 15px
+    font: 16px
 }
+
+
 
 QLabel#sortByLabel {
     color: #FFFFFF;
@@ -26,6 +30,7 @@ QComboBox#sortingComboBox {
     border-radius: 2px;
 }
 
+/* Location details */
 QLabel#locationDetailsTitle {
     font: 18px
 }
@@ -39,6 +44,7 @@ QComboBox#radiusComboBox {
     border-radius: 2px;
 }
 
+/* Filters (State, City, Type, WC Accessible, Family Friendly, Pet Friendly) */
 QLabel#filterByTitle {
     color: #FFFFFF;
     font: 18px
@@ -53,4 +59,18 @@ QComboBox#filterComboboxes {
     border: 1px black;
     border-radius: 2px;
 }
+
+/* scrollArea Objects */
+QLabel#attractionName {
+    font: 18px
+}
+
+QLabel#rating {
+    font: 14px
+}
+
+QLabel#locationAndDistance {
+    font: 14px
+}
+
 
