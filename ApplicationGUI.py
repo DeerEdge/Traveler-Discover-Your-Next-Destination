@@ -88,10 +88,10 @@ class Ui_MainWindow(object):
         self.attractionTitle.setText((str(attraction[1])))
         self.ratingLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 350, -5, 50, 50)
         self.ratingLabel.setObjectName("rating")
-        self.ratingLabel.setText((str(attraction[9])))
+        self.ratingLabel.setText((str(attraction[8])))
         minStarRating = 5.0
         for i in range(10):
-            if (float(attraction[9]) < minStarRating):
+            if (float(attraction[8]) < minStarRating):
                 minStarRating = minStarRating - 0.5
             else:
                 self.ratingIcon = QtWidgets.QLabel(self.scrollAreaGroupBox)
@@ -104,40 +104,40 @@ class Ui_MainWindow(object):
         if (self.latitudeInput.text() != "" and self.longitudeInput.text() != "" and self.isfloat(str(self.latitudeInput.text())) and self.isfloat(str(self.longitudeInput.text()))):
             self.locationLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos - 8, 250, 50)
             self.locationLabel.setObjectName("locationAndDistance")
-            distanceFromUserLocation = distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),(attraction[14], attraction[15])).miles
-            self.locationLabel.setText((str(attraction[5]) + ", " + str(attraction[4])) + " - " + str('%.1f'%(distanceFromUserLocation)) + " miles away")
+            distanceFromUserLocation = distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),(attraction[13], attraction[14])).miles
+            self.locationLabel.setText((str(attraction[4]) + ", " + str(attraction[3])) + " - " + str('%.1f'%(distanceFromUserLocation)) + " miles away")
         else:
             self.locationLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos - 3, 200, 50)
             self.locationLabel.setObjectName("locationAndDistance")
-            self.locationLabel.setText((str(attraction[5]) + ", " + str(attraction[4])))
+            self.locationLabel.setText((str(attraction[4]) + ", " + str(attraction[3])))
         self.typeLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 20, 200, 50)
-        self.typeLabel.setText((str(attraction[6])))
+        self.typeLabel.setText((str(attraction[5])))
         self.priceLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 40, 200, 50)
-        if (str(attraction[7])) == '1':
+        if (str(attraction[6])) == '1':
             self.priceLabel.setText("Price Level - $")
-        elif (str(attraction[7])) == '2':
+        elif (str(attraction[6])) == '2':
             self.priceLabel.setText("Price Level - $$")
         else:
             self.priceLabel.setText("Price Level - $$$")
         self.busynessLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 60, 200, 50)
-        if (str(attraction[8])) == '1':
+        if (str(attraction[7])) == '1':
             self.busynessLabel.setText("Low Busyness")
-        elif (str(attraction[8])) == '2':
+        elif (str(attraction[7])) == '2':
             self.busynessLabel.setText("Moderately Busy")
         else:
             self.busynessLabel.setText("Very Busy")
         self.wheelChairAccessibilityLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 170, labelYPos + 20, 200, 50)
-        if ((attraction[10])):
+        if ((attraction[9])):
             self.wheelChairAccessibilityLabel.setText("Wheelchair Accessible? - Yes")
         else:
             self.wheelChairAccessibilityLabel.setText("Wheelchair Accessible? - No")
         self.familyFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 170, labelYPos + 40, 200, 50)
-        if ((attraction[11])):
+        if ((attraction[10])):
             self.familyFriendlyLabel.setText("Family Friendly? - Yes")
         else:
             self.familyFriendlyLabel.setText("Family Friendly? - No")
         self.petFriendlyLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 170, labelYPos + 60, 200, 50)
-        if ((attraction[12])):
+        if ((attraction[11])):
             self.petFriendlyLabel.setText("Pet Friendly? - Yes")
         else:
             self.petFriendlyLabel.setText("Pet Friendly? - No")
@@ -147,17 +147,17 @@ class Ui_MainWindow(object):
         #     self.distanceLabel.setText(str('%.1f'%(distanceFromUserLocation)) + " miles from you")
         #     self.distanceLabel.setObjectName("Distance")
         self.coordinateLocationLabel = self.createLabel("scrollAreaGroupBox", labelXPos, labelYPos + 80, 200, 50)
-        self.coordinateLocationLabel.setText("Location: (" + str('%.3f'%(attraction[14])) + "," + str('%.3f'%(attraction[15])) + ")")
+        self.coordinateLocationLabel.setText("Location: (" + str('%.3f'%(attraction[13])) + "," + str('%.3f'%(attraction[14])) + ")")
         self.coordinateInfoLabel = self.createLabel("scrollAreaGroupBox", 0, 0, 200, 50)
-        self.coordinateInfoLabel.setText(str('%.6f'%(attraction[15])) + "," + str('%.6f'%(attraction[14])))
+        self.coordinateInfoLabel.setText(str('%.6f'%(attraction[14])) + "," + str('%.6f'%(attraction[13])))
         self.coordinateInfoLabel.setObjectName("Location")
         self.coordinateInfoLabel.hide()
         self.descriptionLabel = self.createLabel("scrollAreaGroupBox",labelXPos, labelYPos + 93, 454, 125)
         self.descriptionLabel.setWordWrap(True)
-        self.descriptionLabel.setText(("     " + str(attraction[3])))
+        self.descriptionLabel.setText(("     " + str(attraction[2])))
 
         self.attractionImage = QtWidgets.QLabel(self.scrollAreaGroupBox)
-        imageAddress = "./Attraction Pictures/" + str(attraction[0]) + " - " + str(attraction[5]) + ".jpg"
+        imageAddress = "./Attraction Pictures/" + str(attraction[0]) + " - " + str(attraction[4]) + ".jpg"
         self.attractionImage.setPixmap(QtGui.QPixmap(imageAddress))
         self.attractionImage.setScaledContents(True)
         self.attractionImage.setFixedSize(220, 220)
@@ -168,7 +168,7 @@ class Ui_MainWindow(object):
         self.mapBox.setEnabled(True)
         self.mapBox.setFlat(True)
         self.mapHolder = QtWidgets.QVBoxLayout(self.mapBox)
-        coordinate = (attraction[14],attraction[15])
+        coordinate = (attraction[13],attraction[14])
         map = folium.Map(
             zoom_start=15,
             location=coordinate
@@ -191,7 +191,7 @@ class Ui_MainWindow(object):
         self.googleMapsButton = QtWidgets.QToolButton(self.scrollAreaGroupBox)
         self.googleMapsButton.setGeometry(786, 198, 94, 17)
         self.googleMapsButton.setText(_translate("MainWindow", "Website ↗︎"))
-        self.googleMapsButton.clicked.connect(lambda: webbrowser.open(str(attraction[13])))
+        self.googleMapsButton.clicked.connect(lambda: webbrowser.open(str(attraction[12])))
 
         self.line = QtWidgets.QFrame(self.scrollAreaGroupBox)
         self.line.setGeometry(QtCore.QRect(235, 138, 440, 10))
@@ -232,7 +232,7 @@ class Ui_MainWindow(object):
         for index in range(len(attributeList)):
             if (attributeList[index] == "None" or attributeList[index] == "False"):
                 attributeList[index] = None
-        allAttractions = ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(None,None,None,None,None,None))
+        allAttractions = ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(None, None, None, None, None, None))
         filteredAttractions = ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(attributeList[0], attributeList[1], attributeList[2], attributeList[3], attributeList[4], attributeList[5]))
         filteredAttractionsList = filteredAttractions
         if (len(filteredAttractionsList)) == 1:
@@ -309,22 +309,22 @@ class Ui_MainWindow(object):
 
     def sortingAttractions(self):
         def findDistanceToInput(data):
-            return distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),(data[14], data[15])).miles
+            return distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),(data[13], data[14])).miles
 
         if self.sortingComboBox.currentText() == "Nearest attractions":
             filteredAttractionsList.sort(key=findDistanceToInput)
         if self.sortingComboBox.currentText() == "Rating: Lowest to Highest":
-            filteredAttractionsList.sort(key=itemgetter(9), reverse=False)
-        if self.sortingComboBox.currentText() == "Rating: Highest to Lowest":
-            filteredAttractionsList.sort(key=itemgetter(9), reverse=True)
-        if self.sortingComboBox.currentText() == "Price: Lowest to Highest":
-            filteredAttractionsList.sort(key=itemgetter(7), reverse=False)
-        if self.sortingComboBox.currentText() == "Price: Highest to Lowest":
-            filteredAttractionsList.sort(key=itemgetter(7), reverse=True)
-        if self.sortingComboBox.currentText() == "Traffic: Lowest to Highest":
             filteredAttractionsList.sort(key=itemgetter(8), reverse=False)
-        if self.sortingComboBox.currentText() == "Traffic: Highest to Lowest":
+        if self.sortingComboBox.currentText() == "Rating: Highest to Lowest":
             filteredAttractionsList.sort(key=itemgetter(8), reverse=True)
+        if self.sortingComboBox.currentText() == "Price: Lowest to Highest":
+            filteredAttractionsList.sort(key=itemgetter(6), reverse=False)
+        if self.sortingComboBox.currentText() == "Price: Highest to Lowest":
+            filteredAttractionsList.sort(key=itemgetter(6), reverse=True)
+        if self.sortingComboBox.currentText() == "Traffic: Lowest to Highest":
+            filteredAttractionsList.sort(key=itemgetter(7), reverse=False)
+        if self.sortingComboBox.currentText() == "Traffic: Highest to Lowest":
+            filteredAttractionsList.sort(key=itemgetter(7), reverse=True)
 
     def detectChangeInRadius(self, _):
         global radiusChecked
@@ -647,13 +647,13 @@ class Ui_MainWindow(object):
         self.titleCentralwidget.setFixedSize(1150, 645)
         self.titleWindowPicture = QtWidgets.QLabel(self.titleCentralwidget)
         self.titleWindowPicture.setFixedSize(1150,645)
-        self.titleWindowPicture.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowPicture.jpeg"))
+        self.titleWindowPicture.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowPicture.jpeg"))
         self.titleWindowPicture.setScaledContents(True)
         self.titleWindowPicture.show()
         self.titleWindowLogo = QtWidgets.QLabel(self.titleCentralwidget)
         self.titleWindowLogo.setFixedSize(500, 500)
         self.titleWindowLogo.move(310,50)
-        self.titleWindowLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
+        self.titleWindowLogo.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowLogo.png"))
         self.titleWindowLogo.setScaledContents(True)
         self.titleWindowLogo.show()
         self.titleStateInput = self.createComboBox("titleCentralWidget", 150, 250, 150, 50)
@@ -995,7 +995,7 @@ class Ui_MainWindow(object):
 
         # App Logo
         self.appLogo = QtWidgets.QLabel(self.groupBox)
-        self.appLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
+        self.appLogo.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowLogo.png"))
         self.appLogo.setScaledContents(True)
         self.appLogo.setFixedSize(190, 190)
         self.appLogo.move(5, -22)
@@ -1182,7 +1182,7 @@ class Ui_MainWindow(object):
         self.sourcesTabWidget = QtWidgets.QWidget(self.sourcesTab)
         self.sourcesTabWidget.setGeometry(QtCore.QRect(0, 0, 1150, 601))
         self.sourcesTabAppLogo = QtWidgets.QLabel(self.sourcesTabWidget)
-        self.sourcesTabAppLogo.setPixmap(QtGui.QPixmap("./Application Pictures/titleWindowLogo.png"))
+        self.sourcesTabAppLogo.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowLogo.png"))
         self.sourcesTabAppLogo.setScaledContents(True)
         self.sourcesTabAppLogo.setFixedSize(190, 190)
         self.sourcesTabAppLogo.move(5, -22)

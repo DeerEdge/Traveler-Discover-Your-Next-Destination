@@ -8,7 +8,7 @@ import shutil
 
 
 
-complete_data = pd.read_csv("more_data.csv")
+complete_data = pd.read_csv("kearney_final_data.csv")
 links = list(complete_data['image_link-src'].astype("str"))
 cities = list(complete_data['city'].astype("str"))
 
@@ -45,6 +45,6 @@ for idx, city in enumerate(cities, 1):
 
 
 list_of_attraction_pics = sorted(list(glob.glob("*")))[:-25]
-dst = "Attraction Pictures/"
+dst = "NE_WA/"
 for file in list_of_attraction_pics:
     shutil.move(file, dst)
