@@ -721,7 +721,7 @@ class Ui_MainWindow(object):
         self.titleStateInput.addItem("Missouri", ["None", "St. Louis", "Jefferson City", "Independence", "Columbia",
                                                       "Springfield"])
         self.titleStateInput.addItem("Montana", ["None", "Bozeman", "Great Falls", "Helena", "Billings", "Helena"])
-        self.titleStateInput.addItem("Nebraska", ["None", "Omaha", "Lincoln", "Bellevue", "Scottsbluff"])
+        self.titleStateInput.addItem("Nebraska", ["None", "Omaha", "Lincoln", "Bellevue", "Scottsbluff", "Kearney"])
         self.titleStateInput.addItem("Nevada",
                                          ["None", "Las Vegas", "Carson City", "Reno", "Mesquite", "Henderson"])
         self.titleStateInput.addItem("New Hampshire", ["None", "Manchester", "Nashua", "Littleton", "Portsmouth"])
@@ -1039,7 +1039,7 @@ class Ui_MainWindow(object):
         self.stateFilterComboBox.addItem("Mississippi", ["None", "Southaven", "Vicksburg", "Meridian", "Jackson", "Gulfport"])
         self.stateFilterComboBox.addItem("Missouri", ["None", "St. Louis", "Jefferson City", "Independence", "Columbia", "Springfield"])
         self.stateFilterComboBox.addItem("Montana", ["None", "Bozeman", "Great Falls", "Helena", "Billings", "Helena"])
-        self.stateFilterComboBox.addItem("Nebraska", ["None", "Omaha", "Lincoln", "Bellevue", "Scottsbluff"])
+        self.stateFilterComboBox.addItem("Nebraska", ["None", "Omaha", "Lincoln", "Bellevue", "Scottsbluff", "Kearney"])
         self.stateFilterComboBox.addItem("Nevada", ["None", "Las Vegas", "Carson City", "Reno", "Mesquite", "Henderson"])
         self.stateFilterComboBox.addItem("New Hampshire", ["None", "Manchester", "Nashua", "Littleton", "Portsmouth"])
         self.stateFilterComboBox.addItem("New Jersey", ["None", "Trenton", "Cherry Hill", "Atlantic City", "Newark", "New Brunswick"])
