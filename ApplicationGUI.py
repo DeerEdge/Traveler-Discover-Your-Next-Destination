@@ -227,9 +227,20 @@ class Ui_MainWindow(object):
         global filteredAttractionsList
         global groupBox
         _translate = QtCore.QCoreApplication.translate
-        currentSelectedState = self.stateFilterComboBox.currentText()
-        currentSelectedCity = self.cityFilterComboBox.currentText()
-        currentSelectedType = self.typeFilterComboBox.currentText()
+        if self.stateFilterComboBox.currentText() == "No preference":
+            currentSelectedState = "None"
+        else:
+            currentSelectedState = self.stateFilterComboBox.currentText()
+
+        if self.cityFilterComboBox.currentText() == "No preference":
+            currentSelectedCity = "None"
+        else:
+            currentSelectedCity = self.cityFilterComboBox.currentText()
+
+        if self.typeFilterComboBox.currentText() == "No preference":
+            currentSelectedType = "None"
+        else:
+            currentSelectedType = self.typeFilterComboBox.currentText()
         currentCheckedWheelchairAccessibility = self.wheelchairAccessFilterCheckBox.isChecked()
         currentCheckedFamilyFriendliness = self.familyFriendlyFilterCheckBox.isChecked()
         currentCheckedPetFriendliness = self.petFriendlyFilterCheckBox.isChecked()
@@ -617,20 +628,29 @@ class Ui_MainWindow(object):
         except ValueError:
             return False
 
+
     def titleInputDependencies(self, _):
         if (self.titleStateInput.currentText() != "Select a State"):
             self.titleCityInput.setEnabled(True)
+            self.titleStateNotSelected.hide()
             if (self.titleCityInput.currentText() != "Select a City"):
                 self.titleTypeInput.setEnabled(True)
-                self.windowChangeButton.setEnabled(True)
+                self.titleCityNotSelected.hide()
             else:
                 self.titleTypeInput.setEnabled(False)
                 self.titleTypeInput.setCurrentText("Select a Type")
-                self.windowChangeButton.setEnabled(False)
         else:
             self.titleCityInput.setEnabled(False)
             self.titleTypeInput.setCurrentText("Select a Type")
             self.titleCityInput.setCurrentText("Select a City")
+
+    def titleHasStateCity(self, _):
+        if self.titleStateInput.currentText() == "Select a State":
+            self.titleStateNotSelected.show()
+        if self.titleCityInput.currentText() == "Select a City":
+            self.titleCityNotSelected.show()
+        if (self.titleStateInput.currentText() != "Select a State") and (self.titleCityInput.currentText() != "Select a City"):
+            self.changeWindow(self)
 
     def changeWindow(self, _):
         titleSelectedState = self.titleStateInput.currentText()
@@ -644,6 +664,7 @@ class Ui_MainWindow(object):
         self.cityFilterComboBox.addItems(
         self.stateFilterComboBox.itemData(self.stateFilterComboBox.findText(titleSelectedState)))
         self.cityFilterComboBox.setCurrentText(titleSelectedCity)
+        self.cityFilterComboBox.removeItem(0)
         self.typeFilterComboBox.setCurrentText(titleSelectedType)
         self.searchBar.setText(titleSearchInput)
         self.getCurrentFieldValues(_)
@@ -691,96 +712,111 @@ class Ui_MainWindow(object):
                                             "}"
                                            )
         self.titleStateInput.setFont(QtGui.QFont("Lato", 14))
-        self.titleStateInput.addItem("None", ["None"])
+        self.titleStateInput.addItem("Select a State", ["Select a City"])
         self.titleStateInput.addItem("Alabama",
-                                         ["None", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
+                                         ["Select a City", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
         self.titleStateInput.addItem("Alaska",
-                                         ["None", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
-        self.titleStateInput.addItem("Arizona", ["None", "Phoenix", "Tucson", "Sedona", "Mesa", "Scottsdale"])
+                                         ["Select a City", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
+        self.titleStateInput.addItem("Arizona", ["Select a City", "Phoenix", "Tucson", "Sedona", "Mesa", "Scottsdale"])
         self.titleStateInput.addItem("Arkansas",
-                                         ["None", "Little Rock", "Fort Smith", "Fayetteville", "Springsdale",
+                                         ["Select a City", "Little Rock", "Fort Smith", "Fayetteville", "Springsdale",
                                           "Jonesboro"])
         self.titleStateInput.addItem("California",
-                                         ["None", "San Francisco", "Los Angeles", "San Diego", "San Jose", "Fresno"])
+                                         ["Select a City", "San Francisco", "Los Angeles", "San Diego", "San Jose", "Fresno"])
         self.titleStateInput.addItem("Colorado",
-                                         ["None", "Denver", "Colorado Springs", "Pueblo", "Aspen", "Fort Collins"])
+                                         ["Select a City", "Denver", "Colorado Springs", "Pueblo", "Aspen", "Fort Collins"])
         self.titleStateInput.addItem("Connecticut",
-                                         ["None", "Bridgeport", "Hartford", "New Haven", "Stamford", "Waterbury"])
+                                         ["Select a City", "Bridgeport", "Hartford", "New Haven", "Stamford", "Waterbury"])
         self.titleStateInput.addItem("Delaware",
-                                         ["None", "Dover", "Wilmington", "Middletown", "New Castle", "Newark"])
+                                         ["Select a City", "Dover", "Wilmington", "Middletown", "New Castle", "Newark"])
         self.titleStateInput.addItem("Florida",
-                                         ["None", "Orlando", "Tallahassee", "Jacksonville", "Miami", "Tampa"])
-        self.titleStateInput.addItem("Georgia", ["None", "Atlanta", "Columbus", "Athens", "Augusta", "Savannah"])
-        self.titleStateInput.addItem("Hawaii", ["None", "Kailua", "Waipahu", "Honolulu", "Hilo", "Kahului"])
+                                         ["Select a City", "Orlando", "Tallahassee", "Jacksonville", "Miami", "Tampa"])
+        self.titleStateInput.addItem("Georgia", ["Select a City", "Atlanta", "Columbus", "Athens", "Augusta", "Savannah"])
+        self.titleStateInput.addItem("Hawaii", ["Select a City", "Kailua", "Waipahu", "Honolulu", "Hilo", "Kahului"])
         self.titleStateInput.addItem("Idaho",
-                                         ["None", "Naperville", "Chicago", "St. Louis", "Rockford", "Springfield"])
+                                         ["Select a City", "Idaho Falls", "Boise", "Twin Falls", "Pocatello", "Coeur d'alene"])
         self.titleStateInput.addItem("Illinois",
-                                         ["None", "San Francisco", "Los Angeles", "San Diego", "San Jose", "Fresno"])
+                                         ["Select a City", "Chicago", "Naperville", "St. Louis", "Rockford", "Springfield"])
         self.titleStateInput.addItem("Indiana",
-                                         ["None", "Indianapolis", "Gary", "Lafayette", "Evansville", "Fort Wayne"])
+                                         ["Select a City", "Indianapolis", "Gary", "Lafayette", "Evansville", "Fort Wayne"])
         self.titleStateInput.addItem("Iowa",
-                                         ["None", "Des Moines", "Waterloo", "Dubuque", "Cedar Rapids", "Davenport"])
-        self.titleStateInput.addItem("Kansas", ["None", "Olathe", "Topeka", "Wichita", "Lawrence", "Kansas City"])
-        self.titleStateInput.addItem("Kentucky", ["None", "Lexington", "Bowling Green", "Louisville", "Florence",
+                                         ["Select a City", "Des Moines", "Waterloo", "Dubuque", "Cedar Rapids", "Davenport"])
+        self.titleStateInput.addItem("Kansas", ["Select a City", "Olathe", "Topeka", "Wichita", "Lawrence", "Kansas City"])
+        self.titleStateInput.addItem("Kentucky", ["Select a City", "Lexington", "Bowling Green", "Louisville", "Florence",
                                                       "Jeffersontown"])
-        self.titleStateInput.addItem("Louisiana", ["None", "Alexandria", "Shreveport", "New Orleans", "Baton Rouge",
+        self.titleStateInput.addItem("Louisiana", ["Select a City", "Alexandria", "Shreveport", "New Orleans", "Baton Rouge",
                                                        "Lafayette"])
-        self.titleStateInput.addItem("Maine", ["None", "Portland", "Bangor", "Camden", "Augusta", "Brunswick"])
+        self.titleStateInput.addItem("Maine", ["Select a City", "Portland", "Bangor", "Camden", "Augusta", "Brunswick"])
         self.titleStateInput.addItem("Maryland",
-                                         ["None", "Washington D.C.", "Annapolis", "Gaithersburg", "Baltimore",
-                                          "Gaithersburg"])
+                                         ["Select a City", "Washington D.C.", "Annapolis", "Gaithersburg", "Baltimore",
+                                          "Columbia"])
         self.titleStateInput.addItem("Massachusetts",
-                                         ["None", "Plymouth", "Springfield ", "Salem", "Worcester", "Boston"])
+                                         ["Select a City", "Plymouth", "Springfield ", "Salem", "Worcester", "Boston"])
         self.titleStateInput.addItem("Michigan",
-                                         ["None", "Detroit", "Grand Rapids", "Ann Arbor", "Lansing", "Traverse City"])
+                                         ["Select a City", "Detroit", "Grand Rapids", "Ann Arbor", "Lansing", "Traverse City"])
         self.titleStateInput.addItem("Minnesota",
-                                         ["None", "Minneapolis", "Duluth", "St Paul", "Rochester", "Richfield"])
+                                         ["Select a City", "Minneapolis", "Duluth", "St Paul", "Rochester", "Richfield"])
         self.titleStateInput.addItem("Mississippi",
-                                         ["None", "Southaven", "Vicksburg", "Meridian", "Jackson", "Gulfport"])
-        self.titleStateInput.addItem("Missouri", ["None", "St. Louis", "Jefferson City", "Independence", "Columbia",
+                                         ["Select a City", "Southaven", "Vicksburg", "Meridian", "Jackson", "Gulfport"])
+        self.titleStateInput.addItem("Missouri", ["Select a City", "St. Louis", "Jefferson City", "Independence", "Columbia",
                                                       "Springfield"])
-        self.titleStateInput.addItem("Montana", ["None", "Bozeman", "Great Falls", "Helena", "Billings", "Helena"])
-        self.titleStateInput.addItem("Nebraska", ["None", "Omaha", "Lincoln", "Bellevue", "Scottsbluff", "Kearney"])
+        self.titleStateInput.addItem("Montana", ["Select a City", "Bozeman", "Great Falls", "Helena", "Billings", "Helena"])
+        self.titleStateInput.addItem("Nebraska", ["Select a City", "Omaha", "Lincoln", "Bellevue", "Scottsbluff", "Kearney"])
         self.titleStateInput.addItem("Nevada",
-                                         ["None", "Las Vegas", "Carson City", "Reno", "Mesquite", "Henderson"])
-        self.titleStateInput.addItem("New Hampshire", ["None", "Manchester", "Nashua", "Littleton", "Portsmouth"])
+                                         ["Select a City", "Las Vegas", "Carson City", "Reno", "Mesquite", "Henderson"])
+        self.titleStateInput.addItem("New Hampshire", ["Select a City", "Manchester", "Nashua", "Littleton", "Portsmouth"])
         self.titleStateInput.addItem("New Jersey",
-                                         ["None", "Trenton", "Cherry Hill", "Atlantic City", "Newark", "New Brunswick"])
+                                         ["Select a City", "Trenton", "Cherry Hill", "Atlantic City", "Newark", "New Brunswick"])
         self.titleStateInput.addItem("New Mexico",
-                                         ["None", "Santa Fe", "Los Lunas", "Rio Rancho", "Las Cruces", "Albuquerque"])
-        self.titleStateInput.addItem("New York", ["None", "New York", "Albany", "Yonkers", "Syracuse", "Buffalo"])
+                                         ["Select a City", "Santa Fe", "Los Lunas", "Rio Rancho", "Las Cruces", "Albuquerque"])
+        self.titleStateInput.addItem("New York", ["Select a City", "New York", "Albany", "Yonkers", "Syracuse", "Buffalo"])
         self.titleStateInput.addItem("North Carolina",
-                                         ["None", "Raleigh", "Charlotte", "Greensboro", "Durham", "Winston-Salem"])
+                                         ["Select a City", "Raleigh", "Charlotte", "Greensboro", "Durham", "Winston-Salem"])
         self.titleStateInput.addItem("North Dakota",
-                                         ["None", "Bismarck", "Grand Forks", "Williston", "Fargo", "Minot"])
-        self.titleStateInput.addItem("Ohio", ["None", "Cleveland", "Toledo", "Columbus", "Cincinnati", "Akron"])
+                                         ["Select a City", "Bismarck", "Grand Forks", "Williston", "Fargo", "Minot"])
+        self.titleStateInput.addItem("Ohio", ["Select a City", "Cleveland", "Toledo", "Columbus", "Cincinnati", "Akron"])
         self.titleStateInput.addItem("Oklahoma",
-                                         ["None", "Oklahoma City", "Tulsa", "Lawton", "Muskogee", "Broken Arrow"])
-        self.titleStateInput.addItem("Oregon", ["None", "Portland", "Oregon City", "Bend", "Eugene", "Salem"])
+                                         ["Select a City", "Oklahoma City", "Tulsa", "Lawton", "Muskogee", "Broken Arrow"])
+        self.titleStateInput.addItem("Oregon", ["Select a City", "Portland", "Oregon City", "Bend", "Eugene", "Salem"])
         self.titleStateInput.addItem("Pennsylvania",
-                                         ["None", "Pittsburgh", "Harrisburg", "Scranton", "Allentown", "Philadelphia"])
+                                         ["Select a City", "Pittsburgh", "Harrisburg", "Scranton", "Allentown", "Philadelphia"])
         self.titleStateInput.addItem("Rhode Island",
-                                         ["None", "Providence", "Warwick", "Woonsocket", "Cranston", "Newport"])
+                                         ["Select a City", "Providence", "Warwick", "Woonsocket", "Cranston", "Newport"])
         self.titleStateInput.addItem("South Carolina",
-                                         ["None", "Charleston", "Mt Pleasant", "Sumter", "Columbia", "Rock Hill"])
+                                         ["Select a City", "Charleston", "Mt Pleasant", "Sumter", "Columbia", "Rock Hill"])
         self.titleStateInput.addItem("South Dakota",
-                                         ["None", "Pierre", "Sioux Falls", "Deadwood", "Watertown", "Rapid City"])
+                                         ["Select a City", "Pierre", "Sioux Falls", "Deadwood", "Watertown", "Rapid City"])
         self.titleStateInput.addItem("Tennessee",
-                                         ["None", "Nashville", "Knoxville", "Gatlinburg", "Chattanooga", "Memphis"])
-        self.titleStateInput.addItem("Texas", ["None", "Austin", "Dallas", "El Paso", "San Antonio", "Houston"])
-        self.titleStateInput.addItem("Utah", ["None", "Salt Lake City", "Park City", "Moab", "Ogden", "St. George"])
+                                         ["Select a City", "Nashville", "Knoxville", "Gatlinburg", "Chattanooga", "Memphis"])
+        self.titleStateInput.addItem("Texas", ["Select a City", "Austin", "Dallas", "El Paso", "San Antonio", "Houston"])
+        self.titleStateInput.addItem("Utah", ["Select a City", "Salt Lake City", "Park City", "Moab", "Ogden", "St. George"])
         self.titleStateInput.addItem("Vermont",
-                                         ["None", "Burlington", "Barre", "Montpelier", "Woodstock", "Rutland", "Stowe"])
+                                         ["Select a City", "Burlington", "Barre", "Montpelier", "Woodstock", "Rutland", "Stowe"])
         self.titleStateInput.addItem("Virginia",
-                                         ["None", "Chesapeake", "Hampton", "Alexandria", "Richmond", "Norfolk"])
-        self.titleStateInput.addItem("Washington", ["None", "Seattle", "Kent", "Spokane", "Tacoma", "Vancouver"])
+                                         ["Select a City", "Chesapeake", "Hampton", "Alexandria", "Richmond", "Norfolk"])
+        self.titleStateInput.addItem("Washington", ["Select a City", "Seattle", "Kent", "Spokane", "Tacoma", "Vancouver"])
         self.titleStateInput.addItem("West Virginia",
-                                         ["None", "Charleston", "Morgantown", "Huntington", "Wheeling"])
+                                         ["Select a City", "Charleston", "Morgantown", "Huntington", "Wheeling"])
         self.titleStateInput.addItem("Wisconsin",
-                                         ["None", "Madison", "Milwaukee", "Eau Claire", "Green Bay", "Appleton"])
-        self.titleStateInput.addItem("Wyoming", ["None", "Jackson", "Cody", "Cheyenne", "Casper", "Laramie"])
+                                         ["Select a City", "Madison", "Milwaukee", "Eau Claire", "Green Bay", "Appleton"])
+        self.titleStateInput.addItem("Wyoming", ["Select a City", "Jackson", "Cody", "Cheyenne", "Casper", "Laramie"])
         self.titleStateInput.activated.connect(self.selectTitleCityFromTitleState)
         self.titleStateInput.activated.connect(self.titleInputDependencies)
+
+        # State Not Selected Error Label
+        self.titleStateNotSelected = self.createLabel("titleCentralWidget", 150, 200, 150, 50)
+        self.titleStateNotSelected = QtWidgets.QLabel(self.titleCentralwidget)
+        self.titleStateNotSelected.setText("Please select a state")
+        self.titleStateNotSelected.setFixedSize(150, 10)
+        self.titleStateNotSelected.move(150, 240)
+        self.titleStateNotSelected.setStyleSheet("QLabel"
+                                           "{"
+                                           "color: red;"
+                                           "font-weight: bold;"
+                                           "}"
+                                           )
+        self.titleStateNotSelected.hide()
+
 
         #Title City Input
         self.titleCityInput = self.createComboBox("titleCentralWidget", 297, 250, 150, 50)
@@ -802,6 +838,20 @@ class Ui_MainWindow(object):
         self.titleCityInput.setFont(QtGui.QFont("Lato", 14))
         self.titleCityInput.addItem("Select a City", ["None"])
         self.titleCityInput.activated.connect(self.titleInputDependencies)
+
+        # City Not Selected Error Label
+        self.titleCityNotSelected = self.createLabel("titleCentralWidget", 150, 200, 150, 50)
+        self.titleCityNotSelected = QtWidgets.QLabel(self.titleCentralwidget)
+        self.titleCityNotSelected.setText("Please select a city")
+        self.titleCityNotSelected.setFixedSize(150, 10)
+        self.titleCityNotSelected.move(300, 240)
+        self.titleCityNotSelected.setStyleSheet("QLabel"
+                                                 "{"
+                                                 "color: red;"
+                                                 "font-weight: bold;"
+                                                 "}"
+                                                 )
+        self.titleCityNotSelected.hide()
 
         # Title Type Input
         self.titleTypeInput = self.createComboBox("titleCentralWidget", 444, 250, 160, 50)
@@ -839,7 +889,6 @@ class Ui_MainWindow(object):
 
         # Search button that changes windows
         self.windowChangeButton = QtWidgets.QToolButton(self.titleCentralwidget)
-        self.windowChangeButton.setEnabled(False)
         self.windowChangeButton.setGeometry(900, 250, 100, 50)
         self.windowChangeButton.setText("Search")
         self.windowChangeButton.setStyleSheet("QToolButton"
@@ -851,7 +900,7 @@ class Ui_MainWindow(object):
                                           "}"
                                           )
         self.windowChangeButton.setFont(QtGui.QFont("Lato", 14))
-        self.windowChangeButton.clicked.connect(self.changeWindow)
+        self.windowChangeButton.clicked.connect(self.titleHasStateCity)
 
         # Explore Cities Feature Preview Picture
         # self.titleWindowExplorePicture = QtWidgets.QLabel(self.titleCentralwidget)
@@ -1030,57 +1079,57 @@ class Ui_MainWindow(object):
         self.stateFilterLabel.setObjectName("filters")
         self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+47, Ycoor+103, 171, 26)
         self.stateFilterComboBox.setObjectName("filterComboboxes")
-        self.stateFilterComboBox.addItem("None", ["None"])
-        self.stateFilterComboBox.addItem("Alabama", ["None", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
-        self.stateFilterComboBox.addItem("Alaska", ["None", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
-        self.stateFilterComboBox.addItem("Arizona", ["None", "Phoenix", "Tucson", "Sedona", "Mesa", "Scottsdale"])
-        self.stateFilterComboBox.addItem("Arkansas", ["None", "Little Rock", "Fort Smith", "Fayetteville", "Springsdale", "Jonesboro"])
-        self.stateFilterComboBox.addItem("California", ["None", "San Francisco", "Los Angeles", "San Diego", "San Jose", "Fresno"])
-        self.stateFilterComboBox.addItem("Colorado", ["None", "Denver", "Colorado Springs", "Pueblo", "Aspen", "Fort Collins"])
-        self.stateFilterComboBox.addItem("Connecticut", ["None", "Bridgeport", "Hartford", "New Haven", "Stamford", "Waterbury"])
-        self.stateFilterComboBox.addItem("Delaware", ["None", "Dover", "Wilmington", "Middletown", "New Castle", "Newark"])
-        self.stateFilterComboBox.addItem("Florida", ["None", "Orlando", "Tallahassee", "Jacksonville", "Miami", "Tampa"])
-        self.stateFilterComboBox.addItem("Georgia", ["None", "Atlanta", "Columbus", "Athens", "Augusta", "Savannah"])
-        self.stateFilterComboBox.addItem("Hawaii", ["None", "Kailua", "Waipahu", "Honolulu", "Hilo", "Kahului"])
-        self.stateFilterComboBox.addItem("Idaho", ["None", "Naperville", "Chicago", "St. Louis", "Rockford", "Springfield"])
-        self.stateFilterComboBox.addItem("Illinois", ["None", "San Francisco", "Los Angeles", "San Diego", "San Jose", "Fresno"])
-        self.stateFilterComboBox.addItem("Indiana", ["None", "Indianapolis", "Gary", "Lafayette", "Evansville", "Fort Wayne"])
-        self.stateFilterComboBox.addItem("Iowa", ["None", "Des Moines", "Waterloo", "Dubuque", "Cedar Rapids", "Davenport"])
-        self.stateFilterComboBox.addItem("Kansas", ["None", "Olathe", "Topeka", "Wichita", "Lawrence", "Kansas City"])
-        self.stateFilterComboBox.addItem("Kentucky", ["None", "Lexington", "Bowling Green", "Louisville", "Florence", "Jeffersontown"])
-        self.stateFilterComboBox.addItem("Louisiana", ["None", "Alexandria", "Shreveport", "New Orleans", "Baton Rouge", "Lafayette"])
-        self.stateFilterComboBox.addItem("Maine", ["None", "Portland", "Bangor", "Camden", "Augusta", "Brunswick"])
-        self.stateFilterComboBox.addItem("Maryland", ["None", "Washington D.C.", "Annapolis", "Gaithersburg", "Baltimore", "Gaithersburg"])
-        self.stateFilterComboBox.addItem("Massachusetts", ["None", "Plymouth", "Springfield ", "Salem", "Worcester", "Boston"])
-        self.stateFilterComboBox.addItem("Michigan", ["None", "Detroit", "Grand Rapids", "Ann Arbor", "Lansing", "Traverse City"])
-        self.stateFilterComboBox.addItem("Minnesota", ["None", "Minneapolis", "Duluth", "St Paul", "Rochester", "Richfield"])
-        self.stateFilterComboBox.addItem("Mississippi", ["None", "Southaven", "Vicksburg", "Meridian", "Jackson", "Gulfport"])
-        self.stateFilterComboBox.addItem("Missouri", ["None", "St. Louis", "Jefferson City", "Independence", "Columbia", "Springfield"])
-        self.stateFilterComboBox.addItem("Montana", ["None", "Bozeman", "Great Falls", "Helena", "Billings", "Helena"])
-        self.stateFilterComboBox.addItem("Nebraska", ["None", "Omaha", "Lincoln", "Bellevue", "Scottsbluff", "Kearney"])
-        self.stateFilterComboBox.addItem("Nevada", ["None", "Las Vegas", "Carson City", "Reno", "Mesquite", "Henderson"])
-        self.stateFilterComboBox.addItem("New Hampshire", ["None", "Manchester", "Nashua", "Littleton", "Portsmouth"])
-        self.stateFilterComboBox.addItem("New Jersey", ["None", "Trenton", "Cherry Hill", "Atlantic City", "Newark", "New Brunswick"])
-        self.stateFilterComboBox.addItem("New Mexico", ["None", "Santa Fe", "Los Lunas", "Rio Rancho", "Las Cruces", "Albuquerque"])
-        self.stateFilterComboBox.addItem("New York", ["None", "New York", "Albany", "Yonkers", "Syracuse", "Buffalo"])
-        self.stateFilterComboBox.addItem("North Carolina", ["None", "Raleigh", "Charlotte", "Greensboro", "Durham", "Winston-Salem"])
-        self.stateFilterComboBox.addItem("North Dakota", ["None", "Bismarck", "Grand Forks", "Williston", "Fargo", "Minot"])
-        self.stateFilterComboBox.addItem("Ohio", ["None", "Cleveland", "Toledo", "Columbus", "Cincinnati", "Akron"])
-        self.stateFilterComboBox.addItem("Oklahoma", ["None", "Oklahoma City", "Tulsa", "Lawton", "Muskogee", "Broken Arrow"])
-        self.stateFilterComboBox.addItem("Oregon", ["None", "Portland", "Oregon City", "Bend", "Eugene", "Salem"])
-        self.stateFilterComboBox.addItem("Pennsylvania", ["None", "Pittsburgh", "Harrisburg", "Scranton", "Allentown", "Philadelphia"])
-        self.stateFilterComboBox.addItem("Rhode Island", ["None", "Providence", "Warwick", "Woonsocket", "Cranston", "Newport"])
-        self.stateFilterComboBox.addItem("South Carolina", ["None", "Charleston", "Mt Pleasant", "Sumter", "Columbia", "Rock Hill"])
-        self.stateFilterComboBox.addItem("South Dakota", ["None", "Pierre", "Sioux Falls", "Deadwood", "Watertown", "Rapid City"])
-        self.stateFilterComboBox.addItem("Tennessee", ["None", "Nashville", "Knoxville", "Gatlinburg", "Chattanooga", "Memphis"])
-        self.stateFilterComboBox.addItem("Texas", ["None", "Austin", "Dallas", "El Paso", "San Antonio", "Houston"])
-        self.stateFilterComboBox.addItem("Utah", ["None", "Salt Lake City", "Park City", "Moab", "Ogden", "St. George"])
-        self.stateFilterComboBox.addItem("Vermont", ["None", "Burlington", "Barre", "Montpelier", "Woodstock", "Rutland", "Stowe"])
-        self.stateFilterComboBox.addItem("Virginia", ["None", "Chesapeake", "Hampton", "Alexandria", "Richmond", "Norfolk"])
-        self.stateFilterComboBox.addItem("Washington", ["None", "Seattle", "Kent", "Spokane", "Tacoma", "Vancouver"])
-        self.stateFilterComboBox.addItem("West Virginia", ["None", "Charleston", "Morgantown", "Huntington", "Wheeling"])
-        self.stateFilterComboBox.addItem("Wisconsin", ["None", "Madison", "Milwaukee", "Eau Claire", "Green Bay", "Appleton"])
-        self.stateFilterComboBox.addItem("Wyoming", ["None", "Jackson", "Cody", "Cheyenne", "Casper", "Laramie"])
+        self.stateFilterComboBox.addItem("No preference", ["No preference"])
+        self.stateFilterComboBox.addItem("Alabama", ["No preference", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
+        self.stateFilterComboBox.addItem("Alaska", ["No preference", "Anchorage", "Juneau", "Fairbanks", "Badger", "Knik-Fairview"])
+        self.stateFilterComboBox.addItem("Arizona", ["No preference", "Phoenix", "Tucson", "Sedona", "Mesa", "Scottsdale"])
+        self.stateFilterComboBox.addItem("Arkansas", ["No preference", "Little Rock", "Fort Smith", "Fayetteville", "Springsdale", "Jonesboro"])
+        self.stateFilterComboBox.addItem("California", ["No preference", "San Francisco", "Los Angeles", "San Diego", "San Jose", "Fresno"])
+        self.stateFilterComboBox.addItem("Colorado", ["No preference", "Denver", "Colorado Springs", "Pueblo", "Aspen", "Fort Collins"])
+        self.stateFilterComboBox.addItem("Connecticut", ["No preference", "Bridgeport", "Hartford", "New Haven", "Stamford", "Waterbury"])
+        self.stateFilterComboBox.addItem("Delaware", ["No preference", "Dover", "Wilmington", "Middletown", "New Castle", "Newark"])
+        self.stateFilterComboBox.addItem("Florida", ["No preference", "Orlando", "Tallahassee", "Jacksonville", "Miami", "Tampa"])
+        self.stateFilterComboBox.addItem("Georgia", ["No preference", "Atlanta", "Columbus", "Athens", "Augusta", "Savannah"])
+        self.stateFilterComboBox.addItem("Hawaii", ["No preference", "Kailua", "Waipahu", "Honolulu", "Hilo", "Kahului"])
+        self.stateFilterComboBox.addItem("Idaho", ["No preference", "Idaho Falls", "Boise", "Twin Falls", "Pocatello", "Coeur d'alene"])
+        self.stateFilterComboBox.addItem("Illinois", ["No preference", "Chicago", "Naperville", "St. Louis", "Rockford", "Springfield"])
+        self.stateFilterComboBox.addItem("Indiana", ["No preference", "Indianapolis", "Gary", "Lafayette", "Evansville", "Fort Wayne"])
+        self.stateFilterComboBox.addItem("Iowa", ["No preference", "Des Moines", "Waterloo", "Dubuque", "Cedar Rapids", "Davenport"])
+        self.stateFilterComboBox.addItem("Kansas", ["No preference", "Olathe", "Topeka", "Wichita", "Lawrence", "Kansas City"])
+        self.stateFilterComboBox.addItem("Kentucky", ["No preference", "Lexington", "Bowling Green", "Louisville", "Florence", "Jeffersontown"])
+        self.stateFilterComboBox.addItem("Louisiana", ["No preference", "Alexandria", "Shreveport", "New Orleans", "Baton Rouge", "Lafayette"])
+        self.stateFilterComboBox.addItem("Maine", ["No preference", "Portland", "Bangor", "Camden", "Augusta", "Brunswick"])
+        self.stateFilterComboBox.addItem("Maryland", ["No preference", "Washington D.C.", "Annapolis", "Gaithersburg", "Baltimore", "Columbia"])
+        self.stateFilterComboBox.addItem("Massachusetts", ["No preference", "Plymouth", "Springfield ", "Salem", "Worcester", "Boston"])
+        self.stateFilterComboBox.addItem("Michigan", ["No preference", "Detroit", "Grand Rapids", "Ann Arbor", "Lansing", "Traverse City"])
+        self.stateFilterComboBox.addItem("Minnesota", ["No preference", "Minneapolis", "Duluth", "St Paul", "Rochester", "Richfield"])
+        self.stateFilterComboBox.addItem("Mississippi", ["No preference", "Southaven", "Vicksburg", "Meridian", "Jackson", "Gulfport"])
+        self.stateFilterComboBox.addItem("Missouri", ["No preference", "St. Louis", "Jefferson City", "Independence", "Columbia", "Springfield"])
+        self.stateFilterComboBox.addItem("Montana", ["No preference", "Bozeman", "Great Falls", "Helena", "Billings", "Helena"])
+        self.stateFilterComboBox.addItem("Nebraska", ["No preference", "Omaha", "Lincoln", "Bellevue", "Scottsbluff", "Kearney"])
+        self.stateFilterComboBox.addItem("Nevada", ["No preference", "Las Vegas", "Carson City", "Reno", "Mesquite", "Henderson"])
+        self.stateFilterComboBox.addItem("New Hampshire", ["No preference", "Manchester", "Nashua", "Littleton", "Portsmouth"])
+        self.stateFilterComboBox.addItem("New Jersey", ["No preference", "Trenton", "Cherry Hill", "Atlantic City", "Newark", "New Brunswick"])
+        self.stateFilterComboBox.addItem("New Mexico", ["No preference", "Santa Fe", "Los Lunas", "Rio Rancho", "Las Cruces", "Albuquerque"])
+        self.stateFilterComboBox.addItem("New York", ["No preference", "New York", "Albany", "Yonkers", "Syracuse", "Buffalo"])
+        self.stateFilterComboBox.addItem("North Carolina", ["No preference", "Raleigh", "Charlotte", "Greensboro", "Durham", "Winston-Salem"])
+        self.stateFilterComboBox.addItem("North Dakota", ["No preference", "Bismarck", "Grand Forks", "Williston", "Fargo", "Minot"])
+        self.stateFilterComboBox.addItem("Ohio", ["No preference", "Cleveland", "Toledo", "Columbus", "Cincinnati", "Akron"])
+        self.stateFilterComboBox.addItem("Oklahoma", ["No preference", "Oklahoma City", "Tulsa", "Lawton", "Muskogee", "Broken Arrow"])
+        self.stateFilterComboBox.addItem("Oregon", ["No preference", "Portland", "Oregon City", "Bend", "Eugene", "Salem"])
+        self.stateFilterComboBox.addItem("Pennsylvania", ["No preference", "Pittsburgh", "Harrisburg", "Scranton", "Allentown", "Philadelphia"])
+        self.stateFilterComboBox.addItem("Rhode Island", ["No preference", "Providence", "Warwick", "Woonsocket", "Cranston", "Newport"])
+        self.stateFilterComboBox.addItem("South Carolina", ["No preference", "Charleston", "Mt Pleasant", "Sumter", "Columbia", "Rock Hill"])
+        self.stateFilterComboBox.addItem("South Dakota", ["No preference", "Pierre", "Sioux Falls", "Deadwood", "Watertown", "Rapid City"])
+        self.stateFilterComboBox.addItem("Tennessee", ["No preference", "Nashville", "Knoxville", "Gatlinburg", "Chattanooga", "Memphis"])
+        self.stateFilterComboBox.addItem("Texas", ["No preference", "Austin", "Dallas", "El Paso", "San Antonio", "Houston"])
+        self.stateFilterComboBox.addItem("Utah", ["No preference", "Salt Lake City", "Park City", "Moab", "Ogden", "St. George"])
+        self.stateFilterComboBox.addItem("Vermont", ["No preference", "Burlington", "Barre", "Montpelier", "Woodstock", "Rutland", "Stowe"])
+        self.stateFilterComboBox.addItem("Virginia", ["No preference", "Chesapeake", "Hampton", "Alexandria", "Richmond", "Norfolk"])
+        self.stateFilterComboBox.addItem("Washington", ["No preference", "Seattle", "Kent", "Spokane", "Tacoma", "Vancouver"])
+        self.stateFilterComboBox.addItem("West Virginia", ["No preference", "Charleston", "Morgantown", "Huntington", "Wheeling"])
+        self.stateFilterComboBox.addItem("Wisconsin", ["No preference", "Madison", "Milwaukee", "Eau Claire", "Green Bay", "Appleton"])
+        self.stateFilterComboBox.addItem("Wyoming", ["No preference", "Jackson", "Cody", "Cheyenne", "Casper", "Laramie"])
         self.stateFilterComboBox.activated.connect(self.selectCityFromState)
         self.stateFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
@@ -1097,7 +1146,7 @@ class Ui_MainWindow(object):
         self.typeFilterLabel.setObjectName("filters")
         self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+47, Ycoor+173, 171, 26)
         self.typeFilterComboBox.setObjectName("filterComboboxes")
-        self.typeFilterComboBox.addItems(["None", "Food", "Nature/Outdoor", "Entertainment", "Cultural/Historical"])
+        self.typeFilterComboBox.addItems(["No preference", "Food", "Nature/Outdoor", "Entertainment", "Cultural/Historical"])
         self.typeFilterComboBox.activated.connect(self.getCurrentFieldValues)
 
         # Filtering by WheelChair Accessibility - Format: (CheckBox : Label)
