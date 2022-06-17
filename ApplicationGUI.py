@@ -163,6 +163,15 @@ class Ui_MainWindow(object):
         self.attractionImage.setFixedSize(220, 220)
         self.attractionImage.show()
 
+        self.bookmarkIcon = QtWidgets.QToolButton(self.scrollAreaGroupBox)
+        self.bookmarkIcon.setObjectName("bookmark")
+        self.bookmarkIcon.setProperty("unactivated", True)
+        self.bookmarkIcon.setGeometry(10, 10, 30, 30)
+        self.bookmarkIcon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+        self.bookmarkIcon.setIconSize(QtCore.QSize(512, 512))
+        self.bookmarkIcon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
+        self.bookmarkIcon.clicked.connect(self.controlBookmarks)
+
         self.mapBox = QtWidgets.QGroupBox(self.scrollAreaGroupBox)
         self.mapBox.setGeometry(QtCore.QRect(675, -10, 220, 220))
         self.mapBox.setEnabled(True)
@@ -187,7 +196,6 @@ class Ui_MainWindow(object):
         self.expandMapButton.setText("Expand Map ↗︎")
         self.expandMapButton.clicked.connect(self.showExpandedMapViewWindow)
 
-        self.expandMapButton.clicked.connect(self.showExpandedMapViewWindow)
         self.googleMapsButton = QtWidgets.QToolButton(self.scrollAreaGroupBox)
         self.googleMapsButton.setGeometry(786, 198, 94, 17)
         self.googleMapsButton.setText(_translate("MainWindow", "Website ↗︎"))
@@ -325,6 +333,17 @@ class Ui_MainWindow(object):
             filteredAttractionsList.sort(key=itemgetter(7), reverse=False)
         if self.sortingComboBox.currentText() == "Traffic: Highest to Lowest":
             filteredAttractionsList.sort(key=itemgetter(7), reverse=True)
+
+    def controlBookmarks(self, _):
+        self.bookmarkIcon = self.scrollAreaGroupBox.sender().parent().findChild(QtWidgets.QToolButton, 'bookmark')
+        if (self.bookmarkIcon.property("unactivated") == True):
+            self.bookmarkIcon.setProperty("unactivated", False)
+            self.bookmarkIcon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/checked bookmark.png"))
+        else:
+            self.bookmarkIcon.setProperty("unactivated", True)
+            self.bookmarkIcon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+        self.bookmarkIcon.setIconSize(QtCore.QSize(1024, 1024))
+        self.bookmarkIcon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
 
     def detectChangeInRadius(self, _):
         global radiusChecked
@@ -910,7 +929,6 @@ class Ui_MainWindow(object):
         # self.sourcesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
 
         MainWindow.setCentralWidget(self.titleCentralwidget)
-
 
     def setupUi(self, MainWindow):
         global clickCount

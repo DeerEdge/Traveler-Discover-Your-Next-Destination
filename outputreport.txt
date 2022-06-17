@@ -1,0 +1,14 @@
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-17 Time Of Action: 16:29:30
+Selected State: Hawaii
+Selected City: Waipahu
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 338), Highway Inn Restaurant, Catering and Seafood, Food, Waipahu, Kalua pig, lau lau & beef stew is served in an old-fashioned diner space with down-home charm. Serving the Best Hawaiian Foods since 1947 and featured on Food Network’s diners, drive-ins and dives. zagat rated multiple hale `aina award winning restaurant in waipahu, near honolulu. fish market, seafood ho’okipa catering, ono hawaiian food, highway inn, oahu hawaii.
+Filtered Attraction: (id: 339), iTrampoline Hawaii, Entertainment, Waipahu, Large indoor playground featuring a variety of trampoline games, including dodgeball & basketball. Hawaii's largest indoor trampoline park.  Next level amusement featuring a variety of attractions. 
+ Dogdgeball, basketball, a gaming area and more.  Jump higher than ever before at iTrampoline Hawaii.
+Filtered Attraction: (id: 345), Hawaii's Plantation Village, Cultural/Historical, Waipahu, Guides take visitors on a tour of a re-created 1900s sugar plantation with 25 buildings & homes. Hawaiis Plantation Village is an outdoor museum of historical homes and gardens that tell the story of Hawaiis people through guided tours by local people.
+Filtered Attraction: (id: 351), Leeward Drive-Inn, Food, Waipahu, Bare-bones counter-serve spot offering casual Asian, Hawaiian & American fare & early-morning hours. 
+Filtered Attraction: (id: 353), Patsy T. Mink Central Oʻahu Regional Park, Nature/Outdoor, Waipahu, Vast park with a tennis & aquatic center, baseball diamonds, archery range & other athletic fields. 
