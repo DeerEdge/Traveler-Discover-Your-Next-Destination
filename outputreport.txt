@@ -1,45 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-18 Time Of Action: 05:44:48
-Selected State: Alaska
-Selected City: None
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-18 Time Of Action: 06:32:57
+Selected State: Georgia
+Selected City: Columbus
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 82), Reflections Lake, Nature/Outdoor, Knik-Fairview, A serene lake visualizing the reflective beauty of Alaska.
-Filtered Attraction: (id: 60), Alaska Native Heritage Center, Cultural/Historical, Anchorage, The Alaska Native Heritage Center, northeast of the city center, explores the cultures of 11 Alaskan indigenous groups. At the Heritage Center, six traditional dwellings surround the small Lake Tiulana, with each demonstration village displaying artifacts and offering various experiences.
-Filtered Attraction: (id: 61), Anchorage Museum at Rasmuson Center, Cultural/Historical, Anchorage, The facility contains a broad range of art and historic items related to Alaska and the arctic. The museum features numerous traveling exhibits from around the world each year.
-Filtered Attraction: (id: 62), Chugach State Park, Nature/Outdoor, Anchorage, One of the four largest state parks in the United States, Chugach State Park covers a staggering 700 square miles. This rugged terrain of mountains, rivers, lakes, and glaciers is home to wolves, moose, bears, beavers, lynx, and other wildlife. It’s also offers hiking, skiing, and camping.
-Filtered Attraction: (id: 63), Kincaid Grill and Wine Bar, Food, Anchorage, This bar serves an impressive menu of Alaskan cuisine, from seafood to meat to decadent desserts.
-Filtered Attraction: (id: 64), Alyeska Resort, Entertainment, Anchorage, Alyeska Resort is truly a playground for all levels of skiers and riders. Offering 1,610 skiable acres, 76 named trails and over 669″ of snow annually, Alyeska lives up to its reputation of ‘steep and deep’. 
-Filtered Attraction: (id: 65), Bear Tooth Theatrepub, Entertainment, Anchorage, The Theatrepub has become a second-run movie hub for Anchorage, as well as the only place in town to catch relevant documentaries and Art House films. And as an added bonus, the monthly concerts that had once been hosted exclusively at Moose’s Tooth now had an indoor spot for the long winters.
-Filtered Attraction: (id: 66), Mendenhall Glacier, Nature/Outdoor, Juneau, Experience the splendor of Mendenhall Glacier at the Mendenhall Glacier Visitor Center. Here, you can enjoy views of the thirteen-mile-long river of ice, which terminates on the far side of Mendenhall Lake, and watch blue icebergs floating in the water amidst reflections of southeast Alaska’s coast mountains. 
-Filtered Attraction: (id: 67), Tracy Arm, Nature/Outdoor, Juneau, Tracy Arm, a classic fjord, has it all- tidewater and elevated glaciers, breathtaking mountains and sheer rock walls that reach up over a mile high with waterfalls that tumble down to the emerald green water, and Alaska’s largest icebergs. Watch for whales, bears, mountain goats, hundreds of harbor seals, and a variety of birds such as eagles, arctic terns, kittiwakes, and pigeon guillemots.
-Filtered Attraction: (id: 68), Mount Roberts Tramway, Entertainment, Juneau, The experience begins with a five-minute ride from 56 feet above sea level through lush rain forest to 1,800-feet of Mount Roberts. Enjoy as the Chilkat Mountains, the Gastineau Channel, downtown Juneau, Douglas Island and the highest peaks on Admiralty Island spread out before you.
-Filtered Attraction: (id: 69), Historic Gold Mining and Panning Tour, Entertainment, Juneau, Once you reach the creek in Last Chance Basin, you’ll get a good view of the Alaska-Juneau Mine, once one of world’s largest hard-rock mines. You’ll learn about the many gold prospectors who came here—like the city’s namesake, Joe Juneau—and get some hands-on pointers on how to shake and maneuver your pan in the creek to get the best glittering harvest.
-Filtered Attraction: (id: 70), Deckhand Dave's Fish Tacos, Food, Juneau, This is an Alaskan fish taco truck. Only locally sources fish are used in the tacos. The type of salmon used rotates seasonally.
-Filtered Attraction: (id: 71), Arctic Circle & Northern Lights Tour, Nature/Outdoor, Fairbanks, This tour consists of a full day adventure as groups cross the Arctic Circle to watch the Alaskan Northern Lights. Along the way you can enjoy the expansive landscape of Alaska’s untouched wilderness.
-Filtered Attraction: (id: 72), Museum of the North, Cultural/Historical, Fairbanks, Discover Alaska Native cultures, natural wonders, diverse wildlife and Arctic dinosaurs. Explore 2,000 years of Alaska art. Learn about research by museum scientists. Original exhibits and breathtaking architecture.
-Filtered Attraction: (id: 73), Running Reindeer Ranch, Nature/Outdoor, Fairbanks, Running Reindeer Ranch offers guided walking natural history tours of the boreal forest with our reindeer friends. Get to know our reindeer in this 2.5 hour unique, immersive, educational tour. Enjoy a walk through the magical birch forest, observing reindeer games and learning the adaptations that make reindeer ideal for Arctic living.
-Filtered Attraction: (id: 74), Pioneer Park, Entertainment, Fairbanks, Experience the Alaska of 100 years ago! Pioneer Park is an historic village that features original buildings moved from downtown Fairbanks, as well as museums and a Gold Rush town street. But it’s also a theme park with a carousel and train that runs the perimeter, shops, and restaurants. 
-Filtered Attraction: (id: 75), The Cookie Jar Restaurant
-, Food, Fairbanks, Relaxed restaurant & bakery serving up all-day breakfast, soups & sandwiches, plus steak & seafood.
-
-
-Filtered Attraction: (id: 76), Museum of Alaska Transportation
-, Cultural/Historical, Wasilla, Vintage trains, planes & automobiles are displayed at this museum devoted to old–school transport.
-
-Filtered Attraction: (id: 77), Wasilla Museum & Visitor Center, Cultural/Historical, Wasilla, Museum tracing the story of Wasilla, from its Native Athabaskan roots to the mining boom & beyond.
-
-
-Filtered Attraction: (id: 78), Palmer Hay Flats State Game Refuge
-, Nature/Outdoor, Wasilla, Palmer Hay Flats State Game Refuge is composed of 28,800 acres of coastal marshy areas adjacent to Knik Arm that support populations of moose, muskrat, foxes, coyotes, eagles, and migratory waterfowl.
-Filtered Attraction: (id: 79), Extreme Fun Center, Entertainment, Wasilla, The Extreme Fun Center offers bumper cars, adventure in the laser maze, go mini-bowling, hit up the arcade, get into laser tag, or speed onto the track.
-Filtered Attraction: (id: 80), Basil Ginger, Food, Wasilla, Pizza, pasta, seafood, souvlaki & steaks served in a roomy dining hall with a full bar.
-Filtered Attraction: (id: 81), Knik Museum and Mushers Hall of Fame, Cultural/Historical, Knik-Fairview, The Knik Museum and Mushers Hall of Fame honors the heritage and culture of the Knik area.
-Filtered Attraction: (id: 83), Lucille Lake
-, Nature/Outdoor, Knik-Fairview, 350-acre lake lined with private homes & a park featuring camping, picnic shelters & a boat launch.
-
-Filtered Attraction: (id: 84), Matanuska Lake
-, Nature/Outdoor, Knik-Fairview, Tranquil lake available open for sightseeing and fishing.
-Filtered Attraction: (id: 85), Knik Pizza, Food, Knik-Fairview, Local food eatery offering speciality and DIY pizzas, wings, appetizers and more.
+Filtered Attraction: (id: 314), Columbus Botanical Garden, Nature/Outdoor, Columbus, 22-acre botanical garden featuring herbs, vegetables, roses & other flowers, plus a walking trail. 
+Filtered Attraction: (id: 316), Coca-Cola Space Science Center, Entertainment, Columbus, Space museum offering simulators, film screenings & observation events appropriate for all ages. 
+Filtered Attraction: (id: 329), The Black Cow, Food, Columbus, Homey destination for fried green tomatoes & other Southern-inspired comfort food plus cocktails. 
+Filtered Attraction: (id: 333), The Columbus Museum, Cultural/Historical, Columbus, American art & regional history exhibits are displayed in a former private home with lush gardens. The Columbus Museum in Columbus, Ga. has a dual mission of bringing American art and regional history to life for the Chattahoochee Valley, with wonderful things to do for the entire family.
+Filtered Attraction: (id: 335), Historic Westville, Cultural/Historical, Columbus, Costumed guides bring the restored schools, churches & businesses of this 1850s village to life. 

@@ -369,8 +369,23 @@ class Ui_MainWindow(object):
         else:
             self.bookmarkIcon.setProperty("unactivated", True)
             self.bookmarkIcon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+            self.removeBookmark(_)
         self.bookmarkIcon.setIconSize(QtCore.QSize(1024, 1024))
         self.bookmarkIcon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
+
+    def removeBookmark(self, _):
+        name = self.scrollAreaGroupBox.sender().parent().findChild(QtWidgets.QLabel, 'attractionName').text()
+        for object in self.bookmarkScrollAreaWidgetContainer.children():
+            try:
+                if (object.findChild(QtWidgets.QLabel, 'attractionName').text() == name):
+                    for groupBox in self.scrollAreaWidgetContainer.children():
+                        try:
+                            groupBox.findChild(QtWidgets.QToolButton, 'bookmark').setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+                        except:
+                            continue
+                    object.deleteLater()
+            except:
+                continue
 
     def addBookmark(self, _):
         attraction = (self.scrollAreaGroupBox.sender().parent().findChild(QtWidgets.QLabel, 'attractionInfo').text()).strip('][').split(',|')
@@ -470,9 +485,9 @@ class Ui_MainWindow(object):
 
         self.bookmarkIcon = QtWidgets.QToolButton(self.bookmarkScrollAreaGroupBox)
         self.bookmarkIcon.setObjectName("bookmark")
-        self.bookmarkIcon.setProperty("unactivated", True)
+        self.bookmarkIcon.setProperty("unactivated", False)
         self.bookmarkIcon.setGeometry(10, 10, 30, 30)
-        self.bookmarkIcon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+        self.bookmarkIcon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/checked bookmark.png"))
         self.bookmarkIcon.setIconSize(QtCore.QSize(512, 512))
         self.bookmarkIcon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
         self.bookmarkIcon.clicked.connect(self.controlBookmarks)
