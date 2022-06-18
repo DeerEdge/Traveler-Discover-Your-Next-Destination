@@ -1178,7 +1178,7 @@ class Ui_MainWindow(object):
         self.appLogo.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowLogo.png"))
         self.appLogo.setScaledContents(True)
         self.appLogo.setFixedSize(190, 190)
-        self.appLogo.move(0, -8)
+        self.appLogo.move(-10, 10)
         self.appLogo.show()
 
         # Filter Title
@@ -1443,8 +1443,8 @@ class Ui_MainWindow(object):
         self.petFriendlyFilterLabel.setText(_translate("MainWindow", "Pet Friendly"))
         self.sortingComboBoxLabel.setText(_translate("MainWindow", "Sort By:"))
         self.sourcesLabel.setText(_translate("MainWindow", "Sources, Liscenses, and References"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "Find Attractions"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.bookmarks_tab), _translate("MainWindow", "Bookmarked Attractions"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "        Find Attractions        "))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.bookmarks_tab), _translate("MainWindow", "     Bookmarked Attractions     "))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.sourcesTab), _translate("MainWindow", "Sources, Licenses, and References"))
 
 if __name__ == "__main__":

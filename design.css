@@ -1,3 +1,63 @@
+QTabWidget::pane {
+    background: #5883AD;
+}
+
+QTabWidget::tab-bar {
+    alignment: center;
+}
+
+QTabBar::tab {
+    border: 1px solid #FFFFFF;
+}
+
+QTabBar::tab:selected {
+    color: #FFFFFF;
+    background: #486A8C;
+}
+
+QTabBar::tab:!selected {
+    background: #FFD942;
+}
+
+QTabBar::tab:!selected:hover {
+    background: #DEBD3A;
+}
+
+QTabBar::tab:top:!selected {
+    margin-top: 3px;
+}
+
+QTabBar::tab:bottom:!selected {
+    margin-bottom: 3px;
+}
+
+QTabBar::tab:top, QTabBar::tab:bottom {
+    min-width: 8ex;
+    margin-right: -1px;
+    padding: 5px 10px 5px 10px;
+}
+
+QTabBar::tab:top:selected {
+    border-bottom-color: none;
+}
+
+QTabBar::tab:bottom:selected {
+    border-top-color: none;
+}
+
+QTabBar::tab:top:last, QTabBar::tab:bottom:last,
+QTabBar::tab:top:only-one, QTabBar::tab:bottom:only-one {
+    margin-right: 0;
+}
+
+QTabBar::tab:left:!selected {
+    margin-right: 3px;
+}
+
+QTabBar::tab:right:!selected {
+    margin-left: 3px;
+}
+
 QWidget#display {
     background-color: #5883AD;
 }

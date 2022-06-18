@@ -1,13 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-18 Time Of Action: 10:31:07
-Selected State: Idaho
-Selected City: Pocatello
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-18 Time Of Action: 11:08:30
+Selected State: Hawaii
+Selected City: Honolulu
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 365), Museum of Clean, Cultural/Historical, Pocatello, Modern museum showcasing exhibits on historic cleaning techniques & tools, with brooms, tubs & more. 
-Filtered Attraction: (id: 368), Zoo Idaho, Nature/Outdoor, Pocatello, Simple zoo specializing in animals from the Intermountain West, including bears, bison & wild cats. Welcome to Zoo Idaho! Established in 1932, the zoo specializes in species of Idaho and the Intermountain West, featuring a world-class grizzly bear exhibit.
-Filtered Attraction: (id: 377), The Healthier Place To Eat, Food, Pocatello, Casual, healthy-leaning outpost offering counter-service sandwiches, salads & wraps. 
-Filtered Attraction: (id: 384), Bannock County Historical Museum, Cultural/Historical, Pocatello, City & county history museum displaying donated artifacts, photos & archeological objects. 
-Filtered Attraction: (id: 385), Idaho Museum of Natural History, Cultural/Historical, Pocatello, Exhibits of artifacts & specimens documenting the natural history of Idaho & the Intermountain West. Discovering Idaho One Story at a Time. The Idaho Museum of Natural History is located in Pocatello, Idaho on Idaho State University campus. Enjoy Idaho from our gallery with your kids.
+Filtered Attraction: (id: 341), Honolulu Zoo, Nature/Outdoor, Honolulu, Popular spot for families covers 42 acres with lush gardens, 900+ animals, a petting zoo & more. The Honolulu Zoo is Oahu's best family activity. Located in the heart of Waikiki, visitors can learn more about Hawaii's indigenous species.
+Filtered Attraction: (id: 342), Iolani Palace, Cultural/Historical, Honolulu, Opulent 19th-century home of Hawaii’s last monarchs operating as a museum with tours & exhibits. 
+Filtered Attraction: (id: 344), Waikiki Aquarium, Entertainment, Honolulu, Small aquarium featuring 3,000+ Hawaiian & tropical Pacific marine animals, plus multiple exhibits. 
+Filtered Attraction: (id: 354), Ono Seafood, Food, Honolulu, Locals flock to this no-frills eatery for the variety of ahi poke & a chill, laid-back atmosphere. 
+Filtered Attraction: (id: 358), Bishop Museum, Cultural/Historical, Honolulu, Museum showcases exhibits on Hawaiian & other Pacific Island cultures, plus features a planetarium. 
