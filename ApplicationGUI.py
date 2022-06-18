@@ -1,3 +1,4 @@
+import ast
 import os
 import webbrowser
 import ApplicationDatabase
@@ -37,6 +38,8 @@ class Ui_MainWindow(object):
             self.label = QtWidgets.QLabel(self.groupBox)
         elif type == "scrollAreaGroupBox":
             self.label = QtWidgets.QLabel(self.scrollAreaGroupBox)
+        elif type == "bookmarkScrollAreaGroupBox":
+            self.label = QtWidgets.QLabel(self.bookmarkScrollAreaGroupBox)
         elif type == "helpMenuGroupBox":
             self.label = QtWidgets.QLabel(self.helpMenuGroupBox)
         elif type == "topGroupBoxBar":
@@ -83,6 +86,17 @@ class Ui_MainWindow(object):
 
         labelXPos = 230
         labelYPos = 25
+        converted_list = ''
+        for element in attraction:
+            if element == attraction[0]:
+                converted_list = converted_list + str(element)
+            else:
+                converted_list = converted_list + ',|' + str(element)
+        attractionDetailsString = "[" + (converted_list) + "]"
+        self.attractionInfo = self.createLabel("scrollAreaGroupBox", 0, 0, 600, 50)
+        self.attractionInfo.setObjectName("attractionInfo")
+        self.attractionInfo.setText(attractionDetailsString)
+        self.attractionInfo.setHidden(True)
         self.attractionTitle = self.createLabel("scrollAreaGroupBox", labelXPos, -5, 450, 50)
         self.attractionTitle.setObjectName("attractionName")
         self.attractionTitle.setText((str(attraction[1])))
@@ -339,11 +353,153 @@ class Ui_MainWindow(object):
         if (self.bookmarkIcon.property("unactivated") == True):
             self.bookmarkIcon.setProperty("unactivated", False)
             self.bookmarkIcon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/checked bookmark.png"))
+            self.addBookmark(_)
+            self.bookmarksScrollArea.setWidget(self.bookmarkScrollAreaWidgetContainer)
         else:
             self.bookmarkIcon.setProperty("unactivated", True)
             self.bookmarkIcon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
         self.bookmarkIcon.setIconSize(QtCore.QSize(1024, 1024))
         self.bookmarkIcon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
+
+    def addBookmark(self, _):
+        attraction = (self.scrollAreaGroupBox.sender().parent().findChild(QtWidgets.QLabel, 'attractionInfo').text()).strip('][').split(',|')
+        _translate = QtCore.QCoreApplication.translate
+
+        self.bookmarkScrollAreaGroupBox = QtWidgets.QGroupBox(self.bookmarkScrollAreaWidgetContainer)
+        self.bookmarkScrollAreaGroupBox.setFixedSize(884, 220)
+        self.bookmarkScrollAreaGroupBox.setLayout(QtWidgets.QVBoxLayout())
+
+        labelXPos = 230
+        labelYPos = 25
+        self.attractionTitle = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos, -5, 450, 50)
+        self.attractionTitle.setObjectName("attractionName")
+        self.attractionTitle.setText((str(attraction[1])))
+        self.ratingLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos + 350, -5, 50, 50)
+        self.ratingLabel.setObjectName("rating")
+        self.ratingLabel.setText((str(attraction[8])))
+        minStarRating = 5.0
+        for i in range(10):
+            if (float(attraction[8]) < minStarRating):
+                minStarRating = minStarRating - 0.5
+            else:
+                self.ratingIcon = QtWidgets.QLabel(self.bookmarkScrollAreaGroupBox)
+                self.ratingIcon.setPixmap(
+                    QtGui.QPixmap("./Application Pictures/Star Ratings/" + str(minStarRating) + " star.png"))
+                self.ratingIcon.setScaledContents(True)
+                self.ratingIcon.setFixedSize(85, 16)
+                self.ratingIcon.move(600, 12)
+                self.ratingIcon.show()
+                break
+        if (self.latitudeInput.text() != "" and self.longitudeInput.text() != "" and self.isfloat(
+                str(self.latitudeInput.text())) and self.isfloat(str(self.longitudeInput.text()))):
+            self.locationLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos, labelYPos - 8, 250, 50)
+            self.locationLabel.setObjectName("locationAndDistance")
+            distanceFromUserLocation = distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),
+                                                         (attraction[13], attraction[14])).miles
+            self.locationLabel.setText((str(attraction[4]) + ", " + str(attraction[3])) + " - " + str(
+                '%.1f' % (distanceFromUserLocation)) + " miles away")
+        else:
+            self.locationLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos, labelYPos - 3, 200, 50)
+            self.locationLabel.setObjectName("locationAndDistance")
+            self.locationLabel.setText((str(attraction[4]) + ", " + str(attraction[3])))
+        self.typeLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos, labelYPos + 20, 200, 50)
+        self.typeLabel.setText((str(attraction[5])))
+        self.priceLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos, labelYPos + 40, 200, 50)
+        if (str(attraction[6])) == '1':
+            self.priceLabel.setText("Price Level - $")
+        elif (str(attraction[6])) == '2':
+            self.priceLabel.setText("Price Level - $$")
+        else:
+            self.priceLabel.setText("Price Level - $$$")
+        self.busynessLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos, labelYPos + 60, 200, 50)
+        if (str(attraction[7])) == '1':
+            self.busynessLabel.setText("Low Busyness")
+        elif (str(attraction[7])) == '2':
+            self.busynessLabel.setText("Moderately Busy")
+        else:
+            self.busynessLabel.setText("Very Busy")
+        self.wheelChairAccessibilityLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos + 170, labelYPos + 20, 200,
+                                                             50)
+        if ((attraction[9])):
+            self.wheelChairAccessibilityLabel.setText("Wheelchair Accessible? - Yes")
+        else:
+            self.wheelChairAccessibilityLabel.setText("Wheelchair Accessible? - No")
+        self.familyFriendlyLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos + 170, labelYPos + 40, 200, 50)
+        if ((attraction[10])):
+            self.familyFriendlyLabel.setText("Family Friendly? - Yes")
+        else:
+            self.familyFriendlyLabel.setText("Family Friendly? - No")
+        self.petFriendlyLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos + 170, labelYPos + 60, 200, 50)
+        if ((attraction[11])):
+            self.petFriendlyLabel.setText("Pet Friendly? - Yes")
+        else:
+            self.petFriendlyLabel.setText("Pet Friendly? - No")
+        # if (self.latitudeInput.text() != "" and self.longitudeInput.text() != "" and self.isfloat(str(self.latitudeInput.text())) and self.isfloat(str(self.longitudeInput.text()))):
+        #     distanceFromUserLocation = distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),(attraction[14], attraction[15])).miles
+        #     self.distanceLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 310, labelYPos + 40, 200, 50)
+        #     self.distanceLabel.setText(str('%.1f'%(distanceFromUserLocation)) + " miles from you")
+        #     self.distanceLabel.setObjectName("Distance")
+        self.coordinateLocationLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos, labelYPos + 80, 200, 50)
+        self.coordinateLocationLabel.setText(
+            "Location: (" + str('%.3f' % (float(attraction[13]))) + "," + str('%.3f' % float((attraction[14]))) + ")")
+        self.coordinateInfoLabel = self.createLabel("bookmarkScrollAreaGroupBox", 0, 0, 200, 50)
+        self.coordinateInfoLabel.setText(str('%.6f' % float(attraction[14])) + "," + str('%.6f' % float(attraction[13])))
+        self.coordinateInfoLabel.setObjectName("Location")
+        self.coordinateInfoLabel.hide()
+        self.descriptionLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos, labelYPos + 93, 454, 125)
+        self.descriptionLabel.setWordWrap(True)
+        self.descriptionLabel.setText(("     " + str(attraction[2])))
+
+        self.attractionImage = QtWidgets.QLabel(self.bookmarkScrollAreaGroupBox)
+        imageAddress = "./Attraction Pictures/" + str(attraction[0]) + " - " + str(attraction[4]) + ".jpg"
+        self.attractionImage.setPixmap(QtGui.QPixmap(imageAddress))
+        self.attractionImage.setScaledContents(True)
+        self.attractionImage.setFixedSize(220, 220)
+        self.attractionImage.show()
+
+        self.bookmarkIcon = QtWidgets.QToolButton(self.bookmarkScrollAreaGroupBox)
+        self.bookmarkIcon.setObjectName("bookmark")
+        self.bookmarkIcon.setProperty("unactivated", True)
+        self.bookmarkIcon.setGeometry(10, 10, 30, 30)
+        self.bookmarkIcon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+        self.bookmarkIcon.setIconSize(QtCore.QSize(512, 512))
+        self.bookmarkIcon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
+        self.bookmarkIcon.clicked.connect(self.controlBookmarks)
+
+        self.mapBox = QtWidgets.QGroupBox(self.bookmarkScrollAreaGroupBox)
+        self.mapBox.setGeometry(QtCore.QRect(675, -10, 220, 220))
+        self.mapBox.setEnabled(True)
+        self.mapBox.setFlat(True)
+        self.mapHolder = QtWidgets.QVBoxLayout(self.mapBox)
+        coordinate = (float(attraction[13]), float(attraction[14]))
+        map = folium.Map(
+            zoom_start=15,
+            location=coordinate
+        )
+        folium.Marker(
+            location=coordinate
+        ).add_to(map)
+        # save map data to data object
+        data = io.BytesIO()
+        map.save(data, close_file=False)
+        webView = QWebEngineView()
+        webView.setHtml(data.getvalue().decode())
+        self.mapHolder.addWidget(webView)
+        self.expandMapButton = QtWidgets.QToolButton(self.bookmarkScrollAreaGroupBox)
+        self.expandMapButton.setGeometry(690, 198, 94, 17)
+        self.expandMapButton.setText("Expand Map ↗︎")
+        self.expandMapButton.clicked.connect(self.showExpandedMapViewWindow)
+
+        self.googleMapsButton = QtWidgets.QToolButton(self.bookmarkScrollAreaGroupBox)
+        self.googleMapsButton.setGeometry(786, 198, 94, 17)
+        self.googleMapsButton.setText(_translate("MainWindow", "Website ↗︎"))
+        self.googleMapsButton.clicked.connect(lambda: webbrowser.open(str(attraction[12])))
+
+        self.line = QtWidgets.QFrame(self.bookmarkScrollAreaGroupBox)
+        self.line.setGeometry(QtCore.QRect(235, 138, 440, 10))
+        self.line.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.verticalLayout_4.addWidget(self.bookmarkScrollAreaGroupBox)
 
     def detectChangeInRadius(self, _):
         global radiusChecked
@@ -1012,11 +1168,11 @@ class Ui_MainWindow(object):
         self.clearButton.clicked.connect(self.clearSearch)
 
         # App Logo
-        self.appLogo = QtWidgets.QLabel(self.groupBox)
+        self.appLogo = QtWidgets.QLabel(self.centralwidget)
         self.appLogo.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowLogo.png"))
         self.appLogo.setScaledContents(True)
         self.appLogo.setFixedSize(190, 190)
-        self.appLogo.move(5, -22)
+        self.appLogo.move(0, -8)
         self.appLogo.show()
 
         # Filter Title
@@ -1192,19 +1348,53 @@ class Ui_MainWindow(object):
 
         # Adds multiple tabs
         self.tabWidget.addTab(self.tabWidgetPage1, " ")
-        self.tab = QtWidgets.QWidget()
-        self.tabWidget.addTab(self.tab, " ")
+
+        self.bookmarksTab = QtWidgets.QWidget()
+        self.tabWidget.addTab(self.bookmarksTab, " ")
+        self.topGroupBoxBar = QtWidgets.QGroupBox(self.bookmarksTab)
+        self.topGroupBoxBar.setFixedSize(907, 40)
+        self.topGroupBoxBar.move(230, 10)
+        self.topGroupBoxBar.setEnabled(True)
+        self.topGroupBoxBar.setFlat(True)
+        # Search Field and Search Button
+        self.searchBar = QtWidgets.QLineEdit(self.topGroupBoxBar)
+        self.searchBar.setObjectName("searchBar")
+        self.searchBar.setStyleSheet("font: 14px")
+        self.searchBar.setGeometry(QtCore.QRect(200, 8, 301, 30))
+        self.searchBar.setPlaceholderText("Search by Keyword")
+        self.searchButton = QtWidgets.QToolButton(self.topGroupBoxBar)
+        self.searchButton.setGeometry(QtCore.QRect(500, 9, 55, 28))
+        self.searchButton.setText(_translate("MainWindow", "Search"))
+        self.searchIcon = QtWidgets.QLabel(self.topGroupBoxBar)
+        self.searchIcon.setPixmap(QtGui.QPixmap("./Application Pictures/magnifyingIcon.png"))
+        self.searchIcon.setScaledContents(True)
+        self.searchIcon.setFixedSize(25, 25)
+        self.searchIcon.move(171, 10)
+        self.searchIcon.show()
+        self.searchButton.clicked.connect(self.searchResults)
+        self.clearButton = QtWidgets.QToolButton(self.topGroupBoxBar)
+        self.clearButton.setGeometry(QtCore.QRect(554, 9, 55, 28))
+        self.clearButton.setText("Clear")
+        self.clearButton.clicked.connect(self.clearSearch)
+        # self.bookmarksTabAppLogo = QtWidgets.QLabel(self.bookmarksTab)
+        # self.bookmarksTabAppLogo.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowLogo.png"))
+        # self.bookmarksTabAppLogo.setScaledContents(True)
+        # self.bookmarksTabAppLogo.setFixedSize(190, 190)
+        # self.bookmarksTabAppLogo.move(5, -22)
+        # self.bookmarksTabAppLogo.show()
+        self.bookmarkScrollAreaWidgetContainer = QtWidgets.QWidget()
+        self.bookmarksScrollArea = QtWidgets.QScrollArea(self.bookmarksTab)
+        self.bookmarksScrollArea.setFixedWidth(907)
+        self.bookmarksScrollArea.setMinimumHeight(531)
+        self.bookmarksScrollArea.move(130, 50)
+        self.bookmarksScrollArea.setWidgetResizable(True)
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.bookmarkScrollAreaWidgetContainer)
+        self.bookmarkScrollAreaWidgetContainer.setLayout(self.verticalLayout_4)
 
         self.sourcesTab = QtWidgets.QWidget()
         self.tabWidget.addTab(self.sourcesTab, " ")
         self.sourcesTabWidget = QtWidgets.QWidget(self.sourcesTab)
         self.sourcesTabWidget.setGeometry(QtCore.QRect(0, 0, 1150, 601))
-        self.sourcesTabAppLogo = QtWidgets.QLabel(self.sourcesTabWidget)
-        self.sourcesTabAppLogo.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowLogo.png"))
-        self.sourcesTabAppLogo.setScaledContents(True)
-        self.sourcesTabAppLogo.setFixedSize(190, 190)
-        self.sourcesTabAppLogo.move(5, -22)
-        self.sourcesTabAppLogo.show()
         self.sourcesLabel = self.createLabel("sourcesTabWidget", 465, 20, 250, 40)
         self.sourcesText = QtWidgets.QPlainTextEdit(self.sourcesTabWidget)
         self.sourcesText.setFixedSize(1129,531)
@@ -1243,7 +1433,7 @@ class Ui_MainWindow(object):
         self.sortingComboBoxLabel.setText(_translate("MainWindow", "Sort By:"))
         self.sourcesLabel.setText(_translate("MainWindow", "Sources, Liscenses, and References"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "Find Attractions"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Bookmarked Attractions"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.bookmarksTab), _translate("MainWindow", "Bookmarked Attractions"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.sourcesTab), _translate("MainWindow", "Sources, Licenses, and References"))
 
 if __name__ == "__main__":
