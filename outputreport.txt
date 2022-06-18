@@ -1,13 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-18 Time Of Action: 11:08:30
-Selected State: Hawaii
-Selected City: Honolulu
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-18 Time Of Action: 18:59:50
+Selected State: Massachusetts
+Selected City: Worcester
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 341), Honolulu Zoo, Nature/Outdoor, Honolulu, Popular spot for families covers 42 acres with lush gardens, 900+ animals, a petting zoo & more. The Honolulu Zoo is Oahu's best family activity. Located in the heart of Waikiki, visitors can learn more about Hawaii's indigenous species.
-Filtered Attraction: (id: 342), Iolani Palace, Cultural/Historical, Honolulu, Opulent 19th-century home of Hawaii’s last monarchs operating as a museum with tours & exhibits. 
-Filtered Attraction: (id: 344), Waikiki Aquarium, Entertainment, Honolulu, Small aquarium featuring 3,000+ Hawaiian & tropical Pacific marine animals, plus multiple exhibits. 
-Filtered Attraction: (id: 354), Ono Seafood, Food, Honolulu, Locals flock to this no-frills eatery for the variety of ahi poke & a chill, laid-back atmosphere. 
-Filtered Attraction: (id: 358), Bishop Museum, Cultural/Historical, Honolulu, Museum showcases exhibits on Hawaiian & other Pacific Island cultures, plus features a planetarium. 
+Filtered Attraction: (id: 619), Worcester Art Museum, Cultural/Historical, Worcester, Vast art collection from ancient to contemporary , including European master works & a Gothic house. Welcome to WAM! Our mission is to connect people, communities, and cultures through the experience of art.
+Filtered Attraction: (id: 627), Worcester Historical Museum, Cultural/Historical, Worcester, Museum & archive focusing on Worcester city history, with rotating exhibits & a historic house tour. 
+Filtered Attraction: (id: 630), The Boynton Restaurant & Spirits, Food, Worcester, Long-running haunt draws college kids & locals with a large choice of American eats, beers, and TVs. The Boynton Restaurant & Spirits is located at 117 Highland St., Worcester, MA 01609, just 2 minutes off of Rt 290.
+Filtered Attraction: (id: 633), Quinsigamond State Park, Nature/Outdoor, Worcester, Recreation area on Lake Quinsigamond with swimming, boating, fishing, sports & picnic facilities. 
+Filtered Attraction: (id: 637), EcoTarium, Entertainment, Worcester, Ecology & conservation museum with interactive displays, a planetarium, trails & a treetop walkway. 

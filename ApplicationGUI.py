@@ -40,8 +40,8 @@ class Ui_MainWindow(object):
             self.label = QtWidgets.QLabel(self.scrollAreaGroupBox)
         elif type == "bookmarkScrollAreaGroupBox":
             self.label = QtWidgets.QLabel(self.bookmarkScrollAreaGroupBox)
-        elif type == "helpMenuGroupBox":
-            self.label = QtWidgets.QLabel(self.helpMenuGroupBox)
+        elif type == "help_menu_groupBox":
+            self.label = QtWidgets.QLabel(self.help_menu_groupBox)
         elif type == "topGroupBoxBar":
             self.label = QtWidgets.QLabel(self.topGroupBoxBar)
         elif type == "sourcesTabWidget":
@@ -580,9 +580,9 @@ class Ui_MainWindow(object):
 
         if (clickCount != 1):
             clickCount = clickCount + 1
-            self.helpMenuGroupBox.show()
+            self.help_menu_groupBox.show()
         else:
-            self.helpMenuGroupBox.hide()
+            self.help_menu_groupBox.hide()
             clickCount = 0
 
     def showDocumentation(self, _):
@@ -1124,8 +1124,8 @@ class Ui_MainWindow(object):
         self.designGroupBox.setObjectName("backdrop")
         self.designGroupBox.setEnabled(True)
         self.designGroupBox.setFlat(True)
-        self.designGroupBox.setFixedSize(218,240)
-        self.designGroupBox.move(5,50)
+        self.designGroupBox.setFixedSize(222,240)
+        self.designGroupBox.move(7,50)
         self.groupBox = QtWidgets.QGroupBox(self.widget)
         self.groupBox.setEnabled(True)
         self.groupBox.setFlat(True)
@@ -1133,7 +1133,7 @@ class Ui_MainWindow(object):
         # Setting topGroupBoxBar
         self.topGroupBoxBar = QtWidgets.QGroupBox(self.widget)
         self.topGroupBoxBar.setFixedSize(907, 40)
-        self.topGroupBoxBar.move(230,10)
+        self.topGroupBoxBar.move(234,10)
         self.topGroupBoxBar.setEnabled(True)
         self.topGroupBoxBar.setFlat(True)
         self.numOfAttractionsLabel = self.createLabel("topGroupBoxBar", 10, 20, 200, 20)
@@ -1182,7 +1182,7 @@ class Ui_MainWindow(object):
         self.appLogo.show()
 
         # Filter Title
-        Xcoor = 6
+        Xcoor = 10
         Ycoor = 230
         self.filterTitle = self.createLabel("groupBox",Xcoor+5, Ycoor+60, 120, 50)
         self.filterTitle.setObjectName("filterByTitle")
@@ -1190,7 +1190,7 @@ class Ui_MainWindow(object):
         # Filtering by State - Format: (Label : ComboBox)
         self.stateFilterLabel = self.createLabel("groupBox",Xcoor+5, Ycoor+90, 50, 50)
         self.stateFilterLabel.setObjectName("filters")
-        self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+47, Ycoor+103, 171, 26)
+        self.stateFilterComboBox = self.createComboBox("groupBox",Xcoor+47, Ycoor+103, 173, 26)
         self.stateFilterComboBox.setObjectName("filterComboboxes")
         self.stateFilterComboBox.addItem("No preference", ["No preference"])
         self.stateFilterComboBox.addItem("Alabama", ["No preference", "Huntsville", "Birmingham", "Montgomery", "Mobile", "Tuscaloosa"])
@@ -1249,7 +1249,7 @@ class Ui_MainWindow(object):
         # Filtering by City - Format: (Label : ComboBox)
         self.cityFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+125, 50, 50)
         self.cityFilterLabel.setObjectName("filters")
-        self.cityFilterComboBox = self.createComboBox("groupBox", Xcoor+47, Ycoor+138, 171, 26)
+        self.cityFilterComboBox = self.createComboBox("groupBox", Xcoor+47, Ycoor+138, 173, 26)
         self.cityFilterComboBox.setObjectName("filterComboboxes")
         self.cityFilterComboBox.addItems(["None"])
         self.cityFilterComboBox.activated.connect(self.getCurrentFieldValues)
@@ -1257,7 +1257,7 @@ class Ui_MainWindow(object):
         # Filtering by Type - Format: (Label : ComboBox)
         self.typeFilterLabel = self.createLabel("groupBox", Xcoor+5, Ycoor+160, 50, 50)
         self.typeFilterLabel.setObjectName("filters")
-        self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+47, Ycoor+173, 171, 26)
+        self.typeFilterComboBox = self.createComboBox("groupBox", Xcoor+47, Ycoor+173, 173, 26)
         self.typeFilterComboBox.setObjectName("filterComboboxes")
         self.typeFilterComboBox.addItems(["No preference", "Food", "Nature/Outdoor", "Entertainment", "Cultural/Historical"])
         self.typeFilterComboBox.activated.connect(self.getCurrentFieldValues)
@@ -1289,13 +1289,13 @@ class Ui_MainWindow(object):
         self.latitudeInputLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 115, 200, 25)
         self.latitudeInputLabel.setText("Latitude:")
         self.latitudeInput = QtWidgets.QLineEdit(self.groupBox)
-        self.latitudeInput.setGeometry(QtCore.QRect(Xcoor + 65, Ycoor - 115, 120, 25))
+        self.latitudeInput.setGeometry(QtCore.QRect(Xcoor + 70, Ycoor - 115, 138, 25))
         self.latitudeInput.setPlaceholderText(" Enter latitude")
         self.latitudeInput.textChanged.connect(self.checkIfLocationIsFilled)
         self.longitudeInputLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 80, 200, 25)
         self.longitudeInputLabel.setText("Longitude:")
         self.longitudeInput = QtWidgets.QLineEdit(self.groupBox)
-        self.longitudeInput.setGeometry(QtCore.QRect(Xcoor + 75, Ycoor - 80, 120, 25))
+        self.longitudeInput.setGeometry(QtCore.QRect(Xcoor + 70, Ycoor - 80, 138, 25))
         self.longitudeInput.setPlaceholderText(" Enter longitude")
         self.longitudeInput.textChanged.connect(self.checkIfLocationIsFilled)
         self.radiusLabel = self.createLabel("groupBox", Xcoor + 5, Ycoor - 45, 200, 25)
@@ -1318,22 +1318,23 @@ class Ui_MainWindow(object):
         # Adding a Dynamic Help Menu
         self.helpButton = QtWidgets.QToolButton(self.groupBox)
         self.helpButton.setObjectName("helpButton")
-        self.helpButton.setGeometry(5,535,219,20)
+        self.helpButton.setGeometry(7,535,223,20)
         clickCount = 0
-        self.helpMenuGroupBox = QtWidgets.QGroupBox(self.groupBox)
-        self.helpMenuGroupBox.setGeometry(QtCore.QRect(5, 455, 205, 80))
-        self.helpMenuGroupBox.hide()
+        self.help_menu_groupBox = QtWidgets.QGroupBox(self.groupBox)
+        self.help_menu_groupBox.setObjectName("help_menu_groupBox")
+        self.help_menu_groupBox.setGeometry(QtCore.QRect(7, 455, 223, 80))
+        self.help_menu_groupBox.hide()
         self.reportButton = QtWidgets.QToolButton(self.groupBox)
-        self.reportButton.setGeometry(5, 560, 219, 20)
+        self.reportButton.setGeometry(7, 560, 223, 20)
         self.reportButton.setText("Create a Report")
         self.reportButton.clicked.connect(self.createReport)
-        self.documentationButton = QtWidgets.QToolButton(self.helpMenuGroupBox)
-        self.documentationButton.setGeometry(5, 30, 195, 20)
+        self.documentationButton = QtWidgets.QToolButton(self.help_menu_groupBox)
+        self.documentationButton.setGeometry(6, 30, 211, 20)
         self.documentationButton.clicked.connect(self.showDocumentation)
-        self.supportButton = QtWidgets.QToolButton(self.helpMenuGroupBox)
-        self.supportButton.setGeometry(5, 5, 195, 20)
-        self.showToolDescriptionButton = QtWidgets.QToolButton(self.helpMenuGroupBox)
-        self.showToolDescriptionButton.setGeometry(5, 55, 195, 20)
+        self.supportButton = QtWidgets.QToolButton(self.help_menu_groupBox)
+        self.supportButton.setGeometry(6, 5, 211, 20)
+        self.showToolDescriptionButton = QtWidgets.QToolButton(self.help_menu_groupBox)
+        self.showToolDescriptionButton.setGeometry(6, 55, 211, 20)
         self.showToolDescriptionButton.clicked.connect(self.showDescriptions)
         self.documentationButton.setText(_translate("MainWindow", " Read Documentation"))
         self.supportButton.setText(_translate("MainWindow", "Q ＆ A"))
@@ -1347,7 +1348,9 @@ class Ui_MainWindow(object):
         self.scrollArea = QtWidgets.QScrollArea(self.tabWidgetPage1)
         self.scrollArea.setFixedWidth(907)
         self.scrollArea.setMinimumHeight(531)
-        self.scrollArea.move(230,50)
+        self.scrollArea.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.scrollArea.horizontalScrollBar().setDisabled(True)
+        self.scrollArea.move(236,50)
         self.scrollArea.setWidgetResizable(True)
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContainer)
         self.scrollAreaWidgetContainer.setLayout(self.verticalLayout_3)
@@ -1406,10 +1409,15 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.sourcesTab, " ")
         self.sourcesTabWidget = QtWidgets.QWidget(self.sourcesTab)
         self.sourcesTabWidget.setGeometry(QtCore.QRect(0, 0, 1150, 601))
-        self.sourcesLabel = self.createLabel("sourcesTabWidget", 465, 20, 250, 40)
-        self.sourcesText = QtWidgets.QPlainTextEdit(self.sourcesTabWidget)
-        self.sourcesText.setFixedSize(1129,531)
-        self.sourcesText.move(8, 50)
+        self.sourcesLabel = self.createLabel("sourcesTabWidget", 465, 20, 300, 40)
+        self.sourcesLabel.setObjectName("sourcesLabel")
+        self.sourcesTextContainer = QtWidgets.QGroupBox(self.sourcesTabWidget)
+        self.sourcesTextContainer.setObjectName("sourcesTextContainer")
+        self.sourcesTextContainer.setFixedSize(1133, 527)
+        self.sourcesTextContainer.move(8, 50)
+        self.sourcesText = QtWidgets.QPlainTextEdit(self.sourcesTextContainer)
+        self.sourcesText.setFixedSize(1133, 527)
+        self.sourcesText.setObjectName("sourcesText")
         text = open('sources.txt').read()
         self.sourcesText.setPlainText(text)
         self.sourcesText.setReadOnly(True)
@@ -1443,9 +1451,9 @@ class Ui_MainWindow(object):
         self.petFriendlyFilterLabel.setText(_translate("MainWindow", "Pet Friendly"))
         self.sortingComboBoxLabel.setText(_translate("MainWindow", "Sort By:"))
         self.sourcesLabel.setText(_translate("MainWindow", "Sources, Liscenses, and References"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "        Find Attractions        "))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.bookmarks_tab), _translate("MainWindow", "     Bookmarked Attractions     "))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.sourcesTab), _translate("MainWindow", "Sources, Licenses, and References"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "           Find Attractions          "))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.bookmarks_tab), _translate("MainWindow",  "        Bookmarked Attractions       "))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.sourcesTab), _translate("MainWindow",     "Sources, Licenses, and References"))
 
 if __name__ == "__main__":
     # Clears action log
@@ -1457,6 +1465,7 @@ if __name__ == "__main__":
         app.setStyleSheet(_style)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
+    # MainWindow.setWindowFlags(QtCore.Qt.FramelessWindowHint)
     ui.setupTitle(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())

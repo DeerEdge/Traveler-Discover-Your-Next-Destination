@@ -1,3 +1,4 @@
+/* Tab Widget*/
 QTabWidget::pane {
     background: #5883AD;
 }
@@ -11,12 +12,13 @@ QTabBar::tab {
 }
 
 QTabBar::tab:selected {
-    color: #FFFFFF;
-    background: #486A8C;
+    color: #000000;
+    background: #FFD942;
 }
 
 QTabBar::tab:!selected {
-    background: #FFD942;
+    color: #FFFFFF;
+    background: #486A8C;
 }
 
 QTabBar::tab:!selected:hover {
@@ -58,6 +60,7 @@ QTabBar::tab:right:!selected {
     margin-left: 3px;
 }
 
+/* Background */
 QWidget#display {
     background-color: #5883AD;
 }
@@ -120,6 +123,11 @@ QComboBox#filterComboboxes {
     border-radius: 2px;
 }
 
+/* Help menu */
+QGroupBox#help_menu_groupBox {
+    background: #486A8C;
+}
+
 /* scrollArea Objects */
 QLabel#attractionName {
     font: 18px
@@ -133,4 +141,18 @@ QLabel#locationAndDistance {
     font: 14px
 }
 
+/* Sources tab text container */
+QLabel#sourcesLabel {
+    color: #FFFFFF;
+    font: 16px
+}
+
+QGroupBox#sourcesTextContainer {
+    border: 8px solid #FFD942;
+}
+
+QPlainTextEdit#sourcesText {
+    color: #293155;
+    font-family: Arial, sans-serif;
+}
 
