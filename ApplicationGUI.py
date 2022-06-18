@@ -365,7 +365,7 @@ class Ui_MainWindow(object):
             self.bookmarkIcon.setProperty("unactivated", False)
             self.bookmarkIcon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/checked bookmark.png"))
             self.addBookmark(_)
-            self.bookmarksScrollArea.setWidget(self.bookmarkScrollAreaWidgetContainer)
+            self.bookmarks_scrollArea.setWidget(self.bookmarks_scrollArea_object_container)
         else:
             self.bookmarkIcon.setProperty("unactivated", True)
             self.bookmarkIcon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
@@ -375,7 +375,7 @@ class Ui_MainWindow(object):
 
     def removeBookmark(self, _):
         name = self.scrollAreaGroupBox.sender().parent().findChild(QtWidgets.QLabel, 'attractionName').text()
-        for object in self.bookmarkScrollAreaWidgetContainer.children():
+        for object in self.bookmarks_scrollArea_object_container.children():
             try:
                 if (object.findChild(QtWidgets.QLabel, 'attractionName').text() == name):
                     for groupBox in self.scrollAreaWidgetContainer.children():
@@ -391,7 +391,7 @@ class Ui_MainWindow(object):
         attraction = (self.scrollAreaGroupBox.sender().parent().findChild(QtWidgets.QLabel, 'attractionInfo').text()).strip('][').split(',|')
         _translate = QtCore.QCoreApplication.translate
 
-        self.bookmarkScrollAreaGroupBox = QtWidgets.QGroupBox(self.bookmarkScrollAreaWidgetContainer)
+        self.bookmarkScrollAreaGroupBox = QtWidgets.QGroupBox(self.bookmarks_scrollArea_object_container)
         self.bookmarkScrollAreaGroupBox.setFixedSize(884, 220)
         self.bookmarkScrollAreaGroupBox.setLayout(QtWidgets.QVBoxLayout())
 
@@ -525,7 +525,7 @@ class Ui_MainWindow(object):
         self.line.setGeometry(QtCore.QRect(235, 138, 440, 10))
         self.line.setFrameShape(QtWidgets.QFrame.HLine)
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.verticalLayout_4.addWidget(self.bookmarkScrollAreaGroupBox)
+        self.bookmarks_container_vertical_layout.addWidget(self.bookmarkScrollAreaGroupBox)
 
     def detectChangeInRadius(self, _):
         global radiusChecked
@@ -684,7 +684,6 @@ class Ui_MainWindow(object):
         self.window.show()
 
     def searchResults(self, _):
-        _translate = QtCore.QCoreApplication.translate
         countOfObjectsShown = len(self.scrollAreaWidgetContainer.children()) - 1
         for index in range(len(self.scrollAreaWidgetContainer.children())):
             if index != 0:
@@ -694,11 +693,9 @@ class Ui_MainWindow(object):
                     self.scrollAreaWidgetContainer.children()[index].hide()
                     countOfObjectsShown = countOfObjectsShown - 1
         if (countOfObjectsShown) == 1:
-            self.numOfAttractionsLabel.setText(
-                _translate("MainWindow", (str(countOfObjectsShown)) + " Attraction Found"))
+            self.numOfAttractionsLabel.setText((str(countOfObjectsShown)) + " Attraction Found")
         else:
-            self.numOfAttractionsLabel.setText(
-                _translate("MainWindow", (str(countOfObjectsShown)) + " Attractions Found"))
+            self.numOfAttractionsLabel.setText((str(countOfObjectsShown)) + " Attractions Found")
 
     def clearSearch(self, _):
         self.searchBar.setText("")
@@ -709,6 +706,20 @@ class Ui_MainWindow(object):
                     self.numOfAttractionsLabel.setText((str(len(self.scrollAreaWidgetContainer.children()) - 1) + " Attraction Found"))
                 else:
                     self.numOfAttractionsLabel.setText((str(len(self.scrollAreaWidgetContainer.children()) - 1) + " Attractions Found"))
+
+    def search_bookmarks(self, _):
+        for index in range(len(self.bookmarks_scrollArea_object_container.children())):
+            if index != 0:
+                if (self.bookmarks_tab_search_bar.text().lower() in self.bookmarks_scrollArea_object_container.children()[index].findChild(QtWidgets.QLabel,'attractionName').text().lower()):
+                    self.bookmarks_scrollArea_object_container.children()[index].show()
+                else:
+                    self.bookmarks_scrollArea_object_container.children()[index].hide()
+
+    def clear_bookmarks_tab_search_bar(self, _):
+        self.searchBar.setText("")
+        for index in range(len(self.bookmarks_scrollArea_object_container.children())):
+            if index != 0:
+                self.bookmarks_scrollArea_object_container.children()[index].show()
 
     def createUserReportFile(self, _):
         path = "./User Reports"
@@ -1073,81 +1084,6 @@ class Ui_MainWindow(object):
         self.windowChangeButton.setFont(QtGui.QFont("Lato", 14))
         self.windowChangeButton.clicked.connect(self.titleHasStateCity)
 
-        # Explore Cities Feature Preview Picture
-        # self.titleWindowExplorePicture = QtWidgets.QLabel(self.titleCentralwidget)
-        # self.titleWindowExplorePicture.setStyleSheet("QLabel"
-        #                                   "{"
-        #                                   "border: 2px solid;"
-        #                                   "border-color: rgb(245, 245, 245);"
-        #                                   "}"
-        #                                   )
-        # # self.titleWindowExplorePicture.setFixedSize(469, 330)
-        # self.titleWindowExplorePicture.move(150, 290)
-        # self.titleWindowExplorePicture.setPixmap(QtGui.QPixmap("./Application Pictures/exploreCities.png"))
-        # self.titleWindowExplorePicture.setScaledContents(True)
-        # self.titleWindowExplorePicture.show()
-
-        # Explore Cities Button
-        # self.exploreCitiesButton = QtWidgets.QToolButton(self.titleCentralwidget)
-        # self.exploreCitiesButton.setGeometry(160, 320, 370, 30)
-        # self.exploreCitiesButton.setText("Explore Top Cities and Attractions")
-        # self.exploreCitiesButton.setStyleSheet("QToolButton"
-        #                                       "{"
-        #                                       "color: white;"
-        #                                       "border: 2px solid;"
-        #                                       "border-color: rgb(245, 245, 245);"
-        #                                       "background-color: rgba(20, 52, 124, 170);"
-        #                                       "}"
-        #                                       )
-        # self.exploreCitiesButton.setFont(QtGui.QFont("Lato", 12))
-        # self.exploreCitiesButton.clicked.connect(self.changeToExploreTab)
-        #
-        # # Description of Explore Feature
-        # self.exploreCitiesFeatureDescription = self.createLabel("titleCentralWidget", 160, 355, 370, 200)
-        # self.exploreCitiesFeatureDescription.setText("     Not sure where to go or what types of attractions are best? Using our"
-        #                                              "\n unique explore feature, you can instantly find the top attractions across the"
-        #                                              "\n country! These attractions come from the biggest cities in the nation and"
-        #                                              "\n boast high ratings and extravagant qualities. From the iconic Golden Gate"
-        #                                              "\n Bridge to the skyscrapers of New York City, an extensive collection of"
-        #                                              "\n attractions await you! To explore these attractions click the button above.")
-        # self.exploreCitiesFeatureDescription.setWordWrap(True)
-        # self.exploreCitiesFeatureDescription.setStyleSheet("QLabel"
-        #                                        "{"
-        #                                        "color: white;"
-        #                                        "background-color: rgba(20, 52, 124, 170);"
-        #                                        "}"
-        #                                        )
-        # self.exploreCitiesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
-        #
-        # # Sources button
-        # self.sourcesButton = QtWidgets.QToolButton(self.titleCentralwidget)
-        # self.sourcesButton.setGeometry(550, 320, 370, 30)
-        # self.sourcesButton.setText("View Sources, Licenses, and References")
-        # self.sourcesButton.setStyleSheet("QToolButton"
-        #                                        "{"
-        #                                        "color: white;"
-        #                                        "border: 2px solid;"
-        #                                        "border-color: rgb(245, 245, 245);"
-        #                                        "background-color: rgba(20, 52, 124, 170);"
-        #                                        "}"
-        #                                        )
-        # self.sourcesButton.setFont(QtGui.QFont("Lato", 12))
-        # self.sourcesButton.clicked.connect(self.changeToSourcesTab)
-        #
-        # # Sources Button Description
-        # self.sourcesFeatureDescription = self.createLabel("titleCentralWidget", 550, 355, 370, 53)
-        # self.sourcesFeatureDescription.setText("     Find all sources, licenses, and references used within this application by"
-        #                                        "\n clicking the button above. If you spot any missing citations, please create"
-        #                                        "\n a report on the search attractions page.")
-        # self.sourcesFeatureDescription.setWordWrap(True)
-        # self.sourcesFeatureDescription.setStyleSheet("QLabel"
-        #                                  "{"
-        #                                  "color: white;"
-        #                                  "background-color: rgba(20, 52, 124, 170);"
-        #                                  "}"
-        #                                  )
-        # self.sourcesFeatureDescription.setFont(QtGui.QFont("Lato", 10))
-
         MainWindow.setCentralWidget(self.titleCentralwidget)
 
     def setupUi(self, MainWindow):
@@ -1170,10 +1106,7 @@ class Ui_MainWindow(object):
         self.tabWidgetPage1.setObjectName("tab1")
         self.gridWidget = QtWidgets.QWidget(self.tabWidgetPage1)
         self.gridWidget.setGeometry(QtCore.QRect(880, 0, 251, 49))
-        # self.line = QtWidgets.QFrame(self.tabWidgetPage1)
-        # self.line.setGeometry(QtCore.QRect(210, -10, 21, 611))
-        # self.line.setFrameShape(QtWidgets.QFrame.VLine)
-        # self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+
         self.widget = QtWidgets.QWidget(self.tabWidgetPage1)
         self.widget.setGeometry(QtCore.QRect(0, 0, 1151, 601))
         self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
@@ -1412,48 +1345,42 @@ class Ui_MainWindow(object):
 
         # Adds multiple tabs
         self.tabWidget.addTab(self.tabWidgetPage1, " ")
+        self.bookmarks_tab = QtWidgets.QWidget()
+        self.tabWidget.addTab(self.bookmarks_tab, " ")
+        self.bookmarks_tab_top_groupBox_bar = QtWidgets.QGroupBox(self.bookmarks_tab)
+        self.bookmarks_tab_top_groupBox_bar.setFixedSize(907, 40)
+        self.bookmarks_tab_top_groupBox_bar.move(230, 10)
+        self.bookmarks_tab_top_groupBox_bar.setEnabled(True)
+        self.bookmarks_tab_top_groupBox_bar.setFlat(True)
 
-        self.bookmarksTab = QtWidgets.QWidget()
-        self.tabWidget.addTab(self.bookmarksTab, " ")
-        self.topGroupBoxBar = QtWidgets.QGroupBox(self.bookmarksTab)
-        self.topGroupBoxBar.setFixedSize(907, 40)
-        self.topGroupBoxBar.move(230, 10)
-        self.topGroupBoxBar.setEnabled(True)
-        self.topGroupBoxBar.setFlat(True)
         # Search Field and Search Button
-        self.searchBar = QtWidgets.QLineEdit(self.topGroupBoxBar)
-        self.searchBar.setObjectName("searchBar")
-        self.searchBar.setStyleSheet("font: 14px")
-        self.searchBar.setGeometry(QtCore.QRect(200, 8, 301, 30))
-        self.searchBar.setPlaceholderText("Search by Keyword")
-        self.searchButton = QtWidgets.QToolButton(self.topGroupBoxBar)
-        self.searchButton.setGeometry(QtCore.QRect(500, 9, 55, 28))
-        self.searchButton.setText(_translate("MainWindow", "Search"))
-        self.searchIcon = QtWidgets.QLabel(self.topGroupBoxBar)
-        self.searchIcon.setPixmap(QtGui.QPixmap("./Application Pictures/magnifyingIcon.png"))
-        self.searchIcon.setScaledContents(True)
-        self.searchIcon.setFixedSize(25, 25)
-        self.searchIcon.move(171, 10)
-        self.searchIcon.show()
-        self.searchButton.clicked.connect(self.searchResults)
-        self.clearButton = QtWidgets.QToolButton(self.topGroupBoxBar)
-        self.clearButton.setGeometry(QtCore.QRect(554, 9, 55, 28))
-        self.clearButton.setText("Clear")
-        self.clearButton.clicked.connect(self.clearSearch)
-        # self.bookmarksTabAppLogo = QtWidgets.QLabel(self.bookmarksTab)
-        # self.bookmarksTabAppLogo.setPixmap(QtGui.QPixmap("Application Pictures/titleWindowLogo.png"))
-        # self.bookmarksTabAppLogo.setScaledContents(True)
-        # self.bookmarksTabAppLogo.setFixedSize(190, 190)
-        # self.bookmarksTabAppLogo.move(5, -22)
-        # self.bookmarksTabAppLogo.show()
-        self.bookmarkScrollAreaWidgetContainer = QtWidgets.QWidget()
-        self.bookmarksScrollArea = QtWidgets.QScrollArea(self.bookmarksTab)
-        self.bookmarksScrollArea.setFixedWidth(907)
-        self.bookmarksScrollArea.setMinimumHeight(531)
-        self.bookmarksScrollArea.move(130, 50)
-        self.bookmarksScrollArea.setWidgetResizable(True)
-        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.bookmarkScrollAreaWidgetContainer)
-        self.bookmarkScrollAreaWidgetContainer.setLayout(self.verticalLayout_4)
+        self.bookmarks_tab_search_icon = QtWidgets.QLabel(self.bookmarks_tab_top_groupBox_bar)
+        self.bookmarks_tab_search_icon.setPixmap(QtGui.QPixmap("./Application Pictures/magnifyingIcon.png"))
+        self.bookmarks_tab_search_icon.setScaledContents(True)
+        self.bookmarks_tab_search_icon.setFixedSize(25, 25)
+        self.bookmarks_tab_search_icon.move(171, 10)
+        self.bookmarks_tab_search_icon.show()
+        self.bookmarks_tab_search_bar = QtWidgets.QLineEdit(self.bookmarks_tab_top_groupBox_bar)
+        self.bookmarks_tab_search_bar.setObjectName("searchBar")
+        self.bookmarks_tab_search_bar.setStyleSheet("font: 14px")
+        self.bookmarks_tab_search_bar.setGeometry(QtCore.QRect(200, 8, 301, 30))
+        self.bookmarks_tab_search_bar.setPlaceholderText("Search by Keyword")
+        self.bookmarks_tab_search_button = QtWidgets.QToolButton(self.bookmarks_tab_top_groupBox_bar)
+        self.bookmarks_tab_search_button.clicked.connect(self.search_bookmarks)
+        self.bookmarks_tab_search_button.setGeometry(QtCore.QRect(500, 9, 55, 28))
+        self.bookmarks_tab_search_button.setText(_translate("MainWindow", "Search"))
+        self.bookmarks_tab_clear_button = QtWidgets.QToolButton(self.bookmarks_tab_top_groupBox_bar)
+        self.bookmarks_tab_clear_button.setGeometry(QtCore.QRect(554, 9, 55, 28))
+        self.bookmarks_tab_clear_button.setText("Clear")
+        self.bookmarks_tab_clear_button.clicked.connect(self.clear_bookmarks_tab_search_bar)
+        self.bookmarks_scrollArea_object_container = QtWidgets.QWidget()
+        self.bookmarks_scrollArea = QtWidgets.QScrollArea(self.bookmarks_tab)
+        self.bookmarks_scrollArea.setFixedWidth(907)
+        self.bookmarks_scrollArea.setMinimumHeight(531)
+        self.bookmarks_scrollArea.move(130, 50)
+        self.bookmarks_scrollArea.setWidgetResizable(True)
+        self.bookmarks_container_vertical_layout = QtWidgets.QVBoxLayout(self.bookmarks_scrollArea_object_container)
+        self.bookmarks_scrollArea_object_container.setLayout(self.bookmarks_container_vertical_layout)
 
         self.sourcesTab = QtWidgets.QWidget()
         self.tabWidget.addTab(self.sourcesTab, " ")
@@ -1497,7 +1424,7 @@ class Ui_MainWindow(object):
         self.sortingComboBoxLabel.setText(_translate("MainWindow", "Sort By:"))
         self.sourcesLabel.setText(_translate("MainWindow", "Sources, Liscenses, and References"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tabWidgetPage1), _translate("MainWindow", "Find Attractions"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.bookmarksTab), _translate("MainWindow", "Bookmarked Attractions"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.bookmarks_tab), _translate("MainWindow", "Bookmarked Attractions"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.sourcesTab), _translate("MainWindow", "Sources, Licenses, and References"))
 
 if __name__ == "__main__":
