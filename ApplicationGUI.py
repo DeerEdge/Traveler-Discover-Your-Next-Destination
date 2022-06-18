@@ -373,6 +373,20 @@ class Ui_MainWindow(object):
         self.bookmarkIcon.setIconSize(QtCore.QSize(1024, 1024))
         self.bookmarkIcon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
 
+    def clear_all_bookmarks(self, _):
+        for object in self.bookmarks_scrollArea_object_container.children():
+            try:
+                attraction = object.findChild(QtWidgets.QLabel, 'attractionName').text()
+                for groupBox in self.scrollAreaWidgetContainer.children():
+                    try:
+                        if (groupBox.findChild(QtWidgets.QLabel, 'attractionName').text() == object.findChild(QtWidgets.QLabel, 'attractionName').text()):
+                            groupBox.findChild(QtWidgets.QToolButton, 'bookmark').setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+                    except:
+                        continue
+                object.deleteLater()
+            except:
+                continue
+
     def removeBookmark(self, _):
         name = self.scrollAreaGroupBox.sender().parent().findChild(QtWidgets.QLabel, 'attractionName').text()
         for object in self.bookmarks_scrollArea_object_container.children():
@@ -460,11 +474,6 @@ class Ui_MainWindow(object):
             self.petFriendlyLabel.setText("Pet Friendly? - Yes")
         else:
             self.petFriendlyLabel.setText("Pet Friendly? - No")
-        # if (self.latitudeInput.text() != "" and self.longitudeInput.text() != "" and self.isfloat(str(self.latitudeInput.text())) and self.isfloat(str(self.longitudeInput.text()))):
-        #     distanceFromUserLocation = distance.distance(((self.latitudeInput.text()), (self.longitudeInput.text())),(attraction[14], attraction[15])).miles
-        #     self.distanceLabel = self.createLabel("scrollAreaGroupBox", labelXPos + 310, labelYPos + 40, 200, 50)
-        #     self.distanceLabel.setText(str('%.1f'%(distanceFromUserLocation)) + " miles from you")
-        #     self.distanceLabel.setObjectName("Distance")
         self.coordinateLocationLabel = self.createLabel("bookmarkScrollAreaGroupBox", labelXPos, labelYPos + 80, 200, 50)
         self.coordinateLocationLabel.setText(
             "Location: (" + str('%.3f' % (float(attraction[13]))) + "," + str('%.3f' % float((attraction[14]))) + ")")
@@ -716,7 +725,7 @@ class Ui_MainWindow(object):
                     self.bookmarks_scrollArea_object_container.children()[index].hide()
 
     def clear_bookmarks_tab_search_bar(self, _):
-        self.searchBar.setText("")
+        self.bookmarks_tab_search_bar.setText("")
         for index in range(len(self.bookmarks_scrollArea_object_container.children())):
             if index != 0:
                 self.bookmarks_scrollArea_object_container.children()[index].show()
@@ -1353,26 +1362,36 @@ class Ui_MainWindow(object):
         self.bookmarks_tab_top_groupBox_bar.setEnabled(True)
         self.bookmarks_tab_top_groupBox_bar.setFlat(True)
 
-        # Search Field and Search Button
+        # Bookmarks Tab: Searchbar, Buttons, Icons, and ScrollArea
+        # Search Bar Icon
         self.bookmarks_tab_search_icon = QtWidgets.QLabel(self.bookmarks_tab_top_groupBox_bar)
         self.bookmarks_tab_search_icon.setPixmap(QtGui.QPixmap("./Application Pictures/magnifyingIcon.png"))
         self.bookmarks_tab_search_icon.setScaledContents(True)
         self.bookmarks_tab_search_icon.setFixedSize(25, 25)
         self.bookmarks_tab_search_icon.move(171, 10)
         self.bookmarks_tab_search_icon.show()
+        # Search Bar
         self.bookmarks_tab_search_bar = QtWidgets.QLineEdit(self.bookmarks_tab_top_groupBox_bar)
         self.bookmarks_tab_search_bar.setObjectName("searchBar")
         self.bookmarks_tab_search_bar.setStyleSheet("font: 14px")
         self.bookmarks_tab_search_bar.setGeometry(QtCore.QRect(200, 8, 301, 30))
         self.bookmarks_tab_search_bar.setPlaceholderText("Search by Keyword")
+        # Search Button
         self.bookmarks_tab_search_button = QtWidgets.QToolButton(self.bookmarks_tab_top_groupBox_bar)
         self.bookmarks_tab_search_button.clicked.connect(self.search_bookmarks)
         self.bookmarks_tab_search_button.setGeometry(QtCore.QRect(500, 9, 55, 28))
         self.bookmarks_tab_search_button.setText(_translate("MainWindow", "Search"))
-        self.bookmarks_tab_clear_button = QtWidgets.QToolButton(self.bookmarks_tab_top_groupBox_bar)
-        self.bookmarks_tab_clear_button.setGeometry(QtCore.QRect(554, 9, 55, 28))
-        self.bookmarks_tab_clear_button.setText("Clear")
-        self.bookmarks_tab_clear_button.clicked.connect(self.clear_bookmarks_tab_search_bar)
+        # Clear Button
+        self.bookmarks_tab_clear_search_bar = QtWidgets.QToolButton(self.bookmarks_tab_top_groupBox_bar)
+        self.bookmarks_tab_clear_search_bar.setGeometry(QtCore.QRect(554, 9, 55, 28))
+        self.bookmarks_tab_clear_search_bar.setText("Clear")
+        self.bookmarks_tab_clear_search_bar.clicked.connect(self.clear_bookmarks_tab_search_bar)
+        # Clear All Bookmarks Button
+        self.bookmarks_tab_clear_bookmarks = QtWidgets.QToolButton(self.bookmarks_tab_top_groupBox_bar)
+        self.bookmarks_tab_clear_bookmarks.setGeometry(QtCore.QRect(640, 9, 150, 28))
+        self.bookmarks_tab_clear_bookmarks.setText("Clear All Bookmarks")
+        self.bookmarks_tab_clear_bookmarks.clicked.connect(self.clear_all_bookmarks)
+        # ScrollArea
         self.bookmarks_scrollArea_object_container = QtWidgets.QWidget()
         self.bookmarks_scrollArea = QtWidgets.QScrollArea(self.bookmarks_tab)
         self.bookmarks_scrollArea.setFixedWidth(907)
@@ -1382,6 +1401,7 @@ class Ui_MainWindow(object):
         self.bookmarks_container_vertical_layout = QtWidgets.QVBoxLayout(self.bookmarks_scrollArea_object_container)
         self.bookmarks_scrollArea_object_container.setLayout(self.bookmarks_container_vertical_layout)
 
+        # Bookmarks Tab: Buttons, Icons, and TextEdit
         self.sourcesTab = QtWidgets.QWidget()
         self.tabWidget.addTab(self.sourcesTab, " ")
         self.sourcesTabWidget = QtWidgets.QWidget(self.sourcesTab)

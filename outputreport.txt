@@ -1,48 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-18 Time Of Action: 10:05:43
-Selected State: Maine
-Selected City: Augusta
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-18 Time Of Action: 10:31:07
+Selected State: Idaho
+Selected City: Pocatello
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 577), Capitol Park, Nature/Outdoor, Augusta, Public park with mature trees & extensive lawns standing in the shadow of the Capitol Building. 
-Filtered Attraction: (id: 579), Old Fort Western, Cultural/Historical, Augusta, The oldest surviving wood fort in New England, this 1754 structure houses historic collections. 
-Filtered Attraction: (id: 583), Margaritas Mexican Restaurant, Food, Augusta, Mexican handcrafts decorate this chain serving tacos, enchiladas, margaritas & other classics. Margaritas Mexican Restaurants offers distinctly delicious Mexican food that is made fresh throughout the day and each Margarita is hand shaken using real lemon and lime citrus blends. With a commitment to provide an authentic ambience, the decor is crafted by Mexican artisans and brought up on a tr
-Filtered Attraction: (id: 584), Viles Arboretum, Nature/Outdoor, Augusta, Spacious public park filled with trees & native plants offering educational opportunities. 
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-18 Time Of Action: 10:06:13
-Selected State: Maine
-Selected City: None
-Selected Type: None
-Wheelchair Accessibility is Checked: False
-Family Friendliness is Checked: False
-Pet Friendliness is Checked: False
-Currently sorting by: Recommended
-Filtered Attraction: (id: 569), Duckfat, Food, Portland, Small European-leaning sandwich shop & cafe known for its duck-fat Belgian fries & milkshakes. Hand-cut Belgian-inspired fries, panini, gelato shakes, craft beer, 
-housemade sodas, salads, soups, locally sourced ingredients, 43 Middle 
-Street, downtown Portland Maine.
-Filtered Attraction: (id: 570), Moe's Original BBQ Restaurant & Catering - Bangor, Food, Bangor, Easygoing chain serving Alabama-style pulled pork & other meats smoked in-house. Toast is a restaurant point of sale and management system that helps restaurants improve
-operations, increase sales and create a better guest experience.
-Filtered Attraction: (id: 571), Portland Museum of Art, Cultural/Historical, Portland, I.M. Pei-designed museum known for its paintings by Winslow Homer, Andrew Wyeth & Edward Hopper. The Portland Museum of Art is an open, accessible, inclusive, and welcoming 
-museum for all, with exhibitions and programs that reflect our community 
-and create experiences with art that strengthen our bonds and bring us 
-together.
-Filtered Attraction: (id: 572), Barrett's Cove Public Beach, Nature/Outdoor, Camden, Modest-sized public beach with picnic facilities & a boat launch, plus views Mount Battie. 
-Filtered Attraction: (id: 573), Beech Hill Preserve, Nature/Outdoor, Camden, Lush conservation land featuring 295 acres of forested park with 2 trails to a hilltop summit. 
-Filtered Attraction: (id: 574), Portland Head Light, Cultural/Historical, Portland, Still operative 1791 lighthouse & navigation museum on rocky, scenic coastline in Ft. Williams Park. 
-Filtered Attraction: (id: 575), Bangor City Forest, Nature/Outdoor, Bangor, 650-acre recreational area featuring hiking & cross-country ski trails & a bog boardwalk. 
-Filtered Attraction: (id: 576), Camden Hills State Park, Nature/Outdoor, Camden, Mountainous park with a campground & trails offering vistas of Downtown Camden & Penobscot Bay. Maine.gov - Official site includes links to services available online, Governor, state agencies, Legislature, US Congressional delegation, state parks, and tax information.
-Filtered Attraction: (id: 577), Capitol Park, Nature/Outdoor, Augusta, Public park with mature trees & extensive lawns standing in the shadow of the Capitol Building. 
-Filtered Attraction: (id: 578), Maine Narrow Gauge Railroad, Cultural/Historical, Portland, Coastal rides in a quaint old train, with ocean views & a conductor providing historical info. Maine Narrow Gauge Railroad Co. & Museum is a travel destination in Portland, ME. We offer train rides on our historic two-foot gauge railroad. Check out our events!
-Filtered Attraction: (id: 579), Old Fort Western, Cultural/Historical, Augusta, The oldest surviving wood fort in New England, this 1754 structure houses historic collections. 
-Filtered Attraction: (id: 580), Peary-MacMillan Arctic Museum, Cultural/Historical, Brunswick, Free museum at Bowdoin College, with artifacts & photos from Arctic expeditions of the early 1900s. 
-Filtered Attraction: (id: 581), The Camden Snow Bowl, Nature/Outdoor, Camden, Recreation area with summertime mountain biking & lake kayaking, plus winter skiing & snowboarding. 
-Filtered Attraction: (id: 582), Boynton-McKay Food Co., Food, Camden, Old-school diner featuring coffee drinks & traditional American breakfast & lunch fare. 
-Filtered Attraction: (id: 583), Margaritas Mexican Restaurant, Food, Augusta, Mexican handcrafts decorate this chain serving tacos, enchiladas, margaritas & other classics. Margaritas Mexican Restaurants offers distinctly delicious Mexican food that is made fresh throughout the day and each Margarita is hand shaken using real lemon and lime citrus blends. With a commitment to provide an authentic ambience, the decor is crafted by Mexican artisans and brought up on a tr
-Filtered Attraction: (id: 584), Viles Arboretum, Nature/Outdoor, Augusta, Spacious public park filled with trees & native plants offering educational opportunities. 
-Filtered Attraction: (id: 585), Maine Discovery Museum, Entertainment, Bangor, Kids get hands-on learning at this Downtown complex with interactive exhibits on science & the arts. 
-Filtered Attraction: (id: 586), Bowdoin College Museum of Art, Cultural/Historical, Brunswick, Free art museum with a comprehensive collection of works from a variety of periods & media. 
-Filtered Attraction: (id: 587), Portland Observatory, Nature/Outdoor, Portland, Seasonal tours of the only remaining wooden maritime signal tower (built circa 1807) in the U.S. 
-Filtered Attraction: (id: 588), Skolfield-Whittier House, Cultural/Historical, Brunswick, Community history center celebrating the history of Brunswick, Topsham, & Harpswell, Maine. 
-Filtered Attraction: (id: 589), Joshua L. Chamberlain Museum, Cultural/Historical, Brunswick, Museum in the grand, restored 1820s residence of Civil War hero, college professor & governor. 
-Filtered Attraction: (id: 590), Little Tokyo Restaurant, Food, Brunswick, Contemporary eatery with some tatami seating serving sushi & other Japanese fare, plus cocktails. 
+Filtered Attraction: (id: 365), Museum of Clean, Cultural/Historical, Pocatello, Modern museum showcasing exhibits on historic cleaning techniques & tools, with brooms, tubs & more. 
+Filtered Attraction: (id: 368), Zoo Idaho, Nature/Outdoor, Pocatello, Simple zoo specializing in animals from the Intermountain West, including bears, bison & wild cats. Welcome to Zoo Idaho! Established in 1932, the zoo specializes in species of Idaho and the Intermountain West, featuring a world-class grizzly bear exhibit.
+Filtered Attraction: (id: 377), The Healthier Place To Eat, Food, Pocatello, Casual, healthy-leaning outpost offering counter-service sandwiches, salads & wraps. 
+Filtered Attraction: (id: 384), Bannock County Historical Museum, Cultural/Historical, Pocatello, City & county history museum displaying donated artifacts, photos & archeological objects. 
+Filtered Attraction: (id: 385), Idaho Museum of Natural History, Cultural/Historical, Pocatello, Exhibits of artifacts & specimens documenting the natural history of Idaho & the Intermountain West. Discovering Idaho One Story at a Time. The Idaho Museum of Natural History is located in Pocatello, Idaho on Idaho State University campus. Enjoy Idaho from our gallery with your kids.
