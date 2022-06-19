@@ -1,13 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-19 Time Of Action: 16:14:36
-Selected State: Louisiana
-Selected City: Baton Rouge
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-19 Time Of Action: 18:04:34
+Selected State: Minnesota
+Selected City: Richfield
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 550), BREC's Baton Rouge Zoo, Entertainment, Baton Rouge, The Baton Rouge Zoo is a place where people connect with animals. Over the past forty years, the Zoo has grown to become the #1 year-round family attraction in Baton Rouge. With more than a quarter million guests each year, the Zoo attracts visitors of all ages and backgrounds. The Zoo is a favorite place for families and groups to discover the animal kingdom. The Baton Rouge Zoo is a place where people connect with animals. Over the past forty years, the Zoo has grown to become the #1 year-round family attraction in Baton Rouge. With more than a quarter million guests each year, the Zoo attracts visitors of all ages and backgrounds. The Zoo is a favorite place for families and groups to discover the animal kingdom.
-Filtered Attraction: (id: 552), Capitol Park Museum, Cultural/Historical, Baton Rouge, A state museum featuring exhibits on Louisiana history, industry & culture, plus event space. 
-Filtered Attraction: (id: 553), Louisiana Art & Science Museum, Cultural/Historical, Baton Rouge, Museum complex with kids' science exhibits, a planetarium & galleries spanning the history of art. Louisiana Art & Science Museum seeks to enhance the understanding and appreciation of art and science for general audiences and students by presenting unique, educational and entertaining experiences that encourage discovery, inspire creativity, and foster the pursuit of knowledge.
-Filtered Attraction: (id: 559), Parrain's Seafood Restaurant, Food, Baton Rouge, Local seafood specialist cooking up Louisiana recipes in a rustic space with porch seating. 
-Filtered Attraction: (id: 562), USS KIDD Veterans Museum, Cultural/Historical, Baton Rouge, This veteran battleship-turned-museum features naval history exhibits, ship models & memorials. Fun for the whole family with tours at the Pirate of the Pacific, the USS Kidd. Tour our destroyer in its 1945 configuration. Tickets and more here.
+Filtered Attraction: (id: 679), Taft Park, Nature/Outdoor, Richfield, City park offering athletic fields, a walking trail, play equipment, a fishing pier & a hockey rink. 
+Filtered Attraction: (id: 680), Veterans Park, Nature/Outdoor, Richfield, Popular lakefront park featuring an outdoor pool, ice arena, mini-golf course & community events. 
+Filtered Attraction: (id: 681), Wood Lake Nature Center, Nature/Outdoor, Richfield, Nature center with various habitats offering wildlife viewing from trails & a floating boardwalk. 
+Filtered Attraction: (id: 682), Andale Taqueria, Food, Richfield, Tacos, burritos & other Mexican standards are featured at this informal counter-serve establishment. At Andale Taqueria & Mercado, you’ll enjoy express, courteous service in a comfortable setting – breakfast, lunch, or dinner. At Andale Taqueria & Mercado, you’ll enjoy express, courteous service in a comfortable setting – breakfast, lunch, or dinner. 
+Filtered Attraction: (id: 685), Nickelodeon Universe, Entertainment, Richfield, Store in the Mall of America's Nickelodeon theme park, featuring items from the TV station's shows. 

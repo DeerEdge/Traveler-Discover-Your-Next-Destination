@@ -156,3 +156,52 @@ QPlainTextEdit#sourcesText {
     font-family: Arial, sans-serif;
 }
 
+/* Documentation window */
+QLabel#documentationWindow {
+    background: #5883AD;
+}
+
+QLabel#documentationTitle {
+    color: #FFFFFF;
+    font: 16px;
+    font-family: Arial, sans-serif;
+}
+
+QGroupBox#documentationTextContainer {
+    border: 8px solid #FFD942;
+}
+
+QLabel#documentation {
+    color: #293155;
+    font-family: Arial, sans-serif;
+}
+
+/* Expanded map window */
+QLabel#expanded_map_window {
+    background: #5883AD;
+}
+
+/* User report window */
+QLabel#create_user_report_window {
+    background: #5883AD;
+}
+
+QLabel#user_report_window_title {
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font: 16px;
+}
+
+QLabel#user_report_window_field_labels {
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font: 14px;
+}
+
+QGroupBox#bookmarks_scrollArea_backdrop {
+    background: #FFD942;
+}
+
+
+
+
