@@ -1,13 +1,18 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-20 Time Of Action: 02:59:09
-Selected State: Maine
-Selected City: Brunswick
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-20 Time Of Action: 05:27:00
+Selected State: California
+Selected City: San Francisco
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 580), Peary-MacMillan Arctic Museum, Cultural/Historical, Brunswick, Free museum at Bowdoin College, with artifacts & photos from Arctic expeditions of the early 1900s. 
-Filtered Attraction: (id: 586), Bowdoin College Museum of Art, Cultural/Historical, Brunswick, Free art museum with a comprehensive collection of works from a variety of periods & media. 
-Filtered Attraction: (id: 588), Skolfield-Whittier House, Cultural/Historical, Brunswick, Community history center celebrating the history of Brunswick, Topsham, & Harpswell, Maine. 
-Filtered Attraction: (id: 589), Joshua L. Chamberlain Museum, Cultural/Historical, Brunswick, Museum in the grand, restored 1820s residence of Civil War hero, college professor & governor. 
-Filtered Attraction: (id: 590), Little Tokyo Restaurant, Food, Brunswick, Contemporary eatery with some tatami seating serving sushi & other Japanese fare, plus cocktails. 
+Filtered Attraction: (id: 136), Beretta, Food, San Francisco, Handcrafted pizzas, small bites & unique cocktails keep this trendy spot hopping. One of the early pioneers in San Francisco’s popular Mission District neighborhood at Valencia Street and 23rd, Beretta has been a long-time industry favorite since opening in 2008.
+Filtered Attraction: (id: 141), Crissy Field, Nature/Outdoor, San Francisco, Grass field & sandy beach offering trails, a restored marsh & picturesque views of the Golden Gate. 
+Filtered Attraction: (id: 144), Brenda's French Soul Food, Food, San Francisco, Fresh takes on beignets, po' boys & other Big Easy bites draw crowds to this narrow but airy spot. Brenda's French Soul Food ships our famous soul-satisfying comfort food nationwide with Goldbelly—straight from San Francisco right to your doorstep. Get yours now!
+Filtered Attraction: (id: 145), Exploratorium, Entertainment, San Francisco, Hundreds of interactive, educational exhibits & activities illustrating scientific principles. Let your curiosity roam free through hundreds of exhibits in our six spacious indoor and outdoor galleries at Pier 15, San Francisco.
+Filtered Attraction: (id: 149), Aquarium of the Bay, Nature/Outdoor, San Francisco, Aquarium of the Bay is a highlight of things to do in San Francisco. Located on the historic San Francisco waterfront at PIER 39, the Aquarium is home to more than 20,000 marine animals including sleek sharks and rays, secretive octopus, hypnotic jellyfish, sparkling anchovies, frolicking river otters, and many more. Aquarium of the Bay is a highlight of things to do in San Francisco. Located on the historic San Francisco waterfront at PIER 39, the Aquarium is home to more than 20,000 marine animals including sleek sharks and rays, secretive octopus, hypnotic jellyfish, sparkling anchovies, frolicking river otters, and many more.
+Filtered Attraction: (id: 156), Golden Gate Park, Nature/Outdoor, San Francisco, The city's 1,000-ac. oasis draws hikers, bikers, art lovers & music fans. 
+Filtered Attraction: (id: 163), PIER 39, Food, San Francisco, Bustling bayside pier featuring scenic views, sea-lion sightings, eateries, shops & entertainment. 
+Filtered Attraction: (id: 179), Golden Gate Bridge, Nature/Outdoor, San Francisco, Famed 4,200-ft. art deco suspension bridge open to car, bike & foot traffic. The Golden Gate Bridge, Highway and Transportation District is a special district of the State of California which operates and maintains the Golden Gate Bridge and two unified public transit systems - Golden Gate Transit and Golden Gate Ferry.
+Filtered Attraction: (id: 182), Fort Point National Historic Site, Cultural/Historical, San Francisco, Fort from the Civil War era located under the Golden Gate Bridge offering cannon drills & tours. 
+Filtered Attraction: (id: 183), The Walt Disney Family Museum, Entertainment, San Francisco,  The Walt Disney Family Museum is an American museum that features the life and legacy of Walt Disney. The museum is located in The Presidio of San Francisco, part of the Golden Gate National Recreation Area in San Francisco.

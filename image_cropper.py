@@ -3,8 +3,6 @@
 import cv2
 import glob
 
-print(glob.glob("Attraction Pictures/*"))
-
 w = 400
 h = 400
 for file in glob.glob("NE_WA/*"):
