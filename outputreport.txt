@@ -1,13 +1,14 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-20 Time Of Action: 02:59:09
-Selected State: Maine
-Selected City: Brunswick
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-20 Time Of Action: 06:34:53
+Selected State: Kentucky
+Selected City: Louisville
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 580), Peary-MacMillan Arctic Museum, Cultural/Historical, Brunswick, Free museum at Bowdoin College, with artifacts & photos from Arctic expeditions of the early 1900s. 
-Filtered Attraction: (id: 586), Bowdoin College Museum of Art, Cultural/Historical, Brunswick, Free art museum with a comprehensive collection of works from a variety of periods & media. 
-Filtered Attraction: (id: 588), Skolfield-Whittier House, Cultural/Historical, Brunswick, Community history center celebrating the history of Brunswick, Topsham, & Harpswell, Maine. 
-Filtered Attraction: (id: 589), Joshua L. Chamberlain Museum, Cultural/Historical, Brunswick, Museum in the grand, restored 1820s residence of Civil War hero, college professor & governor. 
-Filtered Attraction: (id: 590), Little Tokyo Restaurant, Food, Brunswick, Contemporary eatery with some tatami seating serving sushi & other Japanese fare, plus cocktails. 
+Filtered Attraction: (id: 523), Charlie Vettiner Park, Nature/Outdoor, Louisville, Besides an 18-hole golf course, this park offers sports fields, disc golf, a playground & dog run. 
+Filtered Attraction: (id: 526), Louisville Slugger Museum & Factory, Cultural/Historical, Louisville, A giant baseball bat marks this venue offering tours & exhibits on the sports-equipment icon. 
+Filtered Attraction: (id: 527), Locust Grove, Cultural/Historical, Louisville, Tours & exhibits at the circa 1792 mansion & former home of Louisville founder, George Rogers Clark. 
+Filtered Attraction: (id: 528), Louisville Zoo, Nature/Outdoor, Louisville, Modest-size zoo with habitats for gorillas, tigers & other animals, plus a splash park. 
+Filtered Attraction: (id: 535), Waterfront Park, Entertainment, Louisville, City destination with walking paths, water features, kids’ play areas, vast lawns & public art. 
+Filtered Attraction: (id: 542), Kentucky Science Center, Entertainment, Louisville, Kid-friendly science museum with hands-on exhibits, IMAX films, educational programs & more. 
