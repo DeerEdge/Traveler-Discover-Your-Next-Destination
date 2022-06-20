@@ -1,13 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-20 Time Of Action: 02:33:36
-Selected State: Massachusetts
-Selected City: Plymouth
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-20 Time Of Action: 02:59:09
+Selected State: Maine
+Selected City: Brunswick
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 632), Pilgrim Memorial State Park, Nature/Outdoor, Plymouth, Harborside park commemorating the first pilgrim landing, with Plymouth Rock & a Mayflower replica. 
-Filtered Attraction: (id: 616), Dillon's Local, Food, Plymouth, Internationally inspired comfort classics with brunch, specialty cocktails & catering options. 
-Filtered Attraction: (id: 625), Brewster Gardens, Nature/Outdoor, Plymouth, A walking path runs alongside a stream in this well-maintained, grassy park with a tranquil vibe. 
-Filtered Attraction: (id: 634), Plimoth Grist Mill, Cultural/Historical, Plymouth, 17th-century mill & museum built by early colonists for the milling of corn into cornmeal. History in a New Light  Plimoth Patuxet Museums brings to life the history of Plymouth Colony and the Indigenous homeland. Major exhibits include the…
-Filtered Attraction: (id: 635), Plimoth Patuxet Museums, Cultural/Historical, Plymouth, Complete re-creation of a 17th-century Pilgrim village, including costumed actors & activities. History in a New Light  Plimoth Patuxet Museums brings to life the history of Plymouth Colony and the Indigenous homeland. Major exhibits include the…
+Filtered Attraction: (id: 580), Peary-MacMillan Arctic Museum, Cultural/Historical, Brunswick, Free museum at Bowdoin College, with artifacts & photos from Arctic expeditions of the early 1900s. 
+Filtered Attraction: (id: 586), Bowdoin College Museum of Art, Cultural/Historical, Brunswick, Free art museum with a comprehensive collection of works from a variety of periods & media. 
+Filtered Attraction: (id: 588), Skolfield-Whittier House, Cultural/Historical, Brunswick, Community history center celebrating the history of Brunswick, Topsham, & Harpswell, Maine. 
+Filtered Attraction: (id: 589), Joshua L. Chamberlain Museum, Cultural/Historical, Brunswick, Museum in the grand, restored 1820s residence of Civil War hero, college professor & governor. 
+Filtered Attraction: (id: 590), Little Tokyo Restaurant, Food, Brunswick, Contemporary eatery with some tatami seating serving sushi & other Japanese fare, plus cocktails. 

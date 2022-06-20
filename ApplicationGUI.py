@@ -1358,33 +1358,33 @@ class Ui_MainWindow(object):
         # Adding a Dynamic Help Menu
         self.helpButton = QtWidgets.QToolButton(self.groupBox)
         self.helpButton.setObjectName("helpButton")
-        self.helpButton.setGeometry(7,535,223,20)
+        self.helpButton.setGeometry(7,560,223,20)
         clickCount = 0
         self.help_menu_groupBox = QtWidgets.QGroupBox(self.groupBox)
         self.help_menu_groupBox.setObjectName("help_menu_groupBox")
-        self.help_menu_groupBox.setGeometry(QtCore.QRect(7, 455, 223, 80))
+        self.help_menu_groupBox.setGeometry(QtCore.QRect(7, 480, 223, 80))
         self.help_menu_groupBox.hide()
-        self.reportButton = QtWidgets.QToolButton(self.groupBox)
-        self.reportButton.setGeometry(7, 560, 223, 20)
-        self.reportButton.setText("Create a Report")
-        self.reportButton.clicked.connect(self.createReport)
 
         self.documentationButton = QtWidgets.QToolButton(self.help_menu_groupBox)
         self.documentationButton.setGeometry(6, 30, 211, 20)
         self.documentationButton.clicked.connect(self.showDocumentation)
 
-
         self.supportButton = QtWidgets.QToolButton(self.help_menu_groupBox)
         self.supportButton.setGeometry(6, 5, 211, 20)
         self.supportButton.clicked.connect(self.showQandA)
 
-        self.showToolDescriptionButton = QtWidgets.QToolButton(self.help_menu_groupBox)
-        self.showToolDescriptionButton.setGeometry(6, 55, 211, 20)
-        self.showToolDescriptionButton.clicked.connect(self.showDescriptions)
+        self.reportButton = QtWidgets.QToolButton(self.help_menu_groupBox)
+        self.reportButton.setGeometry(6, 55, 211, 20)
+        self.reportButton.setText("Create a Report")
+        self.reportButton.clicked.connect(self.createReport)
+
+        # self.showToolDescriptionButton = QtWidgets.QToolButton(self.help_menu_groupBox)
+        # self.showToolDescriptionButton.setGeometry(6, 55, 211, 20)
+        # self.showToolDescriptionButton.clicked.connect(self.showDescriptions)
         self.documentationButton.setText(_translate("MainWindow", " Read Documentation"))
         self.supportButton.setText(_translate("MainWindow", "Q ＆ A"))
-        self.showToolDescriptionButton.setText(_translate("MainWindow", "Show Tool Descriptions"))
-        self.helpButton.setText(_translate("MainWindow", "Help"))
+        # self.showToolDescriptionButton.setText(_translate("MainWindow", "Show Tool Descriptions"))
+        self.helpButton.setText(_translate("MainWindow", "Help Menu"))
         self.helpButton.clicked.connect(self.helpMenuListener)
 
         # Setting ScrollArea
