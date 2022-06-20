@@ -1,13 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-20 Time Of Action: 02:59:09
-Selected State: Maine
-Selected City: Brunswick
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-20 Time Of Action: 04:27:33
+Selected State: Louisiana
+Selected City: Alexandria
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 580), Peary-MacMillan Arctic Museum, Cultural/Historical, Brunswick, Free museum at Bowdoin College, with artifacts & photos from Arctic expeditions of the early 1900s. 
-Filtered Attraction: (id: 586), Bowdoin College Museum of Art, Cultural/Historical, Brunswick, Free art museum with a comprehensive collection of works from a variety of periods & media. 
-Filtered Attraction: (id: 588), Skolfield-Whittier House, Cultural/Historical, Brunswick, Community history center celebrating the history of Brunswick, Topsham, & Harpswell, Maine. 
-Filtered Attraction: (id: 589), Joshua L. Chamberlain Museum, Cultural/Historical, Brunswick, Museum in the grand, restored 1820s residence of Civil War hero, college professor & governor. 
-Filtered Attraction: (id: 590), Little Tokyo Restaurant, Food, Brunswick, Contemporary eatery with some tatami seating serving sushi & other Japanese fare, plus cocktails. 
+Filtered Attraction: (id: 545), Spirits Food & Friends, Food, Alexandria, Restaurant, bar & music venue featuring a variety of bands as well as seafood & Southern dishes. Spirit's Food & Friends is the restaurant to go to in Alexandria, LA. We have specialty drinks, delicious food, and live music!
+Filtered Attraction: (id: 547), Alexandria Museum of Art, Cultural/Historical, Alexandria, Modest museum with permanent & rotating exhibits & classes in a renovated historic bank building. 
+Filtered Attraction: (id: 548), Alexandria Zoological Park, Entertainment, Alexandria, Zoo with international-themed habitats for exotic wildlife & tours on a scale-model train. Alexandria Zoological Park is committed to promoting understanding and conservation of the natural world in which we live.
+Filtered Attraction: (id: 557), T.R.E.E. House, Entertainment, Alexandria, Children's museum with a small-scale grocery, bank & medical clinic for imaginative play. 
+Filtered Attraction: (id: 567), Kent Plantation House, Cultural/Historical, Alexandria, French-colonial plantation house built in 1796, featuring guided tours & grounds with outbuildings. 
