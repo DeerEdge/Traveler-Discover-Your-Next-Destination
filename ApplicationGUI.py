@@ -610,6 +610,33 @@ class Ui_MainWindow(object):
         self.documentation.setReadOnly(True)
         self.documentationWindow.show()
 
+# -------------------------------------------
+    def showQandA(self, _):
+        self.QandAWindow = QtWidgets.QLabel()
+        self.QandAWindow.setObjectName("QandAWindow")
+        self.QandAWindow.setFixedSize(800, 600)
+        self.QandAWindow.setWindowTitle("Frequently Asked Questions and their Answers")
+        self.QandAWindowCentralwidget = QtWidgets.QWidget(self.QandAWindow)
+        self.QandAWindowCentralwidget.setFixedSize(800, 600)
+        self.QandAWindowGroupBox = QtWidgets.QGroupBox(self.QandAWindowCentralwidget)
+        self.QandAWindowGroupBox.setFixedSize(784, 554)
+        self.QandAWindowGroupBox.move(8, 35)
+        self.QandAWindowGroupBox.setEnabled(True)
+        self.QandAWindowGroupBox.setFlat(True)
+        self.QandAWindowGroupBox.setObjectName("QandATextContainer")
+        self.QandALabel = self.createLabel("QandAWindowGroupBox", 343, 0, 200, 50)
+        self.QandALabel.setText("QandA")
+        self.QandALabel.setObjectName("QandATitle")
+        self.QandA = QtWidgets.QPlainTextEdit(self.QandAWindowGroupBox)
+        self.QandA.setObjectName("QandA")
+        self.QandA.setFixedSize(780, 550)
+        self.QandA.move(2,2)
+        text = open('qanda.txt').read()
+        self.QandA.setPlainText(text)
+        self.QandA.setReadOnly(True)
+        self.QandAWindow.show()
+#--------------------------------------------
+
     def showDescriptions(self, _):
         self.latitudeInput.setToolTip("Enter a latitudinal location here \n"
                                       "or select the find my location \n"
@@ -1341,11 +1368,16 @@ class Ui_MainWindow(object):
         self.reportButton.setGeometry(7, 560, 223, 20)
         self.reportButton.setText("Create a Report")
         self.reportButton.clicked.connect(self.createReport)
+
         self.documentationButton = QtWidgets.QToolButton(self.help_menu_groupBox)
         self.documentationButton.setGeometry(6, 30, 211, 20)
         self.documentationButton.clicked.connect(self.showDocumentation)
+
+
         self.supportButton = QtWidgets.QToolButton(self.help_menu_groupBox)
         self.supportButton.setGeometry(6, 5, 211, 20)
+        self.supportButton.clicked.connect(self.showQandA)
+
         self.showToolDescriptionButton = QtWidgets.QToolButton(self.help_menu_groupBox)
         self.showToolDescriptionButton.setGeometry(6, 55, 211, 20)
         self.showToolDescriptionButton.clicked.connect(self.showDescriptions)

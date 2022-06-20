@@ -1,13 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-19 Time Of Action: 18:04:34
-Selected State: Minnesota
-Selected City: Richfield
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-20 Time Of Action: 02:33:36
+Selected State: Massachusetts
+Selected City: Plymouth
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 679), Taft Park, Nature/Outdoor, Richfield, City park offering athletic fields, a walking trail, play equipment, a fishing pier & a hockey rink. 
-Filtered Attraction: (id: 680), Veterans Park, Nature/Outdoor, Richfield, Popular lakefront park featuring an outdoor pool, ice arena, mini-golf course & community events. 
-Filtered Attraction: (id: 681), Wood Lake Nature Center, Nature/Outdoor, Richfield, Nature center with various habitats offering wildlife viewing from trails & a floating boardwalk. 
-Filtered Attraction: (id: 682), Andale Taqueria, Food, Richfield, Tacos, burritos & other Mexican standards are featured at this informal counter-serve establishment. At Andale Taqueria & Mercado, you’ll enjoy express, courteous service in a comfortable setting – breakfast, lunch, or dinner. At Andale Taqueria & Mercado, you’ll enjoy express, courteous service in a comfortable setting – breakfast, lunch, or dinner. 
-Filtered Attraction: (id: 685), Nickelodeon Universe, Entertainment, Richfield, Store in the Mall of America's Nickelodeon theme park, featuring items from the TV station's shows. 
+Filtered Attraction: (id: 632), Pilgrim Memorial State Park, Nature/Outdoor, Plymouth, Harborside park commemorating the first pilgrim landing, with Plymouth Rock & a Mayflower replica. 
+Filtered Attraction: (id: 616), Dillon's Local, Food, Plymouth, Internationally inspired comfort classics with brunch, specialty cocktails & catering options. 
+Filtered Attraction: (id: 625), Brewster Gardens, Nature/Outdoor, Plymouth, A walking path runs alongside a stream in this well-maintained, grassy park with a tranquil vibe. 
+Filtered Attraction: (id: 634), Plimoth Grist Mill, Cultural/Historical, Plymouth, 17th-century mill & museum built by early colonists for the milling of corn into cornmeal. History in a New Light  Plimoth Patuxet Museums brings to life the history of Plymouth Colony and the Indigenous homeland. Major exhibits include the…
+Filtered Attraction: (id: 635), Plimoth Patuxet Museums, Cultural/Historical, Plymouth, Complete re-creation of a 17th-century Pilgrim village, including costumed actors & activities. History in a New Light  Plimoth Patuxet Museums brings to life the history of Plymouth Colony and the Indigenous homeland. Major exhibits include the…
