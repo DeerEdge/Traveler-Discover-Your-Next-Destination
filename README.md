@@ -1,6 +1,9 @@
 # Traveler
 A simple, user-friendly, and powerful PyQt5 application made for the 2021-2022 FBLA Coding and Programming Challenge. 
-![Title Window Image](Application Title Window.png)
+
+<img src="/README images/Application Title Window.png">
+<img src="/README images/Find Attractions Tab.png">
+
 
 ## Setup
 For this project, PyCharm was used for the development of the application. To find the system requirements and installation process: https://www.jetbrains.com/help/pycharm/installation-guide.html
