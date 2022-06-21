@@ -88,7 +88,7 @@ QLabel#sortByLabel {
     font: 15px
 }
 
-QComboBox#sortingComboBox {
+QComboBox#sorting_QComboBox {
     border: 1px black;
     border-radius: 2px;
 }
@@ -102,7 +102,7 @@ QLabel#enteredLocation {
     font: 16px
 }
 
-QComboBox#radiusComboBox {
+QComboBox#radius_QComboBox {
     border: 1px black;
     border-radius: 2px;
 }

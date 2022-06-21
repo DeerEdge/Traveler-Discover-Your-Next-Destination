@@ -30,10 +30,10 @@ class Ui_MainWindow(object):
 
     # Upon being called, this function creates a QLabel associated with a container that is specified by the string
     # parameter (container). The QLabel's geometry is specified by the location parameters (x_coordinate, y_coordinate)
-    # and the size parameters (label_width, label_length) passed through the function.
+    # and the size parameters (width, length) passed through the function.
     #
     # Returns a QLabel object
-    def create_QLabel(self, container, x_coordinate, y_coordinate, label_width, label_length):
+    def create_QLabel(self, container, x_coordinate, y_coordinate, width, length):
         global location_and_filters_QGroupBox
         global attractions_QGroupBox_bar
         global attraction_QScrollArea_object
@@ -59,16 +59,16 @@ class Ui_MainWindow(object):
             self.QLabel = QtWidgets.QLabel(self.title_window_central_widget)
 
         # Geometry of QLabel is specified by the passed function parameters
-        self.QLabel.setGeometry(QtCore.QRect(x_coordinate, y_coordinate, label_width, label_length))
+        self.QLabel.setGeometry(QtCore.QRect(x_coordinate, y_coordinate, width, length))
         return self.QLabel
 
 
     # Upon being called, this function creates a QComboBox associated with a container that is specified by the string
     # parameter (container). The QLabel's geometry is specified by the location parameters (x_coordinate, y_coordinate)
-    # and the size parameters (comboBox_width, comboBox_length) passed through the function.
+    # and the size parameters (width, length) passed through the function.
     #
     # Returns a QComboBox object
-    def create_QComboBox(self, container, x_coordinate, y_coordinate, comboBox_width, comboBox_length):
+    def create_QComboBox(self, container, x_coordinate, y_coordinate, width, length):
         global location_and_filters_QGroupBox
         global attraction_QScrollArea_object
         global attractions_QGroupBox_bar
@@ -82,16 +82,16 @@ class Ui_MainWindow(object):
             self.QComboBox = QtWidgets.QComboBox(self.title_window_central_widget)
 
         # Geometry of QComboBox is specified by the passed function parameters
-        self.QComboBox.setGeometry(QtCore.QRect(x_coordinate, y_coordinate, comboBox_width, comboBox_length))
+        self.QComboBox.setGeometry(QtCore.QRect(x_coordinate, y_coordinate, width, length))
         return self.QComboBox
 
 
     # Upon being called, this function creates a QCheckBox associated with a container that is specified by the string
     # parameter (container). The QLabel's geometry is specified by the location parameters (x_coordinate, y_coordinate)
-    # and the size parameters (QCheckBox_width, QCheckBox_length) passed through the function.
+    # and the size parameters (width, length) passed through the function.
     #
     # Returns a QComboBox object
-    def create_QCheckBox(self, container, x_coordinate, y_coordinate, QCheckBox_width, QCheckBox_length):
+    def create_QCheckBox(self, container, x_coordinate, y_coordinate, width, length):
         global location_and_filters_QGroupBox
         global attraction_QScrollArea_object
 
@@ -100,7 +100,7 @@ class Ui_MainWindow(object):
             self.QCheckBox = QtWidgets.QCheckBox(self.location_and_filters_QGroupBox)
 
         # Geometry of QCheckBox is specified by the passed function parameters
-        self.QCheckBox.setGeometry(QtCore.QRect(x_coordinate, y_coordinate, QCheckBox_width, QCheckBox_length))
+        self.QCheckBox.setGeometry(QtCore.QRect(x_coordinate, y_coordinate, width, length))
         return self.QCheckBox
 
 
@@ -1202,7 +1202,7 @@ class Ui_MainWindow(object):
                                            "QComboBox QAbstractItemView {" 
                                            "background-color: rgb(140, 140, 140);"
                                            "color: white;"
-                                           "label_width: 200px;"
+                                           "width: 200px;"
                                             "selection-background-color: lightgrey;"
                                             "}"
                                                     )
@@ -1324,7 +1324,7 @@ class Ui_MainWindow(object):
                                            "QComboBox QAbstractItemView {"
                                            "background-color: rgb(140, 140, 140);"
                                            "color: white;"
-                                           "label_width: 200px;"
+                                           "width: 200px;"
                                            "selection-background-color: lightgrey;"
                                            "}"
                                                    )
@@ -1358,7 +1358,7 @@ class Ui_MainWindow(object):
                                           "QComboBox QAbstractItemView {"
                                           "background-color: rgb(140, 140, 140);"
                                           "color: white;"
-                                          "label_width: 200px;"
+                                          "width: 200px;"
                                           "selection-background-color: lightgrey;"
                                           "}")
         self.title_window_type_input.setFont(QtGui.QFont("Arial", 14))
