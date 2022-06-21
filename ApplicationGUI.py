@@ -1,96 +1,147 @@
 import os
 import webbrowser
+import io
+# folium v0.12.1 - Used to display geographical data
+import folium
 import ApplicationDatabase
 import ApplicationFilterRequest
-import io
-import folium
 
+# ipregistry v3.2.0 - Used to find current location of the user when called
 from ipregistry import IpregistryClient
 from time import gmtime, strftime
 from operator import itemgetter
+# PyQt5 v5.15.6 - Used to create interface and all visual components.
 from PyQt5 import QtCore, QtGui, QtWidgets
+# PyQtWebEngine v5.15.5 - Used to display web widgets. Folium maps are displayed using this library.
 from PyQt5.QtWebEngineWidgets import QWebEngineView
+# geopy v2.2.0 - Used to calculate distance between two points using latitude and longitude values.
 from geopy import distance
 
-
+# Connect to ip finder as a client in order to get information about the ip
 client = IpregistryClient("72bw4jakulj27ism")
 ipInfo = client.lookup()
 
-# clear logs
-def clear_log():
-    with open("outputreport.txt", "r+") as f:
-        f.seek(0)
-        f.truncate()
-
+# Creates an the instance of QApplication, and creates all corresponding class functions
 class Ui_MainWindow(object):
     global filtered_attractions_list
     global radius_checked
     radius_checked = False
     filtered_attractions_list = []
 
-    # The different types of labels to be specified when created
-    def create_QLabel(self, type, Xcoor, Ycoor, width, length):
+    # Upon being called, this function creates a QLabel associated with a container that is specified by the string
+    # parameter (container). The QLabel's geometry is specified by the location parameters (x_coordinate, y_coordinate)
+    # and the size parameters (QLabel_width, QLabel_length) passed through the function.
+    #
+    # Returns a QLabel object
+    def create_QLabel(self, container, x_coordinate, y_coordinate, QLabel_width, QLabel_length):
         global location_and_filters_QGroupBox
         global attractions_QGroupBox_bar
         global attraction_QScrollArea_object
 
-        if type == "location_and_filters_QGroupBox":
-            self.label = QtWidgets.QLabel(self.location_and_filters_QGroupBox)
-        elif type == "attraction_QScrollArea_object":
-            self.label = QtWidgets.QLabel(self.attraction_QScrollArea_object)
-        elif type == "bookmarks_tab_QScrollArea_object":
-            self.label = QtWidgets.QLabel(self.bookmarks_tab_QScrollArea_object)
-        elif type == "help_menu_groupBox":
-            self.label = QtWidgets.QLabel(self.help_menu_groupBox)
-        elif type == "attractions_QGroupBox_bar":
-            self.label = QtWidgets.QLabel(self.attractions_QGroupBox_bar)
-        elif type == "sources_tab_widget":
-            self.label = QtWidgets.QLabel(self.sources_tab_widget)
-        elif type == "report_window_groupBox":
-            self.label = QtWidgets.QLabel(self.report_window)
-        elif type == "documentation_window_QGroupBox":
-            self.label = QtWidgets.QLabel(self.documentation_window)
-        elif type == "title_window_central_widget":
-            self.label = QtWidgets.QLabel(self.title_window_central_widget)
-        self.label.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
-        return self.label
+        # Creates and associates QLabel to specified container
+        if container == "location_and_filters_QGroupBox":
+            self.QLabel = QtWidgets.QLabel(self.location_and_filters_QGroupBox)
+        elif container == "attraction_QScrollArea_object":
+            self.QLabel = QtWidgets.QLabel(self.attraction_QScrollArea_object)
+        elif container == "bookmarks_tab_QScrollArea_object":
+            self.QLabel = QtWidgets.QLabel(self.bookmarks_tab_QScrollArea_object)
+        elif container == "help_menu_groupBox":
+            self.QLabel = QtWidgets.QLabel(self.help_menu_groupBox)
+        elif container == "attractions_QGroupBox_bar":
+            self.QLabel = QtWidgets.QLabel(self.attractions_QGroupBox_bar)
+        elif container == "sources_tab_widget":
+            self.QLabel = QtWidgets.QLabel(self.sources_tab_widget)
+        elif container == "report_window_groupBox":
+            self.QLabel = QtWidgets.QLabel(self.report_window)
+        elif container == "documentation_window_QGroupBox":
+            self.QLabel = QtWidgets.QLabel(self.documentation_window)
+        elif container == "title_window_central_widget":
+            self.QLabel = QtWidgets.QLabel(self.title_window_central_widget)
 
-    # The different types of comboboxes to be specified when created
-    def create_QComboBox(self, type, Xcoor, Ycoor, width, length):
+        # Geometry of QLabel is specified by the passed function parameters
+        self.QLabel.setGeometry(QtCore.QRect(x_coordinate, y_coordinate, QLabel_width, QLabel_length))
+        return self.QLabel
+
+
+    # Upon being called, this function creates a QComboBox associated with a container that is specified by the string
+    # parameter (container). The QLabel's geometry is specified by the location parameters (x_coordinate, y_coordinate)
+    # and the size parameters (QComboBox_width, QComboBox_length) passed through the function.
+    #
+    # Returns a QComboBox object
+    def create_QComboBox(self, container, x_coordinate, y_coordinate, QComboBox_width, QComboBox_length):
         global location_and_filters_QGroupBox
         global attraction_QScrollArea_object
         global attractions_QGroupBox_bar
 
-        if type == "location_and_filters_QGroupBox":
-            self.comboBox = QtWidgets.QComboBox(self.location_and_filters_QGroupBox)
-        elif type == "attractions_QGroupBox_bar":
-            self.comboBox = QtWidgets.QComboBox(self.attractions_QGroupBox_bar)
-        elif type == "title_window_central_widget":
-            self.comboBox = QtWidgets.QComboBox(self.title_window_central_widget)
-        self.comboBox.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
-        return self.comboBox
+        # Creates and associates QComboBox to specified container
+        if container == "location_and_filters_QGroupBox":
+            self.QComboBox = QtWidgets.QComboBox(self.location_and_filters_QGroupBox)
+        elif container == "attractions_QGroupBox_bar":
+            self.QComboBox = QtWidgets.QComboBox(self.attractions_QGroupBox_bar)
+        elif container == "title_window_central_widget":
+            self.QComboBox = QtWidgets.QComboBox(self.title_window_central_widget)
 
-    # The different types of checkboxes to be specified when created
-    def create_QCheckBox(self, type, Xcoor, Ycoor, width, length):
+        # Geometry of QComboBox is specified by the passed function parameters
+        self.QComboBox.setGeometry(QtCore.QRect(x_coordinate, y_coordinate, QComboBox_width, QComboBox_length))
+        return self.QComboBox
+
+
+    # Upon being called, this function creates a QCheckBox associated with a container that is specified by the string
+    # parameter (container). The QLabel's geometry is specified by the location parameters (x_coordinate, y_coordinate)
+    # and the size parameters (QCheckBox_width, QCheckBox_length) passed through the function.
+    #
+    # Returns a QComboBox object
+    def create_QCheckBox(self, container, x_coordinate, y_coordinate, QCheckBox_width, QCheckBox_length):
         global location_and_filters_QGroupBox
         global attraction_QScrollArea_object
 
-        if type == "location_and_filters_QGroupBox":
-            self.checkBox = QtWidgets.QCheckBox(self.location_and_filters_QGroupBox)
-        self.checkBox.setGeometry(QtCore.QRect(Xcoor,Ycoor,width,length))
-        return self.checkBox
+        # Creates and associates QComboBox to specified container
+        if container == "location_and_filters_QGroupBox":
+            self.QCheckBox = QtWidgets.QCheckBox(self.location_and_filters_QGroupBox)
 
-    # The code needed to create an attraction to be displayed
+        # Geometry of QCheckBox is specified by the passed function parameters
+        self.QCheckBox.setGeometry(QtCore.QRect(x_coordinate, y_coordinate, QCheckBox_width, QCheckBox_length))
+        return self.QCheckBox
+
+
+    # This function creates an object container that holds all of the attraction's information and displays it within
+    # the application's scrollable area. The object consists of the attraction image, attraction details, and
+    # corresponding geographical maps that mark the attraction's location. Buttons are also included to expand the
+    # geographical map preview and to link the user to the attraction's official website.
+    #
+    # Returns a QGroupBox object
     def create_QScrollArea_object(self, Ycoor, attraction):
         global attraction_QScrollArea_object
-        _translate = QtCore.QCoreApplication.translate
 
+        # The QGroupBox container is created and added to the QScrollArea layout
         self.attraction_QScrollArea_object = QtWidgets.QGroupBox(self.widget)
         self.attraction_QScrollArea_object.setFixedSize(884, 220)
         self.attraction_QScrollArea_object.setLayout(QtWidgets.QVBoxLayout())
 
+        # A QLabel is created to display an image of the attraction set using QPixmap
+        self.attraction_image = QtWidgets.QLabel(self.attraction_QScrollArea_object)
+        image_address = "./Attraction Pictures/" + str(attraction[0]) + " - " + str(attraction[4]) + ".jpg"
+        self.attraction_image.setPixmap(QtGui.QPixmap(image_address))
+        self.attraction_image.setScaledContents(True)
+        self.attraction_image.setFixedSize(220, 220)
+        self.attraction_image.show()
+
+        # A QToolButton is created to display the bookmark icon set using QPixmap and performs actions specified by the
+        # control_bookmarks function.
+        self.bookmark_icon = QtWidgets.QToolButton(self.attraction_QScrollArea_object)
+        self.bookmark_icon.setObjectName("bookmark")
+        self.bookmark_icon.setProperty("unactivated", True)
+        self.bookmark_icon.setGeometry(10, 10, 30, 30)
+        self.bookmark_icon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+        self.bookmark_icon.setIconSize(QtCore.QSize(512, 512))
+        self.bookmark_icon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
+
+        # When the bookmark icon is clicked, the bookmark can be added or removed based on the icon's state of activation
+        self.bookmark_icon.clicked.connect(self.control_bookmarks)
+
         labelXPos = 230
         labelYPos = 25
+
         converted_list = ''
         for element in attraction:
             if element == attraction[0]:
@@ -98,50 +149,69 @@ class Ui_MainWindow(object):
             else:
                 converted_list = converted_list + ',|' + str(element)
         attraction_details_string = "[" + (converted_list) + "]"
+
+        # A hidden QLabel holds the attraction's information so the object's attributes can be read after creation
         self.attraction_info_QLabel = self.create_QLabel("attraction_QScrollArea_object", 0, 0, 600, 50)
         self.attraction_info_QLabel.setObjectName("attraction_info_QLabel")
         self.attraction_info_QLabel.setText(attraction_details_string)
         self.attraction_info_QLabel.setHidden(True)
 
-        # A label for the attraction title
+        # A QLabel is created to display the attraction title
         self.attraction_title_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos, -5, 450, 50)
         self.attraction_title_QLabel.setObjectName("attractionName")
         self.attraction_title_QLabel.setText((str(attraction[1])))
 
-        # A label for displaying the rating
+        # A QLabel is created to display the attraction's numeric rating [0-5]
         self.rating_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos + 350, -5, 50, 50)
         self.rating_QLabel.setObjectName("rating")
         self.rating_QLabel.setText((str(attraction[8])))
-        min_star_rating = 5.0
 
+        # A QLabel is created and set to display an image of the attraction's rating through star icons. The rating
+        # displayed through the icons is the floored to the nearest 0.5 decimal.
+        # Ex. 4.8 would be represented as 4.5 and 2.9 would be represented as 2.5
+        # The rating decimal is intially set to 5.0
+        min_star_rating = 5.0
+        # The rating decimal is decreased in increments of 0.5 until the nearest 0.5 floored decimal
         for i in range(10):
             if (float(attraction[8]) < min_star_rating):
                 min_star_rating = min_star_rating - 0.5
             else:
+                # Rating icon label is created and set to the specified rating image using QPixmap
                 self.rating_icon = QtWidgets.QLabel(self.attraction_QScrollArea_object)
-                self.rating_icon.setPixmap(QtGui.QPixmap("./Application Pictures/Star Ratings/" + str(min_star_rating) + " star.png"))
+                self.rating_icon.setPixmap(QtGui.QPixmap("./Application Pictures/Star Ratings/" + str(min_star_rating)
+                                                         + " star.png"))
                 self.rating_icon.setScaledContents(True)
                 self.rating_icon.setFixedSize(85, 16)
                 self.rating_icon.move(600, 12)
                 self.rating_icon.show()
                 break
 
-        # Displaying the latitude and longitude
-        if (self.latitude_input.text() != "" and self.longitude_input.text() != "" and self.is_float(str(self.latitude_input.text())) and self.is_float(str(self.longitude_input.text()))):
+        # A QLabel representing the distance from the specified location is conditionally created. If the latitudinal
+        # and longitudinal fields are not empty and are integers then the distance is calculated and shown by a QLabel.
+        # If the condition is not met, only the attraction's location (city, state) is displayed.
+        if self.latitude_input.text() != "" and self.longitude_input.text() != "" and \
+                self.is_float(str(self.latitude_input.text())) and self.is_float(str(self.longitude_input.text())):
+            # Distance from specified location and attraction is calculated
+            distance_from_user_location = distance.distance(
+                ((self.latitude_input.text()), (self.longitude_input.text())),(attraction[13], attraction[14])).miles
+
+            # A QLabel is created to show the attraction's location and calculated distance
             self.location_Qlabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos, labelYPos - 8, 250, 50)
             self.location_Qlabel.setObjectName("locationAndDistance")
-            distance_from_user_location = distance.distance(((self.latitude_input.text()), (self.longitude_input.text())), (attraction[13], attraction[14])).miles
-            self.location_Qlabel.setText((str(attraction[4]) + ", " + str(attraction[3])) + " - " + str('%.1f' % (distance_from_user_location)) + " miles away")
+            self.location_Qlabel.setText((str(attraction[4]) + ", " + str(attraction[3])) + " - "
+                                         + str('%.1f' % (distance_from_user_location)) + " miles away")
         else:
+            # A QLabel is created to only show the attraction's location
             self.location_Qlabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos, labelYPos - 3, 200, 50)
             self.location_Qlabel.setObjectName("locationAndDistance")
             self.location_Qlabel.setText((str(attraction[4]) + ", " + str(attraction[3])))
 
-        # Label for displaying type
+        # A QLabel is created to show the attraction's type. The type can be one of the four attraction types: Food,
+        # Nature/Outdoor, Entertainment, or Cultural/Historical.
         self.type_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos, labelYPos + 20, 200, 50)
         self.type_QLabel.setText((str(attraction[5])))
 
-        # Label for displaying price
+        # A QLabel is created to display the attraction's relative cost
         self.price_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos, labelYPos + 40, 200, 50)
         if (str(attraction[6])) == '1':
             self.price_QLabel.setText("Price Level - $")
@@ -150,7 +220,7 @@ class Ui_MainWindow(object):
         else:
             self.price_QLabel.setText("Price Level - $$$")
 
-        # Label for displaying busyness
+        # A QLabel is created to display the attraction's relative busyness level
         self.busyness_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos, labelYPos + 60, 200, 50)
         if (str(attraction[7])) == '1':
             self.busyness_QLabel.setText("Low Busyness")
@@ -159,102 +229,92 @@ class Ui_MainWindow(object):
         else:
             self.busyness_QLabel.setText("Very Busy")
 
-        # Label for displaying wheelchair accessibility
+        # A QLabel is created to display whether an attraction is wheelchair accessible
         self.wheelchair_accessibility_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos + 170, labelYPos + 20, 200, 50)
         if ((attraction[9])):
             self.wheelchair_accessibility_QLabel.setText("Wheelchair Accessible? - Yes")
         else:
             self.wheelchair_accessibility_QLabel.setText("Wheelchair Accessible? - No")
 
-        # Label for displaying family friendly
+        # A QLabel is created to display whether an attraction is family friendly
         self.family_friendly_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos + 170, labelYPos + 40, 200, 50)
         if ((attraction[10])):
             self.family_friendly_QLabel.setText("Family Friendly? - Yes")
         else:
             self.family_friendly_QLabel.setText("Family Friendly? - No")
 
-        # Label for displaying pet friendly
+        # A QLabel is created to display whether an attraction is pet friendly
         self.pet_friendly_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos + 170, labelYPos + 60, 200, 50)
         if ((attraction[11])):
             self.pet_friendly_QLabel.setText("Pet Friendly? - Yes")
         else:
             self.pet_friendly_QLabel.setText("Pet Friendly? - No")
 
-        # Label for displaying coordinates
+        # A QLabel is created to display the coordinate location of the attraction (latitude, longitude)
         self.coordinate_location_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos, labelYPos + 80, 200, 50)
         self.coordinate_location_QLabel.setText("Location: (" + str('%.3f' % (attraction[13])) + "," + str('%.3f' % (attraction[14])) + ")")
+
+        # A hidden QLabel is created to be accessed later after the creation of the object
         self.coordinate_info_QLabel = self.create_QLabel("attraction_QScrollArea_object", 0, 0, 200, 50)
-        self.coordinate_info_QLabel.setText(str('%.6f' % (attraction[14])) + "," + str('%.6f' % (attraction[13])))
         self.coordinate_info_QLabel.setObjectName("Location")
+        self.coordinate_info_QLabel.setText(str('%.6f' % (attraction[14])) + "," + str('%.6f' % (attraction[13])))
         self.coordinate_info_QLabel.hide()
 
-        # Label for displaying a brief description
+        # A QLabel is created to display the attraction's description
         self.description_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos, labelYPos + 93, 454, 125)
         self.description_QLabel.setWordWrap(True)
         self.description_QLabel.setText(("     " + str(attraction[2])))
 
-        # Label for displaying an image of the attraction
-        self.attraction_image = QtWidgets.QLabel(self.attraction_QScrollArea_object)
-        image_address = "./Attraction Pictures/" + str(attraction[0]) + " - " + str(attraction[4]) + ".jpg"
-        self.attraction_image.setPixmap(QtGui.QPixmap(image_address))
-        self.attraction_image.setScaledContents(True)
-        self.attraction_image.setFixedSize(220, 220)
-        self.attraction_image.show()
-
-        # Label for displaying the bookmark icons
-        self.bookmark_icon = QtWidgets.QToolButton(self.attraction_QScrollArea_object)
-        self.bookmark_icon.setObjectName("bookmark")
-        self.bookmark_icon.setProperty("unactivated", True)
-        self.bookmark_icon.setGeometry(10, 10, 30, 30)
-        self.bookmark_icon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
-        self.bookmark_icon.setIconSize(QtCore.QSize(512, 512))
-        self.bookmark_icon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
-        self.bookmark_icon.clicked.connect(self.control_bookmarks)
-
-        # Label for displaying the small map window
+        #  A QGroupBox is created to hold the map data
         self.map_container = QtWidgets.QGroupBox(self.attraction_QScrollArea_object)
         self.map_container.setGeometry(QtCore.QRect(675, -10, 220, 220))
         self.map_container.setEnabled(True)
         self.map_container.setFlat(True)
+
+        # The created QGroupBox container"s layout is set to hold the web widget
         self.map_frame = QtWidgets.QVBoxLayout(self.map_container)
 
-        # The map is centered around the coordinates of the attraction
+        # The attraction map is centered around the coordinates of the attraction
         coordinate = (attraction[13],attraction[14])
-        map = folium.Map(
-            zoom_start=15,
-            location=coordinate
-        )
-        folium.Marker(
-            location=coordinate
-        ).add_to(map)
-        # save map data to data object
+        map = folium.Map(zoom_start=15, location=coordinate)
+        folium.Marker(location=coordinate).add_to(map)
+        # Save map data to data object
         data = io.BytesIO()
         map.save(data, close_file=False)
         webView = QWebEngineView()
+        # Sets the web widget to the map data
         webView.setHtml(data.getvalue().decode())
+        # Adds the map data to the QGroupBox layout
         self.map_frame.addWidget(webView)
 
-        # Button to create an expanded map
+        # A QToolButton is made to create an expanded map window when clicked
         self.expand_map_button = QtWidgets.QToolButton(self.attraction_QScrollArea_object)
         self.expand_map_button.setGeometry(690, 198, 94, 17)
         self.expand_map_button.setText("Expand Map ↗︎")
+
+        # When this QToolButton is pressed, an expanded window of the object's coordinates is created
         self.expand_map_button.clicked.connect(self.show_expanded_map_window)
 
-        # The button to open the website of an attraction, in a new window
+        # A QToolButton is created to open the website of an attraction in a new window when clicked
         self.website_button = QtWidgets.QToolButton(self.attraction_QScrollArea_object)
         self.website_button.setGeometry(786, 198, 94, 17)
-        self.website_button.setText(_translate("MainWindow", "Website ↗︎"))
+        self.website_button.setText("Website ↗︎")
+
+        # When this QToolButton is pressed, a redirect to the attraction's website occurs
         self.website_button.clicked.connect(lambda: webbrowser.open(str(attraction[12])))
 
-        # A line for styling to organize different parts
+        # A QFrame.Hline is created to organize different parts of the attraction object
         self.object_line = QtWidgets.QFrame(self.attraction_QScrollArea_object)
         self.object_line.setGeometry(QtCore.QRect(235, 138, 440, 10))
         self.object_line.setFrameShape(QtWidgets.QFrame.HLine)
         self.object_line.setFrameShadow(QtWidgets.QFrame.Sunken)
+
+        # The QScrollArea's layout adds the attraction object to itself to display
         self.verticalLayout_3.addWidget(self.attraction_QScrollArea_object)
         return self.attraction_QScrollArea_object
 
-    # A function for different operations for displayed attractions
+
+    # A function that contols the addition and deletion of QScrollArea attraction objects
     def control_attractions_QScrollArea(self):
         global filtered_attractions_list
 
@@ -272,25 +332,30 @@ class Ui_MainWindow(object):
             Ycoor = Ycoor + 200
         self.attractions_QScrollArea.setWidget(self.attractions_QScrollArea_widget_container)
 
-    # A function to rerun the suggesting algorithm, based on user changes
+
+    # A function to rerun the suggesting algorithm, based on user changes. This function gets the entered preferences
+    # in the state, city, and type QComboBoxes as well as the wheelchair accessibility, family friendly, and pet friendly
+    # QCheckBoxes. Using the entered values, a request to the database is sent to create a list of attractions that
+    # satisfy the user's preferences. Using the filtered attractions, attraction objects are created to display the
+    # attractions.
     def get_current_filter_field_values(self, _):
         global filtered_attractions_list
         global location_and_filters_QGroupBox
         _translate = QtCore.QCoreApplication.translate
 
-        # Choosing which state to filter by, based on the state dropdown menu
+        # Choosing which state to filter by, based on the state dropdown menu choice
         if self.state_filter_QComboBox.currentText() == "No preference":
             current_selected_state = "None"
         else:
             current_selected_state = self.state_filter_QComboBox.currentText()
 
-        # Choosing which city to filter by, based on the city dropdown menu
+        # Choosing which city to filter by, based on the city dropdown menu choice
         if self.city_filter_QComboBox.currentText() == "No preference":
             current_selected_city = "None"
         else:
             current_selected_city = self.city_filter_QComboBox.currentText()
 
-        # Choosing which type to filter by, based on the type dropdown menu
+        # Choosing which container to filter by, based on the container dropdown menu choice
         if self.type_filter_QComboBox.currentText() == "No preference":
             current_selected_type = "None"
         else:
@@ -308,22 +373,34 @@ class Ui_MainWindow(object):
         # Choosing what attribute to sort by, based on the selection of the sorting dropdown menu
         current_sorter = self.sorting_QComboBox.currentText()
 
-        # Creating a list of attributes to filter and sort by
+        # Creating a list of attributes to filter and sort by based on the entered attributes
         attribute_list = [str(current_selected_state),str(current_selected_city),str(current_selected_type),
                          str(current_checked_wheelchair_accessibility), str(current_checked_family_friendliness),
                          str(current_checked_pet_friendliness)]
 
-        # Filtering attractions based on the desired attribtues from the user
+        # Since database filters take a None keyword or a string name value, all "None" or "False" entered values are
+        # converted to the accepted None keyword
         for index in range(len(attribute_list)):
             if (attribute_list[index] == "None" or attribute_list[index] == "False"):
                 attribute_list[index] = None
-        all_attractions = ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(None, None, None, None, None, None))
-        filtered_attractions = ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(attribute_list[0], attribute_list[1], attribute_list[2], attribute_list[3], attribute_list[4], attribute_list[5]))
+
+        # All attractions are stored in a separate storage in order to retrieve all sources and references of all
+        # attractions to later display in the sources tab of the application
+        all_attractions = ApplicationDatabase.getAttractions(filters=ApplicationFilterRequest.FilterRequest(None, None,
+                                                                                                            None, None,
+                                                                                                            None, None))
+
+        # Filtering attractions based on the entered filter attributes. A request with the entered attributes is sent to
+        # retrieve values from the PostgresSQL database. A dynamic database containing all satisfactory attractions is
+        # formed. Changes in filters updates the filtered database based on the new set of filters
+        filtered_attractions = ApplicationDatabase.getAttractions(
+            filters=ApplicationFilterRequest.FilterRequest(attribute_list[0], attribute_list[1], attribute_list[2],
+                                                           attribute_list[3], attribute_list[4], attribute_list[5]))
         filtered_attractions_list = filtered_attractions
 
         # Selective display of singular or plural "Attraction" + "Found"
         if (len(filtered_attractions_list)) == 1:
-            self.num_of_attractions_QLabel.setText(_translate("MainWindow", (str(len(filtered_attractions_list))) + " Attraction Found"))
+            self.num_of_attractions_QLabel.setText((str(len(filtered_attractions_list))) + " Attraction Found")
         else:
             self.num_of_attractions_QLabel.setText(_translate("MainWindow", (str(len(filtered_attractions_list))) + " Attractions Found"))
 
@@ -332,6 +409,10 @@ class Ui_MainWindow(object):
 
         # Display the filtered and sorted attractions
         self.control_attractions_QScrollArea()
+
+        # The distance from entered location and number of objects displayed are calculated. If the QComboBox specifying
+        # desired distance is enabled (when both latitude and longitude are correctly entered) then distance is
+        # calculated. Simultaenously, a QLabel is updated to reflect the number of objects being shown in the QScrollArea.
         if (self.radius_QComboBox.isEnabled()):
             global radius_checked
             radius_checked = True
@@ -354,7 +435,7 @@ class Ui_MainWindow(object):
                     self.num_of_attractions_QLabel.setText((str(count_of_objects_shown)) + " Attractions Found")
         attribute_list = [None, None, None, None, None, None]
 
-# Create an output report text file, based on the attributes the user selected
+        # Create an output report text file, based on the attributes the user selected
         with open('outputreport.txt', 'a') as f:
             stringAccessedTime = strftime("%Y-%m-%d %H:%M:%S", gmtime())
             locationOfSpace = stringAccessedTime.index(" ")
@@ -388,17 +469,17 @@ class Ui_MainWindow(object):
                 f.write("\n")
             f.close()
 
-# Creating a text file, to properly source and credit each attraction
+        # Creating a text file, to properly source and credit each attraction
         # Used to create a file with all sources. Run only once and then comment out
-        # with open('sources.txt', 'w') as f:
-        #     for attraction in all_attractions:
-        #         f.write(" ")
-        #         f.write(str(attraction[1]) + ", " + str(attraction[5]) + ", " + str(attraction[4]) + ", " + str(attraction[2]))
-        #         f.write("\n")
-        #         f.write(" ")
-        #         f.write(str(attraction[13]))
-        #         f.write("\n")
-        #         f.write("\n")
+        with open('sources.txt', 'w') as f:
+            for attraction in all_attractions:
+                f.write(" ")
+                f.write(str(attraction[1]) + ", " + str(attraction[5]) + ", " + str(attraction[4]) + ", " + str(attraction[2]))
+                f.write("\n")
+                f.write(" ")
+                f.write(str(attraction[13]))
+                f.write("\n")
+                f.write("\n")
 
     # The function to sort the displayed attractions, by some attribute (price, distance, busyness, rating)
     def sort_attractions(self):
@@ -454,7 +535,7 @@ class Ui_MainWindow(object):
         self.bookmark_icon.setIconSize(QtCore.QSize(1024, 1024))
         self.bookmark_icon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
 
-# A function ran to clear all bookmarks
+    # A function ran to clear all bookmarks
     def clear_all_bookmarks(self, _):
         for object in self.bookmarks_scrollArea_object_container.children():
             try:
@@ -509,7 +590,7 @@ class Ui_MainWindow(object):
 
         bookmark_object_min_star_rating = 5.0
 
-# Display different star icon based on its rating
+        # Display different star icon based on its rating
         for i in range(10):
             if (float(attraction[8]) < bookmark_object_min_star_rating):
                 bookmark_object_min_star_rating = bookmark_object_min_star_rating - 0.5
@@ -541,7 +622,7 @@ class Ui_MainWindow(object):
         self.bookmarks_tab_type_label.setText((str(attraction[5])))
         self.bookmarks_tab_price_label = self.create_QLabel("bookmarks_tab_QScrollArea_object", labelXPos, labelYPos + 40, 200, 50)
 
-# Display the bookmarked attraction's price
+        # Display the bookmarked attraction's price
         if (str(attraction[6])) == '1':
             self.bookmarks_tab_price_label.setText("Price Level - $")
         elif (str(attraction[6])) == '2':
@@ -994,7 +1075,7 @@ class Ui_MainWindow(object):
         self.submit_button.clicked.connect(self.create_report_file)
         self.report_window.show()
 
-    # A function to check if an input is a float, used for latitude/longitude type validation
+    # A function to check if an input is a float, used for latitude/longitude container validation
     def is_float(self, num):
         # if the input can be turned into a float, return True for this isfloat function
         try:
@@ -1005,7 +1086,7 @@ class Ui_MainWindow(object):
         except ValueError:
             return False
 
-    # The feature in which state, city or type options are not available until a parent is chosen
+    # The feature in which state, city or container options are not available until a parent is chosen
     def title_window_input_dependencies(self, _):
 
         # If the user has selected a state on the title page:
@@ -1017,23 +1098,23 @@ class Ui_MainWindow(object):
 
             # If the user has selected a city on the title page:
             if (self.title_window_city_input.currentText() != "Select a City"):
-                # Enable use of the type dropdown
+                # Enable use of the container dropdown
                 self.title_window_type_input.setEnabled(True)
                 # Hide the warning that says the city is not selected
                 self.title_window_city_unselected_error_label.hide()
 
             # If city is not selected:
             else:
-                # Disable use of the type dropdown
+                # Disable use of the container dropdown
                 self.title_window_type_input.setEnabled(False)
-                # Reset the selected type
+                # Reset the selected container
                 self.title_window_type_input.setCurrentText("Select a Type")
 
         # If the state is not selected
         else:
             # Disable use of the city dropdown
             self.title_window_city_input.setEnabled(False)
-            # Reset any selections for city and type dropdowns
+            # Reset any selections for city and container dropdowns
             self.title_window_type_input.setCurrentText("Select a Type")
             self.title_window_city_input.setCurrentText("Select a City")
 
@@ -1052,7 +1133,7 @@ class Ui_MainWindow(object):
     # The window change from title to the main window, with user selected attributes carrying over
     def change_to_search_attractions_window(self, _):
 
-        # Carry over the title's selection of state, city, type and searchbar to the main window
+        # Carry over the title's selection of state, city, container and searchbar to the main window
         title_selected_state = self.title_window_state_input.currentText()
         title_selected_city = self.title_window_city_input.currentText()
         title_selected_type = self.title_window_type_input.currentText()
@@ -1063,7 +1144,7 @@ class Ui_MainWindow(object):
         ui.setup_application_window(MainWindow)
         self.find_current_location(_)
 
-        # On the main window, set the state, city, type and searchbar to the selections on the title page
+        # On the main window, set the state, city, container and searchbar to the selections on the title page
         self.state_filter_QComboBox.setCurrentText(title_selected_state)
         self.city_filter_QComboBox.addItems(
         self.state_filter_QComboBox.itemData(self.state_filter_QComboBox.findText(title_selected_state)))
@@ -1121,7 +1202,7 @@ class Ui_MainWindow(object):
                                            "QComboBox QAbstractItemView {" 
                                            "background-color: rgb(140, 140, 140);"
                                            "color: white;"
-                                           "width: 200px;"
+                                           "QLabel_width: 200px;"
                                             "selection-background-color: lightgrey;"
                                             "}"
                                                     )
@@ -1243,7 +1324,7 @@ class Ui_MainWindow(object):
                                            "QComboBox QAbstractItemView {"
                                            "background-color: rgb(140, 140, 140);"
                                            "color: white;"
-                                           "width: 200px;"
+                                           "QLabel_width: 200px;"
                                            "selection-background-color: lightgrey;"
                                            "}"
                                                    )
@@ -1264,7 +1345,7 @@ class Ui_MainWindow(object):
                                                  "}")
         self.title_window_city_unselected_error_label.hide()
 
-        # QCombobox to input type field
+        # QCombobox to input container field
         self.title_window_type_input = self.create_QComboBox("title_window_central_widget", 444, 250, 160, 50)
         self.title_window_type_input.setEnabled(False)
         self.title_window_type_input.setStyleSheet("QComboBox"
@@ -1277,7 +1358,7 @@ class Ui_MainWindow(object):
                                           "QComboBox QAbstractItemView {"
                                           "background-color: rgb(140, 140, 140);"
                                           "color: white;"
-                                          "width: 200px;"
+                                          "QLabel_width: 200px;"
                                           "selection-background-color: lightgrey;"
                                           "}")
         self.title_window_type_input.setFont(QtGui.QFont("Arial", 14))
@@ -1358,7 +1439,7 @@ class Ui_MainWindow(object):
         self.attractions_QGroupBox_bar.setEnabled(True)
         self.attractions_QGroupBox_bar.setFlat(True)
 
-        # The label that displays the number of suggested attractions
+        # The QLabel that displays the number of suggested attractions
         self.num_of_attractions_QLabel = self.create_QLabel("attractions_QGroupBox_bar", 10, 20, 200, 20)
         self.num_of_attractions_QLabel.setObjectName("numAttractions")
 
@@ -1510,11 +1591,11 @@ class Ui_MainWindow(object):
         self.location_details_title.setObjectName("locationDetailsTitle")
         self.location_details_title.setText("Location Details")
 
-        # A label that shows your current location
+        # A QLabel that shows your current location
         self.current_location_QLabel = self.create_QLabel("location_and_filters_QGroupBox", Xcoor + 5, Ycoor - 145, 200, 25)
         self.current_location_QLabel.setObjectName("enteredLocation")
 
-        # Latitude label and input
+        # Latitude QLabel and input
         self.latitude_input_QLabel = self.create_QLabel("location_and_filters_QGroupBox", Xcoor + 5, Ycoor - 115, 200, 25)
         self.latitude_input_QLabel.setText("Latitude:")
         self.latitude_input = QtWidgets.QLineEdit(self.location_and_filters_QGroupBox)
@@ -1522,7 +1603,7 @@ class Ui_MainWindow(object):
         self.latitude_input.setPlaceholderText(" Enter latitude")
         self.latitude_input.textChanged.connect(self.check_if_location_fields_are_filled)
 
-        # Longitude label and input
+        # Longitude QLabel and input
         self.longitude_input_QLabel = self.create_QLabel("location_and_filters_QGroupBox", Xcoor + 5, Ycoor - 80, 200, 25)
         self.longitude_input_QLabel.setText("Longitude:")
         self.longitude_input = QtWidgets.QLineEdit(self.location_and_filters_QGroupBox)
@@ -1713,8 +1794,10 @@ class Ui_MainWindow(object):
 
 # Running the application
 if __name__ == "__main__":
-    # Clears action log
-    clear_log()
+    # Clear all user action logs
+    with open("outputreport.txt", "r+") as f:
+        f.seek(0)
+        f.truncate()
     import sys
     app = QtWidgets.QApplication(sys.argv)
     with open("design.css", "r") as f:

@@ -48,7 +48,7 @@ def generateSQL(filters):
         sql += 'city = \'' + filters.city + '\''
     if filters.type is not None:
         checkClause()
-        sql += 'type = \'' + filters.type + '\''
+        sql += 'container = \'' + filters.type + '\''
     if filters.wheelchairAccess is not None:
         checkClause()
         sql += 'WHEELCHAIR_ACCESSIBILITY = ' + str(filters.wheelchairAccess)
@@ -76,4 +76,4 @@ def checkClause():
     # getAttractions(filters=FilterRequest('Alaska', 'Anchorage', 'Sports', None, None, None))
     # print("===============================")
     # getAttractions(filters=FilterRequest(state='Alaska', city='Anchorage'))
-    # getAttractions(filters=FilterRequest(state='Alaska', city='Anchorage', type='Sports'))
+    # getAttractions(filters=FilterRequest(state='Alaska', city='Anchorage', container='Sports'))

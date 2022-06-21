@@ -1,13 +1,33 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-21 Time Of Action: 04:22:51
-Selected State: Minnesota
-Selected City: Rochester
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-21 Time Of Action: 14:09:47
+Selected State: Nebraska
+Selected City: None
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 670), History Center of Olmsted County, Cultural/Historical, Rochester, Local history museum on a 54-acre site with a gallery, archives & library, first set up in 1926. 
-Filtered Attraction: (id: 673), Chester's Kitchen & Bar, Food, Rochester, Modern destination features upscale American fare & cocktails in a stylish venue with patio seating. 
-Filtered Attraction: (id: 678), Quarry Hill Park, Nature/Outdoor, Rochester, Peaceful natural area with a nature center, trails, wildlife habitats & educational programming. 
-Filtered Attraction: (id: 683), Quarry Hill Nature Center, Nature/Outdoor, Rochester, Large park offering hiking trails, a man-made cave & a nature center with classes & live animals. 
-Filtered Attraction: (id: 689), Rochester Art Center, Entertainment, Rochester, Cultural center aimed at creating innovation & creativity through contemporary art. 
+Filtered Attraction: (id: 760), HopCat, Food, Lincoln, Woodwork-filled brew pub with a massive beer list offering creative pub fare & brunch items. 
+Filtered Attraction: (id: 761), Fun-Plex Waterpark & Rides, Entertainment, Bellevue, Family-friendly destination featuring a roller coaster, water rides, mini-golf, an arcade & more. 
+Filtered Attraction: (id: 762), Lincoln Children's Zoo, Nature/Outdoor, Lincoln, Attraction featuring diverse animals, birds & a popular train ride, open from April to October. 
+Filtered Attraction: (id: 763), Omaha's Henry Doorly Zoo and Aquarium, Entertainment, Bellevue, Dome containing species habitats such as the world's largest indoor rainforest & desert ecosystem. 
+Filtered Attraction: (id: 764), Riverside Discovery Center, Nature/Outdoor, Scottsbluff, Big cats, primates & other creatures, plus a petting zoo & splash-pad playground in summer months. 
+Filtered Attraction: (id: 765), Haworth Park, Nature/Outdoor, Bellevue, 1929 city park with flower beds, mature ornamental trees & extensive lawned space. 
+Filtered Attraction: (id: 766), Pioneers Park Nature Center, Nature/Outdoor, Lincoln, Prairie, forest & wetlands covering 668 acres for environmental education & animal preservation. 
+Filtered Attraction: (id: 767), Joslyn Castle, Cultural/Historical, Omaha, Scottish-inspired castle & gardens dating to 1903, with guided tours offered several times a month. 
+Filtered Attraction: (id: 768), Sheldon Museum of Art, Cultural/Historical, Lincoln, Center known for American works, including 19th-century landscapes & pop art, with sculpture garden. 
+Filtered Attraction: (id: 769), Chimney Rock Museum, Cultural/Historical, Scottsbluff, Geologic formation with a landmark spire & visitor center with exhibits about westward migration. 
+Filtered Attraction: (id: 770), Block 16, Food, Omaha, Sandwich shop with a garden-to-table philosophy serving casual lunches of gyros, burgers & sides. Try Alton Brown’s favorite hamburger in the country or one of our daily specials. Serving street-style food for lunch and dinner in downtown Omaha.
+Filtered Attraction: (id: 771), Runza Restaurant, Food, Scottsbluff, Fast-food chain known for namesake German sandwiches, plus burgers, onion rings & crinkle-cut fries. 
+Filtered Attraction: (id: 772), Scotts Bluff National Monument, Nature/Outdoor, Scottsbluff, Boasting remnants of the Oregon trail, this 3,000-acre park features unique rock formations. The National Park Service cares for special places saved by the American people so that all may experience our heritage.
+Filtered Attraction: (id: 773), The Durham Museum, Cultural/Historical, Omaha, Art deco train station from 1931 featuring displays on Omaha history as well as traveling exhibits. Located in historic Union Station, The Durham offers fascinating exhibits, Art Deco architecture and an authentic soda fountain!
+Filtered Attraction: (id: 774), Omaha Children's Museum, Entertainment, Omaha, Playful exhibits & activities encouraging youth to learn about the world through imagination. 
+Filtered Attraction: (id: 775), Midwest Theater, Entertainment, Scottsbluff, Restored 1946 entertainment hall hosting a variety of live music, movie & theater events. 
+Filtered Attraction: (id: 776), State Museum of Natural History, Cultural/Historical, Lincoln, Founded in 1871, this museum explores Nebraska's biodiversity & culture & also offers a planetarium. One of the nation's top natural history museums, learn about fossils, rocks, history, and more though exhibits and hands-on fun. View the world's largest fully mounted mammoth fossil. 
+Filtered Attraction: (id: 777), Fontenelle Forest, Nature/Outdoor, Bellevue, Natural area's hub with a museum, raptor rehabilitation, kids’ classes & indoor playground. 
+Filtered Attraction: (id: 778), Umami Asian Cuisine, Food, Bellevue, Popular, unassuming strip-mall eatery offering a wide sushi menu, plus classic Chinese & Thai fare. Online ordering menu for Umami Asian Cuisine.
+Filtered Attraction: (id: 779), Bob Kerrey Pedestrian Bridge., Nature/Outdoor, Omaha, Open to pedestrians & cyclists, this modern bridge crosses the Missouri River & connects 2 states. 
+Filtered Attraction: (id: 1396), Clark Lake Park, Cultural/Historical, Kearney, A scenic 130-acre park around a lake offering fishing, walking trails & public art displays.
+Filtered Attraction: (id: 1393), Big Apple Fun Center, Entertainment, Kearney, Big entertainment complex with laser tag, bowling, go-karts & more plus a sports bar with billiards.
+Filtered Attraction: (id: 1394), Chihuly Garden and Glass, Entertainment, Kearney, Art museum & sculpture garden showcasing Dale Chihuly's large, colorful glass works. Chihuly Garden and Glass is a museum in the Seattle Center showcasing the studio glass of Dale Chihuly.
+Filtered Attraction: (id: 1395), Clark County Historical Museum, Entertainment, Kearney, Local & regional history exhibits, including many Native American items & a research library.
+Filtered Attraction: (id: 1397), Duke's Seafood, Food, Kearney, Local chain serving market-fresh seafood, grass-fed burgers & cocktails in informal surroundings. Duke's Seafood Restaurant is a seven location Pacific NW seafood concept known for its Wild Seafood and Award Winning Chowder.
