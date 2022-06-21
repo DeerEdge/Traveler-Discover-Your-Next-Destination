@@ -341,9 +341,9 @@ class Ui_MainWindow(object):
                     if index != 0:
                         object_distance_QLabel = self.attractions_QScrollArea_widget_container.children()[index].findChild(QtWidgets.QLabel,
                                                                                                          'locationAndDistance').text()
-                        index_of_letter_m = object_distance_label.index("miles")
-                        index_of_hyphen = object_distance_label.index("-")
-                        if (float(object_distance_label[(index_of_hyphen + 1):(index_of_letter_m - 1)]) < float(self.radius_QComboBox.currentText()[10:12])):
+                        index_of_letter_m = object_distance_QLabel.index("miles")
+                        index_of_hyphen = object_distance_QLabel.index("-")
+                        if (float(object_distance_QLabel[(index_of_hyphen + 1):(index_of_letter_m - 1)]) < float(self.radius_QComboBox.currentText()[10:12])):
                             self.attractions_QScrollArea_widget_container.children()[index].show()
                         else:
                             self.attractions_QScrollArea_widget_container.children()[index].hide()
@@ -461,8 +461,8 @@ class Ui_MainWindow(object):
                 attraction = object.findChild(QtWidgets.QLabel, 'attractionName').text()
                 for object_2 in self.attractions_QScrollArea_widget_container.children():
                     try:
-                        if (groupBox.findChild(QtWidgets.QLabel, 'attractionName').text() == object.findChild(QtWidgets.QLabel, 'attractionName').text()):
-                            groupBox.findChild(QtWidgets.QToolButton, 'bookmark').setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+                        if (object_2.findChild(QtWidgets.QLabel, 'attractionName').text() == object.findChild(QtWidgets.QLabel, 'attractionName').text()):
+                            object_2.findChild(QtWidgets.QToolButton, 'bookmark').setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
                     except:
                         continue
                 object.deleteLater()
@@ -477,7 +477,7 @@ class Ui_MainWindow(object):
                 if (object.findChild(QtWidgets.QLabel, 'attractionName').text() == name):
                     for object_2 in self.attractions_QScrollArea_widget_container.children():
                         try:
-                            groupBox.findChild(QtWidgets.QToolButton, 'bookmark').setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+                            object_2.findChild(QtWidgets.QToolButton, 'bookmark').setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
                         except:
                             continue
                     object.deleteLater()

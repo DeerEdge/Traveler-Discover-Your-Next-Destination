@@ -1,14 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-20 Time Of Action: 06:34:53
-Selected State: Kentucky
-Selected City: Louisville
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-21 Time Of Action: 04:22:51
+Selected State: Minnesota
+Selected City: Rochester
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 523), Charlie Vettiner Park, Nature/Outdoor, Louisville, Besides an 18-hole golf course, this park offers sports fields, disc golf, a playground & dog run. 
-Filtered Attraction: (id: 526), Louisville Slugger Museum & Factory, Cultural/Historical, Louisville, A giant baseball bat marks this venue offering tours & exhibits on the sports-equipment icon. 
-Filtered Attraction: (id: 527), Locust Grove, Cultural/Historical, Louisville, Tours & exhibits at the circa 1792 mansion & former home of Louisville founder, George Rogers Clark. 
-Filtered Attraction: (id: 528), Louisville Zoo, Nature/Outdoor, Louisville, Modest-size zoo with habitats for gorillas, tigers & other animals, plus a splash park. 
-Filtered Attraction: (id: 535), Waterfront Park, Entertainment, Louisville, City destination with walking paths, water features, kids’ play areas, vast lawns & public art. 
-Filtered Attraction: (id: 542), Kentucky Science Center, Entertainment, Louisville, Kid-friendly science museum with hands-on exhibits, IMAX films, educational programs & more. 
+Filtered Attraction: (id: 670), History Center of Olmsted County, Cultural/Historical, Rochester, Local history museum on a 54-acre site with a gallery, archives & library, first set up in 1926. 
+Filtered Attraction: (id: 673), Chester's Kitchen & Bar, Food, Rochester, Modern destination features upscale American fare & cocktails in a stylish venue with patio seating. 
+Filtered Attraction: (id: 678), Quarry Hill Park, Nature/Outdoor, Rochester, Peaceful natural area with a nature center, trails, wildlife habitats & educational programming. 
+Filtered Attraction: (id: 683), Quarry Hill Nature Center, Nature/Outdoor, Rochester, Large park offering hiking trails, a man-made cave & a nature center with classes & live animals. 
+Filtered Attraction: (id: 689), Rochester Art Center, Entertainment, Rochester, Cultural center aimed at creating innovation & creativity through contemporary art. 
