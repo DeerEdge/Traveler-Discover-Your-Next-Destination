@@ -1,8 +1,8 @@
 # Traveler
 A simple, user-friendly, and powerful PyQt5 application made for the 2021-2022 FBLA Coding and Programming Challenge. 
 
-<img src="/README images/Application Title Window.png">
-<img src="/README images/Find Attractions Tab.png">
+<img src="/README%20images/Application%20Title%20Window.png">
+<img src="/README%20images/Find%20Attractions%20Tab.png">
 
 
 ## Setup

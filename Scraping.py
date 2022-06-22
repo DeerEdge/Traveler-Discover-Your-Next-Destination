@@ -16,6 +16,7 @@
 # - Long: Use Geopy Code.
 # - Image column: Thomas's Extension.
 
+#### Connect to database (b.s. it)
 import pandas as pd
 from bs4 import BeautifulSoup
 from geopy import geocoders
