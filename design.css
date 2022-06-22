@@ -1,7 +1,4 @@
 /* Tab Widget*/
-QTabWidget::pane {
-    background: #5883AD;
-}
 
 QTabWidget::tab-bar {
     alignment: center;
@@ -60,11 +57,16 @@ QTabBar::tab:right:!selected {
     margin-left: 3px;
 }
 
-/* Background */
-QWidget#display {
-    background-color: #5883AD;
+/* Background  5883AD*/
+QTabWidget::pane {
+    background: #2061A6;
 }
 
+QWidget#display {
+    background-color: #2061A6;
+}
+
+/*  #FFD942 */
 QGroupBox#backdrop{
     background-color: #FFD942;
     border-radius: 2px;
@@ -80,8 +82,6 @@ QLabel#numAttractions {
     color: #FFFFFF;
     font: 16px
 }
-
-
 
 QLabel#sortByLabel {
     color: #FFFFFF;
@@ -142,7 +142,7 @@ QLabel#locationAndDistance {
 }
 
 /* Sources tab text container */
-QLabel#sourcesLabel {
+QLabel#sources_title_QLabel {
     color: #FFFFFF;
     font: 16px
 }
@@ -157,8 +157,8 @@ QPlainTextEdit#sourcesText {
 }
 
 /* Documentation window */
-QLabel#documentationWindow {
-    background: #5883AD;
+QLabel#documentation_window {
+    background: #2061A6;
 }
 
 QLabel#documentationTitle {
@@ -178,12 +178,12 @@ QLabel#documentation {
 
 /* Expanded map window */
 QLabel#expanded_map_window {
-    background: #5883AD;
+    background: #2061A6;
 }
 
 /* User report window */
 QLabel#create_user_report_window {
-    background: #5883AD;
+    background: #2061A6;
 }
 
 QLabel#user_report_window_title {
@@ -200,6 +200,12 @@ QLabel#user_report_window_field_labels {
 
 QGroupBox#bookmarks_scrollArea_backdrop {
     background: #FFD942;
+}
+
+/* bookmarks topGroupBoxBar */
+QLabel#num_of_bookmark_results {
+    color: #FFFFFF;
+    font: 16px
 }
 
 

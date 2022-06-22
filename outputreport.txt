@@ -1,0 +1,13 @@
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-22 Time Of Action: 05:54:56
+Selected State: Nebraska
+Selected City: Scottsbluff
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 764), Riverside Discovery Center, Nature/Outdoor, Scottsbluff, Big cats, primates & other creatures, plus a petting zoo & splash-pad playground in summer months. 
+Filtered Attraction: (id: 769), Chimney Rock Museum, Cultural/Historical, Scottsbluff, Geologic formation with a landmark spire & visitor center with exhibits about westward migration. 
+Filtered Attraction: (id: 771), Runza Restaurant, Food, Scottsbluff, Fast-food chain known for namesake German sandwiches, plus burgers, onion rings & crinkle-cut fries. 
+Filtered Attraction: (id: 772), Scotts Bluff National Monument, Nature/Outdoor, Scottsbluff, Boasting remnants of the Oregon trail, this 3,000-acre park features unique rock formations. 
+Filtered Attraction: (id: 775), Midwest Theater, Entertainment, Scottsbluff, Restored 1946 entertainment hall hosting a variety of live music, movie & theater events. 

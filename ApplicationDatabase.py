@@ -48,7 +48,7 @@ def generateSQL(filters):
         sql += 'city = \'' + filters.city + '\''
     if filters.type is not None:
         checkClause()
-        sql += 'container = \'' + filters.type + '\''
+        sql += 'type = \'' + filters.type + '\''
     if filters.wheelchairAccess is not None:
         checkClause()
         sql += 'WHEELCHAIR_ACCESSIBILITY = ' + str(filters.wheelchairAccess)
