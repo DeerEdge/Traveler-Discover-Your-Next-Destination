@@ -1,8 +1,8 @@
 # Traveler
 A simple, user-friendly, and powerful PyQt5 application made for the 2021-2022 FBLA Coding and Programming Challenge. 
 
-<img src="/README images/Application Title Window.png">
-<img src="/README images/Find Attractions Tab.png">
+<img src="/README%20images/Application%20Title%20Window.png">
+<img src="/README%20images/Find%20Attractions%20Tab.png">
 
 
 ## Setup
@@ -54,7 +54,7 @@ CREATE INDEX IDX_FAMILY_FRIENDLY  ON ATTRACTION (FAMILY_FRIENDLY );
 CREATE INDEX IDX_PET_FRIENDLY ON ATTRACTION (PET_FRIENDLY);
 ALTER TABLE ATTRACTION ADD CONSTRAINT CHK_RATING CHECK (RATING >= 0 AND RATING <= 5)
 ```
-Highlighting everything and clicking the run button in the menu bar (triangle shaped), a database table is created. Within this database table, all the necessary attraction attribute columns are added. Now all that needs to be done is to load all the atttraction data. Download the file containing all of the attraction data in our data csv project file: [complete_data.md](https://github.com/DeerEdge/2022-FBLA-Nationals-Coding-and-Programming/blob/main/complete_data.csv)
+Highlighting everything and clicking the run button in the menu bar (triangle shaped), a database table is created. Within this database table, all the necessary attraction attribute columns are added. Now all that needs to be done is to load all the atttraction data. Download the file containing all of the attraction data in our data csv project file: [complete_data.csv](https://github.com/DeerEdge/2022-FBLA-Nationals-Coding-and-Programming/blob/main/complete_data.csv)
 
 
 

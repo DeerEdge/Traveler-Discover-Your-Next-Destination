@@ -135,7 +135,7 @@ class Ui_MainWindow(object):
         self.bookmark_icon.setObjectName("bookmark")
         self.bookmark_icon.setProperty("unactivated", True)
         self.bookmark_icon.setGeometry(10, 10, 30, 30)
-        self.bookmark_icon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+        self.bookmark_icon.setIcon(QtGui.QIcon("Application Pictures/Bookmark Icons/unchecked bookmark.png"))
         self.bookmark_icon.setIconSize(QtCore.QSize(512, 512))
         self.bookmark_icon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
 
@@ -546,7 +546,7 @@ class Ui_MainWindow(object):
         # If the bookmark is not selected, change it to activated, change its icon, add its bookmark to the bookmarks tab
         if (self.bookmark_icon.property("unactivated") == True):
             self.bookmark_icon.setProperty("unactivated", False)
-            self.bookmark_icon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/checked bookmark.png"))
+            self.bookmark_icon.setIcon(QtGui.QIcon("Application Pictures/Bookmark Icons/checked bookmark.png"))
             self.add_bookmark(_)
             if len(self.bookmarks_scrollArea_object_container.children()) == 2:
                 self.num_of_bookmarks_QLabel.setText(
@@ -560,7 +560,7 @@ class Ui_MainWindow(object):
         # If the bookmark is selected, change it to unactivated, change its icon, add remove bookmark from the bookmarks tab
         else:
             self.bookmark_icon.setProperty("unactivated", True)
-            self.bookmark_icon.setIcon(QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+            self.bookmark_icon.setIcon(QtGui.QIcon("Application Pictures/Bookmark Icons/unchecked bookmark.png"))
             self.remove_bookmark(_)
             if len(self.bookmarks_scrollArea_object_container.children()) == 3:
                 self.num_of_bookmarks_QLabel.setText(
@@ -581,7 +581,7 @@ class Ui_MainWindow(object):
                         if (object_2.findChild(QtWidgets.QLabel, 'attractionName').text() == object.findChild(
                                 QtWidgets.QLabel, 'attractionName').text()):
                             object_2.findChild(QtWidgets.QToolButton, 'bookmark').setIcon(
-                                QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+                                QtGui.QIcon("Application Pictures/Bookmark Icons/unchecked bookmark.png"))
                     except:
                         continue
                 object.deleteLater()
@@ -598,7 +598,7 @@ class Ui_MainWindow(object):
                     for object_2 in self.attractions_QScrollArea_widget_container.children():
                         try:
                             object_2.findChild(QtWidgets.QToolButton, 'bookmark').setIcon(
-                                QtGui.QIcon("./Application Pictures/Bookmark Icons/unchecked bookmark.png"))
+                                QtGui.QIcon("Application Pictures/Bookmark Icons/unchecked bookmark.png"))
                         except:
                             continue
                     object.deleteLater()
@@ -746,7 +746,7 @@ class Ui_MainWindow(object):
         self.bookmark_object_bookmark_icon.setProperty("unactivated", False)
         self.bookmark_object_bookmark_icon.setGeometry(10, 10, 30, 30)
         self.bookmark_object_bookmark_icon.setIcon(
-            QtGui.QIcon("./Application Pictures/Bookmark Icons/checked bookmark.png"))
+            QtGui.QIcon("Application Pictures/Bookmark Icons/checked bookmark.png"))
         self.bookmark_object_bookmark_icon.setIconSize(QtCore.QSize(512, 512))
         self.bookmark_object_bookmark_icon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
         self.bookmark_object_bookmark_icon.clicked.connect(self.control_bookmarks)
@@ -1646,7 +1646,7 @@ class Ui_MainWindow(object):
         self.search_attractions_button.setText(_translate("MainWindow", "Search"))
 
         self.search_bar_icon = QtWidgets.QLabel(self.attractions_QGroupBox_bar)
-        self.search_bar_icon.setPixmap(QtGui.QPixmap("./Application Pictures/magnifyingIcon.png"))
+        self.search_bar_icon.setPixmap(QtGui.QPixmap("Application Pictures/magnifyingIcon.png"))
         self.search_bar_icon.setScaledContents(True)
         self.search_bar_icon.setFixedSize(25, 25)
         self.search_bar_icon.move(171, 10)
@@ -1985,7 +1985,7 @@ class Ui_MainWindow(object):
         self.num_of_bookmarks_QLabel.setText("0 Total Bookmarks Saved")
         # Search Bar Icon
         self.bookmarks_tab_search_icon = QtWidgets.QLabel(self.bookmarks_tab_top_groupBox_bar)
-        self.bookmarks_tab_search_icon.setPixmap(QtGui.QPixmap("./Application Pictures/magnifyingIcon.png"))
+        self.bookmarks_tab_search_icon.setPixmap(QtGui.QPixmap("Application Pictures/magnifyingIcon.png"))
         self.bookmarks_tab_search_icon.setScaledContents(True)
         self.bookmarks_tab_search_icon.setFixedSize(25, 25)
         self.bookmarks_tab_search_icon.move(171, 10)

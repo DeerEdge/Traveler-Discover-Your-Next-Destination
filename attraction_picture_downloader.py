@@ -8,7 +8,7 @@ import shutil
 
 
 
-complete_data = pd.read_csv("kearney_final_data.csv")
+complete_data = pd.read_csv("final_data.csv")
 links = list(complete_data['image_link-src'].astype("str"))
 cities = list(complete_data['city'].astype("str"))
 
