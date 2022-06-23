@@ -550,10 +550,10 @@ class Ui_MainWindow(object):
             self.add_bookmark(_)
             if len(self.bookmarks_scrollArea_object_container.children()) == 2:
                 self.num_of_bookmarks_QLabel.setText(
-                    (str(len(self.bookmarks_scrollArea_object_container.children()) - 1) + " Total Bookmark"))
+                    (str(len(self.bookmarks_scrollArea_object_container.children()) - 1) + " Total Bookmark Saved"))
             else:
                 self.num_of_bookmarks_QLabel.setText(
-                    (str(len(self.bookmarks_scrollArea_object_container.children()) - 1) + " Total Bookmarks"))
+                    (str(len(self.bookmarks_scrollArea_object_container.children()) - 1) + " Total Bookmarks Saved"))
             self.bookmark_icon.setIconSize(QtCore.QSize(1024, 1024))
             self.bookmarks_scrollArea.setWidget(self.bookmarks_scrollArea_object_container)
 
@@ -564,10 +564,10 @@ class Ui_MainWindow(object):
             self.remove_bookmark(_)
             if len(self.bookmarks_scrollArea_object_container.children()) == 3:
                 self.num_of_bookmarks_QLabel.setText(
-                    (str(len(self.bookmarks_scrollArea_object_container.children()) - 2) + " Total Bookmark"))
+                    (str(len(self.bookmarks_scrollArea_object_container.children()) - 2) + " Total Bookmark Saved"))
             else:
                 self.num_of_bookmarks_QLabel.setText(
-                    (str(len(self.bookmarks_scrollArea_object_container.children()) - 2) + " Total Bookmarks"))
+                    (str(len(self.bookmarks_scrollArea_object_container.children()) - 2) + " Total Bookmarks Saved"))
             self.bookmark_icon.setIconSize(QtCore.QSize(1024, 1024))
         self.bookmark_icon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
 
@@ -587,7 +587,7 @@ class Ui_MainWindow(object):
                 object.deleteLater()
             except:
                 continue
-        self.num_of_bookmarks_QLabel.setText("0 Total Bookmarks")
+        self.num_of_bookmarks_QLabel.setText("0 Total Bookmarks Saved")
 
     # A function for the code to remove a function
     def remove_bookmark(self, _):
@@ -933,15 +933,17 @@ class Ui_MainWindow(object):
                 str(self.latitude_input.text())) and self.is_float(str(self.longitude_input.text()))):
             self.window = QtWidgets.QLabel()
             self.window.setFixedSize(800, 600)
-            self.window.setWindowTitle("Entered Location Map")
+            self.window.setWindowTitle("Location Map View")
+            self.window.setObjectName("location_map_window")
 
             self.central_widget = QtWidgets.QWidget(self.window)
             self.central_widget.setFixedSize(800, 600)
             self.central_widget.setObjectName("central_widget")
 
             self.expanded_map_container = QtWidgets.QGroupBox(self.central_widget)
-            self.expanded_map_container.setFixedSize(820, 610)
-            self.expanded_map_container.move(-10, 0)
+            self.expanded_map_container.setObjectName("expanded_map")
+            self.expanded_map_container.setFixedSize(820, 620)
+            self.expanded_map_container.move(-10, -10)
             self.expanded_map_container.setEnabled(True)
             self.expanded_map_container.setFlat(True)
 
@@ -966,6 +968,7 @@ class Ui_MainWindow(object):
 
             self.map_frame.addWidget(webView)
             self.window.show()
+
 
     # Allowing the user to open an enlarged map window
     def show_expanded_map_window(self, _):
@@ -1312,10 +1315,10 @@ class Ui_MainWindow(object):
                                                     "background-color: rgba(20, 52, 124, 170);"
                                                     "}"
                                                     "QComboBox QAbstractItemView {"
-                                                    "background-color: rgb(140, 140, 140);"
+                                                    "background-color: #3C4571;"
                                                     "color: white;"
                                                     "width: 200px;"
-                                                    "selection-background-color: lightgrey;"
+                                                    "selection-background-color: #0060AC;"
                                                     "}"
                                                     )
         self.title_window_state_input.setFont(QtGui.QFont("Arial", 14))
@@ -1378,7 +1381,7 @@ class Ui_MainWindow(object):
                                                "Baltimore",
                                                "Columbia"])
         self.title_window_state_input.addItem("Massachusetts",
-                                              ["Select a City", "Plymouth", "Springfield ", "Salem", "Worcester",
+                                              ["Select a City", "Plymouth", "Springfield", "Salem", "Worcester",
                                                "Boston"])
         self.title_window_state_input.addItem("Michigan",
                                               ["Select a City", "Detroit", "Grand Rapids", "Ann Arbor", "Lansing",
@@ -1487,10 +1490,10 @@ class Ui_MainWindow(object):
                                                    "background-color: rgba(20, 52, 124, 170);"
                                                    "}"
                                                    "QComboBox QAbstractItemView {"
-                                                   "background-color: rgb(140, 140, 140);"
-                                                   "color: white;"
-                                                   "width: 200px;"
-                                                   "selection-background-color: lightgrey;"
+                                                   "background-color: #3C4571;"
+                                                    "color: white;"
+                                                    "width: 200px;"
+                                                    "selection-background-color: #0060AC;"
                                                    "}"
                                                    )
         self.title_window_city_input.setFont(QtGui.QFont("Arial", 14))
@@ -1522,10 +1525,10 @@ class Ui_MainWindow(object):
                                                    "background-color: rgba(20, 52, 124, 170);"
                                                    "}"
                                                    "QComboBox QAbstractItemView {"
-                                                   "background-color: rgb(140, 140, 140);"
-                                                   "color: white;"
-                                                   "width: 200px;"
-                                                   "selection-background-color: lightgrey;"
+                                                   "background-color: #3C4571;"
+                                                    "color: white;"
+                                                    "width: 200px;"
+                                                    "selection-background-color: #0060AC;"
                                                    "}")
         self.title_window_type_input.setFont(QtGui.QFont("Arial", 14))
         self.title_window_type_input.addItems(
@@ -1979,6 +1982,7 @@ class Ui_MainWindow(object):
         # QLabel that displays the number of bookmarks attractions
         self.num_of_bookmarks_QLabel = self.create_QLabel("bookmarks_tab_top_groupBox_bar", 10, 20, 200, 20)
         self.num_of_bookmarks_QLabel.setObjectName("num_of_bookmark_results")
+        self.num_of_bookmarks_QLabel.setText("0 Total Bookmarks Saved")
         # Search Bar Icon
         self.bookmarks_tab_search_icon = QtWidgets.QLabel(self.bookmarks_tab_top_groupBox_bar)
         self.bookmarks_tab_search_icon.setPixmap(QtGui.QPixmap("./Application Pictures/magnifyingIcon.png"))

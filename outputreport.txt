@@ -1,13 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-22 Time Of Action: 05:54:56
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-22 Time Of Action: 15:11:33
 Selected State: Nebraska
-Selected City: Scottsbluff
+Selected City: Bellevue
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 764), Riverside Discovery Center, Nature/Outdoor, Scottsbluff, Big cats, primates & other creatures, plus a petting zoo & splash-pad playground in summer months. 
-Filtered Attraction: (id: 769), Chimney Rock Museum, Cultural/Historical, Scottsbluff, Geologic formation with a landmark spire & visitor center with exhibits about westward migration. 
-Filtered Attraction: (id: 771), Runza Restaurant, Food, Scottsbluff, Fast-food chain known for namesake German sandwiches, plus burgers, onion rings & crinkle-cut fries. 
-Filtered Attraction: (id: 772), Scotts Bluff National Monument, Nature/Outdoor, Scottsbluff, Boasting remnants of the Oregon trail, this 3,000-acre park features unique rock formations. 
-Filtered Attraction: (id: 775), Midwest Theater, Entertainment, Scottsbluff, Restored 1946 entertainment hall hosting a variety of live music, movie & theater events. 
+Filtered Attraction: (id: 761), Fun-Plex Waterpark & Rides, Entertainment, Bellevue, Family-friendly destination featuring a roller coaster, water rides, mini-golf, an arcade & more. 
+Filtered Attraction: (id: 763), Omaha's Henry Doorly Zoo and Aquarium, Entertainment, Bellevue, Dome containing species habitats such as the world's largest indoor rainforest & desert ecosystem. 
+Filtered Attraction: (id: 765), Haworth Park, Nature/Outdoor, Bellevue, 1929 city park with flower beds, mature ornamental trees & extensive lawned space. 
+Filtered Attraction: (id: 777), Fontenelle Forest, Nature/Outdoor, Bellevue, Natural area's hub with a museum, raptor rehabilitation, kids’ classes & indoor playground. 
+Filtered Attraction: (id: 778), Umami Asian Cuisine, Food, Bellevue, Popular, unassuming strip-mall eatery offering a wide sushi menu, plus classic Chinese & Thai fare. 

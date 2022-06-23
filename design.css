@@ -118,6 +118,10 @@ QLabel#filters {
     font: 15px;
 }
 
+QLabel#location_map_window {
+    background: #2061A6;
+}
+
 QComboBox#filterComboboxes {
     border: 1px black;
     border-radius: 2px;
