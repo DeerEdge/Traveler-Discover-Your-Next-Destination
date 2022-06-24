@@ -1,13 +1,12 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-22 Time Of Action: 15:11:33
-Selected State: Nebraska
-Selected City: Bellevue
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-24 Time Of Action: 05:38:44
+Selected State: Maryland
+Selected City: Gaithersburg
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 761), Fun-Plex Waterpark & Rides, Entertainment, Bellevue, Family-friendly destination featuring a roller coaster, water rides, mini-golf, an arcade & more. 
-Filtered Attraction: (id: 763), Omaha's Henry Doorly Zoo and Aquarium, Entertainment, Bellevue, Dome containing species habitats such as the world's largest indoor rainforest & desert ecosystem. 
-Filtered Attraction: (id: 765), Haworth Park, Nature/Outdoor, Bellevue, 1929 city park with flower beds, mature ornamental trees & extensive lawned space. 
-Filtered Attraction: (id: 777), Fontenelle Forest, Nature/Outdoor, Bellevue, Natural area's hub with a museum, raptor rehabilitation, kids’ classes & indoor playground. 
-Filtered Attraction: (id: 778), Umami Asian Cuisine, Food, Bellevue, Popular, unassuming strip-mall eatery offering a wide sushi menu, plus classic Chinese & Thai fare. 
+Filtered Attraction: (id: 593), Ixtapalapa Taqueria, Food, Gaithersburg, Tacos & Mexican small plates are offered from a counter with popsicles, beer & a few cocktails. Ixtapalapa Taqueria is serving authentic tacos, ice cold beer and a casual 
+atmosphere to the DMV from Gaithersburg, Maryland.
+Filtered Attraction: (id: 602), Centennial Park, Nature/Outdoor, Gaithersburg, County park built around a lake, offering a running trail, boating, fishing & diverse ecosystems. 
+Filtered Attraction: (id: 614), Sky Zone Trampoline Park, Entertainment, Gaithersburg, Chain of indoor trampoline parks featuring freestyle bouncing, dodgeball, fitness programs & more. We're the originators of wall-to-wall aerial action. Our exciting indoor trampoline parks feature a variety of attractions & programs and offer birthday party & event hosting services. Find a park near you!
