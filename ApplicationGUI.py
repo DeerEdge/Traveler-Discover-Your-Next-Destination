@@ -902,10 +902,17 @@ class Ui_MainWindow(object):
         self.documentation_window.show()
 
     def show_QandA_window(self, _):
+
         self.QandA_window = QtWidgets.QLabel()
         self.QandA_window.setObjectName("QandA_window")
         self.QandA_window.setFixedSize(800, 600)
         self.QandA_window.setWindowTitle("Frequently Asked Questions and their Answers")
+
+        combobox1 = QtWidgets.QComboBox(self.QandA_window)
+        combobox1.addItem('One')
+        combobox1.addItem('Two')
+        combobox1.addItem('Three')
+        combobox1.addItem('Four')
 
         self.QandA_window_central_widget = QtWidgets.QWidget(self.QandA_window)
         self.QandA_window_central_widget.setFixedSize(800, 600)
