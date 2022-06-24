@@ -1,13 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-24 Time Of Action: 07:12:13
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-24 Time Of Action: 11:07:12
 Selected State: Mississippi
-Selected City: Gulfport
+Selected City: Jackson
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 700), Ship Island Excursions, Entertainment, Gulfport, Cruises to Ship Island & Civil War-era Fort Massachusetts, with a chance to spot dolphins on route.
-Filtered Attraction: (id: 704), Shrimp Basket Gulfport, Food, Gulfport, Informal chain outpost offering a variety of fried seafood dishes & an oyster bar. 
-Filtered Attraction: (id: 707), Gulf Islands Waterpark, Entertainment, Gulfport, Huge seasonal waterpark with slides, rides & pools plus cafes & rental cabanas amid an island theme.
-Filtered Attraction: (id: 708), Lynn Meadows Discovery Center, Entertainment, Gulfport, Children's museum in a circa-1916 former school with interactive exhibits, outdoor play area & more. 
-Filtered Attraction: (id: 709), Mississippi Coast Model Railroad Museum, Cultural/Historical, Gulfport, 3 elaborate model-train table setups in different scales, plus outdoor displays & toys. 
+Filtered Attraction: (id: 699), Mississippi Museum of Art, Entertainment, Jackson, State's largest art museum with galleries, cafe, outdoor garden, performance stage & free admission. 
+Filtered Attraction: (id: 703), Mississippi Agriculture and Forestry Museum, Cultural/Historical, Jackson, A living-history farm, a recreated 1920s cotton-economy-era town & local historical artifacts. 
+Filtered Attraction: (id: 706), Bully's Soul Food Restaurant, Food, Jackson, Hearty Southern eats, from beef ribs to fried chicken & catfish, in unpretentious surroundings. 
+Filtered Attraction: (id: 711), Mississippi Children's Museum, Entertainment, Jackson, Interactive exhibits, activities & programs for kids focusing on arts, history, health & science. 
+Filtered Attraction: (id: 712), Mississippi Museum of Natural Science, Cultural/Historical, Jackson, Indoor/outdoor natural science museum in a state park with an aquarium, greenhouse, exhibits & more. 

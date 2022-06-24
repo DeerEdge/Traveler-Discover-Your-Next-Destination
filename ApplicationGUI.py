@@ -5,6 +5,8 @@ import io
 from random import random
 
 import folium
+from PyQt5.QtCore import QUrl
+
 import ApplicationDatabase
 import ApplicationFilterRequest
 import sys
@@ -14,9 +16,9 @@ from ipregistry import IpregistryClient
 from time import gmtime, strftime
 from operator import itemgetter
 # PyQt5 v5.15.6 - Used to create interface and all visual components.
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets, QtWebEngineWidgets
 # PyQtWebEngine v5.15.5 - Used to display web widgets. Folium maps are displayed using this library.
-from PyQt5.QtWebEngineWidgets import QWebEngineView
+from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEngineSettings
 # geopy v2.2.0 - Used to calculate distance between two points using latitude and longitude values.
 from geopy import distance
 # import module2
@@ -967,13 +969,24 @@ class Ui_MainWindow(object):
         self.documentation_QLabel.setText("Documentation")
         self.documentation_QLabel.setObjectName("documentationTitle")
 
-        self.documentation = QtWidgets.QPlainTextEdit(self.documentation_window_QGroupBox)
-        self.documentation.setObjectName("documentation")
-        self.documentation.setFixedSize(780, 550)
-        self.documentation.move(2, 2)
-        text = open('documentation.txt').read()
-        self.documentation.setPlainText(text)
-        self.documentation.setReadOnly(True)
+        filename = os.path.abspath('Application Files/FBLA Manual + Documentation.pdf')
+        view = QtWebEngineWidgets.QWebEngineView(self.documentation_window_QGroupBox)
+        settings = view.settings()
+        settings.setAttribute(QtWebEngineWidgets.QWebEngineSettings.PluginsEnabled, True)
+        url = QtCore.QUrl.fromLocalFile(filename)
+        view.load(url)
+        view.resize(780, 550)
+        view.move(2,2)
+        view.show()
+
+        # self.documentation = QtWidgets.QPlainTextEdit(self.documentation_window_QGroupBox)
+        # self.documentation.setObjectName("documentation")
+        # self.documentation.setFixedSize(780, 550)
+        # self.documentation.move(2, 2)
+        # text = open('documentation.txt').read()
+        # self.documentation.setPlainText(text)
+        # self.documentation.setReadOnly(True)
+
         self.documentation_window.show()
 
     def show_QandA_window(self, _):
@@ -2148,6 +2161,7 @@ class Ui_MainWindow(object):
         self.retranslateUI(MainWindow)
         self.tab_widget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
 
     # Changing the sort by dropdown to "Nearest attractions", if the user chooses to sort by distance
     def changeSortingToDistance(self):
