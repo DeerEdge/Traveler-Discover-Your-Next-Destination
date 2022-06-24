@@ -5,6 +5,7 @@ import io
 import folium
 import ApplicationDatabase
 import ApplicationFilterRequest
+import sys
 
 # ipregistry v3.2.0 - Used to find current location of the user when called
 from ipregistry import IpregistryClient
@@ -16,8 +17,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 # geopy v2.2.0 - Used to calculate distance between two points using latitude and longitude values.
 from geopy import distance
-# import module
+# import module2
 from geopy.geocoders import Nominatim
+
 
 geolocator = Nominatim(user_agent="geoapiExercises")
 # Connect to ip finder as a client in order to get information about the ip
@@ -431,6 +433,7 @@ class Ui_MainWindow(object):
             if (self.radius_QComboBox.currentText() != "Any distance"):
                 # The total count of all attraction objects being displayed within attraction_QScrollArea
                 count_of_objects_shown = len(self.attractions_QScrollArea_widget_container.children()) - 1
+
 
                 for index in range(len(self.attractions_QScrollArea_widget_container.children())):
                     if index != 0:

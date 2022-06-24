@@ -1,13 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-22 Time Of Action: 15:11:33
-Selected State: Nebraska
-Selected City: Bellevue
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-24 Time Of Action: 03:17:54
+Selected State: Michigan
+Selected City: Lansing
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 761), Fun-Plex Waterpark & Rides, Entertainment, Bellevue, Family-friendly destination featuring a roller coaster, water rides, mini-golf, an arcade & more. 
-Filtered Attraction: (id: 763), Omaha's Henry Doorly Zoo and Aquarium, Entertainment, Bellevue, Dome containing species habitats such as the world's largest indoor rainforest & desert ecosystem. 
-Filtered Attraction: (id: 765), Haworth Park, Nature/Outdoor, Bellevue, 1929 city park with flower beds, mature ornamental trees & extensive lawned space. 
-Filtered Attraction: (id: 777), Fontenelle Forest, Nature/Outdoor, Bellevue, Natural area's hub with a museum, raptor rehabilitation, kids’ classes & indoor playground. 
-Filtered Attraction: (id: 778), Umami Asian Cuisine, Food, Bellevue, Popular, unassuming strip-mall eatery offering a wide sushi menu, plus classic Chinese & Thai fare. 
+Filtered Attraction: (id: 641), Acapulco Mexican Grill Lansing, Food, Lansing, Familiar Mexican dishes are given typical American makeovers at this relaxed & colorful restaurant. 
+Filtered Attraction: (id: 645), Impression 5 Science Center, Entertainment, Lansing, Long-running science center offers hands-on exhibits & more than 150+ educational play activities. 
+Filtered Attraction: (id: 650), Potter Park Zoo, Nature/Outdoor, Lansing, Home to 500 animals from 4 continents including endangered species, plus on-site eatery & snack bar. 
+Filtered Attraction: (id: 651), R.E. Olds Transportation Museum, Cultural/Historical, Lansing, Museum with vehicles from as early as 1886 plus bicycles, tractors & other forms of transportation. 
+Filtered Attraction: (id: 664), Eli and Edythe Broad Art Museum, Cultural/Historical, Lansing, Contemporary art exhibits featuring international works against a backdrop of striking architecture. 
