@@ -1,13 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-24 Time Of Action: 03:17:54
-Selected State: Michigan
-Selected City: Lansing
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-24 Time Of Action: 07:12:13
+Selected State: Mississippi
+Selected City: Gulfport
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 641), Acapulco Mexican Grill Lansing, Food, Lansing, Familiar Mexican dishes are given typical American makeovers at this relaxed & colorful restaurant. 
-Filtered Attraction: (id: 645), Impression 5 Science Center, Entertainment, Lansing, Long-running science center offers hands-on exhibits & more than 150+ educational play activities. 
-Filtered Attraction: (id: 650), Potter Park Zoo, Nature/Outdoor, Lansing, Home to 500 animals from 4 continents including endangered species, plus on-site eatery & snack bar. 
-Filtered Attraction: (id: 651), R.E. Olds Transportation Museum, Cultural/Historical, Lansing, Museum with vehicles from as early as 1886 plus bicycles, tractors & other forms of transportation. 
-Filtered Attraction: (id: 664), Eli and Edythe Broad Art Museum, Cultural/Historical, Lansing, Contemporary art exhibits featuring international works against a backdrop of striking architecture. 
+Filtered Attraction: (id: 700), Ship Island Excursions, Entertainment, Gulfport, Cruises to Ship Island & Civil War-era Fort Massachusetts, with a chance to spot dolphins on route.
+Filtered Attraction: (id: 704), Shrimp Basket Gulfport, Food, Gulfport, Informal chain outpost offering a variety of fried seafood dishes & an oyster bar. 
+Filtered Attraction: (id: 707), Gulf Islands Waterpark, Entertainment, Gulfport, Huge seasonal waterpark with slides, rides & pools plus cafes & rental cabanas amid an island theme.
+Filtered Attraction: (id: 708), Lynn Meadows Discovery Center, Entertainment, Gulfport, Children's museum in a circa-1916 former school with interactive exhibits, outdoor play area & more. 
+Filtered Attraction: (id: 709), Mississippi Coast Model Railroad Museum, Cultural/Historical, Gulfport, 3 elaborate model-train table setups in different scales, plus outdoor displays & toys. 
