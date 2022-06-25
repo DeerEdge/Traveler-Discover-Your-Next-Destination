@@ -25,6 +25,8 @@ from geopy import distance
 from geopy.geocoders import Nominatim
 
 
+
+
 geolocator = Nominatim(user_agent="geoapiExercises")
 # Connect to ip finder as a client in order to get information about the ip
 client = IpregistryClient("72bw4jakulj27ism")
@@ -156,6 +158,7 @@ class Ui_MainWindow(object):
         global location_and_filters_QGroupBox
         global attraction_QScrollArea_object
         global attractions_QGroupBox_bar
+
 
         # Creates and associates QComboBox to specified container
         if container == "location_and_filters_QGroupBox":
@@ -480,7 +483,7 @@ class Ui_MainWindow(object):
         # formed. Changes in filters updates the filtered database based on the new set of filters
         filtered_attractions = application_database.getAttractions(
             filters=application_filter_request.FilterRequest(attribute_list[0], attribute_list[1], attribute_list[2],
-                                                             attribute_list[3], attribute_list[4], attribute_list[5]))
+                                                           attribute_list[3], attribute_list[4], attribute_list[5]))
         filtered_attractions_list = filtered_attractions
 
         # Selective display of singular or plural "Attraction" + "Found"
@@ -981,6 +984,17 @@ class Ui_MainWindow(object):
 
     def show_QandA_window(self, _):
 
+        all_questions = [["Does the attraction finder cover all states?", "Yes, this application suggests attractions from all 50 states, covering each state’s largest cities."],
+                         ["Can I download my suggested attractions for further use?", "Yes, when running our application, we generate an output report for your further use."],
+                         ["How can I suggest an edit to an attraction?", "On the main window, the help menu offers you the ability to create a report. This gives you the option to tell us of an error by generating a user report."],
+                         ["I need some more information on the program.", "Sure, we have created a file for documentation of our program. Visit the help menu for program documentation."],
+                         ["How do I use the ‘my location’ feature?", "Our application is able to take your location and use it when looking for nearest attractions. By changing the sorting dropdown in the top right, you can sort attractions based on their distance to you. Each displayed attraction will also tell you its physical distance from you."],
+                         ["Why do some features not work?", "Most likely, you may have some wifi problems that prevent full use of internet features, such as finding your location and redirecting you to each attraction’s homepage. \nYou can also generate a user report in the event you encounter an error. \nWe also have created a documentation file that covers required libraries, system requirements, and more."],
+                         ["How do I find attractions close to where I am?", "You can do this by navigating to the location details window and selecting an option in the dropout menu under the area labelled \"Desired Distance From You.\""],
+                         ["How do I filter for whether attractions are pet friendly?", "You can do this by navigating to the \"Filter By:\" area and checking the box on the pet friendly option."],
+                         ["How do I find out how expensive it is to visit an attraction?", "This may be done by navigating to the center area where all the attractions are displayed and looking at the price rating. The price of an attraction is displayed as $, $$ or $$$."]]
+
+
         self.QandA_window = QtWidgets.QLabel()
         self.QandA_window.setObjectName("QandA_window")
         self.QandA_window.setFixedSize(800, 600)
@@ -989,22 +1003,65 @@ class Ui_MainWindow(object):
         self.QandA_window_central_widget = QtWidgets.QWidget(self.QandA_window)
         self.QandA_window_central_widget.setFixedSize(800, 600)
 
+        self.QandA_search_bar = QtWidgets.QLineEdit(self.QandA_window_central_widget)
+        self.QandA_search_bar.setObjectName("search_bar")
+        self.QandA_search_bar.setStyleSheet("font: 14px")
+        self.QandA_search_bar.setGeometry(QtCore.QRect(200, 8, 301, 30))
+        self.QandA_search_bar.setPlaceholderText("Search by Keyword")
+
+        self.QandA_search_attractions_button = QtWidgets.QToolButton(self.QandA_window_central_widget)
+        self.QandA_search_attractions_button.setGeometry(QtCore.QRect(500, 9, 55, 28))
+        self.QandA_search_attractions_button.setText("Search")
+        self.QandA_search_attractions_button.clicked.connect(self.search_QandA)
+
+        self.QandA_search_bar_icon = QtWidgets.QLabel(self.QandA_window_central_widget)
+        self.QandA_search_bar_icon.setPixmap(QtGui.QPixmap("Application Pictures/magnifyingIcon.png"))
+        self.QandA_search_bar_icon.setScaledContents(True)
+        self.QandA_search_bar_icon.setFixedSize(25, 25)
+        self.QandA_search_bar_icon.move(171, 10)
+        self.QandA_search_bar_icon.show()
+
+
+        self.QandA_clear_search_bar_button = QtWidgets.QToolButton(self.QandA_window_central_widget)
+        self.QandA_clear_search_bar_button.setGeometry(QtCore.QRect(554, 9, 55, 28))
+        self.QandA_clear_search_bar_button.setText("Clear")
+        self.QandA_clear_search_bar_button.clicked.connect(self.clear_QandA_search_bar)
+
+
         scroll = QtWidgets.QScrollArea(self.QandA_window_central_widget)
         content = QtWidgets.QWidget()
         scroll.setWidget(content)
         scroll.setWidgetResizable(True)
+        scroll.resize(784, 500)
+        scroll.move(8, 100)
         vlay = QtWidgets.QVBoxLayout(content)
-        for i in range(10):
-            box = CollapsibleBox("Collapsible Box Header-{}".format(i))
+        for element in all_questions:
+            box = CollapsibleBox(element[0])
+            box.thetext = element[0]
             vlay.addWidget(box)
             lay = QtWidgets.QVBoxLayout()
-            for j in range(8):
-                label = QtWidgets.QLabel("{}".format(j))
-                label.setAlignment(QtCore.Qt.AlignCenter)
-                lay.addWidget(label)
+
+            label = QtWidgets.QLabel(element[1])
+            #label.setAlignment(QtCore.Qt.AlignCenter)
+            label.setWordWrap(True)
+            width = 0
+            if len(element[1]) <= 110:
+                width = 30
+            if len(element[1]) < 200 and len(element[1]) > 110:
+                width = 60
+            if len(element[1]) >= 200:
+                width = 100
+            label.setFixedSize(700, width)
+            print(len(element[1]))
+            lay.addWidget(label)
 
             box.setContentLayout(lay)
         vlay.addStretch()
+
+        self.QandA_no_questions_match = QtWidgets.QLabel(self.QandA_window_central_widget)
+        self.QandA_no_questions_match.setFixedSize(500, 50)
+        self.QandA_no_questions_match.move(200, 150)
+
 
         # self.QandA_window_QGroupBox = QtWidgets.QGroupBox(self.QandA_window_central_widget)
         # self.QandA_window_QGroupBox.setFixedSize(784, 554)
@@ -1163,6 +1220,31 @@ class Ui_MainWindow(object):
         for index in range(len(self.bookmarks_scrollArea_object_container.children())):
             if index != 0:
                 self.bookmarks_scrollArea_object_container.children()[index].show()
+
+    # The ability to search for questions in the QnA menu
+    def search_QandA(self, _):
+        number_of_question_shown = len(self.QandA_window_central_widget.children()[4].children()[0].children()[0].children()) - 1
+        for index in range(len(self.QandA_window_central_widget.children()[4].children()[0].children()[0].children())):
+            if index != 0:
+                if (self.QandA_search_bar.text().lower()) in (self.QandA_window_central_widget.children()[4].children()[0].children()[0].findChildren(CollapsibleBox)[index-1].thetext.lower()):
+                    self.QandA_window_central_widget.children()[4].children()[0].children()[0].children()[index].show()
+                else:
+                    self.QandA_window_central_widget.children()[4].children()[0].children()[0].children()[index].hide()
+                    number_of_question_shown = number_of_question_shown - 1
+
+        if number_of_question_shown == 0:
+            self.QandA_no_questions_match.setText("Sorry, we couldn't find any questions related to your search.")
+        else:
+            self.QandA_no_questions_match.setText("")
+
+
+    # The ability to clear the search bar in the QnA menu
+    def clear_QandA_search_bar(self, _):
+        self.QandA_search_bar.setText("")
+        for index in range(len(self.QandA_window_central_widget.children()[4].children()[0].children()[0].children())):
+            if index != 0:
+                self.QandA_window_central_widget.children()[4].children()[0].children()[0].children()[index].show()
+        self.QandA_no_questions_match.setText("")
 
     # The code to create a user report text file
     def create_report_file(self, _):
@@ -2199,6 +2281,7 @@ class Ui_MainWindow(object):
 # Running the application
 if __name__ == "__main__":
     # Clear all user action logs
+
     with open("outputreport.txt", "r+") as f:
         f.seek(0)
         f.truncate()
@@ -2214,4 +2297,3 @@ if __name__ == "__main__":
     ui.setup_title_window(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
