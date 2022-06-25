@@ -314,29 +314,22 @@ class Ui_MainWindow(object):
         else:
             self.busyness_QLabel.setText("Very Busy")
 
-        # A QLabel is created to display whether an attraction is wheelchair accessible
-        self.wheelchair_accessibility_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos + 170,
-                                                                  labelYPos + 20, 200, 50)
+        # A QLabel is created to display whether an attraction is
+        # wheelchair accessible / family friendly / pet friendly
+        wheelchair_family_pet_values = ""
+
         if ((attraction[9])):
-            self.wheelchair_accessibility_QLabel.setText("Wheelchair Accessible? - Yes")
-        else:
-            self.wheelchair_accessibility_QLabel.setText("Wheelchair Accessible? - No")
+            wheelchair_family_pet_values = wheelchair_family_pet_values + "Wheelchair Accessible" + "\n"
 
-        # A QLabel is created to display whether an attraction is family friendly
-        self.family_friendly_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos + 170,
-                                                         labelYPos + 40, 200, 50)
         if ((attraction[10])):
-            self.family_friendly_QLabel.setText("Family Friendly? - Yes")
-        else:
-            self.family_friendly_QLabel.setText("Family Friendly? - No")
+            wheelchair_family_pet_values = wheelchair_family_pet_values + "Family Friendly" + "\n"
 
-        # A QLabel is created to display whether an attraction is pet friendly
-        self.pet_friendly_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos + 170, labelYPos + 60,
-                                                      200, 50)
         if ((attraction[11])):
-            self.pet_friendly_QLabel.setText("Pet Friendly? - Yes")
-        else:
-            self.pet_friendly_QLabel.setText("Pet Friendly? - No")
+            wheelchair_family_pet_values = wheelchair_family_pet_values + "Pet Friendly"
+
+        self.wheelchair_family_pet_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos + 170,
+                                                               labelYPos + 20, 200, 50)
+        self.wheelchair_family_pet_QLabel.setText(wheelchair_family_pet_values)
 
         # A QLabel is created to display the coordinate location of the attraction (latitude, longitude)
         self.coordinate_location_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos, labelYPos + 80,
@@ -596,29 +589,17 @@ class Ui_MainWindow(object):
         if self.sorting_QComboBox.currentText() == "Nearest attractions":
             filtered_attractions_list.sort(key=calculate_distance_to_entered_location)
 
-        # Sorting by lowest rating
-        if self.sorting_QComboBox.currentText() == "Rating: Lowest to Highest":
-            filtered_attractions_list.sort(key=itemgetter(8), reverse=False)
-
         # Sorting by highest rating
-        if self.sorting_QComboBox.currentText() == "Rating: Highest to Lowest":
+        if self.sorting_QComboBox.currentText() == "Highest rated":
             filtered_attractions_list.sort(key=itemgetter(8), reverse=True)
 
         # Sorting by lowest price
-        if self.sorting_QComboBox.currentText() == "Price: Lowest to Highest":
+        if self.sorting_QComboBox.currentText() == "Lowest price":
             filtered_attractions_list.sort(key=itemgetter(6), reverse=False)
 
-        # Sorting by highest price
-        if self.sorting_QComboBox.currentText() == "Price: Highest to Lowest":
-            filtered_attractions_list.sort(key=itemgetter(6), reverse=True)
-
         # Sorting by lowest traffic
-        if self.sorting_QComboBox.currentText() == "Traffic: Lowest to Highest":
+        if self.sorting_QComboBox.currentText() == "Lowest traffic":
             filtered_attractions_list.sort(key=itemgetter(7), reverse=False)
-
-        # Sorting by highest traffic
-        if self.sorting_QComboBox.currentText() == "Traffic: Highest to Lowest":
-            filtered_attractions_list.sort(key=itemgetter(7), reverse=True)
 
     # Changes to bookmark icon when it is clicked
     def control_bookmarks(self, _):
@@ -771,30 +752,21 @@ class Ui_MainWindow(object):
         else:
             self.bookmarks_tab_busyness_label.setText("Very Busy")
 
-        # Display the bookmarked attraction's wheelchair accessibility
-        self.bookmarks_tab_wheelchair_accessibility_label = self.create_QLabel("bookmarks_tab_QScrollArea_object",
-                                                                               labelXPos + 170, labelYPos + 20, 200,
-                                                                               50)
+        # A QLabel is created on the bookmarks tab to display whether an attraction is
+        # wheelchair accessible / family friendly / pet friendly
+        bookmark_wheelchair_family_pet_values = ""
         if ((attraction[9])):
-            self.bookmarks_tab_wheelchair_accessibility_label.setText("Wheelchair Accessible? - Yes")
-        else:
-            self.bookmarks_tab_wheelchair_accessibility_label.setText("Wheelchair Accessible? - No")
+            bookmark_wheelchair_family_pet_values = bookmark_wheelchair_family_pet_values + "Wheelchair Accessible" + "\n"
 
-        # Display the bookmarked attraction's family friendliness
-        self.bookmarks_tab_family_friendly_label = self.create_QLabel("bookmarks_tab_QScrollArea_object",
-                                                                      labelXPos + 170, labelYPos + 40, 200, 50)
         if ((attraction[10])):
-            self.bookmarks_tab_family_friendly_label.setText("Family Friendly? - Yes")
-        else:
-            self.bookmarks_tab_family_friendly_label.setText("Family Friendly? - No")
+            bookmark_wheelchair_family_pet_values = bookmark_wheelchair_family_pet_values + "Family Friendly" + "\n"
 
-        # Display the bookmarked attraction's pet friendliness
-        self.bookmarks_tab_pet_friendly_label = self.create_QLabel("bookmarks_tab_QScrollArea_object", labelXPos + 170,
-                                                                   labelYPos + 60, 200, 50)
         if ((attraction[11])):
-            self.bookmarks_tab_family_friendly_label.setText("Pet Friendly? - Yes")
-        else:
-            self.bookmarks_tab_family_friendly_label.setText("Pet Friendly? - No")
+            bookmark_wheelchair_family_pet_values = bookmark_wheelchair_family_pet_values + "Pet Friendly"
+
+        self.bookmark_wheelchair_family_pet_QLabel = self.create_QLabel("bookmarks_tab_QScrollArea_object", labelXPos + 170,
+                                                               labelYPos + 20, 200, 50)
+        self.bookmark_wheelchair_family_pet_QLabel.setText(bookmark_wheelchair_family_pet_values)
 
         # Display the bookmarked attraction's coordinates
         self.bookmarks_tab_coordinate_location_label = self.create_QLabel("bookmarks_tab_QScrollArea_object", labelXPos,
@@ -1052,9 +1024,7 @@ class Ui_MainWindow(object):
             if len(element[1]) >= 200:
                 width = 100
             label.setFixedSize(700, width)
-            print(len(element[1]))
             lay.addWidget(label)
-
             box.setContentLayout(lay)
         vlay.addStretch()
 
@@ -1807,12 +1777,9 @@ class Ui_MainWindow(object):
         self.sorting_QComboBox.setObjectName("sorting_QComboBox")
         self.sorting_QComboBox.addItems(["Recommended",
                                          "Nearest attractions",
-                                         "Rating: Highest to Lowest",
-                                         "Rating: Lowest to Highest",
-                                         "Price: Highest to Lowest",
-                                         "Price: Lowest to Highest",
-                                         "Traffic: Highest to Lowest",
-                                         "Traffic: Lowest to Highest"])
+                                         "Highest rated",
+                                         "Lowest price",
+                                         "Lowest traffic"])
         self.sorting_QComboBox.activated.connect(self.get_current_filter_field_values)
 
         # Search Field and Search Button
