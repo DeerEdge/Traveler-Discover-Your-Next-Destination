@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/Attraction Data Scraping Programs/Scraping.py" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Attraction Data Scraping Programs/attraction_picture_downloader.py" charset="ISO-8859-1" />
-    <file url="file://$PROJECT_DIR$/Attraction Data Scraping Programs/attraction_picture_downloader.py" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/Scraping.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/attraction_picture_downloader.py" charset="ISO-8859-1" />
   </component>
 </project>

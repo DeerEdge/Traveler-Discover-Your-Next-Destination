@@ -1,0 +1,7 @@
+FAQ 1:
+- How do I find attractions close to where I am?
+    - You can do this by navigating to the location details window and selecting an option in the dropout menu under the area labelled "Desired DIstance From You"
+- How do I filter for whether attractions are pet friendly?
+    - You can do this by navigating to the "Filter By:" area and checking the box on the pet friendly option.
+- How do I find out how expensive it is to visit an attraction?
+    - This may be done by navigating to the center area where all the attractions are displayed and looking at the price rating. It should be $, $$, $$$, $$$$.
