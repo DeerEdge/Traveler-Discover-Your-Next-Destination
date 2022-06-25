@@ -39,7 +39,8 @@ class CollapsibleBox(QtWidgets.QWidget):
         self.toggle_button = QtWidgets.QToolButton(
             text=title, checkable=True, checked=False
         )
-        self.toggle_button.setStyleSheet("QToolButton { border: none; }")
+        self.toggle_button.setFixedWidth(758)
+        # self.toggle_button.setStyleSheet("QToolButton { border: none; }")
         self.toggle_button.setToolButtonStyle(
             QtCore.Qt.ToolButtonTextBesideIcon
         )
@@ -964,25 +965,56 @@ class Ui_MainWindow(object):
                          ["Why do some features not work?", "Most likely, you may have some wifi problems that prevent full use of internet features, such as finding your location and redirecting you to each attraction’s homepage. \nYou can also generate a user report in the event you encounter an error. \nWe also have created a documentation file that covers required libraries, system requirements, and more."],
                          ["How do I find attractions close to where I am?", "You can do this by navigating to the location details window and selecting an option in the dropout menu under the area labelled \"Desired Distance From You.\""],
                          ["How do I filter for whether attractions are pet friendly?", "You can do this by navigating to the \"Filter By:\" area and checking the box on the pet friendly option."],
-                         ["How do I find out how expensive it is to visit an attraction?", "This may be done by navigating to the center area where all the attractions are displayed and looking at the price rating. The price of an attraction is displayed as $, $$ or $$$."]]
+                         ["How do I find out how expensive it is to visit an attraction?", "This may be done by navigating to the center area where all the attractions are displayed and looking at the price rating. The price of an attraction is displayed as $, $$ or $$$."],
+                         ["Where are the sources used in this application provided?", "All sources can by found by navigating to the Sources, Licenses, and References tab positioned to the right of the Bookmarked Attractions tab."],
+                         ["How can I bookmark attractions?", "To bookmark a specific attraction, click on the bookmark icon placed at the top left of the attraction image."],
+                         ["Where can I see all of my bookmarked attractions?", "In order to view all of your bookmarked attractions, simply navigate to the Bookmarked Attractions tab to the right of the Find Attractions tab."],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"],
+                         ["Question", "Answer"]]
 
 
         self.QandA_window = QtWidgets.QLabel()
         self.QandA_window.setObjectName("QandA_window")
         self.QandA_window.setFixedSize(800, 600)
-        self.QandA_window.setWindowTitle("Frequently Asked Questions and their Answers")
+        self.QandA_window.setWindowTitle("Frequently Asked Questions")
 
         self.QandA_window_central_widget = QtWidgets.QWidget(self.QandA_window)
+        self.QandA_window_central_widget.setObjectName("QandA_background")
         self.QandA_window_central_widget.setFixedSize(800, 600)
 
         self.QandA_search_bar = QtWidgets.QLineEdit(self.QandA_window_central_widget)
         self.QandA_search_bar.setObjectName("search_bar")
         self.QandA_search_bar.setStyleSheet("font: 14px")
-        self.QandA_search_bar.setGeometry(QtCore.QRect(200, 8, 301, 30))
+        self.QandA_search_bar.setGeometry(QtCore.QRect(200, 16, 301, 30))
         self.QandA_search_bar.setPlaceholderText("Search by Keyword")
 
         self.QandA_search_attractions_button = QtWidgets.QToolButton(self.QandA_window_central_widget)
-        self.QandA_search_attractions_button.setGeometry(QtCore.QRect(500, 9, 55, 28))
+        self.QandA_search_attractions_button.setGeometry(QtCore.QRect(500, 17, 55, 28))
         self.QandA_search_attractions_button.setText("Search")
         self.QandA_search_attractions_button.clicked.connect(self.search_QandA)
 
@@ -990,22 +1022,24 @@ class Ui_MainWindow(object):
         self.QandA_search_bar_icon.setPixmap(QtGui.QPixmap("Application Pictures/magnifyingIcon.png"))
         self.QandA_search_bar_icon.setScaledContents(True)
         self.QandA_search_bar_icon.setFixedSize(25, 25)
-        self.QandA_search_bar_icon.move(171, 10)
+        self.QandA_search_bar_icon.move(171, 18)
         self.QandA_search_bar_icon.show()
 
 
         self.QandA_clear_search_bar_button = QtWidgets.QToolButton(self.QandA_window_central_widget)
-        self.QandA_clear_search_bar_button.setGeometry(QtCore.QRect(554, 9, 55, 28))
+        self.QandA_clear_search_bar_button.setGeometry(QtCore.QRect(554, 17, 55, 28))
         self.QandA_clear_search_bar_button.setText("Clear")
         self.QandA_clear_search_bar_button.clicked.connect(self.clear_QandA_search_bar)
 
 
         scroll = QtWidgets.QScrollArea(self.QandA_window_central_widget)
+        scroll.setObjectName("content_container")
         content = QtWidgets.QWidget()
+        content.setObjectName("question_container")
         scroll.setWidget(content)
         scroll.setWidgetResizable(True)
-        scroll.resize(784, 500)
-        scroll.move(8, 100)
+        scroll.resize(784, 544)
+        scroll.move(8, 50)
         vlay = QtWidgets.QVBoxLayout(content)
         for element in all_questions:
             box = CollapsibleBox(element[0])
@@ -1032,25 +1066,6 @@ class Ui_MainWindow(object):
         self.QandA_no_questions_match.setFixedSize(500, 50)
         self.QandA_no_questions_match.move(200, 150)
 
-
-        # self.QandA_window_QGroupBox = QtWidgets.QGroupBox(self.QandA_window_central_widget)
-        # self.QandA_window_QGroupBox.setFixedSize(784, 554)
-        # self.QandA_window_QGroupBox.move(8, 35)
-        # self.QandA_window_QGroupBox.setEnabled(True)
-        # self.QandA_window_QGroupBox.setFlat(True)
-        # self.QandA_window_QGroupBox.setObjectName("QandATextContainer")
-        #
-        # self.QandA_QLabel = self.create_QLabel("QandA_window_QGroupBox", 343, 0, 200, 50)
-        # self.QandA_QLabel.setText("QandA")
-        # self.QandA_QLabel.setObjectName("QandATitle")
-        #
-        # self.QandA = QtWidgets.QPlainTextEdit(self.QandA_window_QGroupBox)
-        # self.QandA.setObjectName("QandA")
-        # self.QandA.setFixedSize(780, 550)
-        # self.QandA.move(2, 2)
-        # text = open('qanda.txt').read()
-        # self.QandA.setPlainText(text)
-        # self.QandA.setReadOnly(True)
         self.QandA_window.show()
 
     # Show the maps window for around the user's location, based on their latitude and longitude

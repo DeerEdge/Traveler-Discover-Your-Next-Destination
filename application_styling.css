@@ -213,6 +213,18 @@ QLabel#num_of_bookmark_results {
     font: 16px
 }
 
+QWidget#QandA_background {
+    background: #2061A6;
+}
+
+QWidget#question_container {
+    background: #E5E5E5;
+}
+
+QWidget#content_container {
+    border: 2px solid #FFD942;
+}
+
 
 
 
