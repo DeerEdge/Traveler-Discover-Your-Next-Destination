@@ -1495,7 +1495,7 @@ class Ui_MainWindow(object):
                                               ["Select a City", "Huntsville", "Birmingham", "Montgomery", "Mobile",
                                                "Tuscaloosa"])
         self.title_window_state_input.addItem("Alaska",
-                                              ["Select a City", "Anchorage", "Juneau", "Fairbanks", "Badger",
+                                              ["Select a City", "Anchorage", "Juneau", "Fairbanks", "Wasilla",
                                                "Knik-Fairview"])
         self.title_window_state_input.addItem("Arizona",
                                               ["Select a City", "Phoenix", "Tucson", "Sedona", "Mesa", "Scottsdale"])
@@ -1844,11 +1844,10 @@ class Ui_MainWindow(object):
         self.state_filter_QComboBox = self.create_QComboBox("location_and_filters_QGroupBox", Xcoor + 47, Ycoor + 108,
                                                             173, 26)
         self.state_filter_QComboBox.setObjectName("filterComboboxes")
-        self.state_filter_QComboBox.addItem("No preference", ["No preference"])
         self.state_filter_QComboBox.addItem("Alabama",
                                             ["No preference", "Huntsville", "Birmingham", "Montgomery", "Mobile",
                                              "Tuscaloosa"])
-        self.state_filter_QComboBox.addItem("Alaska", ["No preference", "Anchorage", "Juneau", "Fairbanks", "Badger",
+        self.state_filter_QComboBox.addItem("Alaska", ["No preference", "Anchorage", "Juneau", "Fairbanks", "Wasilla",
                                                        "Knik-Fairview"])
         self.state_filter_QComboBox.addItem("Arizona",
                                             ["No preference", "Phoenix", "Tucson", "Sedona", "Mesa", "Scottsdale"])
