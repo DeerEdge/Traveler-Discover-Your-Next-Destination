@@ -2,14 +2,10 @@ import os
 import webbrowser
 import io
 # folium v0.12.1 - Used to display geographical data
-from random import random
-
 import folium
-from PyQt5.QtCore import QUrl
-
 import application_database
 import application_filter_request
-import sys
+
 
 # ipregistry v3.2.0 - Used to find current location of the user when called
 from ipregistry import IpregistryClient
@@ -21,7 +17,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets, QtWebEngineWidgets
 from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEngineSettings
 # geopy v2.2.0 - Used to calculate distance between two points using latitude and longitude values.
 from geopy import distance
-# import module2
 from geopy.geocoders import Nominatim
 
 
@@ -29,8 +24,13 @@ from geopy.geocoders import Nominatim
 
 geolocator = Nominatim(user_agent="geoapiExercises")
 # Connect to ip finder as a client in order to get information about the ip
-client = IpregistryClient("72bw4jakulj27ism")
-ipInfo = client.lookup()
+global ip_is_found
+try:
+    client = IpregistryClient("72bw4jakulj27ism")
+    ipInfo = client.lookup()
+    ip_is_found = True
+except:
+    ip_is_found = False
 
 class CollapsibleBox(QtWidgets.QWidget):
     def __init__(self, title="", parent=None):
@@ -969,12 +969,12 @@ class Ui_MainWindow(object):
                          ["Where are the sources used in this application provided?", "All sources can by found by navigating to the Sources, Licenses, and References tab positioned to the right of the Bookmarked Attractions tab."],
                          ["How can I bookmark attractions?", "To bookmark a specific attraction, click on the bookmark icon placed at the top left of the attraction image."],
                          ["Where can I see all of my bookmarked attractions?", "In order to view all of your bookmarked attractions, simply navigate to the Bookmarked Attractions tab to the right of the Find Attractions tab."],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
+                         ["How can I create a user report?", "Navigate to the help menu on the Find Attractions tab. Opening the menu will show a button titled \"Create a report\". Uponing clicking this button, a new window will appear with fields for you to fill. Here you can customize the report to provide feedback and report any irregularities within the application." ],
+                         ["Is the shown data secured?", "Yes, the data is stored in a secure database named Postgres SQL. For more information about data security and protection, please read the documentation."],
+                         ["Is the database backed up and dynamic?", "Yes, the database is continuosly backed up on both the local computer as well as the server. The database is dynamic by contiuously storing the filtered attractions which are based on the user's specified attributes. The database is adaptive to the user's needs and dynamically appends user specified results and customized reports. "],
+                         ["Where can I find the requirements to run this application on my computer?", "Minimum requirements to run the application are specified in the documentation as well as the README document."],
+                         ["Where can I download and run this application?", "To setup this application, refer to either the README or documentation for step by step instructions on the installation process."],
+                         ["How do I expand a specific attraction's preview map?", "In order to eexpand the preview map for an attraction, simply navigate to the expand map button underneath the preview mao. A new window with the expanded window will show upon performing this action."],
                          ["Question", "Answer"],
                          ["Question", "Answer"],
                          ["Question", "Answer"],
@@ -1423,7 +1423,9 @@ class Ui_MainWindow(object):
         # Change the displayed window from title page to main window
         self.title_window_central_widget.deleteLater()
         ui.setup_application_window(MainWindow)
-        self.find_current_location(_)
+        self.current_location_QLabel.setText("Please enter a location")
+        if (ip_is_found == True):
+            self.find_current_location(_)
 
         # On the main window, set the state, city, container and searchbar to the selections on the title page
         self.state_filter_QComboBox.setCurrentText(title_selected_state)
@@ -2071,7 +2073,10 @@ class Ui_MainWindow(object):
         self.find_user_location_button = QtWidgets.QToolButton(self.location_and_filters_QGroupBox)
         self.find_user_location_button.setGeometry(Xcoor + 5, Ycoor + 35, 205, 20)
         self.find_user_location_button.setText("Find my location")
-        self.find_user_location_button.clicked.connect(self.find_current_location)
+        if (ip_is_found == True):
+            self.find_user_location_button.clicked.connect(self.find_current_location)
+        else:
+            self.find_user_location_button.setEnabled(False)
 
         # Adding a Dynamic Help Menu
         self.help_menu_button = QtWidgets.QToolButton(self.location_and_filters_QGroupBox)

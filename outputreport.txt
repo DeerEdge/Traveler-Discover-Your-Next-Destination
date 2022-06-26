@@ -1,11 +1,33 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-25 Time Of Action: 13:26:10
-Selected State: Utah
-Selected City: Salt Lake City
-Selected Type: Nature/Outdoor
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-26 Time Of Action: 23:24:00
+Selected State: Massachusetts
+Selected City: None
+Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 1231), Hogle Zoo, Nature/Outdoor, Salt Lake City, Modern, 42-acre zoo boasting hundreds of animals & tropical gardens, plus a train & carousel. 
-Filtered Attraction: (id: 1234), Liberty Park, Nature/Outdoor, Salt Lake City, Home to an aviary & museum, this serene landmark features a lake with ducks & paddle-boat rentals. 
-Filtered Attraction: (id: 1239), Red Butte Garden, Nature/Outdoor, Salt Lake City, University of Utah's botanical garden features nature trails, workshops & an outdoor concert series. 
+Filtered Attraction: (id: 616), Dillon's Local, Food, Plymouth, Internationally inspired comfort classics with brunch, specialty cocktails & catering options. 
+Filtered Attraction: (id: 617), Dr. Seuss National Memorial Sculpture Garden, Nature/Outdoor, Springfield, Whimsical bronze sculptures of Dr. Seuss characters fill the courtyard of this multi-museum complex. 
+Filtered Attraction: (id: 618), Howling Wolf Taqueria, Food, Salem, Funky Mexican joint with from-scratch fare, frequent live music & a bar with drafts & margaritas. 
+Filtered Attraction: (id: 619), Worcester Art Museum, Cultural/Historical, Worcester, Vast art collection from ancient to contemporary , including European master works & a Gothic house. 
+Filtered Attraction: (id: 620), Salem Witch Museum, Cultural/Historical, Salem, Life-size stage sets, exhibits & tours exploring the 1692 Salem witch trials, plus witchcraft today. 
+Filtered Attraction: (id: 621), New England Aquarium, Nature/Outdoor, Boston, A giant glass tank spiraled by a multilevel walkway is the main draw at this waterfront attraction. 
+Filtered Attraction: (id: 622), Salem Maritime National Historic Site, Cultural/Historical, Salem, 9-acre park exploring the age of sailing ships, with historic buildings, wharves & a tall ship. 
+Filtered Attraction: (id: 623), Zoo in Forest Park and Education Center, Nature/Outdoor, Springfield, This zoo in a 735-acre woodland park features native & exotic animals, plus educational programs. 
+Filtered Attraction: (id: 624), Boston Common, Nature/Outdoor, Boston, Storied, nearly 50-acre urban park that hosted British troops during the American Revolution. 
+Filtered Attraction: (id: 625), Brewster Gardens, Nature/Outdoor, Plymouth, A walking path runs alongside a stream in this well-maintained, grassy park with a tranquil vibe. 
+Filtered Attraction: (id: 626), Salem Witch Village, Cultural/Historical, Salem, Attraction offering exhibits about witches & witchcraft, souvenir shops & haunted house tours. 
+Filtered Attraction: (id: 627), Worcester Historical Museum, Cultural/Historical, Worcester, Museum & archive focusing on Worcester city history, with rotating exhibits & a historic house tour. 
+Filtered Attraction: (id: 628), Springfield Armory National Historic Site, Cultural/Historical, Springfield, Historic buildings & large collection of military weapons displayed at Revolutionary War arsenal. 
+Filtered Attraction: (id: 629), Ropes Mansion and Garden, Nature/Outdoor, Salem, House museum in an 18th-century Georgian Colonial mansion with a garden in the back. 
+Filtered Attraction: (id: 630), The Boynton Restaurant & Spirits, Food, Worcester, Long-running haunt draws college kids & locals with a large choice of American eats, beers, and TVs. 
+Filtered Attraction: (id: 631), Bueno Y Sano, Food, Springfield, Low-key, family-run chain outpost specializing in health-conscious burritos, tacos & salads. Good from the start. 
+Filtered Attraction: (id: 632), Pilgrim Memorial State Park, Nature/Outdoor, Plymouth, Harborside park commemorating the first pilgrim landing, with Plymouth Rock & a Mayflower replica. 
+Filtered Attraction: (id: 633), Quinsigamond State Park, Nature/Outdoor, Worcester, Recreation area on Lake Quinsigamond with swimming, boating, fishing, sports & picnic facilities. 
+Filtered Attraction: (id: 634), Plimoth Grist Mill, Cultural/Historical, Plymouth, 17th-century mill & museum built by early colonists for the milling of corn into cornmeal. 
+Filtered Attraction: (id: 635), Plimoth Patuxet Museums, Cultural/Historical, Plymouth, Complete re-creation of a 17th-century Pilgrim village, including costumed actors & activities. 
+Filtered Attraction: (id: 636), Springfield Museums, Cultural/Historical, Springfield, 1 ticket grants entry to a science museum, history museum & 2 art museums around a grassy quad. 
+Filtered Attraction: (id: 637), EcoTarium, Entertainment, Worcester, Ecology & conservation museum with interactive displays, a planetarium, trails & a treetop walkway. 
+Filtered Attraction: (id: 638), Boston Tea Party Ships & Museum, Cultural/Historical, Boston, Floating history museum with live reenactments, multimedia exhibits & a tearoom. 
+Filtered Attraction: (id: 639), Museum of Science, Entertainment, Boston, Venerable institution with interactive exhibits, dome-shaped IMAX/3-D film theater & a planetarium. 
+Filtered Attraction: (id: 640), Saus Boston, Food, Boston, Local eatery featuring fries & beer, plus 15 sauces, is particularly popular late-night. 
