@@ -422,6 +422,7 @@ class Ui_MainWindow(object):
             self.create_QScrollArea_object(Ycoor, filtered_attractions_list[index])
             Ycoor = Ycoor + 200
         self.attractions_QScrollArea.setWidget(self.attractions_QScrollArea_widget_container)
+        self.attractions_QScrollArea.verticalScrollBar().setSliderPosition(0)
 
     # A function to rerun the suggesting algorithm, based on user changes. This function gets the entered preferences
     # in the state, city, and type QComboBoxes as well as the wheelchair accessibility, family friendly, and pet friendly
@@ -615,7 +616,7 @@ class Ui_MainWindow(object):
                 self.num_of_bookmarks_QLabel.setText(
                     (str(len(self.bookmarks_scrollArea_object_container.children()) - 1) + " Total Bookmarks Saved"))
             self.bookmark_icon.setIconSize(QtCore.QSize(1024, 1024))
-            self.bookmarks_scrollArea.setWidget(self.bookmarks_scrollArea_object_container)
+            self.bookmarks_QScrollArea.setWidget(self.bookmarks_scrollArea_object_container)
 
         # If the bookmark is selected, change it to unactivated, change its icon, add remove bookmark from the bookmarks tab
         else:
@@ -630,6 +631,7 @@ class Ui_MainWindow(object):
                     (str(len(self.bookmarks_scrollArea_object_container.children()) - 2) + " Total Bookmarks Saved"))
             self.bookmark_icon.setIconSize(QtCore.QSize(1024, 1024))
         self.bookmark_icon.setStyleSheet("QToolButton { background-color: transparent; border: 0px }");
+        self.bookmarks_QScrollArea.verticalScrollBar().setSliderPosition(0)
 
     # A function ran to clear all bookmarks
     def clear_all_bookmarks(self, _):
@@ -2184,11 +2186,12 @@ class Ui_MainWindow(object):
         self.bookmarks_tab_clear_bookmarks.clicked.connect(self.clear_all_bookmarks)
         # ScrollArea
         self.bookmarks_scrollArea_object_container = QtWidgets.QWidget()
-        self.bookmarks_scrollArea = QtWidgets.QScrollArea(self.bookmarks_tab)
-        self.bookmarks_scrollArea.setFixedWidth(905)
-        self.bookmarks_scrollArea.setMinimumHeight(523)
-        self.bookmarks_scrollArea.move(125, 54)
-        self.bookmarks_scrollArea.setWidgetResizable(True)
+        self.bookmarks_QScrollArea = QtWidgets.QScrollArea(self.bookmarks_tab)
+        self.bookmarks_QScrollArea.setFixedWidth(905)
+        self.bookmarks_QScrollArea.setMinimumHeight(523)
+        self.bookmarks_QScrollArea.move(125, 54)
+        self.bookmarks_QScrollArea.setWidgetResizable(True)
+        self.bookmarks_QScrollArea.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.bookmarks_container_vertical_layout = QtWidgets.QVBoxLayout(self.bookmarks_scrollArea_object_container)
         self.bookmarks_scrollArea_object_container.setLayout(self.bookmarks_container_vertical_layout)
 
