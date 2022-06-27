@@ -361,7 +361,17 @@ class Ui_MainWindow(object):
         # The attraction map is centered around the coordinates of the attraction
         coordinate = (attraction[13], attraction[14])
         map = folium.Map(zoom_start=15, location=coordinate)
-        folium.Marker(location=coordinate).add_to(map)
+        folium.Marker(
+            location=coordinate,
+            icon=folium.Icon(color="red", icon='circle', prefix='fa'),
+        ).add_to(map)
+        if (self.latitude_input.text() != "" and self.longitude_input.text() != "" and self.is_float(
+                str(self.latitude_input.text())) and self.is_float(str(self.longitude_input.text()))):
+            entered_location_coordinate = (float(self.latitude_input.text()), float(self.longitude_input.text()))
+            folium.Marker(
+                location=entered_location_coordinate,
+                icon=folium.Icon(color="darkgreen", icon='user'),
+            ).add_to(map)
         # Save map data to data object
         data = io.BytesIO()
         map.save(data, close_file=False)
@@ -385,14 +395,12 @@ class Ui_MainWindow(object):
         self.website_button.setText("Website ↗︎")
 
         # When this QToolButton is pressed, a redirect to the attraction's website occurs
-        print(str(attraction[12]))
         if (str(attraction[12]).startswith("http://")):
             web_link = str(attraction[12]).replace("http://", "https://")
         elif (str(attraction[12]).startswith("https://")):
             web_link = str(attraction[12])
         else:
             web_link = "https://" + str(attraction[12])
-        print(web_link)
         self.website_button.clicked.connect(lambda: webbrowser.open(web_link))
 
         # A QFrame.Hline is created to organize different parts of the attraction object
@@ -818,7 +826,8 @@ class Ui_MainWindow(object):
             location=coordinate
         )
         folium.Marker(
-            location=coordinate
+            location=coordinate,
+            icon = folium.Icon(color="darkgreen", icon='user')
         ).add_to(map)
         # save map data to data object
         data = io.BytesIO()
@@ -837,14 +846,12 @@ class Ui_MainWindow(object):
         self.bookmark_object_website_redirect = QtWidgets.QToolButton(self.bookmarks_tab_QScrollArea_object)
         self.bookmark_object_website_redirect.setGeometry(786, 198, 94, 17)
         self.bookmark_object_website_redirect.setText(_translate("MainWindow", "Website ↗︎"))
-        print(str(attraction[12]))
         if (str(attraction[12]).startswith("http://")):
             web_link = str(attraction[12]).replace("http://","https://")
         elif (str(attraction[12]).startswith("https://")):
             web_link = str(attraction[12])
         else:
             web_link = "https://"+str(attraction[12])
-        print(web_link)
         self.bookmark_object_website_redirect.clicked.connect(lambda: webbrowser.open(web_link))
 
         # Create a line on the bookmark tab
@@ -1098,18 +1105,19 @@ class Ui_MainWindow(object):
 
             # The map window is centered around the latitude and longitude in their respective inputs
             coordinate = (float(self.latitude_input.text()), float(self.longitude_input.text()))
-            expanded_map = folium.Map(
+            entered_location_map = folium.Map(
                 zoom_start=15,
                 location=coordinate,
                 popup="test"
             )
             folium.Marker(
-                location=coordinate
-            ).add_to(expanded_map)
+                location=coordinate,
+                icon=folium.Icon(color="darkgreen", icon='user'),
+            ).add_to(entered_location_map)
 
             # save map data to data object
             data = io.BytesIO()
-            expanded_map.save(data, close_file=False)
+            entered_location_map.save(data, close_file=False)
             webView = QWebEngineView()
             webView.setHtml(data.getvalue().decode())
 
@@ -1143,13 +1151,21 @@ class Ui_MainWindow(object):
         lat = float(object_coordinate[(index_of_comma + 1):])
         coordinate = (lat, long)
         expandedMap = folium.Map(
-            zoom_start=15,
+            zoom_start=14,
             location=coordinate,
             popup="test"
         )
         folium.Marker(
-            location=coordinate
+            location=coordinate,
+            icon=folium.Icon(color="red", icon='circle', prefix='fa'),
         ).add_to(expandedMap)
+        if (self.latitude_input.text() != "" and self.longitude_input.text() != "" and self.is_float(
+                str(self.latitude_input.text())) and self.is_float(str(self.longitude_input.text()))):
+            entered_location_coordinate = (float(self.latitude_input.text()), float(self.longitude_input.text()))
+            folium.Marker(
+                location=entered_location_coordinate,
+                icon=folium.Icon(color="darkgreen", icon='user'),
+            ).add_to(expandedMap)
         # save map data to data object
         data = io.BytesIO()
         expandedMap.save(data, close_file=False)
