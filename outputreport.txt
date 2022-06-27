@@ -1,33 +1,46 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-26 Time Of Action: 23:24:00
-Selected State: Massachusetts
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-27 Time Of Action: 03:09:41
+Selected State: Minnesota
+Selected City: Duluth
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 668), Duluth Grill, Food, Duluth, Casual, enduring eatery providing locally sourced comfort food & an extensive breakfast menu. 
+Filtered Attraction: (id: 671), Lake Superior Railroad Museum, Cultural/Historical, Duluth, Exhibits of historic railcars & equipment in a former depot, plus excursions & regional history. 
+Filtered Attraction: (id: 676), Leif Erikson Park, Nature/Outdoor, Duluth, Popular park along the Lakewalk featuring a small stage for events, a rose garden & water views. 
+Filtered Attraction: (id: 684), Glensheen Mansion, Cultural/Historical, Duluth, Tours of a historic 39-room mansion with its original furnishings intact, plus extensive grounds.
+Filtered Attraction: (id: 686), Aerial Lift Bridge, Cultural/Historical, Duluth, Landmark 1905 steel bridge whose deck can be lifted 135 ft. to allow for the passage of large ships. 
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-27 Time Of Action: 03:10:19
+Selected State: New Mexico
 Selected City: None
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 616), Dillon's Local, Food, Plymouth, Internationally inspired comfort classics with brunch, specialty cocktails & catering options. 
-Filtered Attraction: (id: 617), Dr. Seuss National Memorial Sculpture Garden, Nature/Outdoor, Springfield, Whimsical bronze sculptures of Dr. Seuss characters fill the courtyard of this multi-museum complex. 
-Filtered Attraction: (id: 618), Howling Wolf Taqueria, Food, Salem, Funky Mexican joint with from-scratch fare, frequent live music & a bar with drafts & margaritas. 
-Filtered Attraction: (id: 619), Worcester Art Museum, Cultural/Historical, Worcester, Vast art collection from ancient to contemporary , including European master works & a Gothic house. 
-Filtered Attraction: (id: 620), Salem Witch Museum, Cultural/Historical, Salem, Life-size stage sets, exhibits & tours exploring the 1692 Salem witch trials, plus witchcraft today. 
-Filtered Attraction: (id: 621), New England Aquarium, Nature/Outdoor, Boston, A giant glass tank spiraled by a multilevel walkway is the main draw at this waterfront attraction. 
-Filtered Attraction: (id: 622), Salem Maritime National Historic Site, Cultural/Historical, Salem, 9-acre park exploring the age of sailing ships, with historic buildings, wharves & a tall ship. 
-Filtered Attraction: (id: 623), Zoo in Forest Park and Education Center, Nature/Outdoor, Springfield, This zoo in a 735-acre woodland park features native & exotic animals, plus educational programs. 
-Filtered Attraction: (id: 624), Boston Common, Nature/Outdoor, Boston, Storied, nearly 50-acre urban park that hosted British troops during the American Revolution. 
-Filtered Attraction: (id: 625), Brewster Gardens, Nature/Outdoor, Plymouth, A walking path runs alongside a stream in this well-maintained, grassy park with a tranquil vibe. 
-Filtered Attraction: (id: 626), Salem Witch Village, Cultural/Historical, Salem, Attraction offering exhibits about witches & witchcraft, souvenir shops & haunted house tours. 
-Filtered Attraction: (id: 627), Worcester Historical Museum, Cultural/Historical, Worcester, Museum & archive focusing on Worcester city history, with rotating exhibits & a historic house tour. 
-Filtered Attraction: (id: 628), Springfield Armory National Historic Site, Cultural/Historical, Springfield, Historic buildings & large collection of military weapons displayed at Revolutionary War arsenal. 
-Filtered Attraction: (id: 629), Ropes Mansion and Garden, Nature/Outdoor, Salem, House museum in an 18th-century Georgian Colonial mansion with a garden in the back. 
-Filtered Attraction: (id: 630), The Boynton Restaurant & Spirits, Food, Worcester, Long-running haunt draws college kids & locals with a large choice of American eats, beers, and TVs. 
-Filtered Attraction: (id: 631), Bueno Y Sano, Food, Springfield, Low-key, family-run chain outpost specializing in health-conscious burritos, tacos & salads. Good from the start. 
-Filtered Attraction: (id: 632), Pilgrim Memorial State Park, Nature/Outdoor, Plymouth, Harborside park commemorating the first pilgrim landing, with Plymouth Rock & a Mayflower replica. 
-Filtered Attraction: (id: 633), Quinsigamond State Park, Nature/Outdoor, Worcester, Recreation area on Lake Quinsigamond with swimming, boating, fishing, sports & picnic facilities. 
-Filtered Attraction: (id: 634), Plimoth Grist Mill, Cultural/Historical, Plymouth, 17th-century mill & museum built by early colonists for the milling of corn into cornmeal. 
-Filtered Attraction: (id: 635), Plimoth Patuxet Museums, Cultural/Historical, Plymouth, Complete re-creation of a 17th-century Pilgrim village, including costumed actors & activities. 
-Filtered Attraction: (id: 636), Springfield Museums, Cultural/Historical, Springfield, 1 ticket grants entry to a science museum, history museum & 2 art museums around a grassy quad. 
-Filtered Attraction: (id: 637), EcoTarium, Entertainment, Worcester, Ecology & conservation museum with interactive displays, a planetarium, trails & a treetop walkway. 
-Filtered Attraction: (id: 638), Boston Tea Party Ships & Museum, Cultural/Historical, Boston, Floating history museum with live reenactments, multimedia exhibits & a tearoom. 
-Filtered Attraction: (id: 639), Museum of Science, Entertainment, Boston, Venerable institution with interactive exhibits, dome-shaped IMAX/3-D film theater & a planetarium. 
-Filtered Attraction: (id: 640), Saus Boston, Food, Boston, Local eatery featuring fries & beer, plus 15 sauces, is particularly popular late-night. 
+Filtered Attraction: (id: 852), Meow Wolf Santa Fe, Entertainment, Santa Fe, Unique & immersive art installations with multimedia elements & a mysterious narrative throughout. 
+Filtered Attraction: (id: 853), National Museum of Nuclear Science & History, Cultural/Historical, Los Lunas, Compact educational spot featuring exhibits chronicling the development of nuclear science. 
+Filtered Attraction: (id: 854), ABQ BioPark, Nature/Outdoor, Los Lunas, Over 250 species of animal life in a natural environment, including polar bears, monkeys & koalas. 
+Filtered Attraction: (id: 855), Santa Fe Plaza, Entertainment, Santa Fe, Historic city plaza with benches, a bandstand & ethnic markets, plus festivals & community events.
+Filtered Attraction: (id: 856), A Park Above, Nature/Outdoor, Rio Rancho, Green space with ample playground equipment, plus a splash pad, wheelchair swings & covered tables. 
+Filtered Attraction: (id: 857), Cabezon Park, Nature/Outdoor, Rio Rancho, City park with an outdoor swimming pool, community center, football field, playgrounds & gazebos. 
+Filtered Attraction: (id: 858), Cliff's Amusement Park, Nature/Outdoor, Albuquerque, Amusement park with seasonal hours featuring rides, roller coasters, games, a water park & more. 
+Filtered Attraction: (id: 859), Cracker Barrel Old Country Store, Food, Las Cruces, Homey chain restaurant serving American comfort food, with an on-site general store. 
+Filtered Attraction: (id: 860), Gran Quivira Visitor Center, Cultural/Historical, Los Lunas, Visitor center amid the historical Spanish missions at Salinas Pueblo Missions National Monument. 
+Filtered Attraction: (id: 861), Mesilla Valley Bosque State Park, Nature/Outdoor, Las Cruces, Natural area along the Rio Grande with trails popular for hiking & birding, plus ranger-led tours. 
+Filtered Attraction: (id: 862), Petroglyph National Monument, Cultural/Historical, Albuquerque, Archaeological site showcasing thousands of prehistoric Native American drawings on stone walls. 
+Filtered Attraction: (id: 863), Recycled Roadrunner Sculpture, Cultural/Historical, Las Cruces, This off-beat landmark was constructed using cast-off materials such as old sneakers & electronics. 
+Filtered Attraction: (id: 864), Rio Grande Nature Center State Park, Nature/Outdoor, Albuquerque, Riverside area on 270 acres with trails, bird-watching, native plants, self-guided exhibits & store. 
+Filtered Attraction: (id: 865), Sandia Peak Tramway, Nature/Outdoor, Rio Rancho, 2.7-mi. aerial tram ride, with Albuquerque & mountain views, to a peak with trails, skiing & dining. 
+Filtered Attraction: (id: 866), Museum of Nature & Science, Cultural/Historical, Las Cruces, Quaint museum with regionally focused natural history exhibits, including some on local wildlife. 
+Filtered Attraction: (id: 867), New Mexico Farm and Ranch Heritage Museum, Cultural/Historical, Las Cruces, Interactive exhibits bringing to life the history of farming, ranching & rural life in New Mexico. 
+Filtered Attraction: (id: 868), Coronado Historic Site, Cultural/Historical, Rio Rancho, Excavated remains & ancient art in a Pueblo village visited by Coronado on his fabled quest. 
+Filtered Attraction: (id: 869), Frontier Restaurant, Food, Los Lunas, Down-to-earth counter-serve restaurant offering homestyle Southwestern fare since 1971. 
+Filtered Attraction: (id: 870), The Pantry, Food, Santa Fe, Stalwart bustling eatery serves up a variety of classic regional dishes in a comfortable atmosphere. 
+Filtered Attraction: (id: 871), Joe's Pasta House, Food, Rio Rancho, Relaxed Italian restaurant serving popular pasta dishes, plus seafood & steak options. 
+Filtered Attraction: (id: 872), Weck's, Food, Los Lunas, Local chain serving hearty American breakfast & lunch fare in a casual setting with a retro vibe. 
+Filtered Attraction: (id: 873), Albuquerque Museum, Cultural/Historical, Albuquerque, Local history museum featuring maps, photos & crafts depicting the history of Albuquerque. 
+Filtered Attraction: (id: 874), Museum of International Folk Art, Cultural/Historical, Sante Fe, 80,000-sq-ft homage to global folk art & culture, featuring art & artifacts from over 100 countries. 
+Filtered Attraction: (id: 875), New Mexico Museum of Natural History and Science, Cultural/Historical, Albuquerque, Expansive museum featuring stones & gems, dinosaur skeletons & a time travel simulation ride. 
+Filtered Attraction: (id: 876), Georgia O'Keeffe Museum, Cultural/Historical, Santa Fe, Rotating exhibits of the work of Georgia O'Keeffe include paintings, sculptures & sketches. 

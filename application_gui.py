@@ -385,7 +385,15 @@ class Ui_MainWindow(object):
         self.website_button.setText("Website ↗︎")
 
         # When this QToolButton is pressed, a redirect to the attraction's website occurs
-        self.website_button.clicked.connect(lambda: webbrowser.open(str(attraction[12])))
+        print(str(attraction[12]))
+        if (str(attraction[12]).startswith("http://")):
+            web_link = str(attraction[12]).replace("http://", "https://")
+        elif (str(attraction[12]).startswith("https://")):
+            web_link = str(attraction[12])
+        else:
+            web_link = "https://" + str(attraction[12])
+        print(web_link)
+        self.website_button.clicked.connect(lambda: webbrowser.open(web_link))
 
         # A QFrame.Hline is created to organize different parts of the attraction object
         self.object_line = QtWidgets.QFrame(self.attraction_QScrollArea_object)
@@ -565,18 +573,6 @@ class Ui_MainWindow(object):
                         str(element[1]) + ", " + str(element[5]) + ", " + str(element[4]) + ", " + str(element[2]))
                 f.write("\n")
             f.close()
-
-        # Creating a text file, to properly source and credit each attraction
-        # Used to create a file with all sources. Run only once and then comment out
-        with open('Application Data and Documentation Files/sources.txt', 'w') as f:
-            for attraction in all_attractions:
-                f.write(str(attraction[1]) + ", " + str(attraction[4]) + ", " + str(attraction[3]) + " ")
-                f.write("\n")
-                f.write("Website: https://" + str(attraction[12]) + " ")
-                f.write("\n")
-                f.write("Attraction Image: " + str(attraction[15]) + " ")
-                f.write("\n")
-                f.write("\n")
 
     # The function to sort the displayed attractions, by some attribute (price, distance, busyness, rating)
     def sort_attractions(self):
@@ -839,7 +835,15 @@ class Ui_MainWindow(object):
         self.bookmark_object_website_redirect = QtWidgets.QToolButton(self.bookmarks_tab_QScrollArea_object)
         self.bookmark_object_website_redirect.setGeometry(786, 198, 94, 17)
         self.bookmark_object_website_redirect.setText(_translate("MainWindow", "Website ↗︎"))
-        self.bookmark_object_website_redirect.clicked.connect(lambda: webbrowser.open(str(attraction[12])))
+        print(str(attraction[12]))
+        if (str(attraction[12]).startswith("http://")):
+            web_link = str(attraction[12]).replace("http://","https://")
+        elif (str(attraction[12]).startswith("https://")):
+            web_link = str(attraction[12])
+        else:
+            web_link = "https://"+str(attraction[12])
+        print(web_link)
+        self.bookmark_object_website_redirect.clicked.connect(lambda: webbrowser.open(web_link))
 
         # Create a line on the bookmark tab
         self.bookmark_object_line = QtWidgets.QFrame(self.bookmarks_tab_QScrollArea_object)
