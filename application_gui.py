@@ -1397,15 +1397,11 @@ class Ui_MainWindow(object):
         if (self.title_window_state_input.currentText() != "Select a State"):
             # Enable use of the city dropdown
             self.title_window_city_input.setEnabled(True)
-            # Hide the warning that says the state is not selected
-            self.title_window_state_unselected_error_label.hide()
 
             # If the user has selected a city on the title page:
             if (self.title_window_city_input.currentText() != "Select a City"):
                 # Enable use of the container dropdown
                 self.title_window_type_input.setEnabled(True)
-                # Hide the warning that says the city is not selected
-                self.title_window_city_unselected_error_label.hide()
 
             # If city is not selected:
             else:
@@ -1427,12 +1423,9 @@ class Ui_MainWindow(object):
         # If state is not selected, show the warning that informs the user of so
         if self.title_window_state_input.currentText() == "Select a State":
             self.title_window_state_unselected_error_label.show()
-        # If city is not selected, show the warning that informs the user of so
-        if self.title_window_city_input.currentText() == "Select a City":
-            self.title_window_city_unselected_error_label.show()
-        # If both state and city are selected, run the search algorithm
-        if (self.title_window_state_input.currentText() != "Select a State") and (
-                self.title_window_city_input.currentText() != "Select a City"):
+
+        # If state is selected, run the search algorithm
+        else:
             self.change_to_search_attractions_window(self)
 
     # The window change from title to the main window, with user selected attributes carrying over
@@ -1692,19 +1685,6 @@ class Ui_MainWindow(object):
         self.title_window_city_input.addItem("Select a City", ["None"])
         self.title_window_city_input.activated.connect(self.title_window_input_dependencies)
 
-        # City Not Selected Error Label
-        self.title_window_city_unselected_error_label = self.create_QLabel("title_window_central_widget", 150, 200, 150,
-                                                                           50)
-        self.title_window_city_unselected_error_label = QtWidgets.QLabel(self.title_window_central_widget)
-        self.title_window_city_unselected_error_label.setText("Please select a city")
-        self.title_window_city_unselected_error_label.setFixedSize(150, 10)
-        self.title_window_city_unselected_error_label.move(300, 240)
-        self.title_window_city_unselected_error_label.setStyleSheet("QLabel"
-                                                                    "{"
-                                                                    "color: red;"
-                                                                    "font-weight: bold;"
-                                                                    "}")
-        self.title_window_city_unselected_error_label.hide()
 
         # QCombobox to input container field
         self.title_window_type_input = self.create_QComboBox("title_window_central_widget", 444, 250, 160, 50)
