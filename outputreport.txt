@@ -1,13 +1,394 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-29 Time Of Action: 13:23:32
-Selected State: Michigan
-Selected City: Grand Rapids
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-29 Time Of Action: 18:56:54
+Selected State: Utah
+Selected City: None
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 643), Frederik Meijer Gardens & Sculpture Park, Nature/Outdoor, Grand Rapids, Sprawling botanical gardens with diverse sculptures hosts indoor art exhibits & summer concerts. 
-Filtered Attraction: (id: 647), The Gerald Ford Presidential Museum, Cultural/Historical, Grand Rapids, Museum tells Ford's life story using artifacts, interactive exhibits & a replica of the Oval Office. 
-Filtered Attraction: (id: 648), Grand Rapids Children's Museum, Entertainment, Grand Rapids, Hands-on learning space for kids ages 2-10 features a real beehive & workshops like robot building. 
-Filtered Attraction: (id: 660), Grand Rapids Public Museum, Cultural/Historical, Grand Rapids, Museum offers 3 floors of history in an ex-flour mill plus exhibits, a 1928 carousel & planetarium. 
-Filtered Attraction: (id: 661), Butcher's Union, Food, Grand Rapids, Modern gastropub with a meat-heavy menu of globally inspired fare, 100+ whiskeys & draft beer.
+Filtered Attraction: (id: 1219), The Bayou, Food, Salt Lake City, Buzzy eatery & bar offering Cajun-inspired fare & pub grub, plus extensive beer selections. 
+Filtered Attraction: (id: 1220), Squatters Roadhouse Grill, Food, Park City, Outpost of a relaxed microbrewery chain crafting seasonal & year-round beers & eclectic pub grub. 
+Filtered Attraction: (id: 1221), Zax Restaurant, Food, Moab, Relaxed eatery offering all-you-can-eat pizza, soup & salad, plus a full bar in an eclectic setting. 
+Filtered Attraction: (id: 1222), Park City Mountain, Nature/Outdoor, Park City, Renowned resort with skiing, snowboarding & other activities, plus hotels, restaurants & shops. 
+Filtered Attraction: (id: 1223), No Name Saloon, Food, Park City, Happening red-brick saloon with pub grub like bison burgers plus a robust beer & whiskey menu. 
+Filtered Attraction: (id: 1224), Woodward Park City, Nature/Outdoor, Park City, Forested mountain complex offering skiing, snowboarding & tubing, plus a large indoor tumbling area. 
+Filtered Attraction: (id: 1225), Lucky Slice Pizza Ogden, Food, Ogden, Welcoming pizzeria with gourmet sauces, toppings & specialty pies offered whole or by-the-slice. 
+Filtered Attraction: (id: 1226), Eccles Art Center, Cultural/Historical, Ogden, Circa-1893 turreted mansion featuring rotating art exhibits, craft gallery & flower garden. 
+Filtered Attraction: (id: 1227), Ogden Union Station, Cultural/Historical, Ogden, Historic 1920s train station converted to an indoor marketplace with museums, art gallery & eatery. 
+Filtered Attraction: (id: 1228), Treehouse Museum, Cultural/Historical, Ogden, Reading-oriented museum encouraging kids to step into a story via hand-on activities & exhibits. 
+Filtered Attraction: (id: 1229), Corona Arch, Nature/Outdoor, Moab, Accessible via a 1.5-mi. hiking trail with cables, this red sandstone arch is a popular photo spot. 
+Filtered Attraction: (id: 1230), Fort Buenaventura Park, Nature/Outdoor, Ogden, Fur-trading & battle history, Native American artifacts, hiking trails, fishing & a visitor center. 
+Filtered Attraction: (id: 1231), Hogle Zoo, Nature/Outdoor, Salt Lake City, Modern, 42-acre zoo boasting hundreds of animals & tropical gardens, plus a train & carousel. 
+Filtered Attraction: (id: 1232), This Is The Place Heritage Park, Cultural/Historical, Salt Lake City, Living-history park featuring Mormon monument, train rides, petting zoo & Native American village. 
+Filtered Attraction: (id: 1233), Clark Planetarium, Entertainment, Salt Lake City, State-of-the-art venue featuring 3-D IMAX films, laser light shows & exhibits about space & science. 
+Filtered Attraction: (id: 1234), Liberty Park, Nature/Outdoor, Salt Lake City, Home to an aviary & museum, this serene landmark features a lake with ducks & paddle-boat rentals. 
+Filtered Attraction: (id: 1235), Moab Giants, Nature/Outdoor, Moab, Dinosaur park with a desert trail dotted with life-size models of T. rex & other prehistoric beasts. 
+Filtered Attraction: (id: 1236), Ogden Botanical Gardens, Nature/Outdoor, Ogden, Peaceful landscaped gardens with distinct sections, grilling stations & a lawn hosting events. 
+Filtered Attraction: (id: 1237), Pioneer Park, Nature/Outdoor, St. George, Rocky 52-acre park featuring Dixie Rock, views of the city, hiking, BBQs & a covered pavilion. 
+Filtered Attraction: (id: 1238), Prospector Park, Nature/Outdoor, Park City, This park with trees offers picnic spots & a children's playground, plus a bike path. 
+Filtered Attraction: (id: 1239), Red Butte Garden, Nature/Outdoor, Salt Lake City, University of Utah's botanical garden features nature trails, workshops & an outdoor concert series. 
+Filtered Attraction: (id: 1240), Red Hills Desert Garden, Nature/Outdoor, St. George, 5-acre preserve with more than 5,000 desert plants, a stream, replica slot canyon & dinosaur tracks.
+Filtered Attraction: (id: 1241), Rotary Park, Nature/Outdoor, Moab, Scenic 3-acre park with whimsical kids’ play equipment, a creek & a basketball court. 
+Filtered Attraction: (id: 1242), Sand Flats Recreation Area, Nature/Outdoor, Moab, Popular 9,000-acre recreation area including the noted Slickrock bike trail, jeep trails & camping.
+Filtered Attraction: (id: 1243), Snow Canyon State Park, Nature/Outdoor, St. George, Scenic locale offering trails for hiking, climbing & horseback riding amid dunes & sandstone cliffs. 
+Filtered Attraction: (id: 1244), Ogden Nature Center, Nature/Outdoor, Ogden, Expansive, 152-acre nature preserve with walking trails, ponds & an educational center. 
+Filtered Attraction: (id: 1245), Rosenbruch World Wildlife Museum, Cultural/Historical, St. George, Unique museum with dioramas of over 300 animals representing every continent, plus a souvenir shop. 
+Filtered Attraction: (id: 1246), Mesa Arch, Nature/Outdoor, Moab, Cliff's-edge sandstone arch framing an iconic sunrise view of the red rock canyon landscape below. 
+Filtered Attraction: (id: 1247), Red Pine Adventures, Nature/Outdoor, Park City, Adventure outfit offering snowmobiling, snowshoeing & horse-riding on 1,000-acres of private land. 
+Filtered Attraction: (id: 1248), Slickrock Bike Trail, Nature/Outdoor, Moab, Challenging cycling area with a loop trail, picnic tables & toilets in a striking desert setting. 
+Filtered Attraction: (id: 1249), The Dixie Sugarloaf, Nature/Outdoor, St. George, Enormous red sandstone formation labeled DIXIE in white letters, with trails to the top & vistas. 
+Filtered Attraction: (id: 1250), Pasta Jay's, Food, Moab, Low-key Italian eatery serving thin-crust pizzas, ample portions & pastas made from family recipes. 
+Filtered Attraction: (id: 1251), R&R BBQ, Food, Salt Lake City, Funky counter-serve shack dishing BBQ meats by the plate or pound, plus burgers, sides & beers. 
+Filtered Attraction: (id: 1252), Honolulu Grill, Food, St. George, This unfussy counter serve offers typical Hawaiian food such as kalua pork sandwiches & shave ice. 
+Filtered Attraction: (id: 1253), Pig & a Jelly Jar Ogden, Food, Ogden, Southern comfort eats with a modern twist are the draw this open, airy eatery with a funky ambiance. 
+Filtered Attraction: (id: 1254), Black Bear Diner St. George, Food, St. George, Easygoing chain serving familiar all-day comfort food & desserts in a woodsy setting. 
+Filtered Attraction: (id: 1255), Thunder Junction All Abilities Park, Nature/Outdoor, St. George, Play equipment, a dinosaur-themed garden, train rides & picnics for kids with different abilities. 
+Filtered Attraction: (id: 1256), Moab Museum, Cultural/Historical, Moab, City museum where geology, paleontology & archeology collections join pioneer & mining exhibits. 
+Filtered Attraction: (id: 1257), Park City Museum, Cultural/Historical, Park City, Local history museum offering interactive exhibits, artifacts & the city's original basement jail. 
+Filtered Attraction: (id: 1258), Natural History Museum of Utah, Cultural/Historical, Salt Lake City, Modern venue with 10 galleries exploring earth science & Utah’s native cultures in a scenic locale. 
+Filtered Attraction: (id: 1259), Ogden's George S. Eccles Dinosaur Park, Nature/Outdoor, Ogden, 5-acre park featuring more than 100 dinosaur replicas, plus a museum with hands-on activities. 
+Filtered Attraction: (id: 1260), St. George Dinosaur Discovery Site at Johnson Farm, Nature/Outdoor, St. George, Educational spot featuring prehistoric dino tracks along with fossilized fish & plant life.
+Filtered Attraction: (id: 1261), Hill Aerospace Museum, Cultural/Historical, Ogden, Free attraction displaying planes, missiles & aerospace gear, plus exhibits on Air Force history.
+Filtered Attraction: (id: 1262), St. George Children’s Museum, Entertainment, St. George, Museum for kids offering interactive exhibits, including a play farm, grocery store & science room. 
+Filtered Attraction: (id: 1263), Kimball Art Center, Cultural/Historical, Park City, Gallery displaying works as well as hosting educational art programs & other events. 
+Filtered Attraction: (id: 1264), Park Silly Sunday Market, Entertainment, Park City, Compact weekly street market offering handicrafts, food stands, beer, live music & kids' activities. 
+Filtered Attraction: (id: 1265), Utah State Capitol, Cultural/Historical, Salt Lake City, Built in 1916, the renovated neoclassical revival building offers original murals, exhibits & tours. 
+Filtered Attraction: (id: 1266), Utah Olympic Park, Nature/Outdoor, Park City, Sprawling park built for the 2002 Olympics featuring ski jumps, bobsled rides, a zip line & museums. 
+Filtered Attraction: (id: 1267), Dead Horse Point State Park, Nature/Outdoor, Moab, Cliffside park offering camping, hiking/biking trails, plus overlooks & views of the Colorado River. 
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-29 Time Of Action: 18:57:04
+Selected State: Illinois
+Selected City: None
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 387), The White Chocolate Grill, Food, Naperville, Spacious contemporary grill features traditional American fare & cocktails in a relaxed atmosphere. 
+Filtered Attraction: (id: 388), Jarabe Mexican Street Food, Food, Chicago, Tacos, tortas & other Mexican street food doled out in an unassuming counter-serve eatery. 
+Filtered Attraction: (id: 389), Dana-Thomas House State Historic Site, Cultural/Historical, St. Louis, Museum in a historic Frank Lloyd Wright home from 1902 housing many original furnishings. 
+Filtered Attraction: (id: 390), Machine Shed Restaurant Rockford, Food, Rockford, Family-owned, farm-themed regional chain member serving traditional American fare & full bar. 
+Filtered Attraction: (id: 391), The Olympic Tavern, Food, Rockford, Longtime American taproom with 25+ drafts & creative bar bites, pasta, sandwiches, steak & seafood. 
+Filtered Attraction: (id: 392), The Purple Pig Restaurant, Food, Chicago, Expanded outpost of a famed pork & wine specialist with an open kitchen & a chic, airy setting.
+Filtered Attraction: (id: 393), RBI Brunch Bar, Food, Rockford, Burgers, wings & nachos are doled out in an easygoing game-day hangout with pool & a patio. 
+Filtered Attraction: (id: 394), True Food Kitchen, Food, Chicago, Relaxed, eco-chic chain serving health-conscious fare, including vegan options, plus cocktails. 
+Filtered Attraction: (id: 395), The Morton Arboretum, Nature/Outdoor, Naperville, Diverse 1,700-acre nature preserve with a maze garden & tram plus picnicking, hiking & biking. 
+Filtered Attraction: (id: 396), Museum of Science and Industry, Chicago, Entertainment, Chicago, Sprawling, hands-on museum full of informative, child-friendly scientific & industrial exhibits.
+Filtered Attraction: (id: 397), Shedd Aquarium, Nature/Outdoor, Chicago, State-of-the-art indoor aquarium, famous for its variety of habitats & views of Lake Michigan. 
+Filtered Attraction: (id: 398), Burpee Museum of Natural History, Cultural/Historical, St. Louis, Educational center with tours of exhibits on geology, flora & fauna, dinosaurs & native artifacts.
+Filtered Attraction: (id: 399), 360 CHICAGO, Nature/Outdoor, Chicago, Observatory on the 94th floor of the John Hancock Building with a tilting glass lookout 1000 ft. up. 
+Filtered Attraction: (id: 400), Cahokia Mounds State Historic Site, Cultural/Historical, Springfield, Site of a 13th-century Native American urban center with artifacts & ruins of homes & monuments. 
+Filtered Attraction: (id: 401), Henson Robinson Zoo, Nature/Outdoor, Springfield, 90+ species native to North & South America, Australia, Africa & Asia in naturalistic environs.
+Filtered Attraction: (id: 402), Lincoln Home National Historic Site, Cultural/Historical, Springfield, Popular national historic site offering tours of Lincoln's period-furnished, Greek-Revival home. 
+Filtered Attraction: (id: 403), Lincoln Park Zoo, Nature/Outdoor, Chicago, Small, free zoo with lions, primates, reptiles, a children's area & an interactive farm exhibit. 
+Filtered Attraction: (id: 404), Millennium Carillon, Cultural/Historical, Naperville, Modern tower featuring a 72-bell musical instrument & panoramic views from its observation deck. 
+Filtered Attraction: (id: 405), Old State Capitol State Historic Site, Cultural/Historical, Springfield, Restored former capitol building featuring 19th-century period details & educational exhibits. 
+Filtered Attraction: (id: 406), Riverwalk, Nature/Outdoor, Chicago, Riverside pedestrian path featuring city views & dining, plus bridges, fishing piers & boat docks. 
+Filtered Attraction: (id: 407), Skydeck Chicago, Nature/Outdoor, Chicago, 103rd floor of the former Sears Tower with clear observation boxes & views extending to four states. 
+Filtered Attraction: (id: 408), Anderson Japanese Gardens, Nature/Outdoor, Rockford, Tranquil, 12-acre landscape garden in traditional Japanese style, with an airy, farm-to-table cafe. 
+Filtered Attraction: (id: 409), Charlie Parker's Diner, Food, Springfield, Longtime American diner serving all-day breakfast, lunch specials & hearty sandwiches. 
+Filtered Attraction: (id: 410), DuPage Children's Museum, Cultural/Historical, Naperville, Play & education center for young children, with numerous fun & experimental activities plus a cafe. 
+Filtered Attraction: (id: 411), Grant Park, Nature/Outdoor, Chicago, 319-acre centerpiece of Downtown housing some of the city's busiest attractions. 
+Filtered Attraction: (id: 412), Klehm Arboretum & Botanic Garden, Nature/Outdoor, Rockford, 155 acres of landscaped grounds with dog-friendly paved paths, wooded trails & horticulture library. 
+Filtered Attraction: (id: 413), Knoch Knolls Nature Center, Entertainment, Naperville, Nature center with kid-oriented exhibits, including an aquarium, live animals & a playground. 
+Filtered Attraction: (id: 414), Lincoln Park Conservatory, Nature/Outdoor, Chicago, Thousands of plants, from tropical species to seasonal flowers, in a glass-domed structure. 
+Filtered Attraction: (id: 415), Maggie Daley Park, Nature/Outdoor, Chicago, Popular recreational area with winter ice skating, a climbing wall & playground equipment. 
+Filtered Attraction: (id: 416), Millennium Park, Nature/Outdoor, Chicago, 24.5-acre green space with a video display, the reflective Bean sculpture & an outdoor theater. 
+Filtered Attraction: (id: 417), Navy Pier, Nature/Outdoor, Chicago, Former Navy training center draws crowds with carnival rides, restaurants, shops & fireworks. 
+Filtered Attraction: (id: 418), Nicholas Conservatory & Gardens, Nature/Outdoor, Rockford, 11,000 sq. ft. of indoor tropical flora & sculpture plus landscaped lagoon with fountains & patios.
+Filtered Attraction: (id: 419), Riverwalk Park, Nature/Outdoor, Naperville, .
+Filtered Attraction: (id: 420), Springbrook Prairie Forest Preserve, Nature/Outdoor, Naperville, Expansive natural area including meadow & prairie habitat for birds plus running & biking trails. 
+Filtered Attraction: (id: 421), Union Square Park, Nature/Outdoor, Springfield, This small, urban park features grassy areas, benches & a gazebo, plus statues of Abraham Lincoln. 
+Filtered Attraction: (id: 422), Illinois State Museum, Cultural/Historical, Springfield, Educational venue dedicated to the culture, history, geology, anthropology & art of Illinois. 
+Filtered Attraction: (id: 423), Tinker Swiss Cottage Museum and Gardens, Nature/Outdoor, Rockford, Guided tours of a restored, Swiss-style 1865 home boasting its original furnishings. 
+Filtered Attraction: (id: 424), Lazy Dog Restaurant & Bar, Food, Naperville, Relaxed, lodge-chic chain serving global comfort fare, including stir-fries, pot roast & pastas. 
+Filtered Attraction: (id: 425), Native Foods, Food, Chicago, Chain for creative, Californian-style vegan fare, including mock-meat dishes, ordered at a counter. 
+Filtered Attraction: (id: 426), Field Museum, Cultural/Historical, Chicago,  
+Filtered Attraction: (id: 427), Cantigny Park, Nature/Outdoor, Naperville, 500 acres of gardens, golf, camping & picnic grounds plus 2 museums, 4 eateries & a bandshell. 
+Filtered Attraction: (id: 428), Garfield Park Conservatory, Nature/Outdoor, Chicago, 184-acre park with a swimming pool, fishing lagoon, athletic fields, tennis courts & more. 
+Filtered Attraction: (id: 429), Lincoln Memorial Garden and Nature Center, Cultural/Historical, Springfield, 100-acre woodland & prairie garden honoring Abraham Lincoln, with trails, bridges & a pond. 
+Filtered Attraction: (id: 430), Knight's Action Park, Nature/Outdoor, Springfield, Multiamusement venue with rides & attractions, water-park features & 2 drive-in movie screens. 
+Filtered Attraction: (id: 431), Midway Village Museum, Cultural/Historical, Rockford, Exhibits of historic artifacts, household items, documents & photos plus a living Victorian village. 
+Filtered Attraction: (id: 432), The Art Institute of Chicago, Cultural/Historical, Chicago, Renowned art museum holding nearly 300,000 works from all over the world, spanning many centuries. 
+Filtered Attraction: (id: 433), Rockford Art Museum, Cultural/Historical, Rockford, Non-profit museum featuring a diverse collection of modern & contemporary American art, plus a shop. 
+Filtered Attraction: (id: 434), Naper Settlement, Cultural/Historical, Naperville, 12-acre pioneer reenactment village & indoor/outdoor museum with many artifacts & outbuildings. 
+Filtered Attraction: (id: 435), Maldaner's Restaurant, Food, Springfield, Wood-swathed, American eatery (since 1884) emphasizing local produce, along the storied Route 66. 
+Filtered Attraction: (id: 436), GreenFire, Food, Rockford, American bistro & market serving locally sourced, wood-fired pizza, burgers & fish, plus wine. 
+Filtered Attraction: (id: 437), Wrigley Field, Entertainment, Chicago, Ivy-covered walls & manual scoreboard add retro charm to 2nd oldest baseball stadium in the majors. 
+Filtered Attraction: (id: 438), Cloud Gate, Nature/Outdoor, Chicago, Huge outdoor sculpture shaped like a bean & allowing for views from its many mirrored sides. 
+Filtered Attraction: (id: 439), Discovery Center Museum, Cultural/Historical, Rockford, Fun & educational science museum with exhibits, workshops, crafts & experiments for kids. 
+Filtered Attraction: (id: 440), City Museum, Cultural/Historical, St. Louis, Constantly evolving art installation, playground & discovery center made from found objects. 
+Filtered Attraction: (id: 441), Saint Louis Zoo, Nature/Outdoor, St. Louis, Free 90-acre zoo featuring animals such as penguins, bears & elephants, plus a train ride (fee). 
+Filtered Attraction: (id: 442), Citygarden Sculpture Park, Nature/Outdoor, St. Louis, Outdoor swimming pool with deep lanes & a shallow play area featuring a 250-ft. double waterslide. 
+Filtered Attraction: (id: 443), Gateway Arch National Park, Nature/Outdoor, St. Louis, Park honoring Jefferson's role in western expansion, featuring the Gateway Arch & visitors' center. 
+Filtered Attraction: (id: 444), The Gateway Arch, Nature/Outdoor, St. Louis, Curved, 630-ft.-tall monument celebrating US western expansion, with views from the top & a museum. 
+Filtered Attraction: (id: 445), Sugarfire Smoke House, Food, St. Louis, Southern-style, local BBQ chain serving ribs, salmon, brisket cheesesteaks, spiked shakes & more.
+Filtered Attraction: (id: 446), Campbell House Museum, Cultural/Historical, St. Louis, Restored 19th-century home displaying period furnishings, paintings & the family's personal effects. 
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-29 Time Of Action: 18:57:25
+Selected State: Oklahoma
+Selected City: None
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 1004), Tally's Good Food Café, Food, Tulsa, Retro Route 66 diner with daily specials, an extensive menu & morning-to-night operating hours. 
+Filtered Attraction: (id: 1005), Philbrook Museum of Art, Cultural/Historical, Tulsa, Global collection of fine & decorative art in an ornate Italian Renaissance-style mansion & gardens. 
+Filtered Attraction: (id: 1006), Oklahoma City National Memorial & Museum, Cultural/Historical, Oklahoma City, A garden, pool & sculptural memorial commemorating victims of the 1995 Murrah Building bombing. 
+Filtered Attraction: (id: 1007), National Cowboy & Western Heritage Museum, Cultural/Historical, Oklahoma City, Dioramas, artifacts, art & more documenting & interpreting the history of the American West. 
+Filtered Attraction: (id: 1008), Historic Mattie Beal Home, Cultural/Historical, Lawton, Built 1907–1909, this restored neoclassical house with 14 rooms offers self-guided tours & events. 
+Filtered Attraction: (id: 1009), Five Civilized Tribes Museum, Cultural/Historical, Muskogee, Museum in a historic 19th-c. building, dedicated to the art & culture of 5 Native American tribes. 
+Filtered Attraction: (id: 1010), Haikey Creek Park, Nature/Outdoor, Broken Arrow, Vast county park boasting picnic area & playgrounds, plus an 18-hole championship disc golf course. 
+Filtered Attraction: (id: 1011), Honor Heights Park, Nature/Outdoor, Muskogee, 122-acre arboretum & botanical garden offering trails, a recreational area & an azalea festival. 
+Filtered Attraction: (id: 1012), Woodward Park, Nature/Outdoor, Tulsa, 45 acres of horticultural gardens (rock, herb, rose & azalea), a Victorian conservatory & arboretum. 
+Filtered Attraction: (id: 1013), Museum of the Great Plains, Cultural/Historical, Lawton, Interactive museum charting interior US history, with an 1830s trading post, schoolhouse & depot. 
+Filtered Attraction: (id: 1014), River Country Water Park, Nature/Outdoor, Muskogee, Large seasonal attraction with a lazy river & body slides, plus play areas for tots & volleyball. 
+Filtered Attraction: (id: 1015), Oklahoma City Zoo, Nature/Outdoor, Oklahoma City, Zoo with an array of animals, plus walking trails, shows & attractions such as train tours. 
+Filtered Attraction: (id: 1016), Amish Country Store & Restaurant, Food, Muskogee, Quaint establishment offering hearty, traditional comfort fare, plus baked goods, candy & snacks. 
+Filtered Attraction: (id: 1017), RibCrib BBQ, Food, Lawton, Barbecue chain dishing up ribs, brisket, sandwiches & sides in a laid-back setting. 
+Filtered Attraction: (id: 1018), Charleston's Restaurant, Food, Broken Arrow, Relaxed hangout serving classic pub fare, such as burgers, ribs & tenders, plus wine & cocktails. 
+Filtered Attraction: (id: 1019), Kitchen No. 324, Food, Oklahoma City, Industrial cafe/bakery in a historic building preparing elevated comfort fare & artisanal sweets. 
+Filtered Attraction: (id: 1020), Center of the Universe, Entertainment, Tulsa, Mysterious spot where visitors stand on a circle & noises they make are echoed back much louder. 
+Filtered Attraction: (id: 1021), Ray Harral Nature Park & Center, Nature/Outdoor, Broken Arrow, 40-acre park with a peaceful feel, an on-site nature center, picnic facilities & fishing. 
+Filtered Attraction: (id: 1022), Oklahoma City Museum of Art, Cultural/Historical, Oklahoma City, American art from the colonial era to 1960, plus European paintings & contemporary exhibitions. 
+Filtered Attraction: (id: 1023), Tulsa Air and Space Museum & Planetarium, Cultural/Historical, Tulsa, Detailed history from 1897 to the space age plus interactive exhibits, vintage aircraft & a theater. 
+Filtered Attraction: (id: 1024), Three Rivers Museum, Cultural/Historical, Muskogee, Museum dedicated to local history, with rotating food trucks in the parking lot every Thursday. 
+Filtered Attraction: (id: 1025), The Museum Broken Arrow, Cultural/Historical, Broken Arrow, Museum displaying local & regional history via artifacts, special exhibits & various events. 
+Filtered Attraction: (id: 1026), Comanche Nation Waterpark, Entertainment, Lawton, This family-friendly park features multistory waterslides, a lazy river, wave pool & picnic area. 
+Filtered Attraction: (id: 1027), Events Park, Nature/Outdoor, Broken Arrow, 165-acre community park offering extensive lawns & mature trees as well as lake fishing. 
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-29 Time Of Action: 18:57:32
+Selected State: Illinois
+Selected City: None
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 387), The White Chocolate Grill, Food, Naperville, Spacious contemporary grill features traditional American fare & cocktails in a relaxed atmosphere. 
+Filtered Attraction: (id: 388), Jarabe Mexican Street Food, Food, Chicago, Tacos, tortas & other Mexican street food doled out in an unassuming counter-serve eatery. 
+Filtered Attraction: (id: 389), Dana-Thomas House State Historic Site, Cultural/Historical, St. Louis, Museum in a historic Frank Lloyd Wright home from 1902 housing many original furnishings. 
+Filtered Attraction: (id: 390), Machine Shed Restaurant Rockford, Food, Rockford, Family-owned, farm-themed regional chain member serving traditional American fare & full bar. 
+Filtered Attraction: (id: 391), The Olympic Tavern, Food, Rockford, Longtime American taproom with 25+ drafts & creative bar bites, pasta, sandwiches, steak & seafood. 
+Filtered Attraction: (id: 392), The Purple Pig Restaurant, Food, Chicago, Expanded outpost of a famed pork & wine specialist with an open kitchen & a chic, airy setting.
+Filtered Attraction: (id: 393), RBI Brunch Bar, Food, Rockford, Burgers, wings & nachos are doled out in an easygoing game-day hangout with pool & a patio. 
+Filtered Attraction: (id: 394), True Food Kitchen, Food, Chicago, Relaxed, eco-chic chain serving health-conscious fare, including vegan options, plus cocktails. 
+Filtered Attraction: (id: 395), The Morton Arboretum, Nature/Outdoor, Naperville, Diverse 1,700-acre nature preserve with a maze garden & tram plus picnicking, hiking & biking. 
+Filtered Attraction: (id: 396), Museum of Science and Industry, Chicago, Entertainment, Chicago, Sprawling, hands-on museum full of informative, child-friendly scientific & industrial exhibits.
+Filtered Attraction: (id: 397), Shedd Aquarium, Nature/Outdoor, Chicago, State-of-the-art indoor aquarium, famous for its variety of habitats & views of Lake Michigan. 
+Filtered Attraction: (id: 398), Burpee Museum of Natural History, Cultural/Historical, St. Louis, Educational center with tours of exhibits on geology, flora & fauna, dinosaurs & native artifacts.
+Filtered Attraction: (id: 399), 360 CHICAGO, Nature/Outdoor, Chicago, Observatory on the 94th floor of the John Hancock Building with a tilting glass lookout 1000 ft. up. 
+Filtered Attraction: (id: 400), Cahokia Mounds State Historic Site, Cultural/Historical, Springfield, Site of a 13th-century Native American urban center with artifacts & ruins of homes & monuments. 
+Filtered Attraction: (id: 401), Henson Robinson Zoo, Nature/Outdoor, Springfield, 90+ species native to North & South America, Australia, Africa & Asia in naturalistic environs.
+Filtered Attraction: (id: 402), Lincoln Home National Historic Site, Cultural/Historical, Springfield, Popular national historic site offering tours of Lincoln's period-furnished, Greek-Revival home. 
+Filtered Attraction: (id: 403), Lincoln Park Zoo, Nature/Outdoor, Chicago, Small, free zoo with lions, primates, reptiles, a children's area & an interactive farm exhibit. 
+Filtered Attraction: (id: 404), Millennium Carillon, Cultural/Historical, Naperville, Modern tower featuring a 72-bell musical instrument & panoramic views from its observation deck. 
+Filtered Attraction: (id: 405), Old State Capitol State Historic Site, Cultural/Historical, Springfield, Restored former capitol building featuring 19th-century period details & educational exhibits. 
+Filtered Attraction: (id: 406), Riverwalk, Nature/Outdoor, Chicago, Riverside pedestrian path featuring city views & dining, plus bridges, fishing piers & boat docks. 
+Filtered Attraction: (id: 407), Skydeck Chicago, Nature/Outdoor, Chicago, 103rd floor of the former Sears Tower with clear observation boxes & views extending to four states. 
+Filtered Attraction: (id: 408), Anderson Japanese Gardens, Nature/Outdoor, Rockford, Tranquil, 12-acre landscape garden in traditional Japanese style, with an airy, farm-to-table cafe. 
+Filtered Attraction: (id: 409), Charlie Parker's Diner, Food, Springfield, Longtime American diner serving all-day breakfast, lunch specials & hearty sandwiches. 
+Filtered Attraction: (id: 410), DuPage Children's Museum, Cultural/Historical, Naperville, Play & education center for young children, with numerous fun & experimental activities plus a cafe. 
+Filtered Attraction: (id: 411), Grant Park, Nature/Outdoor, Chicago, 319-acre centerpiece of Downtown housing some of the city's busiest attractions. 
+Filtered Attraction: (id: 412), Klehm Arboretum & Botanic Garden, Nature/Outdoor, Rockford, 155 acres of landscaped grounds with dog-friendly paved paths, wooded trails & horticulture library. 
+Filtered Attraction: (id: 413), Knoch Knolls Nature Center, Entertainment, Naperville, Nature center with kid-oriented exhibits, including an aquarium, live animals & a playground. 
+Filtered Attraction: (id: 414), Lincoln Park Conservatory, Nature/Outdoor, Chicago, Thousands of plants, from tropical species to seasonal flowers, in a glass-domed structure. 
+Filtered Attraction: (id: 415), Maggie Daley Park, Nature/Outdoor, Chicago, Popular recreational area with winter ice skating, a climbing wall & playground equipment. 
+Filtered Attraction: (id: 416), Millennium Park, Nature/Outdoor, Chicago, 24.5-acre green space with a video display, the reflective Bean sculpture & an outdoor theater. 
+Filtered Attraction: (id: 417), Navy Pier, Nature/Outdoor, Chicago, Former Navy training center draws crowds with carnival rides, restaurants, shops & fireworks. 
+Filtered Attraction: (id: 418), Nicholas Conservatory & Gardens, Nature/Outdoor, Rockford, 11,000 sq. ft. of indoor tropical flora & sculpture plus landscaped lagoon with fountains & patios.
+Filtered Attraction: (id: 419), Riverwalk Park, Nature/Outdoor, Naperville, .
+Filtered Attraction: (id: 420), Springbrook Prairie Forest Preserve, Nature/Outdoor, Naperville, Expansive natural area including meadow & prairie habitat for birds plus running & biking trails. 
+Filtered Attraction: (id: 421), Union Square Park, Nature/Outdoor, Springfield, This small, urban park features grassy areas, benches & a gazebo, plus statues of Abraham Lincoln. 
+Filtered Attraction: (id: 422), Illinois State Museum, Cultural/Historical, Springfield, Educational venue dedicated to the culture, history, geology, anthropology & art of Illinois. 
+Filtered Attraction: (id: 423), Tinker Swiss Cottage Museum and Gardens, Nature/Outdoor, Rockford, Guided tours of a restored, Swiss-style 1865 home boasting its original furnishings. 
+Filtered Attraction: (id: 424), Lazy Dog Restaurant & Bar, Food, Naperville, Relaxed, lodge-chic chain serving global comfort fare, including stir-fries, pot roast & pastas. 
+Filtered Attraction: (id: 425), Native Foods, Food, Chicago, Chain for creative, Californian-style vegan fare, including mock-meat dishes, ordered at a counter. 
+Filtered Attraction: (id: 426), Field Museum, Cultural/Historical, Chicago,  
+Filtered Attraction: (id: 427), Cantigny Park, Nature/Outdoor, Naperville, 500 acres of gardens, golf, camping & picnic grounds plus 2 museums, 4 eateries & a bandshell. 
+Filtered Attraction: (id: 428), Garfield Park Conservatory, Nature/Outdoor, Chicago, 184-acre park with a swimming pool, fishing lagoon, athletic fields, tennis courts & more. 
+Filtered Attraction: (id: 429), Lincoln Memorial Garden and Nature Center, Cultural/Historical, Springfield, 100-acre woodland & prairie garden honoring Abraham Lincoln, with trails, bridges & a pond. 
+Filtered Attraction: (id: 430), Knight's Action Park, Nature/Outdoor, Springfield, Multiamusement venue with rides & attractions, water-park features & 2 drive-in movie screens. 
+Filtered Attraction: (id: 431), Midway Village Museum, Cultural/Historical, Rockford, Exhibits of historic artifacts, household items, documents & photos plus a living Victorian village. 
+Filtered Attraction: (id: 432), The Art Institute of Chicago, Cultural/Historical, Chicago, Renowned art museum holding nearly 300,000 works from all over the world, spanning many centuries. 
+Filtered Attraction: (id: 433), Rockford Art Museum, Cultural/Historical, Rockford, Non-profit museum featuring a diverse collection of modern & contemporary American art, plus a shop. 
+Filtered Attraction: (id: 434), Naper Settlement, Cultural/Historical, Naperville, 12-acre pioneer reenactment village & indoor/outdoor museum with many artifacts & outbuildings. 
+Filtered Attraction: (id: 435), Maldaner's Restaurant, Food, Springfield, Wood-swathed, American eatery (since 1884) emphasizing local produce, along the storied Route 66. 
+Filtered Attraction: (id: 436), GreenFire, Food, Rockford, American bistro & market serving locally sourced, wood-fired pizza, burgers & fish, plus wine. 
+Filtered Attraction: (id: 437), Wrigley Field, Entertainment, Chicago, Ivy-covered walls & manual scoreboard add retro charm to 2nd oldest baseball stadium in the majors. 
+Filtered Attraction: (id: 438), Cloud Gate, Nature/Outdoor, Chicago, Huge outdoor sculpture shaped like a bean & allowing for views from its many mirrored sides. 
+Filtered Attraction: (id: 439), Discovery Center Museum, Cultural/Historical, Rockford, Fun & educational science museum with exhibits, workshops, crafts & experiments for kids. 
+Filtered Attraction: (id: 440), City Museum, Cultural/Historical, St. Louis, Constantly evolving art installation, playground & discovery center made from found objects. 
+Filtered Attraction: (id: 441), Saint Louis Zoo, Nature/Outdoor, St. Louis, Free 90-acre zoo featuring animals such as penguins, bears & elephants, plus a train ride (fee). 
+Filtered Attraction: (id: 442), Citygarden Sculpture Park, Nature/Outdoor, St. Louis, Outdoor swimming pool with deep lanes & a shallow play area featuring a 250-ft. double waterslide. 
+Filtered Attraction: (id: 443), Gateway Arch National Park, Nature/Outdoor, St. Louis, Park honoring Jefferson's role in western expansion, featuring the Gateway Arch & visitors' center. 
+Filtered Attraction: (id: 444), The Gateway Arch, Nature/Outdoor, St. Louis, Curved, 630-ft.-tall monument celebrating US western expansion, with views from the top & a museum. 
+Filtered Attraction: (id: 445), Sugarfire Smoke House, Food, St. Louis, Southern-style, local BBQ chain serving ribs, salmon, brisket cheesesteaks, spiked shakes & more.
+Filtered Attraction: (id: 446), Campbell House Museum, Cultural/Historical, St. Louis, Restored 19th-century home displaying period furnishings, paintings & the family's personal effects. 
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-29 Time Of Action: 18:57:38
+Selected State: Illinois
+Selected City: Chicago
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 388), Jarabe Mexican Street Food, Food, Chicago, Tacos, tortas & other Mexican street food doled out in an unassuming counter-serve eatery. 
+Filtered Attraction: (id: 392), The Purple Pig Restaurant, Food, Chicago, Expanded outpost of a famed pork & wine specialist with an open kitchen & a chic, airy setting.
+Filtered Attraction: (id: 394), True Food Kitchen, Food, Chicago, Relaxed, eco-chic chain serving health-conscious fare, including vegan options, plus cocktails. 
+Filtered Attraction: (id: 396), Museum of Science and Industry, Chicago, Entertainment, Chicago, Sprawling, hands-on museum full of informative, child-friendly scientific & industrial exhibits.
+Filtered Attraction: (id: 397), Shedd Aquarium, Nature/Outdoor, Chicago, State-of-the-art indoor aquarium, famous for its variety of habitats & views of Lake Michigan. 
+Filtered Attraction: (id: 399), 360 CHICAGO, Nature/Outdoor, Chicago, Observatory on the 94th floor of the John Hancock Building with a tilting glass lookout 1000 ft. up. 
+Filtered Attraction: (id: 403), Lincoln Park Zoo, Nature/Outdoor, Chicago, Small, free zoo with lions, primates, reptiles, a children's area & an interactive farm exhibit. 
+Filtered Attraction: (id: 406), Riverwalk, Nature/Outdoor, Chicago, Riverside pedestrian path featuring city views & dining, plus bridges, fishing piers & boat docks. 
+Filtered Attraction: (id: 407), Skydeck Chicago, Nature/Outdoor, Chicago, 103rd floor of the former Sears Tower with clear observation boxes & views extending to four states. 
+Filtered Attraction: (id: 411), Grant Park, Nature/Outdoor, Chicago, 319-acre centerpiece of Downtown housing some of the city's busiest attractions. 
+Filtered Attraction: (id: 414), Lincoln Park Conservatory, Nature/Outdoor, Chicago, Thousands of plants, from tropical species to seasonal flowers, in a glass-domed structure. 
+Filtered Attraction: (id: 415), Maggie Daley Park, Nature/Outdoor, Chicago, Popular recreational area with winter ice skating, a climbing wall & playground equipment. 
+Filtered Attraction: (id: 416), Millennium Park, Nature/Outdoor, Chicago, 24.5-acre green space with a video display, the reflective Bean sculpture & an outdoor theater. 
+Filtered Attraction: (id: 417), Navy Pier, Nature/Outdoor, Chicago, Former Navy training center draws crowds with carnival rides, restaurants, shops & fireworks. 
+Filtered Attraction: (id: 425), Native Foods, Food, Chicago, Chain for creative, Californian-style vegan fare, including mock-meat dishes, ordered at a counter. 
+Filtered Attraction: (id: 426), Field Museum, Cultural/Historical, Chicago,  
+Filtered Attraction: (id: 428), Garfield Park Conservatory, Nature/Outdoor, Chicago, 184-acre park with a swimming pool, fishing lagoon, athletic fields, tennis courts & more. 
+Filtered Attraction: (id: 432), The Art Institute of Chicago, Cultural/Historical, Chicago, Renowned art museum holding nearly 300,000 works from all over the world, spanning many centuries. 
+Filtered Attraction: (id: 437), Wrigley Field, Entertainment, Chicago, Ivy-covered walls & manual scoreboard add retro charm to 2nd oldest baseball stadium in the majors. 
+Filtered Attraction: (id: 438), Cloud Gate, Nature/Outdoor, Chicago, Huge outdoor sculpture shaped like a bean & allowing for views from its many mirrored sides. 
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-29 Time Of Action: 18:57:43
+Selected State: Illinois
+Selected City: Chicago
+Selected Type: None
+Wheelchair Accessibility is Checked: True
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 388), Jarabe Mexican Street Food, Food, Chicago, Tacos, tortas & other Mexican street food doled out in an unassuming counter-serve eatery. 
+Filtered Attraction: (id: 392), The Purple Pig Restaurant, Food, Chicago, Expanded outpost of a famed pork & wine specialist with an open kitchen & a chic, airy setting.
+Filtered Attraction: (id: 394), True Food Kitchen, Food, Chicago, Relaxed, eco-chic chain serving health-conscious fare, including vegan options, plus cocktails. 
+Filtered Attraction: (id: 396), Museum of Science and Industry, Chicago, Entertainment, Chicago, Sprawling, hands-on museum full of informative, child-friendly scientific & industrial exhibits.
+Filtered Attraction: (id: 397), Shedd Aquarium, Nature/Outdoor, Chicago, State-of-the-art indoor aquarium, famous for its variety of habitats & views of Lake Michigan. 
+Filtered Attraction: (id: 399), 360 CHICAGO, Nature/Outdoor, Chicago, Observatory on the 94th floor of the John Hancock Building with a tilting glass lookout 1000 ft. up. 
+Filtered Attraction: (id: 403), Lincoln Park Zoo, Nature/Outdoor, Chicago, Small, free zoo with lions, primates, reptiles, a children's area & an interactive farm exhibit. 
+Filtered Attraction: (id: 406), Riverwalk, Nature/Outdoor, Chicago, Riverside pedestrian path featuring city views & dining, plus bridges, fishing piers & boat docks. 
+Filtered Attraction: (id: 407), Skydeck Chicago, Nature/Outdoor, Chicago, 103rd floor of the former Sears Tower with clear observation boxes & views extending to four states. 
+Filtered Attraction: (id: 411), Grant Park, Nature/Outdoor, Chicago, 319-acre centerpiece of Downtown housing some of the city's busiest attractions. 
+Filtered Attraction: (id: 414), Lincoln Park Conservatory, Nature/Outdoor, Chicago, Thousands of plants, from tropical species to seasonal flowers, in a glass-domed structure. 
+Filtered Attraction: (id: 415), Maggie Daley Park, Nature/Outdoor, Chicago, Popular recreational area with winter ice skating, a climbing wall & playground equipment. 
+Filtered Attraction: (id: 416), Millennium Park, Nature/Outdoor, Chicago, 24.5-acre green space with a video display, the reflective Bean sculpture & an outdoor theater. 
+Filtered Attraction: (id: 417), Navy Pier, Nature/Outdoor, Chicago, Former Navy training center draws crowds with carnival rides, restaurants, shops & fireworks. 
+Filtered Attraction: (id: 425), Native Foods, Food, Chicago, Chain for creative, Californian-style vegan fare, including mock-meat dishes, ordered at a counter. 
+Filtered Attraction: (id: 426), Field Museum, Cultural/Historical, Chicago,  
+Filtered Attraction: (id: 428), Garfield Park Conservatory, Nature/Outdoor, Chicago, 184-acre park with a swimming pool, fishing lagoon, athletic fields, tennis courts & more. 
+Filtered Attraction: (id: 432), The Art Institute of Chicago, Cultural/Historical, Chicago, Renowned art museum holding nearly 300,000 works from all over the world, spanning many centuries. 
+Filtered Attraction: (id: 437), Wrigley Field, Entertainment, Chicago, Ivy-covered walls & manual scoreboard add retro charm to 2nd oldest baseball stadium in the majors. 
+Filtered Attraction: (id: 438), Cloud Gate, Nature/Outdoor, Chicago, Huge outdoor sculpture shaped like a bean & allowing for views from its many mirrored sides. 
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-29 Time Of Action: 18:57:51
+Selected State: Utah
+Selected City: None
+Selected Type: None
+Wheelchair Accessibility is Checked: True
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 1219), The Bayou, Food, Salt Lake City, Buzzy eatery & bar offering Cajun-inspired fare & pub grub, plus extensive beer selections. 
+Filtered Attraction: (id: 1220), Squatters Roadhouse Grill, Food, Park City, Outpost of a relaxed microbrewery chain crafting seasonal & year-round beers & eclectic pub grub. 
+Filtered Attraction: (id: 1221), Zax Restaurant, Food, Moab, Relaxed eatery offering all-you-can-eat pizza, soup & salad, plus a full bar in an eclectic setting. 
+Filtered Attraction: (id: 1222), Park City Mountain, Nature/Outdoor, Park City, Renowned resort with skiing, snowboarding & other activities, plus hotels, restaurants & shops. 
+Filtered Attraction: (id: 1223), No Name Saloon, Food, Park City, Happening red-brick saloon with pub grub like bison burgers plus a robust beer & whiskey menu. 
+Filtered Attraction: (id: 1224), Woodward Park City, Nature/Outdoor, Park City, Forested mountain complex offering skiing, snowboarding & tubing, plus a large indoor tumbling area. 
+Filtered Attraction: (id: 1225), Lucky Slice Pizza Ogden, Food, Ogden, Welcoming pizzeria with gourmet sauces, toppings & specialty pies offered whole or by-the-slice. 
+Filtered Attraction: (id: 1226), Eccles Art Center, Cultural/Historical, Ogden, Circa-1893 turreted mansion featuring rotating art exhibits, craft gallery & flower garden. 
+Filtered Attraction: (id: 1227), Ogden Union Station, Cultural/Historical, Ogden, Historic 1920s train station converted to an indoor marketplace with museums, art gallery & eatery. 
+Filtered Attraction: (id: 1228), Treehouse Museum, Cultural/Historical, Ogden, Reading-oriented museum encouraging kids to step into a story via hand-on activities & exhibits. 
+Filtered Attraction: (id: 1229), Corona Arch, Nature/Outdoor, Moab, Accessible via a 1.5-mi. hiking trail with cables, this red sandstone arch is a popular photo spot. 
+Filtered Attraction: (id: 1230), Fort Buenaventura Park, Nature/Outdoor, Ogden, Fur-trading & battle history, Native American artifacts, hiking trails, fishing & a visitor center. 
+Filtered Attraction: (id: 1231), Hogle Zoo, Nature/Outdoor, Salt Lake City, Modern, 42-acre zoo boasting hundreds of animals & tropical gardens, plus a train & carousel. 
+Filtered Attraction: (id: 1232), This Is The Place Heritage Park, Cultural/Historical, Salt Lake City, Living-history park featuring Mormon monument, train rides, petting zoo & Native American village. 
+Filtered Attraction: (id: 1233), Clark Planetarium, Entertainment, Salt Lake City, State-of-the-art venue featuring 3-D IMAX films, laser light shows & exhibits about space & science. 
+Filtered Attraction: (id: 1234), Liberty Park, Nature/Outdoor, Salt Lake City, Home to an aviary & museum, this serene landmark features a lake with ducks & paddle-boat rentals. 
+Filtered Attraction: (id: 1235), Moab Giants, Nature/Outdoor, Moab, Dinosaur park with a desert trail dotted with life-size models of T. rex & other prehistoric beasts. 
+Filtered Attraction: (id: 1236), Ogden Botanical Gardens, Nature/Outdoor, Ogden, Peaceful landscaped gardens with distinct sections, grilling stations & a lawn hosting events. 
+Filtered Attraction: (id: 1237), Pioneer Park, Nature/Outdoor, St. George, Rocky 52-acre park featuring Dixie Rock, views of the city, hiking, BBQs & a covered pavilion. 
+Filtered Attraction: (id: 1238), Prospector Park, Nature/Outdoor, Park City, This park with trees offers picnic spots & a children's playground, plus a bike path. 
+Filtered Attraction: (id: 1239), Red Butte Garden, Nature/Outdoor, Salt Lake City, University of Utah's botanical garden features nature trails, workshops & an outdoor concert series. 
+Filtered Attraction: (id: 1240), Red Hills Desert Garden, Nature/Outdoor, St. George, 5-acre preserve with more than 5,000 desert plants, a stream, replica slot canyon & dinosaur tracks.
+Filtered Attraction: (id: 1241), Rotary Park, Nature/Outdoor, Moab, Scenic 3-acre park with whimsical kids’ play equipment, a creek & a basketball court. 
+Filtered Attraction: (id: 1242), Sand Flats Recreation Area, Nature/Outdoor, Moab, Popular 9,000-acre recreation area including the noted Slickrock bike trail, jeep trails & camping.
+Filtered Attraction: (id: 1243), Snow Canyon State Park, Nature/Outdoor, St. George, Scenic locale offering trails for hiking, climbing & horseback riding amid dunes & sandstone cliffs. 
+Filtered Attraction: (id: 1244), Ogden Nature Center, Nature/Outdoor, Ogden, Expansive, 152-acre nature preserve with walking trails, ponds & an educational center. 
+Filtered Attraction: (id: 1245), Rosenbruch World Wildlife Museum, Cultural/Historical, St. George, Unique museum with dioramas of over 300 animals representing every continent, plus a souvenir shop. 
+Filtered Attraction: (id: 1246), Mesa Arch, Nature/Outdoor, Moab, Cliff's-edge sandstone arch framing an iconic sunrise view of the red rock canyon landscape below. 
+Filtered Attraction: (id: 1247), Red Pine Adventures, Nature/Outdoor, Park City, Adventure outfit offering snowmobiling, snowshoeing & horse-riding on 1,000-acres of private land. 
+Filtered Attraction: (id: 1248), Slickrock Bike Trail, Nature/Outdoor, Moab, Challenging cycling area with a loop trail, picnic tables & toilets in a striking desert setting. 
+Filtered Attraction: (id: 1249), The Dixie Sugarloaf, Nature/Outdoor, St. George, Enormous red sandstone formation labeled DIXIE in white letters, with trails to the top & vistas. 
+Filtered Attraction: (id: 1250), Pasta Jay's, Food, Moab, Low-key Italian eatery serving thin-crust pizzas, ample portions & pastas made from family recipes. 
+Filtered Attraction: (id: 1251), R&R BBQ, Food, Salt Lake City, Funky counter-serve shack dishing BBQ meats by the plate or pound, plus burgers, sides & beers. 
+Filtered Attraction: (id: 1252), Honolulu Grill, Food, St. George, This unfussy counter serve offers typical Hawaiian food such as kalua pork sandwiches & shave ice. 
+Filtered Attraction: (id: 1253), Pig & a Jelly Jar Ogden, Food, Ogden, Southern comfort eats with a modern twist are the draw this open, airy eatery with a funky ambiance. 
+Filtered Attraction: (id: 1254), Black Bear Diner St. George, Food, St. George, Easygoing chain serving familiar all-day comfort food & desserts in a woodsy setting. 
+Filtered Attraction: (id: 1255), Thunder Junction All Abilities Park, Nature/Outdoor, St. George, Play equipment, a dinosaur-themed garden, train rides & picnics for kids with different abilities. 
+Filtered Attraction: (id: 1256), Moab Museum, Cultural/Historical, Moab, City museum where geology, paleontology & archeology collections join pioneer & mining exhibits. 
+Filtered Attraction: (id: 1257), Park City Museum, Cultural/Historical, Park City, Local history museum offering interactive exhibits, artifacts & the city's original basement jail. 
+Filtered Attraction: (id: 1258), Natural History Museum of Utah, Cultural/Historical, Salt Lake City, Modern venue with 10 galleries exploring earth science & Utah’s native cultures in a scenic locale. 
+Filtered Attraction: (id: 1259), Ogden's George S. Eccles Dinosaur Park, Nature/Outdoor, Ogden, 5-acre park featuring more than 100 dinosaur replicas, plus a museum with hands-on activities. 
+Filtered Attraction: (id: 1260), St. George Dinosaur Discovery Site at Johnson Farm, Nature/Outdoor, St. George, Educational spot featuring prehistoric dino tracks along with fossilized fish & plant life.
+Filtered Attraction: (id: 1261), Hill Aerospace Museum, Cultural/Historical, Ogden, Free attraction displaying planes, missiles & aerospace gear, plus exhibits on Air Force history.
+Filtered Attraction: (id: 1262), St. George Children’s Museum, Entertainment, St. George, Museum for kids offering interactive exhibits, including a play farm, grocery store & science room. 
+Filtered Attraction: (id: 1263), Kimball Art Center, Cultural/Historical, Park City, Gallery displaying works as well as hosting educational art programs & other events. 
+Filtered Attraction: (id: 1264), Park Silly Sunday Market, Entertainment, Park City, Compact weekly street market offering handicrafts, food stands, beer, live music & kids' activities. 
+Filtered Attraction: (id: 1265), Utah State Capitol, Cultural/Historical, Salt Lake City, Built in 1916, the renovated neoclassical revival building offers original murals, exhibits & tours. 
+Filtered Attraction: (id: 1266), Utah Olympic Park, Nature/Outdoor, Park City, Sprawling park built for the 2002 Olympics featuring ski jumps, bobsled rides, a zip line & museums. 
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-29 Time Of Action: 18:58:00
+Selected State: Utah
+Selected City: None
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 1219), The Bayou, Food, Salt Lake City, Buzzy eatery & bar offering Cajun-inspired fare & pub grub, plus extensive beer selections. 
+Filtered Attraction: (id: 1220), Squatters Roadhouse Grill, Food, Park City, Outpost of a relaxed microbrewery chain crafting seasonal & year-round beers & eclectic pub grub. 
+Filtered Attraction: (id: 1221), Zax Restaurant, Food, Moab, Relaxed eatery offering all-you-can-eat pizza, soup & salad, plus a full bar in an eclectic setting. 
+Filtered Attraction: (id: 1222), Park City Mountain, Nature/Outdoor, Park City, Renowned resort with skiing, snowboarding & other activities, plus hotels, restaurants & shops. 
+Filtered Attraction: (id: 1223), No Name Saloon, Food, Park City, Happening red-brick saloon with pub grub like bison burgers plus a robust beer & whiskey menu. 
+Filtered Attraction: (id: 1224), Woodward Park City, Nature/Outdoor, Park City, Forested mountain complex offering skiing, snowboarding & tubing, plus a large indoor tumbling area. 
+Filtered Attraction: (id: 1225), Lucky Slice Pizza Ogden, Food, Ogden, Welcoming pizzeria with gourmet sauces, toppings & specialty pies offered whole or by-the-slice. 
+Filtered Attraction: (id: 1226), Eccles Art Center, Cultural/Historical, Ogden, Circa-1893 turreted mansion featuring rotating art exhibits, craft gallery & flower garden. 
+Filtered Attraction: (id: 1227), Ogden Union Station, Cultural/Historical, Ogden, Historic 1920s train station converted to an indoor marketplace with museums, art gallery & eatery. 
+Filtered Attraction: (id: 1228), Treehouse Museum, Cultural/Historical, Ogden, Reading-oriented museum encouraging kids to step into a story via hand-on activities & exhibits. 
+Filtered Attraction: (id: 1229), Corona Arch, Nature/Outdoor, Moab, Accessible via a 1.5-mi. hiking trail with cables, this red sandstone arch is a popular photo spot. 
+Filtered Attraction: (id: 1230), Fort Buenaventura Park, Nature/Outdoor, Ogden, Fur-trading & battle history, Native American artifacts, hiking trails, fishing & a visitor center. 
+Filtered Attraction: (id: 1231), Hogle Zoo, Nature/Outdoor, Salt Lake City, Modern, 42-acre zoo boasting hundreds of animals & tropical gardens, plus a train & carousel. 
+Filtered Attraction: (id: 1232), This Is The Place Heritage Park, Cultural/Historical, Salt Lake City, Living-history park featuring Mormon monument, train rides, petting zoo & Native American village. 
+Filtered Attraction: (id: 1233), Clark Planetarium, Entertainment, Salt Lake City, State-of-the-art venue featuring 3-D IMAX films, laser light shows & exhibits about space & science. 
+Filtered Attraction: (id: 1234), Liberty Park, Nature/Outdoor, Salt Lake City, Home to an aviary & museum, this serene landmark features a lake with ducks & paddle-boat rentals. 
+Filtered Attraction: (id: 1235), Moab Giants, Nature/Outdoor, Moab, Dinosaur park with a desert trail dotted with life-size models of T. rex & other prehistoric beasts. 
+Filtered Attraction: (id: 1236), Ogden Botanical Gardens, Nature/Outdoor, Ogden, Peaceful landscaped gardens with distinct sections, grilling stations & a lawn hosting events. 
+Filtered Attraction: (id: 1237), Pioneer Park, Nature/Outdoor, St. George, Rocky 52-acre park featuring Dixie Rock, views of the city, hiking, BBQs & a covered pavilion. 
+Filtered Attraction: (id: 1238), Prospector Park, Nature/Outdoor, Park City, This park with trees offers picnic spots & a children's playground, plus a bike path. 
+Filtered Attraction: (id: 1239), Red Butte Garden, Nature/Outdoor, Salt Lake City, University of Utah's botanical garden features nature trails, workshops & an outdoor concert series. 
+Filtered Attraction: (id: 1240), Red Hills Desert Garden, Nature/Outdoor, St. George, 5-acre preserve with more than 5,000 desert plants, a stream, replica slot canyon & dinosaur tracks.
+Filtered Attraction: (id: 1241), Rotary Park, Nature/Outdoor, Moab, Scenic 3-acre park with whimsical kids’ play equipment, a creek & a basketball court. 
+Filtered Attraction: (id: 1242), Sand Flats Recreation Area, Nature/Outdoor, Moab, Popular 9,000-acre recreation area including the noted Slickrock bike trail, jeep trails & camping.
+Filtered Attraction: (id: 1243), Snow Canyon State Park, Nature/Outdoor, St. George, Scenic locale offering trails for hiking, climbing & horseback riding amid dunes & sandstone cliffs. 
+Filtered Attraction: (id: 1244), Ogden Nature Center, Nature/Outdoor, Ogden, Expansive, 152-acre nature preserve with walking trails, ponds & an educational center. 
+Filtered Attraction: (id: 1245), Rosenbruch World Wildlife Museum, Cultural/Historical, St. George, Unique museum with dioramas of over 300 animals representing every continent, plus a souvenir shop. 
+Filtered Attraction: (id: 1246), Mesa Arch, Nature/Outdoor, Moab, Cliff's-edge sandstone arch framing an iconic sunrise view of the red rock canyon landscape below. 
+Filtered Attraction: (id: 1247), Red Pine Adventures, Nature/Outdoor, Park City, Adventure outfit offering snowmobiling, snowshoeing & horse-riding on 1,000-acres of private land. 
+Filtered Attraction: (id: 1248), Slickrock Bike Trail, Nature/Outdoor, Moab, Challenging cycling area with a loop trail, picnic tables & toilets in a striking desert setting. 
+Filtered Attraction: (id: 1249), The Dixie Sugarloaf, Nature/Outdoor, St. George, Enormous red sandstone formation labeled DIXIE in white letters, with trails to the top & vistas. 
+Filtered Attraction: (id: 1250), Pasta Jay's, Food, Moab, Low-key Italian eatery serving thin-crust pizzas, ample portions & pastas made from family recipes. 
+Filtered Attraction: (id: 1251), R&R BBQ, Food, Salt Lake City, Funky counter-serve shack dishing BBQ meats by the plate or pound, plus burgers, sides & beers. 
+Filtered Attraction: (id: 1252), Honolulu Grill, Food, St. George, This unfussy counter serve offers typical Hawaiian food such as kalua pork sandwiches & shave ice. 
+Filtered Attraction: (id: 1253), Pig & a Jelly Jar Ogden, Food, Ogden, Southern comfort eats with a modern twist are the draw this open, airy eatery with a funky ambiance. 
+Filtered Attraction: (id: 1254), Black Bear Diner St. George, Food, St. George, Easygoing chain serving familiar all-day comfort food & desserts in a woodsy setting. 
+Filtered Attraction: (id: 1255), Thunder Junction All Abilities Park, Nature/Outdoor, St. George, Play equipment, a dinosaur-themed garden, train rides & picnics for kids with different abilities. 
+Filtered Attraction: (id: 1256), Moab Museum, Cultural/Historical, Moab, City museum where geology, paleontology & archeology collections join pioneer & mining exhibits. 
+Filtered Attraction: (id: 1257), Park City Museum, Cultural/Historical, Park City, Local history museum offering interactive exhibits, artifacts & the city's original basement jail. 
+Filtered Attraction: (id: 1258), Natural History Museum of Utah, Cultural/Historical, Salt Lake City, Modern venue with 10 galleries exploring earth science & Utah’s native cultures in a scenic locale. 
+Filtered Attraction: (id: 1259), Ogden's George S. Eccles Dinosaur Park, Nature/Outdoor, Ogden, 5-acre park featuring more than 100 dinosaur replicas, plus a museum with hands-on activities. 
+Filtered Attraction: (id: 1260), St. George Dinosaur Discovery Site at Johnson Farm, Nature/Outdoor, St. George, Educational spot featuring prehistoric dino tracks along with fossilized fish & plant life.
+Filtered Attraction: (id: 1261), Hill Aerospace Museum, Cultural/Historical, Ogden, Free attraction displaying planes, missiles & aerospace gear, plus exhibits on Air Force history.
+Filtered Attraction: (id: 1262), St. George Children’s Museum, Entertainment, St. George, Museum for kids offering interactive exhibits, including a play farm, grocery store & science room. 
+Filtered Attraction: (id: 1263), Kimball Art Center, Cultural/Historical, Park City, Gallery displaying works as well as hosting educational art programs & other events. 
+Filtered Attraction: (id: 1264), Park Silly Sunday Market, Entertainment, Park City, Compact weekly street market offering handicrafts, food stands, beer, live music & kids' activities. 
+Filtered Attraction: (id: 1265), Utah State Capitol, Cultural/Historical, Salt Lake City, Built in 1916, the renovated neoclassical revival building offers original murals, exhibits & tours. 
+Filtered Attraction: (id: 1266), Utah Olympic Park, Nature/Outdoor, Park City, Sprawling park built for the 2002 Olympics featuring ski jumps, bobsled rides, a zip line & museums. 
+Filtered Attraction: (id: 1267), Dead Horse Point State Park, Nature/Outdoor, Moab, Cliffside park offering camping, hiking/biking trails, plus overlooks & views of the Colorado River. 
