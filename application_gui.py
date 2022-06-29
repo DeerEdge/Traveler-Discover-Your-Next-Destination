@@ -527,7 +527,9 @@ class Ui_MainWindow(object):
 
 
                 for index in range(len(self.attractions_QScrollArea_widget_container.children())):
-                    if index != 0:
+                    if self.attractions_QScrollArea_widget_container.children()[
+                            index].isWidgetType() == QtWidgets.QGroupBox:
+    
                         object_distance_QLabel = self.attractions_QScrollArea_widget_container.children()[
                             index].findChild(QtWidgets.QLabel, 'locationAndDistance').text()
                         index_of_letter_m = object_distance_QLabel.index("miles")
