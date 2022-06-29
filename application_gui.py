@@ -499,10 +499,10 @@ class Ui_MainWindow(object):
 
         # Selective display of singular or plural "Attraction" + "Found"
         if (len(filtered_attractions_list)) == 1:
-            self.num_of_attractions_QLabel.setText((str(len(filtered_attractions_list))+1) + " Attraction Found")
+            self.num_of_attractions_QLabel.setText((str(len(filtered_attractions_list)+2)) + " Attraction Found")
         else:
             self.num_of_attractions_QLabel.setText(
-                _translate("MainWindow", (str(len(filtered_attractions_list))+1) + " Attractions Found"))
+                _translate("MainWindow", (str(len(filtered_attractions_list)+2)) + " Attractions Found"))
 
         # Sort the filtered attractions
         self.sort_attractions()
@@ -544,9 +544,9 @@ class Ui_MainWindow(object):
 
                 # The QLabel displaying the total number of results is updated as the number of shown attractions changes
                 if (count_of_objects_shown) == 1:
-                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown)+1) + " Attraction Found")
+                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown)+2) + " Attraction Found")
                 else:
-                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown)+1) + " Attractions Found")
+                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown)+2) + " Attractions Found")
         attribute_list = [None, None, None, None, None, None]
 
         # Create an output report text file, based on the attributes the user selected
@@ -886,9 +886,9 @@ class Ui_MainWindow(object):
                         else:
                             self.attractions_QScrollArea_widget_container.children()[index].show()
                 if (count_of_objects_shown) == 1:
-                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+1)) + " Attraction Found")
+                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+2)) + " Attraction Found")
                 else:
-                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+1)) + " Attractions Found")
+                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+2)) + " Attractions Found")
 
     # A function to check if latitude and longitude are filled, then allowing the user to access functions related to their location
     def check_if_location_fields_are_filled(self, _):
@@ -1194,9 +1194,9 @@ class Ui_MainWindow(object):
 
         # Display either singular or plural "Attraction"
         if (count_of_objects_shown) == 1:
-            self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+1)) + " Attraction Found")
+            self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+2)) + " Attraction Found")
         else:
-            self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+1)) + " Attractions Found")
+            self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+2)) + " Attractions Found")
 
     # A function to clear the searchbar
     def clear_find_attractions_search_bar(self, _):
