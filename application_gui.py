@@ -329,7 +329,7 @@ class Ui_MainWindow(object):
             wheelchair_family_pet_values = wheelchair_family_pet_values + "Pet Friendly"
 
         self.wheelchair_family_pet_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos + 170,
-                                                               labelYPos + 20, 200, 50)
+                                                               labelYPos + 35, 200, 50)
         self.wheelchair_family_pet_QLabel.setText(wheelchair_family_pet_values)
 
         # A QLabel is created to display the coordinate location of the attraction (latitude, longitude)
@@ -345,7 +345,7 @@ class Ui_MainWindow(object):
         self.coordinate_info_QLabel.hide()
 
         # A QLabel is created to display the attraction's description
-        self.description_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos, 10, 454, 125)
+        self.description_QLabel = self.create_QLabel("attraction_QScrollArea_object", labelXPos, 15, 454, 125)
         self.description_QLabel.setWordWrap(True)
         self.description_QLabel.setText((str(attraction[2])))
 

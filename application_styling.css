@@ -225,6 +225,10 @@ QWidget#content_container {
     border: 2px solid #FFD942;
 }
 
+QLabel#checkboxes {
+    line-height: 1.7em;
+}
+
 
 
 
