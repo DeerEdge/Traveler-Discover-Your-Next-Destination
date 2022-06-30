@@ -993,27 +993,8 @@ class Ui_MainWindow(object):
                          ["Where can I find the requirements to run this application on my computer?", "Minimum requirements to run the application are specified in the documentation as well as the README document."],
                          ["Where can I download and run this application?", "To setup this application, refer to either the README or documentation for step by step instructions on the installation process."],
                          ["How do I expand a specific attraction's preview map?", "In order to eexpand the preview map for an attraction, simply navigate to the expand map button underneath the preview mao. A new window with the expanded window will show upon performing this action."],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"],
-                         ["Question", "Answer"]]
+                         ["What are the system requirements to run this application?", "Our program requires at least 1 GB of RAM and at least 500 MB of storage space. Your device's OS must be at least Windows 8 or macOS 10.14 or above."],
+                         ["What are some additional features that you plan on implementing in the future?", "We are currently working on increasing the speed at which the program runs, and improving the application's aesthetics."]]
 
 
         self.QandA_window = QtWidgets.QLabel()

@@ -1,13 +1,33 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-30 Time Of Action: 06:34:43
-Selected State: Mississippi
-Selected City: Meridian
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-30 Time Of Action: 06:40:36
+Selected State: Maryland
+Selected City: None
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 695), Bonita Lakes Park, Nature/Outdoor, Meridian, Three lakes anchor this scenic 3,300-acre park, which offers fishing, hiking & horseback riding. 
-Filtered Attraction: (id: 696), Highland Park, Nature/Outdoor, Meridian, Anchored by a large pool, this city park also has a carousel, ball fields & a country-music museum. 
-Filtered Attraction: (id: 698), Meridian Museum of Art, Cultural/Historical, Meridian, Paintings, prints & other works by local artists showcased in a former 1900s library building. 
-Filtered Attraction: (id: 710), Mississippi Industrial Heritage Museum, Cultural/Historical, Meridian, The country's last, intact steam engine factory offers guided tours, yearly events & demonstrations. 
-Filtered Attraction: (id: 713), Harvest Grill, Food, Meridian, Casual, family-friendly grill serving American standards plus a bar with cocktails, wine & beer. 
+Filtered Attraction: (id: 591), The Food Market, Food, Baltimore, An open kitchen in this former grocery store turns out creative American cuisine & cocktails. 
+Filtered Attraction: (id: 592), Iron Rooster- Annapolis, Food, Annapolis, Hip spot with views of Ego Alley serving a creative, all-day breakfast menu & American comfort food.
+Filtered Attraction: (id: 593), Ixtapalapa Taqueria, Food, Gaithersburg, Tacos & Mexican small plates are offered from a counter with popsicles, beer & a few cocktails. 
+Filtered Attraction: (id: 594), International Spy Museum, Cultural/Historical, Washington D.C., Interactive look at the history of espionage features more than 600 artifacts & devices used to spy.
+Filtered Attraction: (id: 595), Annapolis Maritime Museum & Park, Cultural/Historical, Annapolis, Riverfront venue devoted to the ecology, maritime history & arts of the Chesapeake, with boat tours. 
+Filtered Attraction: (id: 596), American Visionary Art Museum, Cultural/Historical, Baltimore, Small museum with unusual rotating exhibits by self-taught artists, 2 sculpture plazas & a garden. 
+Filtered Attraction: (id: 597), Lincoln Memorial, Cultural/Historical, Washington D.C., Parthenon-inspired tribute to Abraham Lincoln with a 19-ft. marble statue, murals & reflecting pool. 
+Filtered Attraction: (id: 598), National Aquarium, Nature/Outdoor, Baltimore, Iconic landmark offering marine-life exhibits, a dolphin show, shark tank & walk-through rainforest. 
+Filtered Attraction: (id: 599), Washington Monument, Cultural/Historical, Washington D.C., Landmark obelisk rising from the National Mall that honors America's first president. 
+Filtered Attraction: (id: 600), B&O Railroad Museum, Cultural/Historical, Baltimore, National Historic Landmark highlighting nearly 200 locomotives, a model train display & train rides. 
+Filtered Attraction: (id: 601), Blandair Regional Park West Playground, Nature/Outdoor, Columbia, Simple park featuring multipurpose sports fields with bleachers plus a playground & parking lot. 
+Filtered Attraction: (id: 602), Centennial Park, Nature/Outdoor, Gaithersburg, County park built around a lake, offering a running trail, boating, fishing & diverse ecosystems. 
+Filtered Attraction: (id: 603), National Mall, Cultural/Historical, Washington D.C., Washington Monument plus memorials to Lincoln, MLK, FDR, WWII & Vietnam vets along a grassy mall. 
+Filtered Attraction: (id: 604), Quiet Waters Park, Entertainment, Annapolis, 340 acres with 6 miles of paved trails, boating & a playground, plus formal gardens & art galleries. 
+Filtered Attraction: (id: 605), Robinson Nature Center, Nature/Outdoor, Columbia, 18-acre center exploring the local ecosystem via a planetarium, nature exhibits & wooded trail. 
+Filtered Attraction: (id: 606), The Cheesecake Factory, Food, Columbia, American chain restaurant offering sizable portions from a vast menu including signature cheesecake 
+Filtered Attraction: (id: 607), United States National Arboretum, Nature/Outdoor, Washington D.C., Free to visitors, this outdoor space boasts trees, shrubs, & plants, plus a picnic area & museum. 
+Filtered Attraction: (id: 608), Merriweather Post Pavilion, Entertainment, Columbia, Local institution with bandshell & lawn seating featuring live performances by international acts. 
+Filtered Attraction: (id: 609), William Paca House & Garden, Nature/Outdoor, Annapolis, Visitors can tour this restored 1760s estate of a former governor & stroll its 2-acre garden. 
+Filtered Attraction: (id: 610), Smithsonian National Space Museum, Cultural/Historical, Washington D.C., Museum documenting the history of aviation & space exploration, with displays of vehicles & more. 
+Filtered Attraction: (id: 611), United States Botanic Garden, Nature/Outdoor, Washington D.C., Sprawling grounds featuring exotic flora plus conservatory, rare plants gallery & butterfly garden. 
+Filtered Attraction: (id: 612), National Museum of African History, Cultural/Historical, Washington D.C., Popular Smithsonian museum with unique exhibits on African American history, culture & community. 
+Filtered Attraction: (id: 613), Banneker-Douglass Museum, Cultural/Historical, Annapolis, Exhibits detail African-American history in the Chesapeake region from 1633 to the civil rights era. 
+Filtered Attraction: (id: 614), Sky Zone Trampoline Park, Entertainment, Gaithersburg, Chain of indoor trampoline parks featuring freestyle bouncing, dodgeball, fitness programs & more. 
+Filtered Attraction: (id: 615), United States Holocaust Museum, Cultural/Historical, Washington D.C., Preserving the memory of the Holocaust with permanent & traveling exhibits & educational programs. 
