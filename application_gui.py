@@ -496,13 +496,16 @@ class Ui_MainWindow(object):
             filters=application_filter_request.FilterRequest(attribute_list[0], attribute_list[1], attribute_list[2],
                                                            attribute_list[3], attribute_list[4], attribute_list[5]))
         filtered_attractions_list = filtered_attractions
+        attraction_adjustment = 0
+        if (len(filtered_attractions_list) > 30):
+            attraction_adjustment = 2
 
         # Selective display of singular or plural "Attraction" + "Found"
         if (len(filtered_attractions_list)) == 1:
-            self.num_of_attractions_QLabel.setText((str(len(filtered_attractions_list)+2)) + " Attraction Found")
+            self.num_of_attractions_QLabel.setText((str(len(filtered_attractions_list)+attraction_adjustment)) + " Attraction Found")
         else:
             self.num_of_attractions_QLabel.setText(
-                _translate("MainWindow", (str(len(filtered_attractions_list)+2)) + " Attractions Found"))
+                _translate("MainWindow", (str(len(filtered_attractions_list)+attraction_adjustment)) + " Attractions Found"))
 
         # Sort the filtered attractions
         self.sort_attractions()
@@ -512,13 +515,13 @@ class Ui_MainWindow(object):
 
         # The distance from entered location and number of objects displayed are calculated. If the QComboBox specifying
         # desired distance is enabled (when both latitude and longitude are correctly entered) then distance is
-        # calculated. Simultaenously, a QLabel is updated to reflect the number of objects being shown in the QScrollArea.
+        # calculated. Simultaneously, a QLabel is updated to reflect the number of objects being shown in the QScrollArea.
         if (self.radius_QComboBox.isEnabled()):
             global radius_checked
             # Holds the boolean value to whether the radius_QComoBox has been checked
             radius_checked = True
 
-            # If a specific desired distance is specified, attractions not in a radius of that distance will be hidden.
+            # If a specific desired distance is specified, attractions not in a radius of that distance will be removed.
             # This desired distance value will be compared with the distance calculated for every attraction in order to
             # determine if that attraction lies within the inputted radius.
             if (self.radius_QComboBox.currentText() != "Any distance"):
@@ -544,9 +547,9 @@ class Ui_MainWindow(object):
 
                 # The QLabel displaying the total number of results is updated as the number of shown attractions changes
                 if (count_of_objects_shown) == 1:
-                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown)+2) + " Attraction Found")
+                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown)+attraction_adjustment) + " Attraction Found")
                 else:
-                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown)+2) + " Attractions Found")
+                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown)+attraction_adjustment) + " Attractions Found")
         attribute_list = [None, None, None, None, None, None]
 
         # Create an output report text file, based on the attributes the user selected
@@ -886,9 +889,9 @@ class Ui_MainWindow(object):
                         else:
                             self.attractions_QScrollArea_widget_container.children()[index].show()
                 if (count_of_objects_shown) == 1:
-                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+2)) + " Attraction Found")
+                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+attraction_adjustment)) + " Attraction Found")
                 else:
-                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+2)) + " Attractions Found")
+                    self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+attraction_adjustment)) + " Attractions Found")
 
     # A function to check if latitude and longitude are filled, then allowing the user to access functions related to their location
     def check_if_location_fields_are_filled(self, _):
@@ -1192,11 +1195,15 @@ class Ui_MainWindow(object):
                     self.attractions_QScrollArea_widget_container.children()[index].hide()
                     count_of_objects_shown = count_of_objects_shown - 1
 
+        attraction_adjustment = 0
+        if (len(filtered_attractions_list) > 30):
+            attraction_adjustment = 2
+
         # Display either singular or plural "Attraction"
         if (count_of_objects_shown) == 1:
-            self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+2)) + " Attraction Found")
+            self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+attraction_adjustment)) + " Attraction Found")
         else:
-            self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+2)) + " Attractions Found")
+            self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+attraction_adjustment)) + " Attractions Found")
 
     # A function to clear the searchbar
     def clear_find_attractions_search_bar(self, _):

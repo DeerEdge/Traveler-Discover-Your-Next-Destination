@@ -1,0 +1,88 @@
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-30 Time Of Action: 04:52:02
+Selected State: Michigan
+Selected City: Lansing
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 641), Acapulco Mexican Grill Lansing, Food, Lansing, Familiar Mexican dishes are given typical American makeovers at this relaxed & colorful restaurant. 
+Filtered Attraction: (id: 645), Impression 5 Science Center, Entertainment, Lansing, Long-running science center offers hands-on exhibits & more than 150+ educational play activities. 
+Filtered Attraction: (id: 650), Potter Park Zoo, Nature/Outdoor, Lansing, Home to 500 animals from 4 continents including endangered species, plus on-site eatery & snack bar. 
+Filtered Attraction: (id: 651), R.E. Olds Transportation Museum, Cultural/Historical, Lansing, Museum with vehicles from as early as 1886 plus bicycles, tractors & other forms of transportation. 
+Filtered Attraction: (id: 664), Eli and Edythe Broad Art Museum, Cultural/Historical, Lansing, Contemporary art exhibits featuring international works against a backdrop of striking architecture. 
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-30 Time Of Action: 04:52:12
+Selected State: Utah
+Selected City: None
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 1219), The Bayou, Food, Salt Lake City, Buzzy eatery & bar offering Cajun-inspired fare & pub grub, plus extensive beer selections. 
+Filtered Attraction: (id: 1220), Squatters Roadhouse Grill, Food, Park City, Outpost of a relaxed microbrewery chain crafting seasonal & year-round beers & eclectic pub grub. 
+Filtered Attraction: (id: 1221), Zax Restaurant, Food, Moab, Relaxed eatery offering all-you-can-eat pizza, soup & salad, plus a full bar in an eclectic setting. 
+Filtered Attraction: (id: 1222), Park City Mountain, Nature/Outdoor, Park City, Renowned resort with skiing, snowboarding & other activities, plus hotels, restaurants & shops. 
+Filtered Attraction: (id: 1223), No Name Saloon, Food, Park City, Happening red-brick saloon with pub grub like bison burgers plus a robust beer & whiskey menu. 
+Filtered Attraction: (id: 1224), Woodward Park City, Nature/Outdoor, Park City, Forested mountain complex offering skiing, snowboarding & tubing, plus a large indoor tumbling area. 
+Filtered Attraction: (id: 1225), Lucky Slice Pizza Ogden, Food, Ogden, Welcoming pizzeria with gourmet sauces, toppings & specialty pies offered whole or by-the-slice. 
+Filtered Attraction: (id: 1226), Eccles Art Center, Cultural/Historical, Ogden, Circa-1893 turreted mansion featuring rotating art exhibits, craft gallery & flower garden. 
+Filtered Attraction: (id: 1227), Ogden Union Station, Cultural/Historical, Ogden, Historic 1920s train station converted to an indoor marketplace with museums, art gallery & eatery. 
+Filtered Attraction: (id: 1228), Treehouse Museum, Cultural/Historical, Ogden, Reading-oriented museum encouraging kids to step into a story via hand-on activities & exhibits. 
+Filtered Attraction: (id: 1229), Corona Arch, Nature/Outdoor, Moab, Accessible via a 1.5-mi. hiking trail with cables, this red sandstone arch is a popular photo spot. 
+Filtered Attraction: (id: 1230), Fort Buenaventura Park, Nature/Outdoor, Ogden, Fur-trading & battle history, Native American artifacts, hiking trails, fishing & a visitor center. 
+Filtered Attraction: (id: 1231), Hogle Zoo, Nature/Outdoor, Salt Lake City, Modern, 42-acre zoo boasting hundreds of animals & tropical gardens, plus a train & carousel. 
+Filtered Attraction: (id: 1232), This Is The Place Heritage Park, Cultural/Historical, Salt Lake City, Living-history park featuring Mormon monument, train rides, petting zoo & Native American village. 
+Filtered Attraction: (id: 1233), Clark Planetarium, Entertainment, Salt Lake City, State-of-the-art venue featuring 3-D IMAX films, laser light shows & exhibits about space & science. 
+Filtered Attraction: (id: 1234), Liberty Park, Nature/Outdoor, Salt Lake City, Home to an aviary & museum, this serene landmark features a lake with ducks & paddle-boat rentals. 
+Filtered Attraction: (id: 1235), Moab Giants, Nature/Outdoor, Moab, Dinosaur park with a desert trail dotted with life-size models of T. rex & other prehistoric beasts. 
+Filtered Attraction: (id: 1236), Ogden Botanical Gardens, Nature/Outdoor, Ogden, Peaceful landscaped gardens with distinct sections, grilling stations & a lawn hosting events. 
+Filtered Attraction: (id: 1237), Pioneer Park, Nature/Outdoor, St. George, Rocky 52-acre park featuring Dixie Rock, views of the city, hiking, BBQs & a covered pavilion. 
+Filtered Attraction: (id: 1238), Prospector Park, Nature/Outdoor, Park City, This park with trees offers picnic spots & a children's playground, plus a bike path. 
+Filtered Attraction: (id: 1239), Red Butte Garden, Nature/Outdoor, Salt Lake City, University of Utah's botanical garden features nature trails, workshops & an outdoor concert series. 
+Filtered Attraction: (id: 1240), Red Hills Desert Garden, Nature/Outdoor, St. George, 5-acre preserve with more than 5,000 desert plants, a stream, replica slot canyon & dinosaur tracks.
+Filtered Attraction: (id: 1241), Rotary Park, Nature/Outdoor, Moab, Scenic 3-acre park with whimsical kids’ play equipment, a creek & a basketball court. 
+Filtered Attraction: (id: 1242), Sand Flats Recreation Area, Nature/Outdoor, Moab, Popular 9,000-acre recreation area including the noted Slickrock bike trail, jeep trails & camping.
+Filtered Attraction: (id: 1243), Snow Canyon State Park, Nature/Outdoor, St. George, Scenic locale offering trails for hiking, climbing & horseback riding amid dunes & sandstone cliffs. 
+Filtered Attraction: (id: 1244), Ogden Nature Center, Nature/Outdoor, Ogden, Expansive, 152-acre nature preserve with walking trails, ponds & an educational center. 
+Filtered Attraction: (id: 1245), Rosenbruch World Wildlife Museum, Cultural/Historical, St. George, Unique museum with dioramas of over 300 animals representing every continent, plus a souvenir shop. 
+Filtered Attraction: (id: 1246), Mesa Arch, Nature/Outdoor, Moab, Cliff's-edge sandstone arch framing an iconic sunrise view of the red rock canyon landscape below. 
+Filtered Attraction: (id: 1247), Red Pine Adventures, Nature/Outdoor, Park City, Adventure outfit offering snowmobiling, snowshoeing & horse-riding on 1,000-acres of private land. 
+Filtered Attraction: (id: 1248), Slickrock Bike Trail, Nature/Outdoor, Moab, Challenging cycling area with a loop trail, picnic tables & toilets in a striking desert setting. 
+Filtered Attraction: (id: 1249), The Dixie Sugarloaf, Nature/Outdoor, St. George, Enormous red sandstone formation labeled DIXIE in white letters, with trails to the top & vistas. 
+Filtered Attraction: (id: 1250), Pasta Jay's, Food, Moab, Low-key Italian eatery serving thin-crust pizzas, ample portions & pastas made from family recipes. 
+Filtered Attraction: (id: 1251), R&R BBQ, Food, Salt Lake City, Funky counter-serve shack dishing BBQ meats by the plate or pound, plus burgers, sides & beers. 
+Filtered Attraction: (id: 1252), Honolulu Grill, Food, St. George, This unfussy counter serve offers typical Hawaiian food such as kalua pork sandwiches & shave ice. 
+Filtered Attraction: (id: 1253), Pig & a Jelly Jar Ogden, Food, Ogden, Southern comfort eats with a modern twist are the draw this open, airy eatery with a funky ambiance. 
+Filtered Attraction: (id: 1254), Black Bear Diner St. George, Food, St. George, Easygoing chain serving familiar all-day comfort food & desserts in a woodsy setting. 
+Filtered Attraction: (id: 1255), Thunder Junction All Abilities Park, Nature/Outdoor, St. George, Play equipment, a dinosaur-themed garden, train rides & picnics for kids with different abilities. 
+Filtered Attraction: (id: 1256), Moab Museum, Cultural/Historical, Moab, City museum where geology, paleontology & archeology collections join pioneer & mining exhibits. 
+Filtered Attraction: (id: 1257), Park City Museum, Cultural/Historical, Park City, Local history museum offering interactive exhibits, artifacts & the city's original basement jail. 
+Filtered Attraction: (id: 1258), Natural History Museum of Utah, Cultural/Historical, Salt Lake City, Modern venue with 10 galleries exploring earth science & Utah’s native cultures in a scenic locale. 
+Filtered Attraction: (id: 1259), Ogden's George S. Eccles Dinosaur Park, Nature/Outdoor, Ogden, 5-acre park featuring more than 100 dinosaur replicas, plus a museum with hands-on activities. 
+Filtered Attraction: (id: 1260), St. George Dinosaur Discovery Site at Johnson Farm, Nature/Outdoor, St. George, Educational spot featuring prehistoric dino tracks along with fossilized fish & plant life.
+Filtered Attraction: (id: 1261), Hill Aerospace Museum, Cultural/Historical, Ogden, Free attraction displaying planes, missiles & aerospace gear, plus exhibits on Air Force history.
+Filtered Attraction: (id: 1262), St. George Children’s Museum, Entertainment, St. George, Museum for kids offering interactive exhibits, including a play farm, grocery store & science room. 
+Filtered Attraction: (id: 1263), Kimball Art Center, Cultural/Historical, Park City, Gallery displaying works as well as hosting educational art programs & other events. 
+Filtered Attraction: (id: 1264), Park Silly Sunday Market, Entertainment, Park City, Compact weekly street market offering handicrafts, food stands, beer, live music & kids' activities. 
+Filtered Attraction: (id: 1265), Utah State Capitol, Cultural/Historical, Salt Lake City, Built in 1916, the renovated neoclassical revival building offers original murals, exhibits & tours. 
+Filtered Attraction: (id: 1266), Utah Olympic Park, Nature/Outdoor, Park City, Sprawling park built for the 2002 Olympics featuring ski jumps, bobsled rides, a zip line & museums. 
+Filtered Attraction: (id: 1267), Dead Horse Point State Park, Nature/Outdoor, Moab, Cliffside park offering camping, hiking/biking trails, plus overlooks & views of the Colorado River. 
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-30 Time Of Action: 04:52:22
+Selected State: Utah
+Selected City: Moab
+Selected Type: None
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 1221), Zax Restaurant, Food, Moab, Relaxed eatery offering all-you-can-eat pizza, soup & salad, plus a full bar in an eclectic setting. 
+Filtered Attraction: (id: 1229), Corona Arch, Nature/Outdoor, Moab, Accessible via a 1.5-mi. hiking trail with cables, this red sandstone arch is a popular photo spot. 
+Filtered Attraction: (id: 1235), Moab Giants, Nature/Outdoor, Moab, Dinosaur park with a desert trail dotted with life-size models of T. rex & other prehistoric beasts. 
+Filtered Attraction: (id: 1241), Rotary Park, Nature/Outdoor, Moab, Scenic 3-acre park with whimsical kids’ play equipment, a creek & a basketball court. 
+Filtered Attraction: (id: 1242), Sand Flats Recreation Area, Nature/Outdoor, Moab, Popular 9,000-acre recreation area including the noted Slickrock bike trail, jeep trails & camping.
+Filtered Attraction: (id: 1246), Mesa Arch, Nature/Outdoor, Moab, Cliff's-edge sandstone arch framing an iconic sunrise view of the red rock canyon landscape below. 
+Filtered Attraction: (id: 1248), Slickrock Bike Trail, Nature/Outdoor, Moab, Challenging cycling area with a loop trail, picnic tables & toilets in a striking desert setting. 
+Filtered Attraction: (id: 1250), Pasta Jay's, Food, Moab, Low-key Italian eatery serving thin-crust pizzas, ample portions & pastas made from family recipes. 
+Filtered Attraction: (id: 1256), Moab Museum, Cultural/Historical, Moab, City museum where geology, paleontology & archeology collections join pioneer & mining exhibits. 
+Filtered Attraction: (id: 1267), Dead Horse Point State Park, Nature/Outdoor, Moab, Cliffside park offering camping, hiking/biking trails, plus overlooks & views of the Colorado River. 
