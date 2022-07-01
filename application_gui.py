@@ -528,7 +528,6 @@ class Ui_MainWindow(object):
                 # The total count of all attraction objects being displayed within attraction_QScrollArea
                 count_of_objects_shown = len(self.attractions_QScrollArea_widget_container.children()) - 1
 
-
                 for index in range(len(self.attractions_QScrollArea_widget_container.children())):
                     if self.attractions_QScrollArea_widget_container.children()[
                             index].isWidgetType() == QtWidgets.QGroupBox:
@@ -544,6 +543,10 @@ class Ui_MainWindow(object):
                         else:
                             self.attractions_QScrollArea_widget_container.children()[index].hide()
                             count_of_objects_shown = count_of_objects_shown - 1
+
+                attraction_adjustment = 0
+                if (len(filtered_attractions_list) > 30):
+                    attraction_adjustment = 2
 
                 # The QLabel displaying the total number of results is updated as the number of shown attractions changes
                 if (count_of_objects_shown) == 1:
@@ -888,6 +891,11 @@ class Ui_MainWindow(object):
                                 count_of_objects_shown = count_of_objects_shown - 1
                         else:
                             self.attractions_QScrollArea_widget_container.children()[index].show()
+
+                attraction_adjustment = 0
+                if (len(filtered_attractions_list) > 30):
+                    attraction_adjustment = 2
+
                 if (count_of_objects_shown) == 1:
                     self.num_of_attractions_QLabel.setText((str(count_of_objects_shown+attraction_adjustment)) + " Attraction Found")
                 else:

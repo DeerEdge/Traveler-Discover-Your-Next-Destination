@@ -1,13 +1,13 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-30 Time Of Action: 06:34:43
-Selected State: Mississippi
-Selected City: Meridian
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-30 Time Of Action: 13:22:56
+Selected State: Iowa
+Selected City: Des Moines
 Selected Type: None
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 695), Bonita Lakes Park, Nature/Outdoor, Meridian, Three lakes anchor this scenic 3,300-acre park, which offers fishing, hiking & horseback riding. 
-Filtered Attraction: (id: 696), Highland Park, Nature/Outdoor, Meridian, Anchored by a large pool, this city park also has a carousel, ball fields & a country-music museum. 
-Filtered Attraction: (id: 698), Meridian Museum of Art, Cultural/Historical, Meridian, Paintings, prints & other works by local artists showcased in a former 1900s library building. 
-Filtered Attraction: (id: 710), Mississippi Industrial Heritage Museum, Cultural/Historical, Meridian, The country's last, intact steam engine factory offers guided tours, yearly events & demonstrations. 
-Filtered Attraction: (id: 713), Harvest Grill, Food, Meridian, Casual, family-friendly grill serving American standards plus a bar with cocktails, wine & beer. 
+Filtered Attraction: (id: 473), Bubba, Food, Des Moines, Southern favorites & a large array of whiskies offered in a relaxed, stylish setting with a patio. 
+Filtered Attraction: (id: 475), Blank Park Zoo, Entertainment, Des Moines, Train rides, petting areas, carousel, concessions & more in a year-round zoo & conservation center.
+Filtered Attraction: (id: 480), Greater Des Moines Botanical Garden, Nature/Outdoor, Des Moines, Seasonal blooms showcased outdoors & in a geodesic dome plus educational programs & art shows. 
+Filtered Attraction: (id: 483), Pappajohn Sculpture Park, Nature/Outdoor, Des Moines, Park housing a sculpture garden, dedicated chess & picnic tables, the Central Library & more.
+Filtered Attraction: (id: 492), Des Moines Art Center, Cultural/Historical, Des Moines, Irish pub grub, brick-oven pies & microbrews served in a flag-adorned space with a seasonal deck. 
