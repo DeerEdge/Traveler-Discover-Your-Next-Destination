@@ -56,6 +56,9 @@ ALTER TABLE ATTRACTION ADD CONSTRAINT CHK_RATING CHECK (RATING >= 0 AND RATING <
 ```
 Highlighting everything and clicking the run button in the menu bar (triangle shaped), a database table is created. Within this database table, all the necessary attraction attribute columns are added. Now all that needs to be done is to load all the atttraction data. Download the file containing all of the attraction data in our data csv project file: [Attraction Data.csv](https://github.com/DeerEdge/2022-FBLA-Nationals-Coding-and-Programming/blob/main/Attractions Data.csv)
 
+## Application Functions
+
+
 
 
 
