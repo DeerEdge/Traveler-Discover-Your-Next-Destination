@@ -58,7 +58,7 @@ Highlighting everything and clicking the run button in the menu bar (triangle sh
 
 Attractions were classfied into categories (i.e. outdoor, cultural, food) using NLP and text processing techniques based on their descriptions provided by google maps or the attractions' own websites.
 
-## Application Functions
+
 
 
 
