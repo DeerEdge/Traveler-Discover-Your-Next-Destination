@@ -1,4 +1,4 @@
-
+# Traveler
 
 <img src="/README%20images/Application%20Title%20Window.png">
 <img src="/README%20images/Find%20Attractions%20Tab.png">
