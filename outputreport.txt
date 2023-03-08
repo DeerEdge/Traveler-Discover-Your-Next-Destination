@@ -1,13 +1,26 @@
-⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2022-06-30 Time Of Action: 13:22:56
-Selected State: Iowa
-Selected City: Des Moines
-Selected Type: None
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2023-03-08 Time Of Action: 05:43:55
+Selected State: Nevada
+Selected City: Reno
+Selected Type: Entertainment
 Wheelchair Accessibility is Checked: False
 Family Friendliness is Checked: False
 Pet Friendliness is Checked: False
 Currently sorting by: Recommended
-Filtered Attraction: (id: 473), Bubba, Food, Des Moines, Southern favorites & a large array of whiskies offered in a relaxed, stylish setting with a patio. 
-Filtered Attraction: (id: 475), Blank Park Zoo, Entertainment, Des Moines, Train rides, petting areas, carousel, concessions & more in a year-round zoo & conservation center.
-Filtered Attraction: (id: 480), Greater Des Moines Botanical Garden, Nature/Outdoor, Des Moines, Seasonal blooms showcased outdoors & in a geodesic dome plus educational programs & art shows. 
-Filtered Attraction: (id: 483), Pappajohn Sculpture Park, Nature/Outdoor, Des Moines, Park housing a sculpture garden, dedicated chess & picnic tables, the Central Library & more.
-Filtered Attraction: (id: 492), Des Moines Art Center, Cultural/Historical, Des Moines, Irish pub grub, brick-oven pies & microbrews served in a flag-adorned space with a seasonal deck. 
+Filtered Attraction: (id: 784), The Discovery - Terry Lee Wells Nevada Discovery Museum, Entertainment, Reno, Science & technology museum presenting interactive exhibits & temporary exhibitions.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯Activity Logged Date: 2023-03-08 Time Of Action: 05:44:07
+Selected State: New York
+Selected City: None
+Selected Type: Entertainment
+Wheelchair Accessibility is Checked: False
+Family Friendliness is Checked: False
+Pet Friendliness is Checked: False
+Currently sorting by: Recommended
+Filtered Attraction: (id: 877), WonderWorks Destiny, Entertainment, Syracuse, Attraction with 100+ hands-on science exhibits plus laser tag, a ropes course & a 6D motion ride. 
+Filtered Attraction: (id: 881), Syracuse Stage, Entertainment, Syracuse, Professional theater staging classic plays, musicals & original productions since 1974. 
+Filtered Attraction: (id: 887), Rockefeller Center, Entertainment, New York, Famous complex that's home to TV studios, plus a seasonal ice rink & giant Christmas tree. 
+Filtered Attraction: (id: 896), Explore & More - The Ralph C. Wilson, Jr. Children's Museum, Entertainment, Buffalo, Games, exhibits & workshops designed to teach kids about the urban history of Western New York. 
+Filtered Attraction: (id: 898), LEGOLAND Discovery Center Westchester, Entertainment, Yonkers, Family entertainment center featuring toy displays, rides & 4D films plus gift shop. 
+Filtered Attraction: (id: 917), Empire City Casino, Entertainment, Yonkers,  
+Filtered Attraction: (id: 920), Museum of Science & Technology, Entertainment, Syracuse, Kid-oriented learning center with a domed IMAX theater explores the human body, fossils & space. 
+Filtered Attraction: (id: 924), Clinton Square, Entertainment, Syracuse, Circa-19th-century gathering place with festivals, monuments & a winter ice-skating rink. 
+Filtered Attraction: (id: 925), Times Square, Entertainment, New York, Bustling destination in the heart of the Theater District known for bright lights, shopping & shows. 

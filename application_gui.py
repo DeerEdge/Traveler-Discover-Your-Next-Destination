@@ -1471,6 +1471,7 @@ class Ui_MainWindow(object):
         # Create widget container for window
         self.title_window_central_widget = QtWidgets.QWidget(MainWindow)
         self.title_window_central_widget.setFixedSize(1150, 645)
+
         # Set background image of the widget container
         self.title_window_background = QtWidgets.QLabel(self.title_window_central_widget)
         self.title_window_background.setFixedSize(1150, 645)
